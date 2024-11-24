@@ -4,7 +4,7 @@
 # Date: 22 November 2024
 # Contact: abdullah.motasim@mail.utoronto.ca
 # License: MIT
-# Pre-requisites: tibble and readr librariess
+# Pre-requisites: tibble and readr libraries
 # Any other information needed? None
 
 
@@ -57,6 +57,9 @@ simulated_player_data <- tibble(
 # Ensure Start is earlier than End
 simulated_player_data <- simulated_player_data %>%
   mutate(End = pmax(End, Start))
+
+simulated_player_data <- simulated_player_data %>%
+  mutate(BattingRunsScored = pmax(BattingRunsScored, HighScore))
 
 
 

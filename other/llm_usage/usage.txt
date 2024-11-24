@@ -382,7 +382,7 @@ Grouping and Ungrouping:
 group_by(Player) groups rows by player name.
 .groups = "drop" ensures the result is a regular data frame.
 Let me know if you need further adjustments or have additional requirements!
-
+s
 
 
 
@@ -542,3 +542,456 @@ Notes:
 Replace fielding_data1, fielding_data2, fielding_data3 with the actual names of your datasets.
 If there are additional columns in your datasets not included in the code, let me know, and I can make further adjustments.
 Would you like any additional refinements?
+
+I now want you to edit this script to simulate the data I had you download: # State names
+states <- c(
+  "New South Wales",
+  "Victoria",
+  "Queensland",
+  "South Australia",
+  "Western Australia",
+  "Tasmania",
+  "Northern Territory",
+  "Australian Capital Territory"
+)
+
+# Political parties
+parties <- c("Labor", "Liberal", "Greens", "National", "Other")
+
+# Create a dataset by randomly assigning states and parties to divisions
+analysis_data <- tibble(
+  division = paste("Division", 1:151),  # Add "Division" to make it a character
+  state = sample(
+    states,
+    size = 151,
+    replace = TRUE,
+    prob = c(0.25, 0.25, 0.15, 0.1, 0.1, 0.1, 0.025, 0.025) # Rough state population distribution
+  ),
+  party = sample(
+    parties,
+    size = 151,
+    replace = TRUE,
+    prob = c(0.40, 0.40, 0.05, 0.1, 0.05) # Rough party distribution
+  )
+)
+
+
+#### Save data ####
+write_csv(analysis_data, "data/00-simulated_data/simulated_data.csv")
+ChatGPT said:
+ChatGPT
+Here's an updated version of the script to simulate cricket player data that matches the structure of the data you downloaded. This script creates a dataset with random players, their stats, and career information, similar to your cricket dataset.
+
+r
+Copy code
+# Load required library
+library(tibble)
+library(readr)
+
+# Generate simulated cricket player data
+set.seed(123) # For reproducibility
+
+# Player names
+players <- paste0("Player ", 1:150)
+
+# Countries
+countries <- c("India", "Australia", "England", "Pakistan", "South Africa", "Sri Lanka", "New Zealand", "West Indies", "Bangladesh", "Zimbabwe", "Afghanistan", "Ireland")
+
+# Simulated cricket data
+simulated_data <- tibble(
+  Player = sample(players, size = 150, replace = TRUE), # Random player names
+  Country = sample(
+    countries,
+    size = 150,
+    replace = TRUE,
+    prob = c(0.2, 0.15, 0.15, 0.1, 0.1, 0.1, 0.1, 0.05, 0.025, 0.025, 0.02, 0.02) # Rough country distribution
+  ),
+  Start = sample(1980:2023, size = 150, replace = TRUE), # Random start years
+  End = sample(1985:2023, size = 150, replace = TRUE), # Random end years
+  Matches = sample(1:500, size = 150, replace = TRUE), # Number of matches played
+  Innings = sample(1:500, size = 150, replace = TRUE), # Number of innings
+  NotOuts = sample(0:50, size = 150, replace = TRUE), # Number of not-outs
+  Runs = sample(0:20000, size = 150, replace = TRUE), # Total runs scored
+  HighScore = sample(50:400, size = 150, replace = TRUE), # Highest individual score
+  Average = round(runif(150, 20, 60), 2), # Batting average
+  BallsFaced = sample(1000:30000, size = 150, replace = TRUE), # Balls faced
+  StrikeRate = round(runif(150, 50, 150), 2), # Strike rate
+  Hundreds = sample(0:100, size = 150, replace = TRUE), # Number of centuries
+  Fifties = sample(0:200, size = 150, replace = TRUE), # Number of half-centuries
+  Ducks = sample(0:50, size = 150, replace = TRUE), # Number of ducks (zero runs in an inning)
+  FourWickets = sample(0:20, size = 150, replace = TRUE), # Number of 4-wicket hauls
+  FiveWickets = sample(0:20, size = 150, replace = TRUE), # Number of 5-wicket hauls
+  Maidens = sample(0:200, size = 150, replace = TRUE) # Number of maiden overs
+)
+
+# Ensure Start is earlier than End
+simulated_data <- simulated_data %>%
+  mutate(End = pmax(End, Start))
+
+# Save the simulated dataset
+write_csv(simulated_data, "data/00-simulated_data/simulated_cricket_data.csv")
+
+# Print a preview of the dataset
+print(head(simulated_data))
+Explanation:
+Players and Countries:
+
+Randomly assigns player names and countries based on predefined distributions.
+Stats:
+
+Randomly generates cricket-specific stats such as matches, innings, runs, high scores, averages, strike rates, and wickets.
+Uses realistic ranges for each stat.
+Consistency:
+
+Ensures that Start year is always earlier than or equal to the End year.
+Saving the Data:
+
+Writes the generated data to a CSV file (simulated_cricket_data.csv) for use in analysis.
+This script ensures a structure similar to the cricket dataset you shared while generating randomized, simulated data. Let me know if you'd like to modify the ranges or distributions for any specific columns!
+
+ok now write me a script to test the data I just simulated
+ChatGPT said:
+ChatGPT
+Here's an R script that performs basic exploratory data analysis (EDA) to test and summarize the simulated cricket dataset. This script includes steps to verify the data structure, check for missing values, summarize statistics, and visualize the key variables.
+
+r
+Copy code
+# Load necessary libraries
+library(tidyverse)
+
+# Load the simulated dataset
+simulated_data <- read_csv("data/00-simulated_data/simulated_data.csv")
+
+#### Inspect the data ####
+
+# View the first few rows of the dataset
+head(simulated_data)
+
+# Check the structure of the dataset
+str(simulated_data)
+
+# Summary statistics for each column
+summary(simulated_data)
+
+#### Check for missing values ####
+
+# Count missing values in each column
+missing_values <- simulated_data %>%
+  summarise(across(everything(), ~ sum(is.na(.))))
+
+# Print missing values summary
+print(missing_values)
+
+#### Analyze the distribution of key variables ####
+
+# Distribution of countries
+simulated_data %>%
+  count(Country, sort = TRUE) %>%
+  ggplot(aes(x = reorder(Country, n), y = n, fill = Country)) +
+  geom_bar(stat = "identity") +
+  coord_flip() +
+  labs(title = "Distribution of Players by Country",
+       x = "Country",
+       y = "Number of Players") +
+  theme_minimal()
+
+# Distribution of runs
+ggplot(simulated_data, aes(x = Runs)) +
+  geom_histogram(binwidth = 100, fill = "blue", color = "black", alpha = 0.7) +
+  labs(title = "Histogram of Runs Scored",
+       x = "Runs",
+       y = "Frequency") +
+  theme_minimal()
+
+# Average runs by country
+simulated_data %>%
+  group_by(Country) %>%
+  summarise(AverageRuns = mean(Runs, na.rm = TRUE)) %>%
+  ggplot(aes(x = reorder(Country, AverageRuns), y = AverageRuns, fill = Country)) +
+  geom_bar(stat = "identity") +
+  coord_flip() +
+  labs(title = "Average Runs by Country",
+       x = "Country",
+       y = "Average Runs") +
+  theme_minimal()
+
+#### Check relationships between variables ####
+
+# Scatter plot of Runs vs Matches
+ggplot(simulated_data, aes(x = Matches, y = Runs)) +
+  geom_point(alpha = 0.6, color = "darkgreen") +
+  geom_smooth(method = "lm", color = "red", se = FALSE) +
+  labs(title = "Scatter Plot of Matches vs Runs",
+       x = "Matches",
+       y = "Runs") +
+  theme_minimal()
+
+# Relationship between Average and StrikeRate
+ggplot(simulated_data, aes(x = Average, y = StrikeRate)) +
+  geom_point(alpha = 0.6, color = "purple") +
+  geom_smooth(method = "lm", color = "blue", se = FALSE) +
+  labs(title = "Scatter Plot of Average vs StrikeRate",
+       x = "Batting Average",
+       y = "Strike Rate") +
+  theme_minimal()
+
+#### Export key summaries ####
+
+# Save summary statistics to a CSV file
+summary_stats <- simulated_data %>%
+  summarise(
+    TotalPlayers = n(),
+    TotalMatches = sum(Matches, na.rm = TRUE),
+    TotalRuns = sum(Runs, na.rm = TRUE),
+    AvgStrikeRate = mean(StrikeRate, na.rm = TRUE),
+    AvgRunsPerMatch = mean(Runs / Matches, na.rm = TRUE)
+  )
+write_csv(summary_stats, "data/01-analysis/summary_statistics.csv")
+
+# Save missing value counts to a CSV file
+write_csv(missing_values, "data/01-analysis/missing_values.csv")
+
+#### Visualizations for categorical variables ####
+
+# Distribution of HighScores
+ggplot(simulated_data, aes(x = HighScore)) +
+  geom_histogram(binwidth = 20, fill = "orange", color = "black", alpha = 0.7) +
+  labs(title = "Distribution of High Scores",
+       x = "High Score",
+       y = "Frequency") +
+  theme_minimal()
+
+#### Save processed dataset ####
+
+# Save a cleaned version of the dataset for further analysis
+simulated_data_cleaned <- simulated_data %>%
+  mutate(
+    RunsPerMatch = Runs / Matches,
+    IsTopScorer = ifelse(HighScore > 100, TRUE, FALSE) # Example derived variable
+  )
+write_csv(simulated_data_cleaned, "data/01-analysis/cleaned_simulated_data.csv")
+
+#### Additional Testing ####
+
+# Test correlation between numerical variables
+correlation_matrix <- simulated_data %>%
+  select(where(is.numeric)) %>%
+  cor(use = "complete.obs")
+
+print(correlation_matrix)
+What this script does:
+Data Inspection:
+
+Displays the structure and head of the dataset.
+Summarizes all columns.
+Missing Value Analysis:
+
+Identifies and reports columns with missing values.
+Data Visualization:
+
+Bar chart of players by country.
+Histogram of runs scored.
+Scatterplots for key relationships.
+Summary Statistics:
+
+Provides overall summaries (total players, total runs, etc.).
+Saves the statistics to a CSV file.
+Derived Variables:
+
+Creates new features such as "RunsPerMatch" and identifies players with high scores over 100.
+Correlation Matrix:
+
+Calculates and prints the correlation between numeric variables.
+Saving Results:
+
+Outputs a cleaned dataset and summary statistics for further use.
+Let me know if you need to extend or adapt this script for specific goals!
+
+
+
+
+
+
+You said:
+the tests should be like this.# Check if the dataset has 151 rows
+if (nrow(analysis_data) == 151) {
+  message("Test Passed: The dataset has 151 rows.")
+} else {
+  stop("Test Failed: The dataset does not have 151 rows.")
+}
+
+# Check if the dataset has 3 columns
+if (ncol(analysis_data) == 3) {
+  message("Test Passed: The dataset has 3 columns.")
+} else {
+  stop("Test Failed: The dataset does not have 3 columns.")
+}
+
+# Check if all values in the 'division' column are unique
+if (n_distinct(analysis_data$division) == nrow(analysis_data)) {
+  message("Test Passed: All values in 'division' are unique.")
+} else {
+  stop("Test Failed: The 'division' column contains duplicate values.")
+}
+
+# Check if the 'state' column contains only valid Australian state names
+valid_states <- c("New South Wales", "Victoria", "Queensland", "South Australia", 
+                  "Western Australia", "Tasmania", "Northern Territory", 
+                  "Australian Capital Territory")
+
+if (all(analysis_data$state %in% valid_states)) {
+  message("Test Passed: The 'state' column contains only valid Australian state names.")
+} else {
+  stop("Test Failed: The 'state' column contains invalid state names.")
+}
+
+# Check if the 'party' column contains only valid party names
+valid_parties <- c("Labor", "Liberal", "Greens", "National", "Other")
+
+if (all(analysis_data$party %in% valid_parties)) {
+  message("Test Passed: The 'party' column contains only valid party names.")
+} else {
+  stop("Test Failed: The 'party' column contains invalid party names.")
+}
+
+# Check if there are any missing values in the dataset
+if (all(!is.na(analysis_data))) {
+  message("Test Passed: The dataset contains no missing values.")
+} else {
+  stop("Test Failed: The dataset contains missing values.")
+}
+
+# Check if there are no empty strings in 'division', 'state', and 'party' columns
+if (all(analysis_data$division != "" & analysis_data$state != "" & analysis_data$party != "")) {
+  message("Test Passed: There are no empty strings in 'division', 'state', or 'party'.")
+} else {
+  stop("Test Failed: There are empty strings in one or more columns.")
+}
+
+# Check if the 'party' column has at least two unique values
+if (n_distinct(analysis_data$party) >= 2) {
+  message("Test Passed: The 'party' column contains at least two unique values.")
+} else {
+  stop("Test Failed: The 'party' column contains less than two unique values.")
+}
+ChatGPT said:
+ChatGPT
+Here is the adjusted testing script for your simulated cricket dataset. It checks the validity of the dataset based on the structure and content of the data:
+
+r
+Copy code
+# Load necessary libraries
+library(tidyverse)
+
+# Load the simulated dataset
+simulated_data <- read_csv("data/00-simulated_data/simulated_data.csv")
+
+#### Define Tests ####
+
+# Check if the dataset has 150 rows
+if (nrow(simulated_data) == 150) {
+  message("Test Passed: The dataset has 150 rows.")
+} else {
+  stop("Test Failed: The dataset does not have 150 rows.")
+}
+
+# Check if the dataset has the expected number of columns
+expected_columns <- c("Player", "Country", "Start", "End", "Matches", "Innings", "NotOuts", 
+                      "Runs", "HighScore", "Average", "BallsFaced", "StrikeRate", 
+                      "Hundreds", "Fifties", "Ducks")
+
+if (all(expected_columns %in% colnames(simulated_data))) {
+  message("Test Passed: The dataset contains all expected columns.")
+} else {
+  stop("Test Failed: The dataset does not contain the expected columns.")
+}
+
+# Check if the 'Player' column contains unique values
+if (n_distinct(simulated_data$Player) == nrow(simulated_data)) {
+  message("Test Passed: All values in 'Player' are unique.")
+} else {
+  stop("Test Failed: The 'Player' column contains duplicate values.")
+}
+
+# Check if the 'Country' column contains only valid country names
+valid_countries <- c("India", "Sri Lanka", "Australia", "Pakistan", "South Africa", 
+                     "New Zealand", "England", "West Indies", "Zimbabwe", "Bangladesh", 
+                     "Afghanistan", "Ireland", "Other")
+
+if (all(simulated_data$Country %in% valid_countries)) {
+  message("Test Passed: The 'Country' column contains only valid country names.")
+} else {
+  stop("Test Failed: The 'Country' column contains invalid country names.")
+}
+
+# Check if there are any missing values in the dataset
+if (all(!is.na(simulated_data))) {
+  message("Test Passed: The dataset contains no missing values.")
+} else {
+  stop("Test Failed: The dataset contains missing values.")
+}
+
+# Check if numeric columns contain valid ranges
+if (all(simulated_data$Runs >= 0 & simulated_data$HighScore >= 0)) {
+  message("Test Passed: All numeric columns have valid ranges.")
+} else {
+  stop("Test Failed: Some numeric columns have invalid values.")
+}
+
+# Check if the 'HighScore' column is consistent with 'Runs'
+if (all(simulated_data$HighScore <= simulated_data$Runs, na.rm = TRUE)) {
+  message("Test Passed: The 'HighScore' column is consistent with 'Runs'.")
+} else {
+  stop("Test Failed: The 'HighScore' column has values exceeding 'Runs'.")
+}
+
+# Check if 'Start' and 'End' years are valid
+if (all(simulated_data$Start <= simulated_data$End)) {
+  message("Test Passed: The 'Start' and 'End' columns have valid years.")
+} else {
+  stop("Test Failed: Some 'Start' years are after 'End' years.")
+}
+
+# Check if the dataset contains at least one player from each country
+missing_countries <- setdiff(valid_countries, unique(simulated_data$Country))
+if (length(missing_countries) == 0) {
+  message("Test Passed: All countries are represented in the dataset.")
+} else {
+  warning("Test Failed: The following countries are missing from the dataset: ", 
+          paste(missing_countries, collapse = ", "))
+}
+
+# Check if there are no empty strings in categorical columns
+categorical_columns <- c("Player", "Country")
+if (all(simulated_data[categorical_columns] != "")) {
+  message("Test Passed: No empty strings in categorical columns.")
+} else {
+  stop("Test Failed: There are empty strings in categorical columns.")
+}
+
+# Check if 'StrikeRate' is calculated correctly
+if (all(simulated_data$StrikeRate == 
+        (simulated_data$Runs / simulated_data$BallsFaced) * 100, na.rm = TRUE)) {
+  message("Test Passed: 'StrikeRate' is calculated correctly.")
+} else {
+  stop("Test Failed: 'StrikeRate' is not calculated correctly.")
+}
+
+# Check if the dataset contains at least two unique players
+if (n_distinct(simulated_data$Player) >= 2) {
+  message("Test Passed: The dataset contains at least two unique players.")
+} else {
+  stop("Test Failed: The dataset contains less than two unique players.")
+}
+
+#### Summary ####
+
+message("All tests completed.")
+Key Changes:
+Dynamic Column Checks: Verifies all required columns exist in the dataset.
+Country Validation: Ensures that the Country column contains only valid cricket-playing nations.
+HighScore Logic: Verifies that HighScore does not exceed Runs.
+Year Range Validation: Checks that the Start year is earlier than or equal to the End year.
+Strike Rate Calculation: Confirms that StrikeRate is derived correctly using Runs and BallsFaced.
+Missing and Empty String Checks: Ensures no NA or empty string values are present in key columns.
+Run this script to validate the structure, consistency, and integrity of your simulated cricket dataset. If any test fails, it will output a descriptive error to help identify the issue.
