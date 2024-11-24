@@ -27,7 +27,7 @@ test_that("cleaned_match_data 6 columns", {
 test_that("cleaned_match_data column types are as expected", {
   expect_type(match_data$team1, "character")
   expect_type(match_data$team2, "character")
-  expect_type(match_data$date, "double")
+  expect_true(lubridate::is.Date(match_data$date))  # Check if 'date' is a lubridate Date
   expect_type(match_data$winner, "character")
   expect_type(match_data$winner_wickets, "double") # Numeric columns
   expect_type(match_data$winner_runs, "double")
