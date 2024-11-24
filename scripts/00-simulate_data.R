@@ -1,6 +1,6 @@
 #### Preamble ####
 # Purpose: Simulates a dataset of cricket player career statistics and games
-# Author: Abdullah Motasim
+# Author: Muhammad Abdullah Motasim
 # Date: 22 November 2024
 # Contact: abdullah.motasim@mail.utoronto.ca
 # License: MIT

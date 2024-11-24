@@ -1,7 +1,7 @@
 #### Preamble ####
 # Purpose: Cleans the raw cricket data
-# Author: Abdullah Motasim
-# Date: 24 November 2024
+# Author: Muhammad Abdullah Motasim
+# Date: 23 November 2024
 # Contact: abdullah.motasim@mail.utoronto.ca
 # License: MIT
 # Pre-requisites: tidyverse and dplyr libraries

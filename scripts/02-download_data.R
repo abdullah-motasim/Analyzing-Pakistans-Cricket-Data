@@ -1,6 +1,6 @@
 #### Preamble ####
 # Purpose: Downloads and saves the data from cricketdata package
-# Author: Abdullah Motasim
+# Author: Muhammad Abdullah Motasim
 # Date: 22 November 2024
 # Contact: abdullah.motasim@mail.utoronto.ca
 # License: MIT
