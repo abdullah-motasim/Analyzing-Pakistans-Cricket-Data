@@ -1,0 +1,821 @@
+team1,team2,date,winner,winner_wickets,winner_runs
+Australia,India,2008-01-02,Australia,NA,122
+South Africa,West Indies,2008-01-02,South Africa,7,NA
+New Zealand,Bangladesh,2008-01-04,New Zealand,9,NA
+South Africa,West Indies,2008-01-10,South Africa,NA,100
+New Zealand,Bangladesh,2008-01-12,New Zealand,NA,137
+Australia,India,2008-01-24,NA,NA,NA
+Bangladesh,South Africa,2008-02-22,South Africa,5,NA
+Bangladesh,South Africa,2008-02-29,South Africa,NA,205
+New Zealand,England,2008-03-05,New Zealand,NA,189
+New Zealand,England,2008-03-13,England,NA,126
+West Indies,Sri Lanka,2008-03-22,Sri Lanka,NA,121
+New Zealand,England,2008-03-22,England,NA,121
+India,South Africa,2008-03-26,NA,NA,NA
+India,South Africa,2008-04-03,South Africa,NA,90
+West Indies,Sri Lanka,2008-04-03,West Indies,6,NA
+India,South Africa,2008-04-11,India,8,NA
+England,New Zealand,2008-05-15,NA,NA,NA
+West Indies,Australia,2008-05-22,Australia,NA,95
+England,New Zealand,2008-05-23,England,6,NA
+West Indies,Australia,2008-05-30,NA,NA,NA
+England,New Zealand,2008-06-05,England,NA,9
+West Indies,Australia,2008-06-12,Australia,NA,87
+England,South Africa,2008-07-10,NA,NA,NA
+England,South Africa,2008-07-18,South Africa,10,NA
+Sri Lanka,India,2008-07-23,Sri Lanka,NA,239
+England,South Africa,2008-07-30,South Africa,5,NA
+Sri Lanka,India,2008-07-31,India,NA,170
+England,South Africa,2008-08-07,England,6,NA
+Sri Lanka,India,2008-08-08,Sri Lanka,8,NA
+India,Australia,2008-10-09,NA,NA,NA
+India,Australia,2008-10-17,India,NA,320
+Bangladesh,New Zealand,2008-10-25,NA,NA,NA
+India,Australia,2008-10-29,NA,NA,NA
+India,Australia,2008-11-06,India,NA,172
+South Africa,Bangladesh,2008-11-19,South Africa,NA,129
+South Africa,Bangladesh,2008-11-26,South Africa,NA,48
+Australia,New Zealand,2008-11-28,Australia,NA,62
+India,England,2008-12-11,India,6,NA
+Australia,South Africa,2008-12-17,South Africa,6,NA
+India,England,2008-12-19,NA,NA,NA
+Australia,South Africa,2008-12-26,South Africa,9,NA
+Australia,South Africa,2009-01-03,Australia,NA,103
+Bangladesh,Sri Lanka,2009-01-03,Sri Lanka,NA,465
+West Indies,England,2009-02-04,West Indies,NA,23
+West Indies,England,2009-02-13,NA,NA,NA
+West Indies,England,2009-02-15,NA,NA,NA
+Pakistan,Sri Lanka,2009-02-21,NA,NA,NA
+West Indies,England,2009-02-26,NA,NA,NA
+South Africa,Australia,2009-02-26,Australia,NA,162
+Pakistan,Sri Lanka,2009-03-01,NA,NA,NA
+West Indies,England,2009-03-06,NA,NA,NA
+South Africa,Australia,2009-03-06,Australia,NA,175
+New Zealand,India,2009-03-18,India,10,NA
+South Africa,Australia,2009-03-19,South Africa,NA,20
+New Zealand,India,2009-03-26,NA,NA,NA
+New Zealand,India,2009-04-03,NA,NA,NA
+England,West Indies,2009-05-06,England,10,NA
+England,West Indies,2009-05-14,England,NA,83
+Sri Lanka,Pakistan,2009-07-04,Sri Lanka,NA,50
+England,Australia,2009-07-08,NA,NA,NA
+West Indies,Bangladesh,2009-07-09,Bangladesh,NA,95
+Sri Lanka,Pakistan,2009-07-12,Sri Lanka,7,NA
+England,Australia,2009-07-16,England,NA,115
+West Indies,Bangladesh,2009-07-17,Bangladesh,4,NA
+Sri Lanka,Pakistan,2009-07-20,NA,NA,NA
+England,Australia,2009-07-30,NA,NA,NA
+England,Australia,2009-08-07,Australia,NA,80
+Sri Lanka,New Zealand,2009-08-18,Sri Lanka,NA,202
+England,Australia,2009-08-20,England,NA,197
+Sri Lanka,New Zealand,2009-08-26,Sri Lanka,NA,96
+India,Sri Lanka,2009-11-16,NA,NA,NA
+India,Sri Lanka,2009-11-24,India,NA,144
+Australia,West Indies,2009-11-26,Australia,NA,65
+India,Sri Lanka,2009-12-02,India,NA,24
+New Zealand,Pakistan,2009-12-03,Pakistan,NA,141
+Australia,West Indies,2009-12-04,NA,NA,NA
+New Zealand,Pakistan,2009-12-11,NA,NA,NA
+South Africa,England,2009-12-16,NA,NA,NA
+Australia,West Indies,2009-12-16,Australia,NA,35
+South Africa,England,2009-12-26,England,NA,98
+Australia,Pakistan,2009-12-26,Australia,NA,170
+Australia,Pakistan,2010-01-03,Australia,NA,36
+South Africa,England,2010-01-14,South Africa,NA,74
+Australia,Pakistan,2010-01-14,Australia,NA,231
+Bangladesh,India,2010-01-24,India,10,NA
+India,South Africa,2010-02-06,South Africa,NA,6
+India,South Africa,2010-02-14,India,NA,57
+New Zealand,Bangladesh,2010-02-15,New Zealand,NA,121
+Bangladesh,England,2010-03-12,England,NA,181
+New Zealand,Australia,2010-03-19,Australia,10,NA
+Bangladesh,England,2010-03-20,England,9,NA
+New Zealand,Australia,2010-03-27,Australia,NA,176
+England,Bangladesh,2010-06-04,England,NA,80
+West Indies,South Africa,2010-06-10,South Africa,NA,163
+West Indies,South Africa,2010-06-18,NA,NA,NA
+West Indies,South Africa,2010-06-26,South Africa,7,NA
+Australia,Pakistan,2010-07-13,Australia,NA,150
+Sri Lanka,India,2010-07-18,Sri Lanka,10,NA
+Australia,Pakistan,2010-07-21,Pakistan,3,NA
+Sri Lanka,India,2010-07-26,NA,NA,NA
+England,Pakistan,2010-07-29,England,NA,354
+Sri Lanka,India,2010-08-03,India,5,NA
+England,Pakistan,2010-08-06,England,9,NA
+England,Pakistan,2010-08-18,Pakistan,4,NA
+England,Pakistan,2010-08-26,England,NA,225
+India,Australia,2010-10-09,India,7,NA
+India,New Zealand,2010-11-04,NA,NA,NA
+India,New Zealand,2010-11-12,NA,NA,NA
+Pakistan,South Africa,2010-11-12,NA,NA,NA
+India,New Zealand,2010-11-20,India,NA,198
+Pakistan,South Africa,2010-11-20,NA,NA,NA
+Sri Lanka,West Indies,2010-11-23,NA,NA,NA
+Australia,England,2010-11-25,NA,NA,NA
+Sri Lanka,West Indies,2010-12-01,NA,NA,NA
+Australia,England,2010-12-03,England,NA,71
+South Africa,India,2010-12-16,South Africa,NA,25
+Australia,England,2010-12-16,Australia,NA,267
+South Africa,India,2010-12-26,India,NA,87
+Australia,England,2010-12-26,England,NA,157
+South Africa,India,2011-01-02,NA,NA,NA
+Australia,England,2011-01-03,England,NA,83
+New Zealand,Pakistan,2011-01-07,Pakistan,10,NA
+New Zealand,Pakistan,2011-01-15,NA,NA,NA
+West Indies,Pakistan,2011-05-12,West Indies,NA,40
+West Indies,Pakistan,2011-05-20,Pakistan,NA,196
+England,Sri Lanka,2011-05-26,England,NA,14
+England,Sri Lanka,2011-06-03,NA,NA,NA
+England,Sri Lanka,2011-06-16,NA,NA,NA
+West Indies,India,2011-06-20,India,NA,63
+West Indies,India,2011-06-28,NA,NA,NA
+West Indies,India,2011-07-06,NA,NA,NA
+England,India,2011-07-21,England,NA,196
+England,India,2011-07-29,England,NA,319
+Zimbabwe,Bangladesh,2011-08-04,Zimbabwe,NA,130
+England,India,2011-08-10,England,NA,242
+England,India,2011-08-18,England,NA,8
+Sri Lanka,Australia,2011-08-31,Australia,NA,125
+Zimbabwe,Pakistan,2011-09-01,Pakistan,7,NA
+Sri Lanka,Australia,2011-09-08,NA,NA,NA
+Sri Lanka,Australia,2011-09-16,NA,NA,NA
+Pakistan,Sri Lanka,2011-10-18,NA,NA,NA
+Pakistan,Sri Lanka,2011-10-26,Pakistan,9,NA
+Bangladesh,West Indies,2011-10-29,West Indies,NA,229
+Zimbabwe,New Zealand,2011-11-01,New Zealand,NA,34
+Pakistan,Sri Lanka,2011-11-03,NA,NA,NA
+India,West Indies,2011-11-06,India,5,NA
+South Africa,Australia,2011-11-09,South Africa,8,NA
+India,West Indies,2011-11-14,India,NA,15
+South Africa,Australia,2011-11-17,Australia,2,NA
+India,West Indies,2011-11-22,NA,NA,NA
+Australia,New Zealand,2011-12-01,Australia,9,NA
+Bangladesh,Pakistan,2011-12-09,Pakistan,NA,184
+Australia,New Zealand,2011-12-09,New Zealand,NA,7
+South Africa,Sri Lanka,2011-12-15,South Africa,NA,81
+Bangladesh,Pakistan,2011-12-17,Pakistan,7,NA
+South Africa,Sri Lanka,2011-12-26,Sri Lanka,NA,208
+Australia,India,2011-12-26,Australia,NA,122
+South Africa,Sri Lanka,2012-01-03,South Africa,10,NA
+Australia,India,2012-01-03,Australia,NA,68
+Australia,India,2012-01-13,Australia,NA,37
+England,Pakistan,2012-01-17,Pakistan,10,NA
+Australia,India,2012-01-24,Australia,NA,298
+England,Pakistan,2012-01-25,Pakistan,NA,72
+New Zealand,Zimbabwe,2012-01-26,New Zealand,NA,301
+England,Pakistan,2012-02-03,Pakistan,NA,71
+New Zealand,South Africa,2012-03-07,NA,NA,NA
+New Zealand,South Africa,2012-03-15,South Africa,9,NA
+New Zealand,South Africa,2012-03-23,NA,NA,NA
+Sri Lanka,England,2012-03-26,Sri Lanka,NA,75
+Sri Lanka,England,2012-04-03,England,8,NA
+West Indies,Australia,2012-04-07,Australia,3,NA
+West Indies,Australia,2012-04-15,NA,NA,NA
+England,West Indies,2012-05-17,England,5,NA
+England,West Indies,2012-05-25,England,9,NA
+England,West Indies,2012-06-07,NA,NA,NA
+Sri Lanka,Pakistan,2012-06-22,Sri Lanka,NA,209
+Sri Lanka,Pakistan,2012-06-30,NA,NA,NA
+Sri Lanka,Pakistan,2012-07-08,NA,NA,NA
+England,South Africa,2012-07-19,South Africa,NA,12
+West Indies,New Zealand,2012-07-25,West Indies,9,NA
+West Indies,New Zealand,2012-08-02,West Indies,5,NA
+England,South Africa,2012-08-02,NA,NA,NA
+England,South Africa,2012-08-16,South Africa,NA,51
+India,New Zealand,2012-08-23,India,NA,115
+India,New Zealand,2012-08-31,India,5,NA
+Australia,South Africa,2012-11-09,NA,NA,NA
+Bangladesh,West Indies,2012-11-13,West Indies,NA,77
+India,England,2012-11-15,India,9,NA
+Sri Lanka,New Zealand,2012-11-17,Sri Lanka,10,NA
+Bangladesh,West Indies,2012-11-21,West Indies,10,NA
+Australia,South Africa,2012-11-22,NA,NA,NA
+India,England,2012-11-23,England,10,NA
+Sri Lanka,New Zealand,2012-11-25,New Zealand,NA,167
+Australia,South Africa,2012-11-30,South Africa,NA,309
+India,England,2012-12-05,England,7,NA
+India,England,2012-12-13,NA,NA,NA
+Australia,Sri Lanka,2012-12-14,Australia,NA,137
+Australia,Sri Lanka,2012-12-26,Australia,NA,201
+South Africa,New Zealand,2013-01-02,South Africa,NA,27
+South Africa,New Zealand,2013-01-11,South Africa,NA,193
+South Africa,Pakistan,2013-02-01,South Africa,NA,211
+South Africa,Pakistan,2013-02-14,South Africa,4,NA
+South Africa,Pakistan,2013-02-22,South Africa,NA,18
+India,Australia,2013-02-22,India,8,NA
+India,Australia,2013-03-02,India,NA,135
+New Zealand,England,2013-03-06,NA,NA,NA
+Sri Lanka,Bangladesh,2013-03-08,NA,NA,NA
+West Indies,Zimbabwe,2013-03-12,West Indies,9,NA
+New Zealand,England,2013-03-14,NA,NA,NA
+India,Australia,2013-03-14,India,6,NA
+Sri Lanka,Bangladesh,2013-03-16,Sri Lanka,7,NA
+West Indies,Zimbabwe,2013-03-20,West Indies,NA,65
+India,Australia,2013-03-22,India,6,NA
+New Zealand,England,2013-03-22,NA,NA,NA
+Zimbabwe,Bangladesh,2013-04-17,Zimbabwe,NA,335
+Zimbabwe,Bangladesh,2013-04-25,Bangladesh,NA,143
+England,New Zealand,2013-05-16,England,NA,170
+England,New Zealand,2013-05-24,England,NA,247
+England,Australia,2013-07-10,England,NA,14
+England,Australia,2013-07-18,England,NA,347
+England,Australia,2013-08-01,NA,NA,NA
+England,Australia,2013-08-09,England,NA,74
+England,Australia,2013-08-21,NA,NA,NA
+Zimbabwe,Pakistan,2013-09-03,Pakistan,NA,221
+Zimbabwe,Pakistan,2013-09-10,Zimbabwe,NA,24
+Bangladesh,New Zealand,2013-10-09,NA,NA,NA
+Pakistan,South Africa,2013-10-14,Pakistan,7,NA
+Bangladesh,New Zealand,2013-10-21,NA,NA,NA
+Pakistan,South Africa,2013-10-23,South Africa,NA,92
+India,West Indies,2013-11-06,India,NA,51
+India,West Indies,2013-11-14,India,NA,126
+Australia,England,2013-11-21,Australia,NA,381
+New Zealand,West Indies,2013-12-03,NA,NA,NA
+Australia,England,2013-12-05,Australia,NA,218
+New Zealand,West Indies,2013-12-11,New Zealand,NA,73
+Australia,England,2013-12-13,Australia,NA,150
+South Africa,India,2013-12-18,NA,NA,NA
+New Zealand,West Indies,2013-12-19,New Zealand,8,NA
+Australia,England,2013-12-26,Australia,8,NA
+South Africa,India,2013-12-26,South Africa,10,NA
+Pakistan,Sri Lanka,2013-12-31,NA,NA,NA
+Australia,England,2014-01-03,Australia,NA,281
+Pakistan,Sri Lanka,2014-01-08,Sri Lanka,9,NA
+Pakistan,Sri Lanka,2014-01-16,Pakistan,5,NA
+Bangladesh,Sri Lanka,2014-01-27,Sri Lanka,NA,248
+Bangladesh,Sri Lanka,2014-02-04,NA,NA,NA
+New Zealand,India,2014-02-06,New Zealand,NA,40
+South Africa,Australia,2014-02-12,Australia,NA,281
+New Zealand,India,2014-02-14,NA,NA,NA
+South Africa,Australia,2014-02-20,South Africa,NA,231
+South Africa,Australia,2014-03-01,Australia,NA,245
+West Indies,New Zealand,2014-06-08,New Zealand,NA,186
+England,Sri Lanka,2014-06-12,NA,NA,NA
+West Indies,New Zealand,2014-06-16,West Indies,10,NA
+West Indies,New Zealand,2014-06-26,New Zealand,NA,53
+England,India,2014-07-09,NA,NA,NA
+Sri Lanka,South Africa,2014-07-16,South Africa,NA,153
+England,India,2014-07-17,India,NA,95
+Sri Lanka,South Africa,2014-07-24,NA,NA,NA
+England,India,2014-07-27,England,NA,266
+Sri Lanka,Pakistan,2014-08-06,Sri Lanka,7,NA
+England,India,2014-08-07,England,NA,54
+Zimbabwe,South Africa,2014-08-09,South Africa,9,NA
+England,India,2014-08-15,England,NA,244
+West Indies,Bangladesh,2014-09-05,West Indies,10,NA
+West Indies,Bangladesh,2014-09-13,West Indies,NA,296
+Australia,Pakistan,2014-10-22,Pakistan,NA,221
+Bangladesh,Zimbabwe,2014-10-25,Bangladesh,3,NA
+Australia,Pakistan,2014-10-30,Pakistan,NA,356
+Bangladesh,Zimbabwe,2014-11-03,Bangladesh,NA,162
+New Zealand,Pakistan,2014-11-09,Pakistan,NA,248
+Bangladesh,Zimbabwe,2014-11-12,Bangladesh,NA,186
+New Zealand,Pakistan,2014-11-17,NA,NA,NA
+New Zealand,Pakistan,2014-11-26,New Zealand,NA,80
+Australia,India,2014-12-09,Australia,NA,48
+South Africa,West Indies,2014-12-17,South Africa,NA,220
+Australia,India,2014-12-17,Australia,4,NA
+New Zealand,Sri Lanka,2014-12-26,New Zealand,8,NA
+Australia,India,2014-12-26,NA,NA,NA
+South Africa,West Indies,2014-12-26,NA,NA,NA
+South Africa,West Indies,2015-01-02,South Africa,8,NA
+New Zealand,Sri Lanka,2015-01-03,New Zealand,NA,193
+Australia,India,2015-01-06,NA,NA,NA
+West Indies,England,2015-04-13,NA,NA,NA
+West Indies,England,2015-04-21,England,9,NA
+Bangladesh,Pakistan,2015-04-28,NA,NA,NA
+West Indies,England,2015-05-01,West Indies,5,NA
+Bangladesh,Pakistan,2015-05-06,Pakistan,NA,328
+England,New Zealand,2015-05-21,England,NA,124
+England,New Zealand,2015-05-29,New Zealand,NA,199
+West Indies,Australia,2015-06-03,Australia,9,NA
+Bangladesh,India,2015-06-10,NA,NA,NA
+West Indies,Australia,2015-06-11,Australia,NA,277
+Sri Lanka,Pakistan,2015-06-17,Pakistan,10,NA
+Sri Lanka,Pakistan,2015-06-25,Sri Lanka,7,NA
+Sri Lanka,Pakistan,2015-07-03,Pakistan,7,NA
+England,Australia,2015-07-08,England,NA,169
+England,Australia,2015-07-16,Australia,NA,405
+Bangladesh,South Africa,2015-07-21,NA,NA,NA
+England,Australia,2015-07-29,England,8,NA
+Bangladesh,South Africa,2015-07-30,NA,NA,NA
+England,Australia,2015-08-06,England,NA,78
+Sri Lanka,India,2015-08-12,Sri Lanka,NA,63
+England,Australia,2015-08-20,Australia,NA,46
+Sri Lanka,India,2015-08-20,India,NA,278
+Sri Lanka,India,2015-08-28,India,NA,117
+Sri Lanka,West Indies,2015-10-22,Sri Lanka,NA,72
+England,Pakistan,2015-10-22,Pakistan,NA,178
+Australia,New Zealand,2015-11-13,NA,NA,NA
+India,South Africa,2015-11-14,NA,NA,NA
+India,South Africa,2015-11-25,India,NA,124
+Australia,New Zealand,2015-11-27,Australia,3,NA
+India,South Africa,2015-12-03,India,NA,337
+England,Pakistan,2015-11-01,Pakistan,NA,127
+Australia,New Zealand,2015-11-05,Australia,NA,208
+India,South Africa,2015-11-05,India,NA,108
+Australia,West Indies,2015-12-10,Australia,NA,212
+Australia,West Indies,2015-12-26,Australia,NA,177
+South Africa,England,2015-12-26,England,NA,241
+South Africa,England,2016-01-02,NA,NA,NA
+Australia,West Indies,2016-01-03,NA,NA,NA
+South Africa,England,2016-01-14,England,7,NA
+South Africa,England,2016-01-22,South Africa,NA,280
+New Zealand,Australia,2016-02-12,Australia,NA,52
+New Zealand,Australia,2016-02-20,Australia,7,NA
+England,Sri Lanka,2016-05-19,England,NA,88
+England,Sri Lanka,2016-05-27,England,9,NA
+England,Sri Lanka,2016-06-09,NA,NA,NA
+England,Pakistan,2016-07-14,Pakistan,NA,75
+England,Pakistan,2016-07-22,England,NA,330
+West Indies,India,2016-07-21,India,NA,92
+Sri Lanka,Australia,2016-07-26,Sri Lanka,NA,106
+Zimbabwe,New Zealand,2016-07-28,New Zealand,NA,117
+West Indies,India,2016-07-30,NA,NA,NA
+Sri Lanka,Australia,2016-08-04,Sri Lanka,NA,229
+England,Pakistan,2016-08-03,England,NA,141
+Zimbabwe,New Zealand,2016-08-06,New Zealand,NA,254
+West Indies,India,2016-08-09,India,NA,237
+Sri Lanka,Australia,2016-08-13,Sri Lanka,NA,163
+England,Pakistan,2016-08-11,Pakistan,10,NA
+South Africa,New Zealand,2016-08-19,NA,NA,NA
+West Indies,India,2016-08-18,NA,NA,NA
+South Africa,New Zealand,2016-08-27,South Africa,NA,204
+India,New Zealand,2016-09-22,India,NA,197
+India,New Zealand,2016-09-30,India,NA,178
+Pakistan,West Indies,2016-10-13,Pakistan,NA,56
+Bangladesh,England,2016-10-20,England,NA,22
+Pakistan,West Indies,2016-10-21,Pakistan,NA,133
+Zimbabwe,Sri Lanka,2016-10-29,Sri Lanka,NA,225
+Bangladesh,England,2016-10-28,Bangladesh,NA,108
+Pakistan,West Indies,2016-10-30,West Indies,5,NA
+Australia,South Africa,2016-11-03,South Africa,NA,177
+Zimbabwe,Sri Lanka,2016-11-06,Sri Lanka,NA,257
+India,England,2016-11-09,NA,NA,NA
+Australia,South Africa,2016-11-12,South Africa,NA,80
+India,England,2016-11-17,India,NA,246
+New Zealand,Pakistan,2016-11-17,New Zealand,8,NA
+Australia,South Africa,2016-11-24,Australia,7,NA
+New Zealand,Pakistan,2016-11-25,New Zealand,NA,138
+India,England,2016-11-26,India,8,NA
+India,England,2016-12-08,India,NA,36
+Australia,Pakistan,2016-12-15,Australia,NA,39
+India,England,2016-12-16,India,NA,75
+South Africa,Sri Lanka,2016-12-26,South Africa,NA,206
+Australia,Pakistan,2016-12-26,Australia,NA,18
+India,New Zealand,2016-10-08,India,NA,321
+South Africa,Sri Lanka,2017-01-02,South Africa,NA,282
+Australia,Pakistan,2017-01-03,Australia,NA,220
+New Zealand,Bangladesh,2017-01-12,New Zealand,7,NA
+South Africa,Sri Lanka,2017-01-12,South Africa,NA,118
+New Zealand,Bangladesh,2017-01-20,New Zealand,9,NA
+India,Bangladesh,2017-02-09,India,NA,208
+India,Australia,2017-02-23,Australia,NA,333
+India,Australia,2017-03-04,India,NA,75
+Sri Lanka,Bangladesh,2017-03-07,Sri Lanka,NA,259
+New Zealand,South Africa,2017-03-08,NA,NA,NA
+Sri Lanka,Bangladesh,2017-03-15,Bangladesh,4,NA
+New Zealand,South Africa,2017-03-16,South Africa,8,NA
+India,Australia,2017-03-16,NA,NA,NA
+New Zealand,South Africa,2017-03-25,NA,NA,NA
+India,Australia,2017-03-25,India,8,NA
+West Indies,Pakistan,2017-04-21,Pakistan,7,NA
+West Indies,Pakistan,2017-04-30,West Indies,NA,106
+England,South Africa,2017-07-06,England,NA,211
+Ireland,Pakistan,2018-05-11,Pakistan,5,NA
+England,Ireland,2019-07-24,England,NA,143
+England,Australia,2019-08-01,Australia,NA,251
+Sri Lanka,New Zealand,2019-08-22,New Zealand,NA,65
+West Indies,India,2019-08-22,India,NA,318
+England,Australia,2019-08-22,England,1,NA
+West Indies,India,2019-08-30,India,NA,257
+England,Australia,2019-09-04,Australia,NA,185
+England,Australia,2019-09-12,England,NA,135
+India,South Africa,2019-10-02,India,NA,203
+India,South Africa,2019-10-10,India,NA,137
+India,South Africa,2019-10-19,India,NA,202
+India,Bangladesh,2019-11-14,India,NA,130
+Australia,Pakistan,2019-11-21,Australia,NA,5
+India,Bangladesh,2019-11-22,India,NA,46
+New Zealand,England,2019-11-21,New Zealand,NA,65
+Australia,Pakistan,2019-11-29,Australia,NA,48
+New Zealand,England,2019-11-29,NA,NA,NA
+Australia,New Zealand,2019-12-12,Australia,NA,296
+Pakistan,Sri Lanka,2019-12-11,NA,NA,NA
+Pakistan,Sri Lanka,2019-12-19,Pakistan,NA,263
+Australia,New Zealand,2019-12-26,Australia,NA,247
+South Africa,England,2019-12-26,South Africa,NA,107
+New Zealand,Bangladesh,2019-03-08,New Zealand,NA,12
+New Zealand,Bangladesh,2019-02-28,New Zealand,NA,52
+South Africa,England,2020-01-03,England,NA,189
+Australia,New Zealand,2020-01-03,Australia,NA,279
+South Africa,England,2020-01-16,England,NA,53
+Zimbabwe,Sri Lanka,2020-01-19,Sri Lanka,10,NA
+Zimbabwe,Sri Lanka,2020-01-27,NA,NA,NA
+Pakistan,Bangladesh,2020-02-07,Pakistan,NA,44
+New Zealand,India,2020-02-21,New Zealand,10,NA
+Bangladesh,Zimbabwe,2020-02-22,Bangladesh,NA,106
+New Zealand,India,2020-02-29,New Zealand,7,NA
+South Africa,Pakistan,2018-12-26,South Africa,6,NA
+South Africa,Pakistan,2019-01-03,South Africa,9,NA
+South Africa,Pakistan,2019-01-11,South Africa,NA,107
+South Africa,Sri Lanka,2019-02-13,Sri Lanka,1,NA
+South Africa,Sri Lanka,2019-02-21,Sri Lanka,8,NA
+Australia,India,2018-12-26,India,NA,137
+Australia,India,2019-01-03,NA,NA,NA
+Australia,Sri Lanka,2019-02-01,Australia,NA,366
+New Zealand,Sri Lanka,2018-12-26,New Zealand,NA,423
+West Indies,England,2019-01-23,West Indies,NA,381
+West Indies,England,2019-01-31,West Indies,10,NA
+West Indies,England,2019-02-09,England,NA,232
+Australia,England,2017-12-26,NA,NA,NA
+England,Australia,2018-01-04,Australia,NA,123
+Australia,South Africa,2018-03-01,Australia,NA,118
+South Africa,Australia,2018-03-22,South Africa,NA,322
+South Africa,Australia,2018-03-30,South Africa,NA,492
+England,New Zealand,2018-03-22,New Zealand,NA,49
+England,New Zealand,2018-03-30,NA,NA,NA
+England,Pakistan,2018-05-24,Pakistan,9,NA
+Pakistan,England,2018-06-01,England,NA,55
+England,India,2018-08-01,England,NA,31
+India,England,2018-08-09,England,NA,159
+India,England,2018-08-18,India,NA,203
+England,India,2018-08-30,England,NA,60
+England,India,2018-09-07,England,NA,118
+South Africa,India,2018-01-05,South Africa,NA,72
+South Africa,India,2018-01-13,South Africa,NA,135
+India,South Africa,2018-01-24,India,NA,63
+West Indies,Sri Lanka,2018-06-06,West Indies,NA,226
+Australia,India,2018-12-14,Australia,NA,146
+New Zealand,Pakistan,2018-11-16,New Zealand,NA,4
+Pakistan,New Zealand,2018-11-24,Pakistan,NA,16
+New Zealand,Pakistan,2018-12-03,New Zealand,NA,123
+India,West Indies,2018-10-04,India,NA,272
+West Indies,India,2018-10-12,India,10,NA
+Australia,South Africa,2018-03-09,South Africa,6,NA
+Bangladesh,Sri Lanka,2018-01-31,NA,NA,NA
+Sri Lanka,Bangladesh,2018-02-08,Sri Lanka,NA,215
+Sri Lanka,West Indies,2018-06-14,NA,NA,NA
+West Indies,Sri Lanka,2018-06-23,Sri Lanka,4,NA
+England,Sri Lanka,2018-11-06,England,NA,211
+England,Sri Lanka,2018-11-14,England,NA,57
+England,Sri Lanka,2018-11-23,England,NA,42
+Sri Lanka,South Africa,2018-07-20,Sri Lanka,NA,199
+India,Australia,2018-12-06,India,NA,31
+West Indies,Bangladesh,2018-07-12,West Indies,NA,166
+Bangladesh,West Indies,2018-11-22,Bangladesh,NA,64
+Bangladesh,West Indies,2018-11-30,Bangladesh,NA,184
+Zimbabwe,Bangladesh,2018-11-03,Zimbabwe,NA,151
+Bangladesh,Zimbabwe,2018-11-11,Bangladesh,NA,218
+Pakistan,Australia,2018-10-07,NA,NA,NA
+England,West Indies,2020-07-08,West Indies,4,NA
+England,West Indies,2020-07-16,England,NA,113
+England,West Indies,2020-07-24,England,NA,269
+South Africa,England,2017-07-14,South Africa,NA,340
+England,South Africa,2017-08-04,England,NA,177
+England,West Indies,2017-08-17,England,NA,209
+Zimbabwe,Sri Lanka,2017-07-14,Sri Lanka,4,NA
+India,Sri Lanka,2017-07-26,India,NA,304
+England,South Africa,2017-07-27,England,NA,239
+India,Sri Lanka,2017-08-03,India,NA,53
+India,Sri Lanka,2017-08-12,India,NA,171
+England,West Indies,2017-08-25,West Indies,5,NA
+West Indies,England,2017-09-07,England,9,NA
+England,Australia,2017-11-23,Australia,10,NA
+Australia,England,2017-12-02,Australia,NA,120
+England,Australia,2017-12-14,Australia,NA,41
+South Africa,Bangladesh,2017-09-28,South Africa,NA,333
+South Africa,Bangladesh,2017-10-06,South Africa,NA,254
+Bangladesh,Australia,2017-08-27,Bangladesh,NA,20
+Bangladesh,Australia,2017-09-04,Australia,7,NA
+West Indies,New Zealand,2017-12-01,New Zealand,NA,67
+New Zealand,West Indies,2017-12-09,New Zealand,NA,240
+Sri Lanka,Pakistan,2017-09-28,Sri Lanka,NA,21
+India,Sri Lanka,2017-11-16,NA,NA,NA
+Sri Lanka,India,2017-11-24,India,NA,239
+India,Sri Lanka,2017-12-02,NA,NA,NA
+West Indies,Zimbabwe,2017-10-21,West Indies,NA,117
+Pakistan,England,2020-08-05,England,3,NA
+Pakistan,England,2020-08-13,NA,NA,NA
+England,Pakistan,2020-08-21,NA,NA,NA
+South Africa,India,2006-12-26,South Africa,NA,174
+India,South Africa,2007-01-02,South Africa,5,NA
+England,Australia,2006-12-26,Australia,NA,99
+England,Australia,2007-01-02,Australia,10,NA
+South Africa,Pakistan,2007-01-19,Pakistan,5,NA
+Pakistan,South Africa,2007-01-26,South Africa,5,NA
+England,West Indies,2007-05-17,NA,NA,NA
+England,West Indies,2007-05-25,England,NA,283
+England,West Indies,2007-06-07,England,NA,60
+West Indies,England,2007-06-15,England,7,NA
+England,India,2007-07-19,NA,NA,NA
+England,India,2007-07-27,India,7,NA
+India,England,2007-08-09,NA,NA,NA
+India,Bangladesh,2007-05-18,NA,NA,NA
+India,Bangladesh,2007-05-25,India,NA,239
+Sri Lanka,England,2007-12-01,Sri Lanka,NA,88
+England,Sri Lanka,2007-12-09,NA,NA,NA
+Sri Lanka,England,2007-12-18,NA,NA,NA
+Australia,Sri Lanka,2007-11-08,Australia,NA,40
+Australia,Sri Lanka,2007-11-16,Australia,NA,96
+Australia,India,2007-12-26,Australia,NA,337
+Bangladesh,Sri Lanka,2007-06-25,Sri Lanka,NA,234
+Bangladesh,Sri Lanka,2007-07-03,Sri Lanka,NA,90
+Bangladesh,Sri Lanka,2007-07-11,Sri Lanka,NA,193
+Pakistan,India,2007-11-22,India,6,NA
+India,Pakistan,2007-11-30,NA,NA,NA
+India,Pakistan,2007-12-08,NA,NA,NA
+South Africa,New Zealand,2007-11-08,South Africa,NA,358
+New Zealand,South Africa,2007-11-16,South Africa,NA,59
+West Indies,South Africa,2007-12-26,West Indies,NA,128
+South Africa,Pakistan,2007-10-01,South Africa,NA,160
+South Africa,Pakistan,2007-10-08,NA,NA,NA
+England,Pakistan,2006-07-13,NA,NA,NA
+Pakistan,England,2006-07-27,England,NA,120
+England,Pakistan,2006-08-17,England,NA,NA
+England,Sri Lanka,2006-05-11,NA,NA,NA
+Sri Lanka,England,2006-05-25,England,6,NA
+Sri Lanka,England,2006-06-02,Sri Lanka,NA,134
+Australia,South Africa,2005-12-26,Australia,NA,184
+South Africa,Australia,2006-01-02,Australia,8,NA
+Pakistan,India,2006-01-21,NA,NA,NA
+Pakistan,India,2006-01-29,Pakistan,NA,341
+Bangladesh,Sri Lanka,2006-03-08,Sri Lanka,10,NA
+South Africa,Australia,2006-03-16,Australia,7,NA
+Australia,South Africa,2006-03-24,Australia,NA,112
+South Africa,Australia,2006-03-31,Australia,2,NA
+South Africa,New Zealand,2006-04-15,South Africa,NA,128
+New Zealand,South Africa,2006-04-27,NA,NA,NA
+Sri Lanka,Pakistan,2006-04-03,Pakistan,8,NA
+England,India,2006-03-01,NA,NA,NA
+India,West Indies,2006-06-02,NA,NA,NA
+India,West Indies,2006-06-10,NA,NA,NA
+West Indies,India,2006-06-22,NA,NA,NA
+India,West Indies,2006-06-30,India,NA,49
+South Africa,Sri Lanka,2006-07-27,Sri Lanka,NA,153
+South Africa,Sri Lanka,2006-08-04,Sri Lanka,1,NA
+Australia,England,2006-11-23,Australia,NA,277
+England,Australia,2006-12-01,Australia,6,NA
+Australia,England,2006-12-14,Australia,NA,206
+Sri Lanka,New Zealand,2006-12-07,New Zealand,5,NA
+Sri Lanka,New Zealand,2006-12-15,Sri Lanka,NA,217
+West Indies,Pakistan,2006-11-11,Pakistan,9,NA
+Pakistan,West Indies,2006-11-19,NA,NA,NA
+New Zealand,West Indies,2020-12-03,New Zealand,NA,134
+New Zealand,West Indies,2020-12-11,New Zealand,NA,12
+Zimbabwe,South Africa,2005-03-04,South Africa,NA,21
+Zimbabwe,South Africa,2005-03-11,South Africa,NA,62
+New Zealand,Australia,2005-03-10,Australia,9,NA
+Australia,New Zealand,2005-03-18,NA,NA,NA
+Sri Lanka,New Zealand,2005-04-11,New Zealand,NA,38
+West Indies,South Africa,2005-04-21,South Africa,NA,86
+Bangladesh,England,2005-06-03,England,NA,27
+New Zealand,Zimbabwe,2005-08-07,New Zealand,NA,294
+Bangladesh,Sri Lanka,2005-09-12,Sri Lanka,NA,96
+Sri Lanka,Bangladesh,2005-09-20,Sri Lanka,NA,69
+Zimbabwe,India,2005-09-13,India,NA,90
+Australia,ICC World XI,2005-10-14,Australia,NA,210
+West Indies,Australia,2005-11-17,Australia,9,NA
+Pakistan,England,2005-11-12,Pakistan,NA,22
+Pakistan,England,2005-11-20,NA,NA,NA
+Sri Lanka,South Africa,2020-12-26,South Africa,NA,45
+Australia,India,2020-12-26,India,8,NA
+New Zealand,Pakistan,2020-12-26,New Zealand,NA,101
+Sri Lanka,South Africa,2021-01-03,South Africa,10,NA
+Pakistan,New Zealand,2021-01-03,New Zealand,NA,176
+Australia,India,2021-01-07,NA,NA,NA
+Australia,India,2021-01-15,India,3,NA
+Sri Lanka,England,2021-01-22,England,6,NA
+South Africa,Pakistan,2021-01-26,Pakistan,7,NA
+Bangladesh,West Indies,2021-02-03,West Indies,3,NA
+Pakistan,South Africa,2021-02-04,Pakistan,NA,95
+England,India,2021-02-05,England,NA,227
+West Indies,Bangladesh,2021-02-11,West Indies,NA,17
+India,England,2021-02-13,India,NA,317
+England,India,2021-02-24,India,10,NA
+England,India,2021-03-04,India,NA,25
+Australia,Sri Lanka,2004-03-08,Australia,NA,197
+England,West Indies,2004-07-29,England,NA,256
+England,West Indies,2004-08-19,England,10,NA
+Australia,India,2004-10-14,NA,NA,NA
+India,Australia,2004-11-03,India,NA,13
+New Zealand,Bangladesh,2004-10-26,New Zealand,NA,101
+New Zealand,Australia,2004-11-18,Australia,NA,156
+Australia,New Zealand,2004-11-26,Australia,NA,213
+South Africa,India,2004-11-20,NA,NA,NA
+South Africa,India,2004-11-28,India,8,NA
+Bangladesh,India,2004-12-10,India,NA,140
+Bangladesh,West Indies,2018-07-04,West Indies,NA,219
+Sri Lanka,West Indies,2021-03-21,NA,NA,NA
+West Indies,Sri Lanka,2021-03-29,NA,NA,NA
+Sri Lanka,Bangladesh,2021-04-21,NA,NA,NA
+Zimbabwe,Pakistan,2021-04-29,Pakistan,NA,116
+Sri Lanka,Bangladesh,2021-04-29,Sri Lanka,NA,209
+Pakistan,Zimbabwe,2021-05-07,Pakistan,NA,147
+England,New Zealand,2021-06-10,New Zealand,8,NA
+West Indies,South Africa,2021-06-10,South Africa,NA,63
+South Africa,West Indies,2021-06-18,South Africa,NA,158
+Bangladesh,Zimbabwe,2021-07-07,Bangladesh,NA,220
+India,England,2021-08-25,England,NA,76
+Sri Lanka,West Indies,2021-11-21,Sri Lanka,NA,187
+India,New Zealand,2021-11-25,NA,NA,NA
+Bangladesh,Pakistan,2021-11-26,Pakistan,8,NA
+West Indies,Pakistan,2017-05-10,Pakistan,NA,101
+Sri Lanka,Pakistan,2017-10-06,Sri Lanka,NA,68
+Zimbabwe,West Indies,2017-10-29,NA,NA,NA
+Sri Lanka,South Africa,2018-07-12,Sri Lanka,NA,278
+Pakistan,Australia,2018-10-16,Pakistan,NA,373
+South Africa,England,2020-01-24,England,NA,191
+Sri Lanka,New Zealand,2019-08-14,Sri Lanka,6,NA
+India,New Zealand,2021-06-18,New Zealand,8,NA
+South Africa,England,2010-01-03,NA,NA,NA
+New Zealand,Pakistan,2009-11-24,New Zealand,NA,32
+West Indies,Australia,2012-04-23,Australia,NA,75
+Australia,Sri Lanka,2013-01-03,Australia,5,NA
+Sri Lanka,Pakistan,2014-08-14,Sri Lanka,NA,105
+New Zealand,Sri Lanka,2015-12-18,New Zealand,5,NA
+England,Australia,2021-12-08,Australia,9,NA
+England,Australia,2021-12-26,Australia,NA,14
+India,South Africa,2021-12-26,India,NA,113
+India,South Africa,2022-01-03,South Africa,7,NA
+Australia,England,2022-01-05,NA,NA,NA
+India,South Africa,2022-01-11,South Africa,7,NA
+Sri Lanka,New Zealand,2018-12-15,NA,NA,NA
+England,India,2021-08-04,NA,NA,NA
+India,England,2021-08-12,India,NA,151
+India,England,2021-09-02,India,NA,157
+Sri Lanka,England,2021-01-14,England,7,NA
+New Zealand,England,2021-06-02,NA,NA,NA
+Australia,England,2021-12-16,Australia,NA,275
+Australia,England,2022-01-14,Australia,NA,146
+Pakistan,Bangladesh,2021-12-04,Pakistan,NA,8
+India,New Zealand,2021-12-03,India,NA,372
+Sri Lanka,West Indies,2021-11-29,Sri Lanka,NA,164
+New Zealand,Bangladesh,2022-01-01,Bangladesh,8,NA
+New Zealand,Bangladesh,2022-01-09,New Zealand,NA,117
+South Africa,New Zealand,2022-02-17,New Zealand,NA,276
+South Africa,New Zealand,2022-02-25,South Africa,NA,198
+India,Sri Lanka,2022-03-04,India,NA,222
+Pakistan,Australia,2022-03-04,NA,NA,NA
+England,West Indies,2022-03-08,NA,NA,NA
+India,Sri Lanka,2022-03-12,India,NA,238
+Australia,Pakistan,2022-03-12,NA,NA,NA
+England,West Indies,2022-03-16,NA,NA,NA
+Australia,Pakistan,2022-03-21,Australia,NA,115
+England,West Indies,2022-03-24,West Indies,10,NA
+South Africa,Bangladesh,2022-03-31,South Africa,NA,220
+South Africa,Bangladesh,2022-04-08,South Africa,NA,332
+Sri Lanka,Bangladesh,2022-05-15,NA,NA,NA
+Bangladesh,Sri Lanka,2022-05-23,Sri Lanka,10,NA
+New Zealand,England,2022-06-02,England,5,NA
+England,Sri Lanka,2003-12-18,Sri Lanka,NA,215
+Australia,India,2003-12-04,NA,NA,NA
+New Zealand,England,2022-06-10,England,5,NA
+West Indies,Zimbabwe,2003-11-12,West Indies,NA,128
+Bangladesh,England,2003-10-21,England,7,NA
+Australia,West Indies,2003-05-09,West Indies,3,NA
+Bangladesh,Australia,2003-07-18,Australia,NA,132
+South Africa,England,2003-07-24,NA,NA,NA
+England,South Africa,2003-08-14,England,NA,70
+South Africa,England,2003-08-21,South Africa,NA,191
+South Africa,England,2003-09-04,England,9,NA
+New Zealand,India,2003-10-16,NA,NA,NA
+Zimbabwe,Australia,2003-10-17,Australia,9,NA
+South Africa,Pakistan,2003-10-24,NA,NA,NA
+Bangladesh,West Indies,2022-06-16,West Indies,7,NA
+South Africa,Zimbabwe,2017-12-26,South Africa,NA,120
+Australia,Sri Lanka,2019-01-24,Australia,NA,40
+England,Australia,2019-08-14,NA,NA,NA
+New Zealand,West Indies,2006-03-09,New Zealand,NA,27
+Bangladesh,West Indies,2011-10-21,NA,NA,NA
+West Indies,England,2004-04-10,NA,NA,NA
+New Zealand,South Africa,2004-03-26,South Africa,6,NA
+New Zealand,England,2022-06-23,England,7,NA
+Bangladesh,West Indies,2022-06-24,West Indies,10,NA
+Sri Lanka,Australia,2022-06-29,Australia,10,NA
+India,England,2022-07-01,England,7,NA
+Zimbabwe,New Zealand,2005-08-15,New Zealand,NA,46
+India,Sri Lanka,2005-12-18,India,NA,259
+Bangladesh,Sri Lanka,2006-02-28,Sri Lanka,8,NA
+Bangladesh,Australia,2006-04-09,Australia,3,NA
+England,India,2006-03-09,India,9,NA
+New Zealand,South Africa,2006-05-05,South Africa,4,NA
+Australia,New Zealand,2008-11-20,Australia,NA,149
+Australia,England,2002-12-26,Australia,5,NA
+Australia,Zimbabwe,2003-10-09,Australia,NA,175
+England,Bangladesh,2003-10-29,England,NA,329
+South Africa,West Indies,2003-12-12,South Africa,NA,189
+South Africa,New Zealand,2004-03-18,New Zealand,9,NA
+South Africa,England,2005-01-02,South Africa,NA,196
+New Zealand,Sri Lanka,2015-12-10,New Zealand,NA,122
+Australia,Sri Lanka,2022-07-08,Sri Lanka,NA,39
+England,South Africa,2022-08-17,South Africa,NA,12
+South Africa,England,2022-08-25,England,NA,85
+South Africa,England,2022-09-08,England,9,NA
+Australia,West Indies,2022-11-30,Australia,NA,164
+Australia,West Indies,2022-12-08,Australia,NA,419
+South Africa,Australia,2022-12-17,Australia,6,NA
+Pakistan,England,2022-12-17,England,8,NA
+India,Bangladesh,2022-12-14,India,NA,188
+Bangladesh,India,2022-12-22,India,3,NA
+South Africa,Australia,2022-12-26,Australia,NA,182
+Pakistan,New Zealand,2022-12-26,NA,NA,NA
+New Zealand,Pakistan,2023-01-02,NA,NA,NA
+Australia,South Africa,2023-01-04,NA,NA,NA
+India,Australia,2004-01-02,NA,NA,NA
+England,Australia,2003-01-02,England,NA,225
+West Indies,Zimbabwe,2023-02-04,NA,NA,NA
+Australia,India,2023-02-09,India,NA,132
+Zimbabwe,West Indies,2023-02-12,West Indies,NA,4
+England,New Zealand,2023-02-16,England,NA,267
+Australia,India,2023-02-17,India,6,NA
+England,New Zealand,2023-02-24,New Zealand,NA,1
+South Africa,West Indies,2023-02-28,South Africa,NA,87
+India,Australia,2023-03-01,Australia,9,NA
+South Africa,West Indies,2023-03-08,South Africa,NA,284
+Sri Lanka,New Zealand,2023-03-09,New Zealand,2,NA
+Australia,India,2023-03-09,NA,NA,NA
+New Zealand,Sri Lanka,2023-03-17,New Zealand,NA,58
+Ireland,Bangladesh,2023-04-04,Bangladesh,7,NA
+Sri Lanka,Ireland,2023-04-16,Sri Lanka,NA,280
+Ireland,Sri Lanka,2023-04-24,Sri Lanka,NA,10
+Ireland,England,2023-06-01,England,10,NA
+Australia,India,2023-06-07,Australia,NA,209
+England,Australia,2023-06-16,Australia,2,NA
+India,Australia,2020-12-17,Australia,8,NA
+Australia,England,2023-06-28,Australia,NA,43
+Australia,England,2023-07-06,England,3,NA
+West Indies,India,2023-07-12,India,NA,141
+Sri Lanka,Pakistan,2023-07-16,Pakistan,4,NA
+Australia,England,2023-07-19,NA,NA,NA
+India,West Indies,2023-07-20,NA,NA,NA
+Sri Lanka,Pakistan,2023-07-24,Pakistan,NA,222
+England,Australia,2023-07-27,England,NA,49
+Pakistan,West Indies,2021-08-12,West Indies,1,NA
+Pakistan,West Indies,2021-08-20,Pakistan,NA,109
+Sri Lanka,Pakistan,2022-07-16,Pakistan,4,NA
+Sri Lanka,Pakistan,2022-07-24,Sri Lanka,NA,246
+England,Pakistan,2022-12-01,England,NA,74
+England,Pakistan,2022-12-09,England,NA,26
+South Africa,Pakistan,2002-12-26,South Africa,10,NA
+South Africa,Pakistan,2003-01-02,South Africa,NA,142
+Bangladesh,Pakistan,2003-09-03,Pakistan,1,NA
+South Africa,Pakistan,2003-10-17,Pakistan,8,NA
+Pakistan,India,2004-04-13,India,NA,131
+Australia,Pakistan,2004-12-16,Australia,NA,491
+South Africa,West Indies,2005-04-29,NA,NA,NA
+England,Pakistan,2006-08-04,England,NA,167
+India,South Africa,2006-12-15,India,NA,123
+Australia,India,2008-01-16,India,NA,72
+England,Bangladesh,2010-05-27,England,8,NA
+Bangladesh,India,2010-01-17,India,NA,113
+India,Australia,2010-10-01,India,1,NA
+Sri Lanka,West Indies,2010-11-15,NA,NA,NA
+England,Sri Lanka,2014-06-20,Sri Lanka,NA,100
+England,Pakistan,2015-10-13,NA,NA,NA
+Sri Lanka,West Indies,2015-10-14,Sri Lanka,NA,6
+Bangladesh,New Zealand,2023-11-28,Bangladesh,NA,150
+Bangladesh,New Zealand,2023-12-06,New Zealand,4,NA
+Australia,Pakistan,2023-12-14,Australia,NA,360
+India,South Africa,2023-12-26,South Africa,NA,32
+Australia,Pakistan,2023-12-26,Australia,NA,79
+South Africa,India,2024-01-03,India,7,NA
+Pakistan,Australia,2024-01-03,Australia,8,NA
+West Indies,Australia,2024-01-17,Australia,10,NA
+West Indies,Australia,2024-01-25,West Indies,NA,8
+England,India,2024-01-25,England,NA,28
+India,England,2024-02-02,India,NA,106
+New Zealand,South Africa,2024-02-04,New Zealand,NA,281
+South Africa,New Zealand,2024-02-13,New Zealand,7,NA
+India,England,2024-02-15,India,NA,434
+England,India,2024-02-23,India,5,NA
+Australia,New Zealand,2024-02-29,Australia,NA,172
+England,India,2024-03-07,India,NA,64
+New Zealand,Australia,2024-03-08,Australia,3,NA
+Sri Lanka,Bangladesh,2024-03-22,Sri Lanka,NA,328
+Sri Lanka,Bangladesh,2024-03-30,Sri Lanka,NA,192
+West Indies,England,2024-07-10,England,NA,114
+England,West Indies,2024-07-18,England,NA,241
+West Indies,England,2024-07-26,England,10,NA
+Zimbabwe,Ireland,2024-07-25,Ireland,4,NA
+England,India,2001-12-19,NA,NA,NA
+South Africa,West Indies,2024-08-07,NA,NA,NA
+South Africa,West Indies,2024-08-15,South Africa,NA,40
+Sri Lanka,England,2024-08-21,England,5,NA
+Pakistan,Bangladesh,2024-08-21,Bangladesh,10,NA
+England,Sri Lanka,2024-08-29,England,NA,190
+Pakistan,Bangladesh,2024-08-30,Bangladesh,6,NA
+England,Sri Lanka,2024-09-06,Sri Lanka,8,NA
+India,Bangladesh,2024-09-19,India,NA,280
+Sri Lanka,New Zealand,2024-09-18,Sri Lanka,NA,63
+Bangladesh,India,2024-09-27,India,7,NA
+India,New Zealand,2024-10-16,New Zealand,8,NA
+New Zealand,India,2024-11-01,New Zealand,NA,25
+Pakistan,England,2024-10-07,England,NA,47
+Pakistan,England,2024-10-15,Pakistan,NA,152
+Sri Lanka,New Zealand,2024-09-26,Sri Lanka,NA,154
+Bangladesh,South Africa,2024-10-21,South Africa,7,NA
+South Africa,Bangladesh,2024-10-29,South Africa,NA,273
+New Zealand,India,2024-10-24,New Zealand,NA,113
+England,Pakistan,2024-10-24,Pakistan,9,NA
