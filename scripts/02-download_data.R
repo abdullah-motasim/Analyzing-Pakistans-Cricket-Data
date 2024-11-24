@@ -4,7 +4,7 @@
 # Date: 22 November 2024
 # Contact: abdullah.motasim@mail.utoronto.ca
 # License: MIT
-# Pre-requisites: 
+# Pre-requisites: cricketdata, tidyverse, and dplyr libraries
 # Any other information needed? None
 
 
@@ -91,6 +91,14 @@ combined_field_data <- bind_rows(cricinfo_data3, cricinfo_data6, cricinfo_data9)
   )
 
 cricsheet_data1 <- fetch_cricsheet("player", "male", "all")
+cricsheet_data2 <- fetch_cricsheet("match", "male", "all")
+
+fetch_cricsheet(
+  type = c("bbb", "match", "player"),
+  gender = c("female", "male"),
+  competition = "tests"
+)
+
 
 player_meta_data <- update_player_meta(start_again = FALSE)
 
@@ -109,5 +117,6 @@ write_csv(combined_bat_data, "data/01-raw_data/combined_bat_data.csv")
 write_csv(combined_bowl_data, "data/01-raw_data/combined_bowl_data.csv")
 write_csv(combined_field_data, "data/01-raw_data/combined_field_data.csv")
 
-write_csv(cricsheet_data1, "data/01-raw_data/cricsheet_data.csv")
+write_csv(cricsheet_data1, "data/01-raw_data/cricsheet_player_data.csv")
+write_csv(cricsheet_data2, "data/01-raw_data/cricsheet_match_data.csv")
 write_csv(player_meta_data, "data/01-raw_data/player_meta_data.csv")
