@@ -1,0 +1,3197 @@
+Player,Country,Start,End,Matches,Innings,Dismissals,Caught,CaughtFielder,CaughtBehind,Stumped,MaxDismissalsInnings
+MV Boucher (ICC/SA),NA,1997,2012,147,281,555,532,0,532,23,6
+AC Gilchrist ,Australia,1999,2008,96,191,416,379,0,379,37,5
+IA Healy ,Australia,1988,1999,119,224,395,366,0,366,29,6
+RW Marsh ,Australia,1970,1984,96,182,355,343,0,343,12,6
+MS Dhoni ,India,2005,2014,90,166,294,256,0,256,38,6
+AJ Stewart ,England,1990,2003,133,231,277,263,36,227,14,6
+BJ Watling ,New Zealand,2009,2021,75,143,275,267,10,257,8,6
+PJL Dujon ,West Indies,1981,1991,81,154,272,267,2,265,5,5
+BJ Haddin ,Australia,2008,2015,66,128,270,262,0,262,8,6
+APE Knott ,England,1967,1981,95,174,269,250,0,250,19,5
+JM Bairstow ,England,2012,2024,100,188,256,242,33,209,14,6
+MJ Prior ,England,2007,2014,79,146,256,243,0,243,13,6
+Q de Kock ,South Africa,2014,2021,54,101,232,221,0,221,11,6
+Wasim Bari ,Pakistan,1967,1984,81,146,228,201,0,201,27,7
+AB de Villiers ,South Africa,2004,2018,114,217,227,222,121,101,5,6
+TG Evans ,England,1946,1959,91,175,219,173,0,173,46,4
+RD Jacobs ,West Indies,1998,2004,65,122,219,207,0,207,12,7
+D Ramdin ,West Indies,2005,2016,74,131,217,205,0,205,12,5
+R Dravid (ICC/IND),NA,1996,2012,164,301,210,210,210,0,0,3
+BB McCullum ,New Zealand,2004,2016,101,186,209,198,30,168,11,5
+Kamran Akmal ,Pakistan,2002,2010,53,99,206,184,0,184,22,5
+DPMD Jayawardene ,Sri Lanka,1997,2014,149,270,205,205,205,0,0,4
+JE Root ,England,2012,2024,149,283,205,205,205,0,0,4
+AC Parore ,New Zealand,1990,2002,78,138,204,197,3,194,7,5
+KC Sangakkara ,Sri Lanka,2000,2015,134,248,202,182,51,131,20,5
+JH Kallis (ICC/SA),NA,1995,2013,166,315,200,200,200,0,0,4
+SMH Kirmani ,India,1976,1986,88,151,198,160,0,160,38,6
+RT Ponting ,Australia,1995,2012,168,328,196,196,196,0,0,3
+DL Murray ,West Indies,1963,1980,62,119,189,181,0,181,8,5
+ATW Grout ,Australia,1957,1966,51,98,187,163,0,163,24,6
+SPD Smith ,Australia,2010,2024,110,209,184,184,184,0,0,5
+Sarfaraz Ahmed ,Pakistan,2010,2023,54,104,182,160,0,160,22,5
+ME Waugh ,Australia,1991,2002,128,245,181,181,181,0,0,4
+IDS Smith ,New Zealand,1980,1992,63,109,176,168,0,168,8,7
+AN Cook ,England,2006,2018,161,300,175,175,175,0,0,3
+RW Taylor ,England,1971,1984,57,106,174,167,0,167,7,7
+SP Fleming ,New Zealand,1994,2008,111,199,171,171,171,0,0,5
+GC Smith (ICC/SA),NA,2002,2014,117,225,169,169,169,0,0,5
+RC Russell ,England,1988,1998,54,96,165,153,0,153,12,6
+BC Lara (ICC/WI),NA,1990,2006,131,241,164,164,164,0,0,4
+LRPL Taylor ,New Zealand,2007,2022,112,212,163,163,163,0,0,3
+N Dickwella ,Sri Lanka,2014,2023,54,98,161,134,1,133,27,5
+A Flower ,Zimbabwe,1992,2002,63,110,160,151,9,142,9,5
+TD Paine ,Australia,2010,2021,35,68,157,150,0,150,7,5
+MA Taylor ,Australia,1989,1999,104,197,157,157,157,0,0,4
+AR Border ,Australia,1978,1994,156,277,156,156,156,0,0,4
+HAPW Jayawardene ,Sri Lanka,2000,2015,58,102,156,124,0,124,32,5
+JC Buttler ,England,2014,2022,57,108,154,153,23,130,1,5
+DJ Richardson ,South Africa,1992,1998,42,77,152,150,0,150,2,5
+Moin Khan ,Pakistan,1990,2004,69,124,148,128,1,127,20,5
+RR Pant ,India,2018,2024,39,76,142,127,0,127,15,6
+JHB Waite ,South Africa,1951,1965,50,94,141,124,0,124,17,4
+Younis Khan ,Pakistan,2000,2017,118,221,139,139,139,0,0,4
+AT Carey ,Australia,2021,2024,33,62,137,125,0,125,12,6
+VVS Laxman ,India,1996,2012,134,248,135,135,135,0,0,4
+MJ Clarke ,Australia,2004,2015,115,223,134,134,134,0,0,3
+GO Jones ,England,2004,2006,34,66,133,128,0,128,5,6
+KS More ,India,1986,1993,49,90,130,110,0,110,20,5
+WAS Oldfield ,Australia,1920,1937,54,101,130,78,0,78,52,5
+Rashid Latif ,Pakistan,1992,2003,37,69,130,119,0,119,11,6
+ML Hayden ,Australia,1994,2009,103,205,128,128,128,0,0,4
+Mushfiqur Rahim ,BAN,2005,2024,94,165,126,111,13,98,15,5
+SK Warne ,Australia,1992,2007,145,281,125,125,125,0,0,3
+HP Tillakaratne ,Sri Lanka,1989,2004,83,141,124,122,88,34,2,5
+GS Chappell ,Australia,1970,1984,87,165,122,122,122,0,0,4
+IVA Richards ,West Indies,1974,1991,121,232,122,122,122,0,0,4
+AJ Strauss ,England,2004,2012,100,189,121,121,121,0,0,3
+IT Botham ,England,1977,1992,102,179,120,120,120,0,0,3
+MC Cowdrey ,England,1954,1975,114,214,120,120,120,0,0,3
+RS Kaluwitharana ,Sri Lanka,1992,2004,49,87,119,93,0,93,26,5
+J Da Silva ,West Indies,2020,2024,32,59,118,112,0,112,6,7
+CL Hooper ,West Indies,1987,2002,102,189,115,115,115,0,0,4
+V Kohli ,India,2011,2024,119,227,115,115,115,0,0,3
+SR Tendulkar ,India,1989,2013,200,366,115,115,115,0,0,3
+JM Parks ,England,1954,1968,46,86,114,103,2,101,11,5
+TA Blundell ,New Zealand,2017,2024,37,73,112,97,3,94,15,5
+Litton Das ,BAN,2015,2024,47,79,112,98,10,88,14,4
+SR Waugh ,Australia,1985,2004,168,318,112,112,112,0,0,3
+BA Stokes ,England,2013,2024,107,204,111,111,111,0,0,5
+WR Hammond ,England,1927,1947,85,154,110,110,110,0,0,3
+RB Simpson ,Australia,1957,1978,62,117,110,110,110,0,0,4
+GS Sobers ,West Indies,1954,1974,93,172,109,109,109,0,0,4
+HM Amla ,South Africa,2004,2019,124,234,108,108,108,0,0,3
+SM Gavaskar ,India,1971,1987,125,216,108,108,108,0,0,3
+JM Anderson ,England,2003,2024,188,355,107,107,107,0,0,3
+NR Mongia ,India,1994,2001,44,77,107,99,0,99,8,5
+M Azharuddin ,India,1984,2000,99,177,105,105,105,0,0,5
+IM Chappell ,Australia,1964,1980,75,144,105,105,105,0,0,4
+GP Thorpe ,England,1993,2005,100,179,105,105,105,0,0,4
+WP Saha ,India,2010,2021,40,77,104,92,0,92,12,6
+Saleem Yousuf ,Pakistan,1982,1990,32,58,104,91,0,91,13,5
+GA Gooch ,England,1975,1995,118,211,103,103,103,0,0,3
+LD Chandimal ,Sri Lanka,2011,2024,84,156,102,92,21,71,10,6
+JR Murray ,West Indies,1993,2002,33,61,102,99,1,98,3,5
+AM Rahane ,India,2013,2023,85,163,102,102,102,0,0,5
+IR Bell ,England,2004,2015,118,223,100,100,100,0,0,3
+BKG Mendis ,Sri Lanka,2015,2024,67,122,100,98,83,15,2,4
+DC Boon ,Australia,1984,1996,107,195,99,99,99,0,0,4
+GRA Langley ,Australia,1951,1956,26,51,98,83,0,83,15,5
+TWM Latham ,New Zealand,2014,2024,85,165,98,98,90,8,0,4
+LEG Ames ,England,1929,1939,47,87,97,74,2,72,23,4
+PD Collingwood ,England,2003,2011,68,124,96,96,95,1,0,4
+CH Gayle ,West Indies,2000,2014,103,190,96,96,96,0,0,3
+CG Greenidge ,West Indies,1974,1991,108,208,96,96,96,0,0,3
+KJ Wadsworth ,New Zealand,1969,1976,33,59,96,92,0,92,4,5
+ME Trescothick ,England,2000,2006,76,139,95,95,95,0,0,4
+HH Gibbs ,South Africa,1996,2008,90,173,94,94,94,0,0,4
+Javed Miandad ,Pakistan,1976,1993,124,218,94,93,93,0,1,3
+Imtiaz Ahmed ,Pakistan,1952,1962,41,69,93,77,3,74,16,5
+Mohammad Rizwan ,Pakistan,2016,2024,35,62,93,86,1,85,7,4
+D Elgar ,South Africa,2012,2024,86,158,92,92,92,0,0,3
+AFA Lilley ,England,1896,1909,35,67,92,70,0,70,22,4
+V Sehwag (ICC/IND),NA,2001,2013,104,192,91,91,91,0,0,3
+DA Warner ,Australia,2011,2024,112,215,91,91,90,1,0,4
+FCM Alexander ,West Indies,1957,1961,25,47,90,85,0,85,5,5
+SO Dowrich ,West Indies,2015,2020,35,61,90,85,0,85,5,4
+GA Hick ,England,1991,2001,65,115,90,90,90,0,0,4
+CH Lloyd ,West Indies,1966,1985,110,209,90,90,90,0,0,2
+RB Richardson ,West Indies,1983,1995,86,164,90,90,90,0,0,3
+KS Williamson ,New Zealand,2010,2024,102,194,90,90,90,0,0,3
+TM Dilshan ,Sri Lanka,1999,2013,87,159,88,88,77,11,0,4
+AW Greig ,England,1972,1977,58,107,87,87,87,0,0,4
+Khaled Mashud ,BAN,2000,2007,44,61,87,78,0,78,9,4
+MEK Hussey ,Australia,2005,2013,79,153,85,85,85,0,0,3
+MS Wade ,Australia,2012,2021,36,70,85,74,11,63,11,5
+MA Atherton ,England,1989,2001,115,200,83,83,83,0,0,3
+G Kirsten ,South Africa,1993,2004,101,191,83,83,83,0,0,4
+IR Redpath ,Australia,1964,1976,66,123,83,83,83,0,0,3
+TG Southee ,New Zealand,2008,2024,104,200,83,83,83,0,0,2
+FM Engineer ,India,1961,1975,46,83,82,66,0,66,16,3
+CO Browne ,West Indies,1995,2005,20,36,81,79,0,79,2,5
+Inzamam-ul-Haq (ICC/PAK),NA,1992,2007,120,219,81,81,81,0,0,4
+DM de Silva ,Sri Lanka,2016,2024,59,107,80,80,80,0,0,5
+TW Graveney ,England,1951,1969,79,152,80,80,78,2,0,3
+BT Foakes ,England,2018,2024,25,47,79,69,0,69,10,4
+ST Jayasuriya ,Sri Lanka,1991,2007,110,196,78,78,78,0,0,3
+DB Vengsarkar ,India,1976,1992,116,202,78,78,78,0,0,4
+Adnan Akmal ,Pakistan,2010,2014,21,41,77,66,0,66,11,6
+Asad Shafiq ,Pakistan,2010,2020,77,144,77,77,77,0,0,3
+AD Mathews ,Sri Lanka,2009,2024,114,208,76,76,76,0,0,3
+PR Downton ,England,1981,1988,30,51,75,70,0,70,5,4
+AJ Lamb ,England,1982,1992,79,146,75,75,75,0,0,4
+DI Gower ,England,1978,1992,117,211,74,74,74,0,0,3
+JL Langer ,Australia,1993,2007,105,206,73,73,73,0,0,2
+H Strudwick ,England,1910,1926,28,50,73,61,0,61,12,4
+M Muralidaran (ICC/SL),NA,1992,2010,133,233,72,72,72,0,0,2
+PA Patel ,India,2002,2018,25,47,72,62,0,62,10,4
+SM Pollock ,South Africa,1995,2008,108,205,72,72,72,0,0,3
+MD Crowe ,New Zealand,1982,1995,77,130,71,71,71,0,0,4
+SC Ganguly ,India,1996,2008,113,208,71,71,71,0,0,3
+JO Holder ,West Indies,2014,2024,69,123,71,71,71,0,0,4
+NJ Astle ,New Zealand,1996,2006,81,147,70,70,70,0,0,2
+Majid Khan ,Pakistan,1964,1983,63,116,70,70,65,5,0,4
+KL Rahul ,India,2014,2024,54,103,68,68,59,9,0,4
+DJ Cullinan ,South Africa,1993,2001,70,130,67,67,67,0,0,3
+N Hussain ,England,1990,2004,96,165,67,67,67,0,0,3
+Azhar Ali ,Pakistan,2010,2022,97,181,66,66,66,0,0,3
+S Chanderpaul ,West Indies,1994,2015,164,297,66,66,66,0,0,2
+CA Pujara ,India,2010,2023,103,199,66,66,66,0,0,3
+R Benaud ,Australia,1952,1964,63,122,65,65,65,0,0,3
+H Carter ,Australia,1907,1921,28,55,65,44,0,44,21,4
+DL Haynes ,West Indies,1978,1994,116,221,65,65,65,0,0,2
+Mohammad Yousuf ,Pakistan,1998,2010,90,168,65,65,65,0,0,3
+Saleem Malik ,Pakistan,1982,1999,103,184,65,65,65,0,0,3
+DJG Sammy ,West Indies,2007,2013,38,68,65,65,65,0,0,5
+RG Sharma ,India,2013,2024,64,125,65,65,65,0,0,3
+JV Coney ,New Zealand,1974,1987,52,97,64,64,64,0,0,3
+RN Harvey ,Australia,1948,1963,79,152,64,64,64,0,0,4
+N Kapil Dev ,India,1978,1994,131,230,64,64,64,0,0,2
+OJ Pope ,England,2018,2024,52,99,64,63,51,12,1,4
+FS Trueman ,England,1952,1965,67,128,64,64,64,0,0,3
+CL Walcott ,West Indies,1948,1960,44,82,64,53,26,27,11,4
+FE Woolley ,England,1909,1934,64,113,64,64,63,1,0,4
+F du Plessis ,South Africa,2012,2021,69,128,63,63,63,0,0,3
+KD Karthik ,India,2004,2018,26,49,63,57,6,51,6,4
+JJ Kelly ,Australia,1896,1905,36,67,63,43,0,43,20,4
+PM Nevill ,Australia,2015,2016,17,31,63,61,0,61,2,4
+GR Viswanath ,India,1969,1983,91,159,63,63,63,0,0,3
+RC Fredericks ,West Indies,1968,1977,59,112,62,62,62,0,0,4
+DA Murray ,West Indies,1978,1982,19,34,62,57,0,57,5,5
+KP Pietersen ,England,2005,2014,104,193,62,62,62,0,0,3
+T Taibu ,Zimbabwe,2001,2012,28,42,62,57,2,55,5,4
+JM Blackham ,Australia,1877,1894,35,62,61,37,2,35,24,4
+MA Butcher ,England,1997,2004,71,122,61,61,61,0,0,3
+NM Lyon ,Australia,2011,2024,130,251,61,61,61,0,0,2
+K Verreynne ,South Africa,2021,2024,20,36,61,56,2,54,5,5
+ADR Campbell ,Zimbabwe,1992,2002,60,105,60,60,60,0,0,3
+G Duckworth ,England,1924,1936,24,43,60,45,0,45,15,4
+FDM Karunaratne ,Sri Lanka,2012,2024,96,177,60,60,60,0,0,3
+A Kumble ,India,1990,2008,132,242,60,60,60,0,0,2
+W Rhodes ,England,1899,1930,58,110,60,60,60,0,0,4
+HB Taber ,Australia,1966,1970,16,30,60,56,0,56,4,5
+MW Gatting ,England,1978,1995,79,135,59,59,59,0,0,3
+WK Lees ,New Zealand,1976,1983,21,42,59,52,0,52,7,5
+DT Lindsay ,South Africa,1963,1970,19,36,59,57,3,54,2,6
+GAR Lock ,England,1952,1968,49,93,59,59,59,0,0,3
+MS Atapattu ,Sri Lanka,1990,2007,90,159,58,58,58,0,0,3
+KF Barrington ,England,1955,1968,82,153,58,58,58,0,0,3
+D Tallon ,Australia,1946,1953,21,42,58,50,0,50,8,4
+DL Vettori (ICC/NZ),NA,1997,2014,113,205,58,58,58,0,0,3
+L Hutton ,England,1937,1955,79,147,57,57,57,0,0,3
+AL Logie ,West Indies,1983,1991,52,98,57,57,57,0,0,4
+Z Crawley ,England,2019,2024,50,95,56,56,56,0,0,4
+RS Mahanama ,Sri Lanka,1986,1998,52,81,56,56,56,0,0,4
+B Mitchell ,South Africa,1929,1949,42,71,56,56,56,0,0,4
+SCJ Broad ,England,2007,2023,167,315,55,55,55,0,0,2
+UT Khawaja ,Australia,2011,2024,74,139,55,55,55,0,0,3
+JT Murray ,England,1961,1967,21,38,55,52,0,52,3,6
+KWR Fletcher ,England,1968,1982,59,106,54,54,54,0,0,3
+SD Hope ,West Indies,2015,2021,38,69,54,53,44,9,1,5
+BN Jarman ,Australia,1959,1969,19,36,54,50,0,50,4,4
+ND McKenzie ,South Africa,2000,2009,58,111,54,54,54,0,0,3
+CMW Read ,England,1999,2007,15,26,54,48,0,48,6,6
+GP Swann ,England,2008,2013,60,113,54,54,54,0,0,3
+BA Young ,New Zealand,1993,1999,35,58,54,54,54,0,0,3
+RR Sarwan ,West Indies,2000,2011,87,162,53,53,53,0,0,2
+MJK Smith ,England,1958,1972,50,91,53,53,53,0,0,3
+ED Solkar ,India,1969,1977,27,50,53,53,53,0,0,4
+JM Brearley ,England,1976,1981,39,75,52,52,52,0,0,3
+A Flintoff (ENG/ICC),NA,1998,2009,79,144,52,52,52,0,0,3
+LR Gibbs ,West Indies,1958,1976,79,151,52,52,52,0,0,3
+WB Phillips ,Australia,1983,1986,27,43,52,52,9,43,0,5
+RP Arnold ,Sri Lanka,1997,2004,44,77,51,51,51,0,0,4
+DM Bravo ,West Indies,2010,2020,56,96,51,51,51,0,0,5
+HB Cameron ,South Africa,1927,1935,26,45,51,39,0,39,12,4
+RW Chakabva ,Zimbabwe,2011,2021,22,38,51,46,1,45,5,5
+AE Dick ,New Zealand,1961,1965,17,30,51,47,0,47,4,4
+AI Kallicharran ,West Indies,1972,1981,66,124,51,51,51,0,0,2
+NS Tamhane ,India,1955,1961,21,35,51,35,0,35,16,4
+MJ Guptill ,New Zealand,2009,2016,47,88,50,50,50,0,0,3
+KJ Hughes ,Australia,1977,1984,70,126,50,50,50,0,0,3
+RB Kanhai ,West Indies,1957,1974,79,147,50,50,44,6,0,3
+Misbah-ul-Haq ,Pakistan,2001,2017,75,143,50,50,50,0,0,3
+DCS Compton ,England,1937,1957,78,146,49,49,49,0,0,2
+BM McMillan ,South Africa,1992,1998,38,70,49,49,49,0,0,3
+SJ Rhodes ,England,1994,1995,11,22,49,46,0,46,3,4
+M Vijay ,India,2008,2018,61,115,49,49,49,0,0,2
+ED Weekes ,West Indies,1948,1958,48,90,49,49,49,0,0,4
+JC Adams ,West Indies,1992,2001,54,99,48,48,48,0,0,4
+CS Baugh ,West Indies,2003,2012,21,38,48,43,0,43,5,5
+TL Goddard ,South Africa,1955,1970,41,77,48,48,48,0,0,4
+Mudassar Nazar ,Pakistan,1976,1989,76,133,48,48,48,0,0,2
+Taufeeq Umar ,Pakistan,2001,2014,44,83,48,48,44,4,0,4
+M Amarnath ,India,1969,1988,69,115,47,47,47,0,0,3
+SL Campbell ,West Indies,1995,2002,52,92,47,47,47,0,0,3
+JL Hendriks ,West Indies,1962,1969,20,37,47,42,0,42,5,4
+AG Prince ,South Africa,2002,2011,66,124,47,47,47,0,0,3
+A Ranatunga ,Sri Lanka,1982,2000,93,148,47,47,47,0,0,3
+SJ Rixon ,Australia,1977,1985,13,24,47,42,0,42,5,4
+KR Stackpole ,Australia,1966,1974,43,83,47,47,47,0,0,3
+RA Jadeja ,India,2012,2024,77,150,46,46,46,0,0,3
+AL Wadekar ,India,1966,1974,37,69,46,46,46,0,0,4
+J Blackwood ,West Indies,2014,2023,56,99,45,45,45,0,0,5
+GS Blewett ,Australia,1995,2000,46,90,45,45,45,0,0,3
+Ijaz Ahmed ,Pakistan,1987,2001,60,110,45,45,45,0,0,3
+R Illingworth ,England,1958,1973,61,115,45,45,45,0,0,3
+Mohammad Hafeez ,Pakistan,2003,2018,55,107,45,45,45,0,0,2
+TT Samaraweera ,Sri Lanka,2001,2013,81,145,45,45,45,0,0,3
+H Trumble ,Australia,1890,1904,32,61,45,45,45,0,0,3
+SR Watson ,Australia,2005,2015,59,113,45,45,45,0,0,3
+WW Armstrong ,Australia,1902,1921,50,96,44,44,44,0,0,2
+KC Brathwaite ,West Indies,2011,2024,95,170,44,44,44,0,0,2
+BE Congdon ,New Zealand,1965,1978,61,110,44,44,43,1,0,3
+AK Markram ,South Africa,2017,2024,41,79,44,44,44,0,0,3
+DJ Mitchell ,New Zealand,2019,2024,28,54,44,44,44,0,0,3
+JR Reid ,New Zealand,1949,1965,58,90,44,43,39,4,1,3
+DL Underwood ,England,1966,1982,86,157,44,44,44,0,0,3
+MP Vaughan ,England,1999,2008,82,150,44,44,44,0,0,3
+S Venkataraghavan ,India,1965,1983,57,101,44,44,44,0,0,4
+Wasim Akram ,Pakistan,1985,2002,104,186,44,44,44,0,0,3
+TA Boult ,New Zealand,2011,2022,78,149,43,43,43,0,0,2
+PA de Silva ,Sri Lanka,1984,2002,93,149,43,43,43,0,0,4
+JH Edrich ,England,1963,1976,77,145,43,43,43,0,0,2
+GW Flower ,Zimbabwe,1992,2004,67,114,43,43,43,0,0,3
+AW Nourse ,South Africa,1902,1924,45,78,43,43,43,0,0,4
+KD Walters ,Australia,1965,1981,74,142,43,43,43,0,0,2
+FMM Worrell ,West Indies,1948,1963,51,98,43,43,43,0,0,3
+Babar Azam ,Pakistan,2016,2024,55,102,42,42,42,0,0,2
+AK Davidson ,Australia,1953,1963,44,85,42,42,42,0,0,4
+PH Edmonds ,England,1975,1987,51,91,42,42,42,0,0,4
+J Garner ,West Indies,1977,1987,58,111,42,42,42,0,0,3
+Harbhajan Singh ,India,1998,2015,103,192,42,42,42,0,0,2
+Iqbal Qasim ,Pakistan,1976,1988,50,89,42,42,42,0,0,3
+PBH May ,England,1951,1961,66,127,42,42,42,0,0,4
+Mushtaq Mohammad ,Pakistan,1959,1979,57,102,42,42,42,0,0,2
+PH Parfitt ,England,1961,1972,37,73,42,42,42,0,0,4
+GM Turner ,New Zealand,1969,1983,41,75,42,42,42,0,0,2
+D Williams ,West Indies,1992,1998,11,19,42,40,0,40,2,5
+DJ Bravo ,West Indies,2004,2010,40,71,41,41,41,0,0,3
+JJ Crowe ,New Zealand,1983,1990,39,69,41,41,41,0,0,4
+WR Endean ,South Africa,1951,1958,28,52,41,41,38,3,0,3
+SJ McCabe ,Australia,1930,1938,39,73,41,41,41,0,0,3
+GM Wood ,Australia,1978,1988,59,108,41,41,41,0,0,2
+MM Ali ,England,2014,2023,68,129,40,40,40,0,0,4
+Hanif Mohammad ,Pakistan,1952,1969,55,95,40,40,38,2,0,4
+Imran Farhat ,Pakistan,2001,2013,40,72,40,40,40,0,0,2
+Mominul Haque ,BAN,2013,2024,68,117,40,40,40,0,0,3
+K Srikkanth ,India,1981,1992,43,78,40,40,40,0,0,5
+LC Braund ,England,1901,1908,23,44,39,39,39,0,0,4
+WJ Edrich ,England,1938,1955,39,70,39,39,39,0,0,3
+BN French ,England,1986,1988,16,25,39,38,0,38,1,4
+WG Grace ,England,1880,1899,22,42,39,39,38,1,0,3
+Sir RJ Hadlee ,New Zealand,1973,1990,86,156,39,39,39,0,0,2
+SM Katich ,Australia,2001,2010,56,109,39,39,39,0,0,2
+Mahmudullah ,BAN,2009,2021,50,87,39,38,38,0,1,3
+MR Ramprakash ,England,1991,2002,52,93,39,39,39,0,0,3
+RA Smith ,England,1988,1996,62,110,39,39,39,0,0,3
+MA Starc ,Australia,2011,2024,90,174,39,39,39,0,0,2
+RGD Willis ,England,1971,1984,90,165,39,39,39,0,0,2
+CPS Chauhan ,India,1969,1981,40,71,38,38,38,0,0,3
+JP Duminy ,South Africa,2008,2017,46,83,38,38,38,0,0,3
+G Gambhir ,India,2004,2016,58,104,38,38,38,0,0,2
+M Labuschagne ,Australia,2018,2024,51,97,38,38,38,0,0,3
+GD McGrath ,Australia,1993,2007,124,244,38,38,38,0,0,2
+GR Marsh ,Australia,1985,1992,50,89,38,38,38,0,0,2
+Mehidy Hasan Miraz ,BAN,2016,2024,50,90,38,38,38,0,0,3
+KR Miller ,Australia,1946,1956,55,105,38,38,38,0,0,2
+JG Wright ,New Zealand,1978,1993,82,145,38,38,38,0,0,3
+CG Borde ,India,1958,1969,55,96,37,37,37,0,0,3
+JM Gregory ,Australia,1920,1928,24,44,37,37,37,0,0,3
+Aamer Sohail ,Pakistan,1992,2000,47,87,36,36,36,0,0,3
+R Ashwin ,India,2011,2024,105,203,36,36,36,0,0,2
+Asif Iqbal ,Pakistan,1964,1980,58,110,36,36,36,0,0,2
+RA Harper ,West Indies,1983,1993,25,49,36,36,36,0,0,3
+AC Hudson ,South Africa,1992,1998,35,63,36,36,36,0,0,4
+DR Martyn ,Australia,1992,2006,67,130,36,36,36,0,0,2
+HM Nicholls ,New Zealand,2016,2023,56,108,36,36,36,0,0,2
+RJ Shastri ,India,1981,1992,80,140,36,36,36,0,0,2
+PW Sherwell ,South Africa,1906,1911,13,24,36,20,0,20,16,3
+DS Smith ,West Indies,2003,2018,43,79,36,36,36,0,0,3
+HDRL Thirimanne ,Sri Lanka,2011,2022,44,82,36,36,36,0,0,5
+EJ Barlow ,South Africa,1961,1970,30,58,35,35,35,0,0,3
+Imrul Kayes ,BAN,2008,2019,39,67,35,35,30,5,0,5
+GRJ Roope ,England,1973,1978,21,37,35,35,35,0,0,3
+JK Silva ,Sri Lanka,2011,2018,39,75,35,34,28,6,1,2
+FJ Titmus ,England,1955,1975,53,100,35,35,35,0,0,2
+KJ Wright ,Australia,1979,1979,10,16,35,31,0,31,4,5
+MG Burgess ,New Zealand,1968,1980,50,94,34,34,34,0,0,2
+SV Carlisle ,Zimbabwe,1995,2005,37,62,34,34,34,0,0,3
+SS Das ,India,2000,2002,23,43,34,34,34,0,0,3
+JE Emburey ,England,1978,1995,64,109,34,34,34,0,0,2
+DM Jones ,Australia,1984,1992,52,91,34,34,34,0,0,2
+L Klusener ,South Africa,1996,2004,49,92,34,34,34,0,0,2
+GD McKenzie ,Australia,1961,1971,60,113,34,34,34,0,0,2
+Mohsin Khan ,Pakistan,1978,1986,48,83,34,34,34,0,0,3
+Nurul Hasan ,BAN,2017,2023,11,20,34,25,0,25,9,3
+Ramiz Raja ,Pakistan,1984,1997,57,103,34,34,34,0,0,3
+JN Rhodes ,South Africa,1992,2000,52,96,34,34,34,0,0,2
+SAR Silva ,Sri Lanka,1983,1988,9,15,34,33,0,33,1,6
+Zaheer Abbas ,Pakistan,1969,1985,78,139,34,34,34,0,0,3
+G Boycott ,England,1964,1982,108,193,33,33,33,0,0,2
+WJ Cronje ,South Africa,1992,2000,68,128,33,33,33,0,0,2
+AF Giles ,England,1998,2006,54,99,33,33,33,0,0,2
+AP Gurusinha ,Sri Lanka,1985,1996,41,66,33,33,31,2,0,2
+EH Hendren ,England,1920,1935,51,92,33,33,33,0,0,2
+C Hill ,Australia,1896,1912,49,93,33,33,33,0,0,3
+HJ Howarth ,New Zealand,1969,1977,30,55,33,33,33,0,0,3
+MH Mankad ,India,1946,1959,44,72,33,33,33,0,0,3
+MJ Slater ,Australia,1993,2001,74,143,33,33,33,0,0,4
+PR Umrigar ,India,1948,1962,59,101,33,33,33,0,0,3
+S Abid Ali ,India,1967,1974,29,53,32,32,32,0,0,3
+TE Bailey ,England,1949,1959,61,118,32,32,32,0,0,2
+DG Bradman ,Australia,1928,1948,52,99,32,32,32,0,0,2
+APF Chapman ,England,1924,1931,26,46,32,32,32,0,0,4
+WW Hinds ,West Indies,2000,2005,45,83,32,32,32,0,0,3
+K Rabada ,South Africa,2015,2024,66,121,32,32,32,0,0,2
+KR Rutherford ,New Zealand,1985,1995,56,95,32,32,32,0,0,2
+JL Smith ,England,2024,2024,9,18,32,31,0,31,1,3
+TA Ward ,South Africa,1912,1924,23,37,32,19,0,19,13,3
+TR Ambrose ,England,2008,2009,11,21,31,31,0,31,0,3
+JG Bracewell ,New Zealand,1980,1990,41,73,31,31,31,0,0,3
+PJ Cummins ,Australia,2011,2024,63,120,31,31,31,0,0,2
+C Green ,Australia,2020,2024,28,53,31,31,31,0,0,3
+JT Ikin ,England,1946,1955,18,32,31,31,31,0,0,3
+AN Petersen ,South Africa,2010,2015,36,68,31,31,31,0,0,2
+KOA Powell ,West Indies,2011,2021,44,79,31,31,31,0,0,3
+DW Randall ,England,1977,1984,47,88,31,31,31,0,0,2
+PK Sen ,India,1948,1952,14,21,31,20,0,20,11,4
+MS Sinclair ,New Zealand,1999,2010,33,61,31,31,30,1,0,3
+VT Trumper ,Australia,1899,1912,48,90,31,31,31,0,0,2
+WPUJC Vaas ,Sri Lanka,1994,2009,111,196,31,31,31,0,0,2
+B Yardley ,Australia,1978,1983,33,62,31,31,31,0,0,2
+Yuvraj Singh ,India,2003,2012,40,76,31,31,31,0,0,2
+BL Cairns ,New Zealand,1974,1985,43,78,30,30,30,0,0,2
+D Ganga ,West Indies,1998,2008,48,87,30,30,30,0,0,3
+PSP Handscomb ,Australia,2016,2023,20,36,30,30,30,0,0,3
+RG Hart ,New Zealand,2002,2003,11,18,30,29,0,29,1,4
+AL Hassett ,Australia,1938,1953,43,82,30,30,30,0,0,2
+IWG Johnson ,Australia,1946,1956,45,86,30,30,30,0,0,3
+BK Kunderan ,India,1960,1967,18,31,30,23,2,21,7,5
+WM Lawry ,Australia,1961,1971,67,127,30,30,30,0,0,2
+AA Mallett ,Australia,1968,1980,38,73,30,30,30,0,0,2
+FLH Mooney ,New Zealand,1949,1954,14,23,30,22,0,22,8,4
+JM Parker ,New Zealand,1973,1980,36,65,30,30,30,0,0,3
+BRM Taylor ,Zimbabwe,2004,2021,34,54,30,30,27,3,0,2
+H Verity ,England,1931,1939,40,75,30,30,30,0,0,2
+KC Wessels (AUS/SA),NA,1982,1994,40,70,30,30,30,0,0,2
+PR Adams ,South Africa,1995,2004,45,85,29,29,29,0,0,3
+T Bavuma ,South Africa,2014,2024,59,107,29,29,29,0,0,2
+JP Crawley ,England,1994,2003,37,65,29,29,29,0,0,2
+ER Dexter ,England,1958,1968,62,116,29,29,29,0,0,2
+BL D'Oliveira ,England,1966,1972,44,83,29,29,29,0,0,3
+LK Germon ,New Zealand,1995,1997,12,19,29,27,0,27,2,4
+GP Howarth ,New Zealand,1975,1985,47,86,29,29,29,0,0,2
+AC MacLaren ,England,1894,1909,35,64,29,29,29,0,0,2
+H Masakadza ,Zimbabwe,2001,2018,38,63,29,29,29,0,0,3
+JA Rudolph ,South Africa,2003,2012,48,92,29,29,29,0,0,2
+Shakib Al Hasan ,BAN,2007,2024,71,126,29,29,29,0,0,2
+A Shrewsbury snr ,England,1881,1893,23,42,29,29,29,0,0,3
+IJL Trott ,England,2009,2015,52,99,29,29,29,0,0,2
+CA Walsh ,West Indies,1984,2001,132,244,29,29,29,0,0,2
+LN Constantine ,West Indies,1928,1939,18,29,28,28,28,0,0,3
+MH Denness ,England,1969,1975,28,50,28,28,28,0,0,2
+S Dhawan ,India,2013,2018,34,66,28,28,28,0,0,2
+JR Hazlewood ,Australia,2014,2024,71,135,28,28,28,0,0,2
+Imran Khan ,Pakistan,1971,1992,88,158,28,28,28,0,0,3
+GA Lohmann ,England,1886,1896,18,36,28,28,28,0,0,3
+Sadiq Mohammad ,Pakistan,1969,1981,41,74,28,28,28,0,0,2
+MN Samuels ,West Indies,2000,2016,71,127,28,28,28,0,0,2
+JB Statham ,England,1951,1965,70,134,28,28,28,0,0,2
+TM Alderman ,Australia,1981,1991,41,75,27,27,27,0,0,2
+J Darling ,Australia,1894,1905,34,63,27,27,27,0,0,3
+HH Dippenaar ,South Africa,1999,2007,38,72,27,27,27,0,0,2
+JN Gillespie ,Australia,1996,2006,71,141,27,27,27,0,0,1
+MJ Greatbatch ,New Zealand,1988,1996,41,64,27,27,27,0,0,3
+W Jaffer ,India,2000,2008,31,58,27,27,27,0,0,3
+MG Johnson ,Australia,2007,2015,73,141,27,27,27,0,0,4
+PG Joshi ,India,1951,1960,12,20,27,18,0,18,9,4
+Najmul Hossain Shanto ,BAN,2017,2024,33,61,27,27,27,0,0,3
+NT Paranavitana ,Sri Lanka,2009,2012,32,53,27,27,27,0,0,2
+MAK Pataudi ,India,1961,1975,46,84,27,27,27,0,0,2
+MDKJ Perera ,Sri Lanka,2015,2021,22,42,27,19,5,14,8,3
+Shan Masood ,Pakistan,2013,2024,38,67,27,27,27,0,0,2
+CL Vincent ,South Africa,1927,1935,25,43,27,27,27,0,0,2
+SC Williams ,West Indies,1994,2002,31,53,27,27,27,0,0,2
+CR Woakes ,England,2013,2024,55,106,27,27,27,0,0,2
+BS Bedi ,India,1966,1979,67,121,26,26,26,0,0,1
+AV Bedser ,England,1946,1955,51,93,26,26,26,0,0,2
+DR Jardine ,England,1928,1934,22,42,26,26,26,0,0,3
+NV Knight ,England,1995,2001,17,31,26,26,26,0,0,4
+RR Lindwall ,Australia,1946,1960,61,117,26,26,26,0,0,2
+SV Manjrekar ,India,1987,1996,37,68,26,25,25,0,1,3
+MA Noble ,Australia,1898,1909,42,79,26,26,26,0,0,3
+MH Richardson ,New Zealand,2000,2004,38,68,26,26,26,0,0,2
+Sarfraz Nawaz ,Pakistan,1969,1984,55,98,26,26,26,0,0,3
+PV Simmons ,West Indies,1988,1997,26,48,26,26,26,0,0,2
+DW Steyn ,South Africa,2004,2019,93,175,26,26,26,0,0,2
+RF Surti ,India,1960,1969,26,47,26,26,26,0,0,3
+R Swetman ,England,1959,1960,11,19,26,24,0,24,2,4
+HJ Tayfield ,South Africa,1949,1960,37,67,26,26,26,0,0,2
+Anil Dalpat ,Pakistan,1984,1985,9,15,25,22,0,22,3,3
+BS Chandrasekhar ,India,1964,1979,58,102,25,25,25,0,0,2
+PG Fulton ,New Zealand,2006,2014,23,42,25,25,25,0,0,3
+SE Gregory ,Australia,1890,1912,58,107,25,25,25,0,0,2
+TM Head ,Australia,2018,2024,50,96,25,25,25,0,0,2
+M Hendrick ,England,1974,1981,30,56,25,25,25,0,0,3
+AH Jones ,New Zealand,1987,1995,39,62,25,25,25,0,0,2
+CC Lewis ,England,1990,1996,32,58,25,25,25,0,0,2
+MD Marshall ,West Indies,1978,1991,81,153,25,25,25,0,0,2
+Mohammad Ashraful ,BAN,2001,2013,61,91,25,25,25,0,0,2
+M Morkel ,South Africa,2006,2018,86,160,25,25,25,0,0,2
+M Ntini ,South Africa,1998,2009,101,192,25,25,25,0,0,1
+EC Petrie ,New Zealand,1955,1966,14,18,25,25,0,25,0,4
+DL Amiss ,England,1966,1977,50,90,24,24,24,0,0,2
+RJ Burns ,England,2018,2022,32,62,24,24,24,0,0,2
+DB Close ,England,1949,1976,22,44,24,24,24,0,0,3
+EJM Cowan ,Australia,2011,2013,18,35,24,24,24,0,0,3
+PB Dassanayake ,Sri Lanka,1993,1994,11,14,24,19,0,19,5,5
+GC Dyer ,Australia,1986,1988,6,11,24,22,0,22,2,4
+G Giffen ,Australia,1881,1896,31,55,24,24,24,0,0,3
+HMRKB Herath ,Sri Lanka,1999,2018,93,172,24,24,24,0,0,2
+MJ Hoggard ,England,2000,2008,67,125,24,24,24,0,0,2
+C Kelleway ,Australia,1910,1928,26,47,24,24,24,0,0,3
+Mohammad Wasim ,Pakistan,1996,2000,18,32,24,22,21,1,2,2
+PWA Mulder ,South Africa,2019,2024,16,32,24,24,24,0,0,3
+VY Richardson ,Australia,1924,1936,19,37,24,24,24,0,0,5
+RA Saggers ,Australia,1948,1950,6,11,24,16,0,16,8,4
+Shubman Gill ,India,2020,2024,29,57,24,24,24,0,0,4
+SJ Snooke ,South Africa,1906,1923,26,47,24,24,24,0,0,2
+WU Tharanga ,Sri Lanka,2005,2017,31,58,24,24,24,0,0,3
+CFK van Wyk ,New Zealand,2012,2012,9,17,24,23,0,23,1,4
+Yasir Shah ,Pakistan,2014,2022,48,90,24,24,24,0,0,2
+PJP Burge ,Australia,1955,1966,42,78,23,23,23,0,0,2
+JA Burns ,Australia,2014,2020,23,44,23,23,23,0,0,2
+RL Chase ,West Indies,2016,2023,49,87,23,23,23,0,0,3
+RG de Alwis ,Sri Lanka,1983,1988,11,14,23,21,0,21,2,4
+GT Dowling ,New Zealand,1961,1972,39,71,23,23,23,0,0,3
+BM Duckett ,England,2016,2024,29,57,23,23,23,0,0,2
+BF Hastings ,New Zealand,1969,1976,31,54,23,23,23,0,0,3
+MG Hughes ,Australia,1985,1994,53,97,23,23,23,0,0,2
+B Lee ,Australia,1999,2008,76,151,23,23,23,0,0,2
+DK Lillee ,Australia,1971,1984,70,133,23,23,23,0,0,2
+RA McLean ,South Africa,1951,1964,40,72,23,23,23,0,0,2
+SE Marsh ,Australia,2011,2019,38,72,23,23,23,0,0,2
+Mushtaq Ahmed ,Pakistan,1990,2003,52,94,23,23,23,0,0,2
+SK Raina ,India,2010,2015,18,33,23,23,23,0,0,2
+I Sharma ,India,2007,2021,105,194,23,23,23,0,0,2
+Soumya Sarkar ,BAN,2015,2021,16,27,23,23,23,0,0,4
+SB Styris ,New Zealand,2002,2007,29,51,23,23,23,0,0,3
+H Sutcliffe ,England,1924,1935,54,96,23,23,23,0,0,3
+Taijul Islam ,BAN,2014,2024,50,88,23,23,23,0,0,2
+HE van der Dussen ,South Africa,2019,2022,18,33,23,23,23,0,0,3
+GN Yallop ,Australia,1976,1984,39,69,23,23,23,0,0,2
+KLT Arthurton ,West Indies,1988,1995,33,62,22,22,22,0,0,2
+Ashraf Ali ,Pakistan,1982,1987,8,14,22,17,0,17,5,4
+GS Ballance (ENG/ZIM),NA,2014,2023,24,48,22,22,22,0,0,3
+IM Barrow ,West Indies,1930,1939,11,16,22,17,1,16,5,3
+HC Brook ,England,2022,2024,21,42,22,22,22,0,0,3
+FR Brown ,England,1931,1953,22,40,22,22,22,0,0,2
+Faisal Iqbal ,Pakistan,2001,2010,26,46,22,22,22,0,0,3
+JDC Goddard ,West Indies,1948,1957,27,51,22,22,22,0,0,2
+Habibul Bashar ,BAN,2000,2008,50,70,22,22,22,0,0,2
+MA Holding ,West Indies,1975,1987,60,114,22,22,22,0,0,2
+RAS Lakmal ,Sri Lanka,2010,2022,70,130,22,22,22,0,0,1
+CD McMillan ,New Zealand,1997,2005,55,99,22,22,22,0,0,1
+MR Marsh ,Australia,2014,2024,43,83,22,22,22,0,0,2
+W Mathias ,Pakistan,1955,1962,21,36,22,22,22,0,0,4
+RG Nadkarni ,India,1955,1968,41,73,22,22,22,0,0,2
+CM Old ,England,1972,1981,46,84,22,22,22,0,0,2
+KAJ Roach ,West Indies,2009,2024,83,151,22,22,22,0,0,2
+Shoaib Mohammad ,Pakistan,1983,1995,45,79,22,22,22,0,0,2
+J Srinath ,India,1991,2002,67,122,22,22,22,0,0,2
+A Symonds ,Australia,2004,2008,26,52,22,22,22,0,0,3
+Agha Salman ,Pakistan,2022,2024,17,33,21,21,21,0,0,3
+AC Bannerman ,Australia,1879,1893,28,49,21,21,21,0,0,2
+RW Barber ,England,1960,1968,28,49,21,21,21,0,0,2
+TE Blain ,New Zealand,1986,1994,11,17,21,19,1,18,2,4
+AR Caddick ,England,1993,2003,62,106,21,21,21,0,0,2
+RJ Christiani ,West Indies,1948,1954,22,44,21,19,18,1,2,3
+RM Cowper ,Australia,1964,1968,27,50,21,21,21,0,0,2
+TM Findlay ,West Indies,1969,1973,10,17,21,19,0,19,2,4
+GB Hole ,Australia,1951,1955,18,35,21,21,21,0,0,4
+Imam-ul-Haq ,Pakistan,2018,2023,24,45,21,21,21,0,0,4
+E Jones ,Australia,1894,1902,19,34,21,21,21,0,0,3
+RB McCosker ,Australia,1975,1980,25,47,21,21,21,0,0,2
+VL Manjrekar ,India,1951,1965,55,96,21,19,17,2,2,2
+BAG Murray ,New Zealand,1968,1971,13,25,21,21,21,0,0,2
+SM Nurse ,West Indies,1960,1969,29,54,21,21,20,1,0,2
+NCL O'Neill ,Australia,1958,1965,42,82,21,21,21,0,0,2
+DG Phadkar ,India,1947,1959,31,50,21,21,21,0,0,2
+WH Ponsford ,Australia,1924,1934,29,55,21,21,21,0,0,2
+JA Raval ,New Zealand,2016,2020,24,46,21,21,21,0,0,3
+CJ Richards ,England,1986,1988,8,15,21,20,0,20,1,5
+CM Spearman ,New Zealand,1995,2000,19,38,21,21,21,0,0,2
+GHS Trott ,Australia,1888,1898,24,44,21,21,21,0,0,2
+GOB Allen ,England,1930,1948,25,47,20,20,20,0,0,2
+RG Archer ,Australia,1953,1956,19,35,20,20,20,0,0,4
+D Bishoo ,West Indies,2011,2018,36,64,20,20,20,0,0,3
+GA Faulkner ,South Africa,1906,1924,25,44,20,20,20,0,0,3
+Intikhab Alam ,Pakistan,1959,1977,47,87,20,20,20,0,0,2
+LV Maddocks ,Australia,1954,1956,7,11,20,19,0,19,1,4
+KA Maharaj ,South Africa,2016,2024,54,101,20,20,20,0,0,2
+RS Morton ,West Indies,2005,2008,15,26,20,20,20,0,0,2
+M Prabhakar ,India,1984,1995,39,69,20,20,20,0,0,2
+GS Ramchand ,India,1952,1960,33,57,20,20,20,0,0,3
+MJ Santner ,New Zealand,2015,2024,29,55,20,20,20,0,0,2
+AC Smith ,England,1962,1963,6,12,20,20,0,20,0,3
+EJ Smith ,England,1911,1913,11,20,20,17,1,16,3,3
+JB Stollmeyer ,West Indies,1939,1955,32,63,20,20,20,0,0,2
+B Sutcliffe ,New Zealand,1947,1965,42,61,20,20,20,0,0,2
+Tamim Iqbal ,BAN,2008,2023,70,122,20,20,20,0,0,2
+CJ Tavare ,England,1980,1989,31,56,20,20,20,0,0,1
+JR Thomson ,Australia,1972,1985,51,94,20,20,20,0,0,1
+AEE Vogler ,South Africa,1906,1911,15,28,20,20,20,0,0,4
+Wasim Raja ,Pakistan,1973,1985,57,98,20,20,20,0,0,2
+Yasir Hameed ,Pakistan,2003,2010,25,47,20,20,20,0,0,2
+Asif Mujtaba ,Pakistan,1986,1997,25,44,19,19,19,0,0,2
+W Barnes ,England,1880,1890,21,40,19,19,19,0,0,3
+MD Bell ,New Zealand,1998,2008,18,33,19,19,19,0,0,2
+KS Bharat ,India,2023,2024,7,14,19,18,0,18,1,3
+C de Grandhomme ,New Zealand,2016,2022,29,57,19,19,19,0,0,2
+TW Hayward ,England,1896,1909,35,67,19,19,19,0,0,2
+Z Khan ,India,2000,2014,92,173,19,19,19,0,0,2
+CJ McDermott ,Australia,1984,1996,71,126,19,19,19,0,0,2
+R Mutumbami ,Zimbabwe,2013,2014,6,12,19,17,0,17,2,5
+MDK Perera ,Sri Lanka,2014,2021,43,79,19,19,19,0,0,2
+V Pollard ,New Zealand,1965,1973,32,57,19,19,19,0,0,3
+Shahriar Nafees ,BAN,2005,2013,24,38,19,19,19,0,0,2
+PM Siddle ,Australia,2008,2019,67,128,19,19,19,0,0,2
+HW Taylor ,South Africa,1912,1932,42,69,19,19,19,0,0,2
+G Ulyett ,England,1877,1890,25,47,19,19,19,0,0,3
+L Vincent ,New Zealand,2001,2007,23,41,19,19,19,0,0,3
+N Wagner ,New Zealand,2012,2024,64,123,19,19,19,0,0,2
+GJ Whittall ,Zimbabwe,1993,2002,46,81,19,19,19,0,0,3
+UT Yadav ,India,2011,2023,57,112,19,19,19,0,0,2
+TJ Zoehrer ,Australia,1986,1987,10,16,19,18,0,18,1,3
+Abdullah Shafique ,Pakistan,2021,2024,22,42,18,18,18,0,0,2
+DW Allan ,West Indies,1962,1966,5,10,18,15,0,15,3,3
+CEL Ambrose ,West Indies,1988,2000,98,182,18,18,18,0,0,1
+N Boje ,South Africa,2000,2006,43,80,18,18,18,0,0,2
+JW Burke ,Australia,1951,1959,24,45,18,18,18,0,0,2
+NJ Contractor ,India,1955,1962,31,54,18,18,18,0,0,2
+DG Cork ,England,1995,2002,37,65,18,18,18,0,0,2
+Danish Kaneria ,Pakistan,2000,2010,61,115,18,18,18,0,0,1
+AA Donald ,South Africa,1992,2002,72,134,18,18,18,0,0,2
+CR Ervine ,Zimbabwe,2011,2024,21,36,18,18,18,0,0,4
+JS Foster ,England,2001,2002,7,13,18,17,0,17,1,5
+HA Gomes ,West Indies,1976,1987,60,112,18,18,18,0,0,1
+GE Gomez ,West Indies,1939,1954,29,58,18,18,18,0,0,3
+GH Hirst ,England,1897,1909,24,44,18,18,18,0,0,2
+DAJ Holford ,West Indies,1966,1977,24,42,18,18,18,0,0,2
+JM How ,New Zealand,2006,2009,19,32,18,18,18,0,0,2
+AH Jarvis ,Australia,1885,1895,11,19,18,9,1,8,9,3
+MJ Leach ,England,2018,2024,39,74,18,18,18,0,0,2
+DJ McGlew ,South Africa,1951,1962,34,63,18,18,18,0,0,3
+JA Maclean ,Australia,1978,1979,4,8,18,18,0,18,0,5
+KD Petersen ,South Africa,2021,2024,14,27,18,18,18,0,0,3
+EAS Prasanna ,India,1962,1978,49,88,18,18,18,0,0,2
+S Ramesh ,India,1999,2001,19,36,18,18,18,0,0,2
+Saeed Anwar ,Pakistan,1990,2001,55,101,18,18,18,0,0,2
+RO Schwarz ,South Africa,1906,1912,20,36,18,18,18,0,0,2
+Shoaib Malik ,Pakistan,2001,2015,35,67,18,18,18,0,0,2
+LJ Tucker ,Ireland,2023,2024,6,10,18,16,0,16,2,4
+Waqar Younis ,Pakistan,1989,2003,87,158,18,18,18,0,0,3
+GP Wickramasinghe ,Sri Lanka,1991,2001,40,65,18,18,18,0,0,2
+SFAF Bacchus ,West Indies,1978,1982,19,34,17,17,17,0,0,3
+AP Binns ,West Indies,1953,1956,5,10,17,14,0,14,3,3
+BC Booth ,Australia,1961,1966,29,54,17,17,17,0,0,2
+DG Brownlie ,New Zealand,2011,2013,14,25,17,17,17,0,0,4
+AN Connolly ,Australia,1963,1971,29,55,17,17,17,0,0,2
+CB Fry ,England,1896,1912,26,47,17,17,17,0,0,2
+JW Gleeson ,Australia,1967,1972,29,56,17,17,17,0,0,2
+CV Grimmett ,Australia,1925,1936,37,71,17,17,17,0,0,2
+JB Hobbs ,England,1908,1930,61,110,17,17,17,0,0,2
+MJ Horne ,New Zealand,1997,2003,35,65,17,17,17,0,0,3
+DL Houghton ,Zimbabwe,1992,1997,22,40,17,17,17,0,0,3
+ML Jaisimha ,India,1959,1971,39,72,17,17,17,0,0,1
+KK Jennings ,England,2016,2019,17,32,17,17,17,0,0,4
+CG Macartney ,Australia,1907,1926,35,64,17,17,17,0,0,1
+G MacGregor ,England,1890,1893,8,15,17,14,0,14,3,3
+GRJ Matthews ,Australia,1983,1993,33,56,17,17,17,0,0,2
+G Miller ,England,1976,1984,34,62,17,17,17,0,0,2
+MJ North ,Australia,2009,2010,21,40,17,17,17,0,0,2
+BP Patel ,India,1974,1977,21,37,17,17,17,0,0,3
+R Peel ,England,1884,1896,20,38,17,17,17,0,0,2
+VD Philander ,South Africa,2011,2020,64,119,17,17,17,0,0,1
+RG Pollock ,South Africa,1963,1970,23,44,17,17,17,0,0,2
+LG Rowe ,West Indies,1972,1980,30,55,17,17,17,0,0,2
+J Ryder ,Australia,1920,1929,20,36,17,17,17,0,0,3
+S Samarawickrama ,Sri Lanka,2017,2024,9,16,17,15,4,11,2,3
+Shadman Islam ,BAN,2018,2024,19,31,17,17,17,0,0,4
+PJ Sharpe ,England,1963,1969,12,24,17,17,17,0,0,2
+AP Sheahan ,Australia,1967,1974,31,60,17,17,17,0,0,1
+HH Streak ,Zimbabwe,1993,2005,65,110,17,17,17,0,0,2
+WW Wade ,South Africa,1938,1950,11,18,17,15,0,15,2,3
+JT Ward ,New Zealand,1964,1968,8,15,17,16,0,16,1,4
+AJ Watkins ,England,1948,1952,15,26,17,17,17,0,0,3
+WA Young ,New Zealand,2020,2024,19,38,17,17,17,0,0,3
+Aamer Malik ,Pakistan,1987,1994,14,26,16,15,11,4,1,4
+CT Bancroft ,Australia,2017,2019,10,19,16,16,16,0,0,3
+AJ Bichel ,Australia,1997,2003,19,38,16,16,16,0,0,2
+GJ Bonnor ,Australia,1880,1888,17,29,16,16,16,0,0,3
+JJ Bumrah ,India,2018,2024,41,79,16,16,16,0,0,1
+N Deonarine ,West Indies,2005,2013,18,33,16,16,16,0,0,3
+M Dillon ,West Indies,1997,2004,38,69,16,16,16,0,0,2
+SB Doull ,New Zealand,1992,2000,32,53,16,16,16,0,0,2
+DD Ebrahim ,Zimbabwe,2001,2005,29,45,16,16,16,0,0,2
+ST Gabriel ,West Indies,2012,2023,59,105,16,16,16,0,0,2
+KD Ghavri ,India,1974,1981,39,69,16,16,16,0,0,2
+CC Griffith ,West Indies,1960,1969,28,52,16,16,16,0,0,2
+SC Guillen (NZ/WI),NA,1951,1956,8,15,16,13,0,13,3,3
+AJ Hall ,South Africa,2002,2007,21,39,16,16,16,0,0,2
+Haroon Rasheed ,Pakistan,1977,1983,23,41,16,16,16,0,0,2
+PL Harris ,South Africa,2007,2011,37,69,16,16,16,0,0,2
+VA Holder ,West Indies,1969,1979,40,74,16,16,16,0,0,1
+CC Hunte ,West Indies,1958,1967,44,85,16,16,16,0,0,2
+Imran Butt ,Pakistan,2021,2021,6,12,16,16,16,0,0,3
+FA Iredale ,Australia,1894,1899,14,27,16,16,16,0,0,3
+KC James ,New Zealand,1930,1933,11,16,16,11,0,11,5,2
+WR James ,Zimbabwe,1993,1994,4,7,16,16,0,16,0,5
+WA Johnston ,Australia,1947,1955,40,79,16,16,16,0,0,2
+AH Kardar (IND/PAK),NA,1946,1958,26,45,16,16,16,0,0,2
+MS Kasprowicz ,Australia,1996,2006,38,75,16,16,16,0,0,2
+BM Laird ,Australia,1979,1982,21,37,16,16,16,0,0,2
+SCG MacGill ,Australia,1998,2008,44,87,16,16,16,0,0,2
+KD Mackay ,Australia,1956,1963,37,71,16,16,16,0,0,2
+Mohammed Shami ,India,2013,2023,64,124,16,16,16,0,0,1
+Mohammed Siraj ,India,2020,2024,32,61,16,16,16,0,0,2
+A Nel ,South Africa,2001,2008,36,69,16,16,16,0,0,2
+CS Pandit ,India,1986,1992,5,9,16,14,3,11,2,4
+WW Read ,England,1882,1893,18,35,16,16,16,0,0,2
+P Roy ,India,1951,1960,43,72,16,16,16,0,0,2
+V Sibanda ,Zimbabwe,2003,2014,14,27,16,16,16,0,0,3
+JA Snow ,England,1965,1976,49,93,16,16,16,0,0,2
+JT Tyldesley ,England,1899,1909,31,59,16,16,16,0,0,1
+RES Wyatt ,England,1927,1937,40,74,16,16,16,0,0,2
+Yashpal Sharma ,India,1979,1983,37,60,16,16,16,0,0,2
+Abdul Qadir ,Pakistan,1977,1990,67,117,15,15,15,0,0,2
+Abdul Razzaq ,Pakistan,1999,2006,46,85,15,15,15,0,0,2
+BF Butcher ,West Indies,1958,1969,44,83,15,15,15,0,0,2
+AG Chipperfield ,Australia,1934,1938,14,26,15,15,15,0,0,3
+A Chopra ,India,2003,2004,10,19,15,15,15,0,0,3
+RRS Cornwall ,West Indies,2019,2023,10,18,15,15,15,0,0,3
+CI Dunusinghe ,Sri Lanka,1995,1995,5,9,15,13,0,13,2,4
+KA Edwards ,West Indies,2011,2014,17,32,15,15,15,0,0,2
+AG Fairfax ,Australia,1929,1931,10,19,15,15,15,0,0,3
+KNM Fernando ,Sri Lanka,2023,2024,10,18,15,15,11,4,0,3
+AD Gaekwad ,India,1974,1985,40,66,15,15,15,0,0,2
+G Gunn ,England,1907,1930,15,30,15,15,15,0,0,2
+PJ Hughes ,Australia,2009,2013,26,48,15,15,15,0,0,2
+SS Iyer ,India,2021,2024,14,27,15,15,15,0,0,2
+YBK Jaiswal ,India,2023,2024,15,28,15,15,15,0,0,3
+AO Jones ,England,1899,1909,12,23,15,15,15,0,0,2
+AS Joseph ,West Indies,2016,2024,36,66,15,15,15,0,0,2
+H Larwood ,England,1926,1933,21,38,15,15,15,0,0,4
+S Madan Lal ,India,1974,1986,39,66,15,15,15,0,0,1
+PNF Mansell ,South Africa,1951,1955,13,24,15,15,15,0,0,2
+G Millman ,England,1961,1962,6,12,15,13,0,13,2,4
+AR Morris ,Australia,1946,1955,46,90,15,15,15,0,0,2
+J Mubarak ,Sri Lanka,2002,2015,13,24,15,15,15,0,0,3
+WL Murdoch (AUS/ENG),NA,1877,1892,19,36,15,14,11,3,1,3
+KJ O'Keeffe ,Australia,1971,1977,24,47,15,15,15,0,0,2
+JDP Oram ,New Zealand,2002,2009,33,60,15,15,15,0,0,2
+DN Patel ,New Zealand,1987,1997,37,62,15,15,15,0,0,2
+PI Pocock ,England,1968,1985,25,46,15,15,15,0,0,3
+MSK Prasad ,India,1999,2000,6,11,15,15,0,15,0,4
+Qasim Umar ,Pakistan,1983,1986,26,42,15,15,15,0,0,2
+Rajin Saleh ,BAN,2003,2008,24,37,15,15,14,1,0,3
+PR Reiffel ,Australia,1992,1998,35,68,15,15,15,0,0,1
+CJL Rogers ,Australia,2008,2015,25,49,15,15,15,0,0,3
+Saqlain Mushtaq ,Pakistan,1995,2004,49,87,15,15,15,0,0,2
+PA Strang ,Zimbabwe,1994,2001,24,44,15,15,15,0,0,3
+DR Tuffey ,New Zealand,2000,2010,26,46,15,15,15,0,0,2
+A Turner ,Australia,1975,1977,14,27,15,15,15,0,0,4
+W Voce ,England,1930,1947,27,51,15,15,15,0,0,2
+AC Voges ,Australia,2015,2016,20,37,15,15,15,0,0,3
+SC Williams ,Zimbabwe,2013,2024,15,28,15,15,15,0,0,2
+CB Wishart ,Zimbabwe,1995,2005,27,45,15,15,15,0,0,2
+MA Agarwal ,India,2018,2022,21,42,14,14,14,0,0,2
+Azhar Mahmood ,Pakistan,1997,2001,21,37,14,14,14,0,0,3
+RG Barlow ,England,1881,1887,17,31,14,14,14,0,0,2
+SG Barnes ,Australia,1938,1948,13,25,14,14,14,0,0,3
+CJ Barnett ,England,1933,1948,20,39,14,14,14,0,0,2
+SJ Benn ,West Indies,2008,2015,26,45,14,14,14,0,0,2
+NE Bonner ,West Indies,2021,2022,15,29,14,14,14,0,0,2
+SL Boock ,New Zealand,1978,1989,30,54,14,14,14,0,0,2
+WA Brown ,Australia,1934,1948,22,41,14,14,14,0,0,2
+CL Cairns ,New Zealand,1989,2004,62,110,14,14,14,0,0,2
+GJ Cosier ,Australia,1975,1978,18,34,14,14,14,0,0,2
+MD Craig ,New Zealand,2014,2016,15,29,14,14,14,0,0,2
+PAJ DeFreitas ,England,1986,1995,44,78,14,14,14,0,0,2
+HDPK Dharmasena ,Sri Lanka,1993,2004,31,53,14,14,14,0,0,3
+SS Dighe ,India,2001,2001,6,11,14,12,0,12,2,3
+RA Duff ,Australia,1902,1905,22,41,14,14,14,0,0,2
+SA Durani ,India,1960,1973,29,53,14,14,14,0,0,3
+BA Edgar ,New Zealand,1978,1986,39,72,14,14,10,4,0,3
+MTG Elliott ,Australia,1996,2004,21,42,14,14,14,0,0,1
+PGH Fender ,England,1921,1929,13,23,14,14,14,0,0,2
+BOP Fernando ,Sri Lanka,2019,2023,21,39,14,14,14,0,0,2
+TR Gripper ,Zimbabwe,1999,2004,20,32,14,14,14,0,0,2
+SP Gupte ,India,1951,1961,36,61,14,14,14,0,0,2
+Haris Sohail ,Pakistan,2017,2021,16,28,14,14,14,0,0,2
+CZ Harris ,New Zealand,1992,2002,23,38,14,14,14,0,0,3
+GA Headley ,West Indies,1930,1954,22,38,14,14,14,0,0,2
+CJ Jordan ,England,2014,2015,8,16,14,14,14,0,0,3
+BD Julien ,West Indies,1973,1977,24,46,14,14,14,0,0,2
+M Kaif ,India,2000,2006,13,24,14,14,14,0,0,4
+BR Knight ,England,1961,1969,29,55,14,14,14,0,0,2
+BW Luckhurst ,England,1970,1974,21,39,14,14,14,0,0,2
+CL McCool ,Australia,1946,1950,14,27,14,14,14,0,0,1
+CC McDonald ,Australia,1952,1961,47,90,14,14,14,0,0,2
+AA Mailey ,Australia,1920,1926,21,38,14,14,14,0,0,2
+CS Martin ,New Zealand,2000,2013,71,128,14,14,14,0,0,1
+DK Morrison ,New Zealand,1987,1997,48,76,14,14,14,0,0,2
+R Pilling ,England,1881,1888,8,14,14,10,0,10,4,3
+AE Relf ,England,1903,1914,13,25,14,14,14,0,0,2
+GM Ritchie ,Australia,1982,1987,30,48,14,14,14,0,0,2
+EAB Rowan ,South Africa,1935,1951,26,43,14,14,14,0,0,2
+CB van Ryneveld ,South Africa,1951,1958,19,35,14,14,14,0,0,2
+SM Warnapura ,Sri Lanka,2007,2009,14,26,14,14,14,0,0,2
+C White ,England,1994,2002,30,53,14,14,14,0,0,3
+NWD Yardley ,England,1938,1950,20,36,14,14,14,0,0,2
+R Abel ,England,1888,1902,13,26,13,13,13,0,0,3
+L Amarnath ,India,1933,1952,24,38,13,13,8,5,0,3
+J Arun Lal ,India,1982,1989,16,30,13,13,13,0,0,2
+CWJ Athey ,England,1980,1988,23,38,13,13,13,0,0,2
+DL Bairstow ,England,1979,1981,4,7,13,12,0,12,1,4
+AB Barath ,West Indies,2009,2012,15,27,13,13,13,0,0,3
+AM Blignaut ,Zimbabwe,2001,2005,19,31,13,13,13,0,0,3
+RJ Bright ,Australia,1977,1986,25,42,13,13,13,0,0,1
+HD Bromfield ,South Africa,1961,1965,9,18,13,13,13,0,0,2
+MC Carew ,West Indies,1963,1972,19,35,13,13,13,0,0,3
+JE Cheetham ,South Africa,1949,1955,24,43,13,13,13,0,0,3
+HL Collins ,Australia,1920,1926,19,35,13,13,13,0,0,2
+JN Crawford ,England,1906,1908,12,23,13,13,13,0,0,3
+D Dasgupta ,India,2001,2002,8,15,13,13,0,13,0,3
+Fawad Alam ,Pakistan,2009,2022,19,34,13,13,13,0,0,2
+JHW Fingleton ,Australia,1932,1938,18,33,13,13,13,0,0,2
+RE Foster ,England,1903,1907,8,16,13,13,13,0,0,2
+G Geary ,England,1924,1934,14,24,13,13,13,0,0,2
+HM Goonatilleke ,Sri Lanka,1982,1982,5,9,13,10,0,10,3,4
+D Gough ,England,1994,2003,58,99,13,13,13,0,0,2
+RS Grant ,West Indies,1935,1939,7,14,13,13,13,0,0,3
+RJ Harris ,Australia,2010,2015,27,52,13,13,13,0,0,2
+JW Hearne ,England,1911,1926,24,42,13,13,13,0,0,2
+AMJ Hilditch ,Australia,1979,1985,18,28,13,13,13,0,0,2
+M Jansen ,South Africa,2021,2024,13,23,13,13,13,0,0,4
+AF Kippax ,Australia,1925,1934,22,43,13,13,13,0,0,1
+M Leyland ,England,1928,1938,41,75,13,13,13,0,0,2
+AR MacGibbon ,New Zealand,1951,1958,26,38,13,13,13,0,0,2
+DJ Malan ,England,2017,2022,22,40,13,13,13,0,0,2
+Maqsood Ahmed ,Pakistan,1952,1955,16,27,13,13,13,0,0,2
+DPB Morkel ,South Africa,1927,1932,16,28,13,13,13,0,0,2
+DJ Nash ,New Zealand,1992,2001,32,56,13,13,13,0,0,2
+GE Palmer ,Australia,1880,1886,17,30,13,13,13,0,0,2
+JS Patel ,New Zealand,2006,2017,24,43,13,13,13,0,0,3
+KS Ranjitsinhji ,England,1896,1902,15,26,13,13,13,0,0,2
+A Ratra ,India,2002,2002,6,11,13,11,0,11,2,3
+GJ Rennie ,Zimbabwe,1997,2002,23,37,13,13,13,0,0,1
+Saeed Ahmed ,Pakistan,1958,1973,41,70,13,13,13,0,0,2
+CS Serjeant ,Australia,1977,1978,12,22,13,13,13,0,0,3
+JS Solomon ,West Indies,1958,1965,27,53,13,13,13,0,0,2
+AL Valentine ,West Indies,1950,1962,36,70,13,13,13,0,0,1
+DJ Vilas ,South Africa,2015,2016,6,10,13,13,0,13,0,4
+DF Whatmore ,Australia,1979,1979,7,11,13,13,13,0,0,4
+J Worrall ,Australia,1885,1899,11,19,13,13,13,0,0,3
+Afsar Zazai ,Afghanistan,2018,2023,6,11,12,11,0,11,1,2
+TJE Andrews ,Australia,1921,1926,16,28,12,12,12,0,0,2
+W Bardsley ,Australia,1909,1926,41,74,12,12,12,0,0,1
+SF Barnes ,England,1901,1914,27,52,12,12,12,0,0,2
+WKM Benjamin ,West Indies,1987,1995,21,38,12,12,12,0,0,2
+MG Bracewell ,New Zealand,2022,2023,8,16,12,12,12,0,0,2
+J Briggs ,England,1884,1899,33,63,12,12,12,0,0,2
+SSJ Brooks ,West Indies,2019,2022,13,24,12,12,10,2,0,2
+G Brown ,England,1921,1923,7,12,12,9,0,9,3,3
+W Bruce ,Australia,1885,1895,14,24,12,12,12,0,0,3
+JD Campbell ,West Indies,2019,2022,20,38,12,12,12,0,0,1
+RH Catterall ,South Africa,1922,1931,24,41,12,12,12,0,0,3
+RK Chauhan ,India,1993,1998,21,36,12,12,12,0,0,2
+AG Cremer ,Zimbabwe,2005,2017,19,29,12,12,12,0,0,2
+TB de Bruyn ,South Africa,2017,2022,13,22,12,12,12,0,0,4
+MH Dekker ,Zimbabwe,1993,1996,14,25,12,12,12,0,0,4
+JEC Franklin ,New Zealand,2001,2013,31,56,12,12,12,0,0,1
+GM Fullerton ,South Africa,1947,1951,7,13,12,10,4,6,2,4
+EA Halliwell ,South Africa,1892,1902,8,13,12,10,0,10,2,2
+DW Hookes ,Australia,1977,1985,23,42,12,12,12,0,0,2
+WP Howell ,Australia,1898,1904,18,33,12,12,12,0,0,2
+NC Johnson ,Zimbabwe,1998,2000,13,21,12,12,12,0,0,3
+SP Jones ,Australia,1882,1888,12,21,12,12,12,0,0,2
+H Klaasen ,South Africa,2019,2023,4,6,12,10,0,10,2,4
+JC Laker ,England,1948,1959,46,91,12,12,12,0,0,1
+AV Mankad ,India,1969,1978,22,43,12,12,12,0,0,2
+PJ Moor (IRE/ZIM),NA,2016,2024,14,24,12,11,5,6,1,3
+RW Morgan ,New Zealand,1965,1972,20,37,12,12,12,0,0,2
+JDS Neesham ,New Zealand,2014,2017,12,24,12,12,12,0,0,3
+AD Nourse ,South Africa,1935,1951,34,57,12,12,12,0,0,2
+SM Patil ,India,1980,1984,29,49,12,12,12,0,0,2
+V Rathour ,India,1996,1997,6,11,12,12,12,0,0,2
+RWV Robins ,England,1929,1937,19,38,12,12,12,0,0,3
+JD Ryder ,New Zealand,2008,2011,18,32,12,12,12,0,0,2
+Salman Butt ,Pakistan,2003,2010,33,63,12,12,12,0,0,2
+Rev.DS Sheppard ,England,1950,1963,22,42,12,12,12,0,0,1
+Shoaib Akhtar ,Pakistan,1997,2007,46,86,12,12,12,0,0,2
+DP Sibley ,England,2019,2021,22,41,12,12,12,0,0,2
+RT Spooner ,England,1951,1955,7,12,12,10,0,10,2,3
+PCR Tufnell ,England,1990,2001,42,74,12,12,12,0,0,1
+Umar Akmal ,Pakistan,2009,2011,16,31,12,12,12,0,0,2
+MRJ Veletta ,Australia,1987,1990,8,14,12,12,12,0,0,2
+MHN Walker ,Australia,1972,1977,34,64,12,12,12,0,0,1
+JH Wardle ,England,1948,1957,28,56,12,12,12,0,0,3
+C Washbrook ,England,1937,1956,37,69,12,12,12,0,0,2
+JC Watkins ,South Africa,1949,1957,15,28,12,12,12,0,0,3
+BW Yuile ,New Zealand,1963,1969,17,29,12,12,12,0,0,2
+DS Atkinson ,West Indies,1948,1958,22,43,11,11,11,0,0,2
+AM Bacher ,South Africa,1996,1999,19,35,11,11,11,0,0,2
+RMH Binny ,India,1979,1987,27,47,11,11,11,0,0,1
+JH Board ,England,1899,1906,6,11,11,8,0,8,3,2
+DAJ Bracewell ,New Zealand,2011,2023,28,51,11,11,11,0,0,2
+CC Depeiaza ,West Indies,1955,1956,5,9,11,7,1,6,4,3
+PS de Villiers ,South Africa,1993,1998,18,35,11,11,11,0,0,2
+Harry Elliott ,England,1928,1934,4,8,11,8,0,8,3,3
+Fazal Mahmood ,Pakistan,1952,1962,34,56,11,11,11,0,0,1
+W Ferguson ,West Indies,1948,1954,8,16,11,11,11,0,0,3
+FR Foster ,England,1911,1912,11,20,11,11,11,0,0,2
+Ghulam Ahmed ,India,1948,1959,22,37,11,11,11,0,0,1
+WW Hall ,West Indies,1958,1969,48,92,11,11,11,0,0,1
+Hanumant Singh ,India,1964,1969,14,25,11,11,11,0,0,2
+RI Harford ,New Zealand,1968,1968,3,6,11,11,0,11,0,5
+VS Hazare ,India,1946,1953,30,48,11,11,11,0,0,2
+AJY Hopkins ,Australia,1902,1909,20,38,11,11,11,0,0,2
+J Hunter ,England,1884,1885,5,10,11,8,0,8,3,4
+Ibrahim Zadran ,Afghanistan,2019,2024,7,14,11,11,11,0,0,2
+GL Jessop ,England,1899,1912,18,34,11,11,11,0,0,2
+Junaid Siddique ,BAN,2008,2012,19,33,11,11,11,0,0,2
+RWT Key ,England,2002,2005,15,27,11,11,11,0,0,2
+DS Lehmann ,Australia,1998,2004,27,54,11,11,11,0,0,1
+JK Lever ,England,1976,1986,21,38,11,11,11,0,0,1
+P Lever ,England,1970,1975,17,31,11,11,11,0,0,2
+D Lloyd ,England,1974,1975,9,18,11,11,11,0,0,3
+EJG Morgan ,England,2010,2012,16,32,11,11,11,0,0,2
+BA Murphy ,Zimbabwe,2000,2001,11,20,11,11,11,0,0,1
+Nasim-ul-Ghani ,Pakistan,1958,1973,29,49,11,11,11,0,0,2
+MS Nichols ,England,1930,1939,14,24,11,11,11,0,0,2
+P Nissanka ,Sri Lanka,2021,2024,13,25,11,11,11,0,0,2
+MHW Papps ,New Zealand,2004,2007,8,14,11,11,11,0,0,2
+H Philipson ,England,1892,1895,5,9,11,8,0,8,3,3
+B Reddy ,India,1979,1979,4,5,11,9,0,9,2,3
+Rubel Hossain ,BAN,2009,2020,27,47,11,11,11,0,0,1
+HD Rutherford ,New Zealand,2013,2015,16,31,11,11,11,0,0,3
+Saeed Ajmal ,Pakistan,2009,2014,35,67,11,11,11,0,0,2
+Saleem Elahi ,Pakistan,1995,2003,13,23,11,10,10,0,1,4
+Shadab Kabir ,Pakistan,1996,2002,5,9,11,11,11,0,0,3
+IS Sodhi ,New Zealand,2013,2024,21,41,11,11,11,0,0,2
+FR Spofforth ,Australia,1877,1887,18,31,11,11,11,0,0,3
+W Storer ,England,1897,1899,6,10,11,11,0,11,0,3
+BC Strang ,Zimbabwe,1995,2001,26,46,11,11,11,0,0,1
+MW Tate ,England,1924,1935,39,68,11,11,11,0,0,2
+JM Taylor ,Australia,1920,1926,20,37,11,11,11,0,0,1
+Umar Gul ,Pakistan,2003,2013,47,91,11,11,11,0,0,2
+PL van der Merwe ,South Africa,1963,1967,15,30,11,11,11,0,0,2
+M van Jaarsveld ,South Africa,2002,2004,9,17,11,11,11,0,0,2
+S Viswanath ,India,1985,1985,3,6,11,11,0,11,0,4
+TW Wall ,Australia,1929,1934,18,34,11,11,11,0,0,2
+PJ Wiseman ,New Zealand,1998,2005,25,48,11,11,11,0,0,2
+A Wood ,England,1938,1939,4,7,11,10,0,10,1,2
+Yajurvindra Singh ,India,1977,1979,4,8,11,11,11,0,0,5
+Zakir Hasan ,BAN,2022,2024,13,24,11,11,11,0,0,2
+DA Allen ,England,1960,1966,39,69,10,10,10,0,0,2
+Al Sahariar ,BAN,2000,2003,15,20,10,10,10,0,0,3
+Asim Kamal ,Pakistan,2003,2005,12,23,10,10,10,0,0,2
+A Bacher ,South Africa,1965,1970,12,24,10,10,10,0,0,2
+GJ Bailey ,Australia,2013,2014,5,10,10,10,10,0,0,2
+KC Bland ,South Africa,1961,1966,21,40,10,10,10,0,0,2
+HF Boyle ,Australia,1879,1884,12,23,10,10,10,0,0,1
+BC Broad ,England,1984,1989,25,41,10,10,10,0,0,2
+ME Chapple ,New Zealand,1953,1966,14,26,10,10,10,0,0,2
+RO Collinge ,New Zealand,1965,1978,35,63,10,10,10,0,0,1
+RDB Croft ,England,1996,2001,21,35,10,10,10,0,0,2
+WW Davis ,West Indies,1983,1988,15,28,10,10,10,0,0,2
+OC Dawson ,South Africa,1947,1949,9,17,10,10,10,0,0,3
+GR Dilley ,England,1979,1989,41,66,10,10,10,0,0,2
+DR Doshi ,India,1979,1983,33,57,10,10,10,0,0,2
+KS Duleepsinhji ,England,1929,1931,12,17,10,10,10,0,0,2
+J Dyson ,Australia,1977,1984,30,56,10,10,10,0,0,2
+FH Edwards ,West Indies,2003,2012,55,102,10,10,10,0,0,1
+CRD Fernando ,Sri Lanka,2000,2012,40,69,10,10,10,0,0,2
+DR Flynn ,New Zealand,2008,2013,24,40,10,10,10,0,0,2
+G Fowler ,England,1982,1985,21,39,10,10,10,0,0,1
+MW Goodwin ,Zimbabwe,1998,2000,19,32,10,10,10,0,0,3
+GC Grant ,West Indies,1930,1935,12,18,10,10,10,0,0,2
+RE Grieveson ,South Africa,1939,1939,2,4,10,7,0,7,3,3
+HSTL Hendry ,Australia,1921,1929,11,22,10,10,10,0,0,3
+MJ Henry ,New Zealand,2015,2024,27,53,10,10,10,0,0,2
+Hon.FS Jackson ,England,1893,1905,20,36,10,10,10,0,0,2
+Javed Omar ,BAN,2001,2007,40,54,10,10,10,0,0,2
+DRE Joseph ,West Indies,1999,1999,4,8,10,10,10,0,0,3
+RS Kalpage ,Sri Lanka,1993,1999,11,16,10,10,10,0,0,2
+CBRLS Kumara ,Sri Lanka,2016,2024,31,53,10,10,10,0,0,1
+GF Lawson ,Australia,1980,1989,46,81,10,10,10,0,0,2
+PA McAlister ,Australia,1904,1909,8,16,10,10,10,0,0,2
+TG McIntosh ,New Zealand,2008,2011,17,32,10,10,10,0,0,2
+CA McWatt ,West Indies,1954,1955,6,11,10,9,0,9,1,3
+KR Mayers ,West Indies,2021,2023,18,35,10,10,10,0,0,2
+IL Mendonca ,West Indies,1962,1962,2,4,10,8,0,8,2,3
+WE Midwinter (AUS/ENG),NA,1877,1887,12,22,10,10,10,0,0,2
+MD Moxon ,England,1986,1989,10,16,10,10,10,0,0,3
+Nasir Hossain ,BAN,2011,2017,19,33,10,10,10,0,0,2
+PP Ojha ,India,2009,2013,24,48,10,10,10,0,0,1
+HK Olonga ,Zimbabwe,1995,2002,30,51,10,10,10,0,0,2
+MS Panesar ,England,2006,2013,50,90,10,10,10,0,0,1
+AY Patel ,New Zealand,2018,2024,21,40,10,10,10,0,0,2
+DR Pringle ,England,1982,1992,30,56,10,10,10,0,0,2
+KR Pushpakumara ,Sri Lanka,1994,2001,23,39,10,10,10,0,0,3
+AF Rae ,West Indies,1948,1953,15,30,10,10,10,0,0,2
+VS Ransford ,Australia,1907,1912,20,39,10,10,10,0,0,2
+Saud Shakeel ,Pakistan,2022,2024,15,29,10,10,10,0,0,2
+Shahid Afridi ,Pakistan,1998,2010,27,52,10,10,10,0,0,2
+BR Taylor ,New Zealand,1965,1973,30,55,10,10,10,0,0,1
+PL Taylor ,Australia,1987,1991,13,23,10,10,10,0,0,2
+EFS Tylecote ,England,1882,1886,6,12,10,5,0,5,5,3
+KDK Vithanage ,Sri Lanka,2013,2015,10,20,10,10,10,0,0,2
+MN Waller ,Zimbabwe,2011,2017,14,25,10,10,10,0,0,2
+CAK Walton ,West Indies,2009,2009,2,4,10,10,0,10,0,5
+Waqar Hasan ,Pakistan,1952,1959,21,36,10,10,10,0,0,2
+S Wettimuny ,Sri Lanka,1982,1987,23,35,10,10,10,0,0,2
+GC White ,South Africa,1906,1912,17,31,10,10,10,0,0,2
+AGD Wickremasinghe ,Sri Lanka,1989,1992,3,6,10,9,0,9,1,3
+RA Woolmer ,England,1975,1981,19,36,10,10,10,0,0,2
+DVP Wright ,England,1938,1951,34,62,10,10,10,0,0,2
+NS Yadav ,India,1979,1987,35,64,10,10,10,0,0,1
+Zulqarnain ,Pakistan,1986,1986,3,6,10,8,0,8,2,3
+PK Amre ,India,1992,1993,11,21,9,9,9,0,0,2
+GG Arnold ,England,1967,1975,34,61,9,9,9,0,0,2
+W Attewell ,England,1884,1892,10,20,9,9,9,0,0,2
+A Balbirnie ,Ireland,2018,2024,9,16,9,9,9,0,0,2
+W Bates ,England,1881,1887,15,29,9,9,9,0,0,1
+JM Blanckenberg ,South Africa,1913,1924,18,29,9,9,9,0,0,2
+BJT Bosanquet ,England,1903,1905,7,13,9,9,9,0,0,2
+DP Conway ,New Zealand,2021,2024,25,49,9,9,9,0,0,2
+G Cook ,England,1982,1983,7,13,9,9,9,0,0,2
+NG Cowans ,England,1982,1985,19,36,9,9,9,0,0,1
+IC Davis ,Australia,1973,1977,15,28,9,9,9,0,0,2
+ALF de Mel ,Sri Lanka,1982,1986,17,27,9,9,9,0,0,2
+RB Desai ,India,1959,1968,28,45,9,9,9,0,0,2
+JWHT Douglas ,England,1911,1925,23,42,9,9,9,0,0,3
+T Emmett ,England,1877,1882,7,13,9,9,9,0,0,3
+LE Favell ,Australia,1954,1961,19,37,9,9,9,0,0,2
+DW Fleming ,Australia,1994,2001,20,38,9,9,9,0,0,2
+ARC Fraser ,England,1989,1998,46,80,9,9,9,0,0,2
+JH Hampshire ,England,1969,1975,8,16,9,9,9,0,0,2
+J Hardstaff jnr ,England,1935,1948,23,44,9,9,9,0,0,1
+MN Hart ,New Zealand,1994,1995,14,22,9,9,9,0,0,1
+NJN Hawke ,Australia,1963,1968,27,50,9,9,9,0,0,1
+BJ Hodge ,Australia,2005,2008,6,12,9,9,9,0,0,2
+RIC Holder ,West Indies,1997,1999,11,19,9,9,9,0,0,2
+GJ Hopkins ,New Zealand,2008,2010,4,6,9,9,0,9,0,3
+KL Hutchings ,England,1907,1909,7,14,9,9,9,0,0,2
+RA Hutton ,England,1971,1971,5,9,9,9,9,0,0,2
+KS Indrajitsinhji ,India,1964,1969,4,8,9,6,0,6,3,2
+HJ Keith ,South Africa,1953,1957,8,16,9,9,9,0,0,2
+LF Kline ,Australia,1957,1961,13,25,9,9,9,0,0,2
+RA Legall ,West Indies,1953,1953,4,8,9,8,0,8,1,3
+SN McGregor ,New Zealand,1955,1965,25,39,9,9,9,0,0,1
+CE McLeod ,Australia,1894,1905,17,31,9,9,9,0,0,1
+RS Madugalle ,Sri Lanka,1982,1988,21,34,9,9,9,0,0,2
+Maninder Singh ,India,1982,1993,35,57,9,9,9,0,0,1
+Mansoor Akhtar ,Pakistan,1980,1990,19,34,9,9,9,0,0,1
+MK Mantri ,India,1951,1955,4,8,9,8,2,6,1,4
+Mashrafe Mortaza ,BAN,2001,2009,36,52,9,9,9,0,0,1
+I Meckiff ,Australia,1957,1963,18,36,9,9,9,0,0,2
+LRD Mendis ,Sri Lanka,1982,1988,24,37,9,9,9,0,0,1
+A Mitchell ,England,1933,1936,6,12,9,9,9,0,0,2
+TM Moody ,Australia,1989,1992,8,13,9,9,9,0,0,2
+JFM Morrison ,New Zealand,1973,1982,17,29,9,9,9,0,0,2
+RC Motz ,New Zealand,1961,1969,32,58,9,9,9,0,0,1
+Naushad Ali ,Pakistan,1965,1965,6,11,9,9,0,9,0,3
+EP Nupen ,South Africa,1921,1936,17,32,9,9,9,0,0,2
+Pervez Sajjad ,Pakistan,1964,1973,19,37,9,9,9,0,0,1
+RJ Peterson ,South Africa,2003,2014,15,29,9,9,9,0,0,2
+GD Phillips ,New Zealand,2020,2024,12,23,9,9,9,0,0,2
+PM Pollock ,South Africa,1961,1970,28,54,9,9,9,0,0,2
+Rahat Ali ,Pakistan,2013,2018,21,40,9,9,9,0,0,1
+S Ramadhin ,West Indies,1950,1961,43,82,9,9,9,0,0,2
+Raqibul Hasan ,BAN,2008,2011,9,17,9,9,9,0,0,2
+RJ Ratnayake ,Sri Lanka,1983,1992,23,36,9,9,9,0,0,1
+JF Reid ,New Zealand,1979,1986,19,35,9,9,9,0,0,3
+MT Renshaw ,Australia,2016,2023,14,26,9,9,9,0,0,1
+AME Roberts ,West Indies,1974,1983,47,90,9,9,9,0,0,1
+Shahadat Hossain ,BAN,2005,2015,38,63,9,9,9,0,0,1
+S Shillingford ,West Indies,2010,2014,16,29,9,9,9,0,0,1
+NS Sidhu ,India,1983,1999,51,90,9,9,9,0,0,2
+JH Sinclair ,South Africa,1896,1911,25,46,9,9,9,0,0,1
+L Sivaramakrishnan ,India,1983,1986,9,16,9,9,9,0,0,2
+GC Small ,England,1986,1991,17,32,9,9,9,0,0,2
+DR Smith ,West Indies,2004,2006,10,18,9,9,9,0,0,3
+OG Smith ,West Indies,1955,1959,26,46,9,9,9,0,0,2
+RT Stanyforth ,England,1927,1928,4,8,9,7,0,7,2,3
+GTS Stevens ,England,1922,1930,10,19,9,9,9,0,0,2
+V Subramanya ,India,1965,1968,9,15,9,9,9,0,0,3
+Taslim Arif ,Pakistan,1980,1980,6,10,9,6,0,6,3,2
+Tauseef Ahmed ,Pakistan,1980,1993,34,62,9,9,9,0,0,2
+PM Toohey ,Australia,1977,1980,15,28,9,9,9,0,0,2
+L Tuckett ,South Africa,1947,1949,9,17,9,9,9,0,0,2
+PA Wallace ,West Indies,1997,1999,7,13,9,9,9,0,0,2
+Abdur Rehman ,Pakistan,2007,2014,22,44,8,8,8,0,0,1
+HR Adhikari ,India,1947,1959,21,30,8,8,8,0,0,2
+Akram Raza ,Pakistan,1989,1995,9,15,8,8,8,0,0,2
+Alimuddin ,Pakistan,1954,1962,25,43,8,8,8,0,0,2
+EG Arnold ,England,1903,1907,10,19,8,8,8,0,0,2
+GA Bartlett ,New Zealand,1961,1968,10,18,8,8,8,0,0,1
+CA Best ,West Indies,1986,1990,8,16,8,8,8,0,0,2
+MG Bevan ,Australia,1994,1998,18,36,8,8,8,0,0,2
+SW Billings ,England,2022,2022,3,6,8,8,0,8,0,5
+JG Binks ,England,1964,1964,2,4,8,8,0,8,0,5
+IR Bishop ,West Indies,1989,1998,43,79,8,8,8,0,0,2
+SE Bond ,New Zealand,2001,2009,18,32,8,8,8,0,0,1
+TT Bresnan ,England,2009,2013,23,43,8,8,8,0,0,1
+T Campbell ,South Africa,1910,1912,5,9,8,7,0,7,1,2
+HB Cave ,New Zealand,1949,1958,19,27,8,8,8,0,0,2
+BB Chari ,Zimbabwe,2014,2018,7,13,8,8,5,3,0,3
+WL Cornford ,England,1930,1930,4,6,8,5,0,5,3,3
+A Cotter ,Australia,1904,1912,21,40,8,8,8,0,0,2
+CEH Croft ,West Indies,1977,1982,27,52,8,8,8,0,0,2
+LS Darling ,Australia,1933,1937,12,23,8,8,8,0,0,3
+HG Deane ,South Africa,1924,1931,17,27,8,8,8,0,0,2
+D Denton ,England,1905,1910,11,21,8,8,8,0,0,2
+SJ Erwee ,South Africa,2022,2023,10,16,8,8,8,0,0,2
+ST Finn ,England,2010,2016,36,68,8,8,8,0,0,2
+TJ Franklin ,New Zealand,1983,1991,21,35,8,8,8,0,0,2
+N Gifford ,England,1964,1973,15,27,8,8,8,0,0,1
+GJ Gilmour ,Australia,1973,1977,15,29,8,8,8,0,0,2
+DR Hadlee ,New Zealand,1969,1978,26,45,8,8,8,0,0,2
+S Haigh ,England,1899,1912,11,19,8,8,8,0,0,2
+AD Hales ,England,2015,2016,11,21,8,8,8,0,0,2
+MS Harris ,Australia,2018,2022,14,27,8,8,8,0,0,2
+WK Hegg ,England,1998,1999,2,4,8,8,0,8,0,3
+PS Heine ,South Africa,1955,1962,14,28,8,8,8,0,0,2
+RNS Hobbs ,England,1967,1971,7,12,8,8,8,0,0,2
+JKC Holt ,West Indies,1954,1959,17,32,8,8,8,0,0,2
+Imran Tahir ,South Africa,2011,2015,20,38,8,8,8,0,0,1
+DJ Insole ,England,1950,1957,9,18,8,8,8,0,0,3
+Khurram Manzoor ,Pakistan,2009,2014,16,30,8,8,8,0,0,2
+PN Kirsten ,South Africa,1992,1994,12,23,8,8,8,0,0,3
+P Krishnamurthy ,India,1971,1971,5,10,8,7,0,7,1,2
+KMDN Kulasekara ,Sri Lanka,2005,2014,21,40,8,8,8,0,0,2
+B Kumar ,India,2013,2018,21,38,8,8,8,0,0,2
+CB Lambert ,West Indies,1991,1998,5,10,8,8,8,0,0,3
+ACB Langton ,South Africa,1935,1939,15,23,8,8,8,0,0,1
+W Larkins ,England,1980,1991,13,22,8,8,8,0,0,2
+FJ Laver ,Australia,1899,1909,15,28,8,8,8,0,0,1
+DM Lewis ,West Indies,1971,1971,3,6,8,8,0,8,0,4
+TC Lowry ,New Zealand,1930,1931,7,11,8,8,8,0,0,2
+A Lyth ,England,2015,2015,7,13,8,8,8,0,0,2
+EL McCormick ,Australia,1935,1938,12,22,8,8,8,0,0,2
+AJW McIntyre ,England,1950,1955,3,5,8,8,1,7,0,3
+TG McMahon ,New Zealand,1955,1956,5,6,8,7,0,7,1,3
+Q McMillan ,South Africa,1929,1932,13,23,8,8,8,0,0,2
+A Melville ,South Africa,1938,1949,11,20,8,8,8,0,0,2
+BD Milburn ,New Zealand,1969,1969,3,5,8,6,0,6,2,3
+A Mishra ,India,2008,2016,22,40,8,8,8,0,0,1
+MV Narasimha Rao ,India,1978,1979,4,8,8,8,8,0,0,2
+IK Pathan ,India,2003,2008,29,54,8,8,8,0,0,1
+DBL Powell ,West Indies,2002,2009,37,68,8,8,8,0,0,2
+CAK Rajitha ,Sri Lanka,2018,2024,18,31,8,8,8,0,0,3
+D Ramnarine ,West Indies,1998,2002,12,24,8,8,8,0,0,2
+JM Read ,England,1882,1893,17,33,8,8,8,0,0,1
+OE Robinson ,England,2021,2024,20,39,8,8,8,0,0,1
+RT Robinson ,England,1984,1989,29,49,8,8,8,0,0,1
+CAG Russell ,England,1920,1923,10,16,8,8,8,0,0,3
+RG Samuels ,West Indies,1996,1997,6,12,8,8,8,0,0,2
+HJH Scott ,Australia,1884,1886,8,13,8,8,8,0,0,2
+Shujauddin ,Pakistan,1954,1962,19,34,8,8,8,0,0,1
+Shuvagata Hom ,BAN,2014,2016,8,14,8,8,8,0,0,2
+BW Sinclair ,New Zealand,1963,1968,21,37,8,8,8,0,0,2
+GB Studd ,England,1882,1883,4,8,8,8,8,0,0,3
+ML Su'a ,New Zealand,1992,1995,13,22,8,8,8,0,0,2
+R Tattersall ,England,1951,1954,16,30,8,8,8,0,0,2
+JE Taylor ,West Indies,2003,2016,46,81,8,8,8,0,0,1
+AJ Traicos (SA/ZIM),NA,1970,1993,7,12,8,8,8,0,0,4
+CTB Turner ,Australia,1887,1895,17,30,8,8,8,0,0,2
+JM Vince ,England,2016,2018,13,24,8,8,8,0,0,2
+W Watson ,England,1951,1959,23,44,8,8,8,0,0,1
+AR Whittall ,Zimbabwe,1996,1999,10,16,8,8,8,0,0,3
+MA Wood ,England,2015,2024,37,71,8,8,8,0,0,1
+TS Worthington ,England,1930,1937,9,15,8,8,8,0,0,1
+RA Young ,New Zealand,2011,2011,5,10,8,8,0,8,0,2
+Aftab Ahmed ,BAN,2004,2010,16,23,7,7,7,0,0,2
+JC Alabaster ,New Zealand,1955,1972,21,35,7,7,7,0,0,1
+Inshan Ali ,West Indies,1971,1977,12,23,7,7,7,0,0,2
+CJ Anderson ,New Zealand,2013,2016,13,25,7,7,7,0,0,2
+WE Astill ,England,1927,1930,9,18,7,7,7,0,0,1
+Hon.IFW Bligh ,England,1882,1883,4,8,7,7,7,0,0,2
+DJ Brown ,England,1965,1969,26,46,7,7,7,0,0,2
+JT Brown ,England,1894,1899,8,15,7,7,6,1,0,1
+MA Carberry ,England,2010,2014,6,12,7,7,7,0,0,1
+UDU Chandana ,Sri Lanka,1999,2005,16,30,7,7,7,0,0,1
+EJ Chatfield ,New Zealand,1975,1989,43,75,7,7,7,0,0,2
+CM Christiani ,West Indies,1935,1935,4,8,7,6,0,6,1,3
+PT Collins ,West Indies,1999,2006,32,61,7,7,7,0,0,1
+NRD Compton ,England,2012,2016,16,29,7,7,7,0,0,2
+JF Crapp ,England,1948,1949,7,13,7,7,7,0,0,2
+JL Denly ,England,2019,2020,15,29,7,7,7,0,0,1
+Dilawar Hussain ,India,1934,1936,3,6,7,6,0,6,1,3
+MP Donnelly ,New Zealand,1937,1949,7,12,7,7,7,0,0,2
+GN Edwards ,New Zealand,1977,1981,8,13,7,7,0,7,0,3
+R Edwards ,Australia,1972,1975,20,39,7,7,7,0,0,2
+SM Ervine ,Zimbabwe,2003,2004,5,6,7,7,7,0,0,2
+W Farrimond ,England,1931,1935,4,8,7,5,0,5,2,2
+MVT Fernando ,Sri Lanka,2016,2024,25,45,7,7,7,0,0,1
+AJ Finch ,Australia,2018,2018,5,10,7,7,7,0,0,4
+NA Foster ,England,1983,1993,29,50,7,7,7,0,0,1
+GN Francis ,West Indies,1928,1933,10,13,7,7,7,0,0,2
+KJ Funston ,South Africa,1952,1958,18,34,7,7,7,0,0,2
+TW Garrett ,Australia,1877,1888,19,34,7,7,7,0,0,1
+H Hameed ,England,2016,2022,10,19,7,7,7,0,0,3
+Hannan Sarkar ,BAN,2002,2004,17,26,7,7,7,0,0,2
+SJ Harmison (ENG/ICC),NA,2002,2009,63,115,7,7,7,0,0,1
+UC Hathurusingha ,Sri Lanka,1991,1999,26,44,7,7,7,0,0,1
+FC Hayes ,England,1973,1976,9,15,7,7,7,0,0,2
+DW Headley ,England,1997,1999,15,25,7,7,7,0,0,1
+SO Hetmyer ,West Indies,2017,2019,16,29,7,7,7,0,0,2
+BW Hilfenhaus ,Australia,2009,2012,27,50,7,7,7,0,0,2
+RO Hinds ,West Indies,2002,2009,15,27,7,7,7,0,0,2
+RM Hogg ,Australia,1978,1984,38,69,7,7,7,0,0,1
+PM Hornibrook ,Australia,1929,1930,6,11,7,7,7,0,0,2
+J Humphries ,England,1908,1908,3,6,7,7,0,7,0,3
+A Jackson ,Australia,1929,1931,8,16,7,7,7,0,0,2
+Jahurul Islam ,BAN,2010,2013,7,13,7,7,7,0,0,2
+PA Jaques ,Australia,2005,2008,11,22,7,7,7,0,0,2
+Javed Burki ,Pakistan,1960,1969,25,42,7,7,7,0,0,2
+LR Johnson ,West Indies,2014,2016,9,14,7,7,7,0,0,2
+SB Joshi ,India,1996,2000,15,28,7,7,7,0,0,1
+DC Jurel ,India,2024,2024,4,7,7,5,0,5,2,2
+VG Kambli ,India,1993,1995,17,30,7,7,7,0,0,1
+HR Lance ,South Africa,1962,1970,13,26,7,7,7,0,0,2
+CB Llewellyn ,South Africa,1896,1912,15,26,7,7,7,0,0,2
+ML Love ,Australia,2002,2003,5,10,7,7,7,0,0,3
+SJE Loxton ,Australia,1948,1951,12,23,7,7,7,0,0,4
+MF Maharoof ,Sri Lanka,2004,2011,22,40,7,7,7,0,0,1
+DE Malcolm ,England,1989,1997,40,73,7,7,7,0,0,1
+SL Malinga ,Sri Lanka,2004,2010,30,59,7,7,7,0,0,2
+Manzoor Elahi ,Pakistan,1984,1995,6,10,7,7,7,0,0,2
+XM Marshall ,West Indies,2005,2009,7,14,7,7,7,0,0,2
+S Matsikenyeri ,Zimbabwe,2003,2005,8,12,7,7,7,0,0,2
+TJ Matthews ,Australia,1912,1912,8,12,7,7,7,0,0,2
+TMK Mawoyo ,Zimbabwe,2011,2016,11,20,7,7,7,0,0,2
+PHKD Mendis ,Sri Lanka,2022,2024,8,16,7,7,7,0,0,1
+VM Merchant ,India,1933,1951,10,18,7,7,7,0,0,2
+C Milburn ,England,1966,1969,9,14,7,7,7,0,0,2
+Mohammad Abbas ,Pakistan,2017,2021,25,44,7,7,7,0,0,2
+Mohammad Rafique ,BAN,2000,2008,33,48,7,7,7,0,0,1
+Mohammad Sami ,Pakistan,2001,2012,36,66,7,7,7,0,0,2
+S Mushtaq Ali ,India,1934,1952,11,19,7,7,7,0,0,1
+Nayeem Hasan ,BAN,2018,2024,11,21,7,7,7,0,0,3
+Nazar Mohammad ,Pakistan,1952,1952,5,8,7,7,7,0,0,2
+L Ngidi ,South Africa,2018,2024,19,35,7,7,7,0,0,1
+ASM Oakman ,England,1956,1956,2,4,7,7,7,0,0,3
+IE O'Brien ,New Zealand,2005,2009,22,38,7,7,7,0,0,2
+WJ O'Reilly ,Australia,1932,1946,27,50,7,7,7,0,0,2
+C Overton ,England,2017,2022,8,14,7,7,7,0,0,2
+HH Pandya ,India,2017,2018,11,21,7,7,7,0,0,1
+E Paynter ,England,1931,1939,20,37,7,7,7,0,0,1
+MJ Potts ,England,2022,2024,9,17,7,7,7,0,0,2
+JSE Price ,England,1964,1972,15,28,7,7,7,0,0,2
+Rahmat Shah ,Afghanistan,2018,2024,9,17,7,7,7,0,0,1
+AMB Rowan ,South Africa,1947,1951,15,28,7,7,7,0,0,2
+Sami Aslam ,Pakistan,2015,2017,13,25,7,7,7,0,0,2
+VJ Scott ,New Zealand,1946,1952,10,14,7,7,7,0,0,2
+JED Sealy ,West Indies,1930,1939,11,21,7,6,2,4,1,2
+Shahadat Hossain (3) ,BAN,2023,2024,5,9,7,7,7,0,0,2
+Shamsur Rahman ,BAN,2014,2014,6,11,7,7,7,0,0,2
+C Sharma ,India,1984,1989,23,40,7,7,7,0,0,1
+M Sherwin ,England,1887,1888,3,6,7,5,0,5,2,4
+Shoriful Islam ,BAN,2021,2024,12,22,7,7,7,0,0,1
+IJ Siedle ,South Africa,1928,1936,18,29,7,7,7,0,0,2
+Sikander Bakht ,Pakistan,1976,1983,26,48,7,7,7,0,0,1
+LPC Silva ,Sri Lanka,2006,2008,11,21,7,7,7,0,0,2
+MC Snedden ,New Zealand,1981,1990,25,42,7,7,7,0,0,2
+DS Steele ,England,1975,1976,8,16,7,7,7,0,0,2
+T Stubbs ,South Africa,2024,2024,5,10,7,7,7,0,0,2
+JWA Taylor ,England,2012,2016,7,13,7,7,7,0,0,2
+SA Thomson ,New Zealand,1990,1995,19,31,7,7,7,0,0,1
+EWT Tindill ,New Zealand,1937,1947,5,8,7,6,0,6,1,2
+PHJ Trimborn ,South Africa,1967,1970,4,8,7,7,7,0,0,2
+TR Veivers ,Australia,1963,1967,21,38,7,7,7,0,0,2
+Wajahatullah Wasti ,Pakistan,1999,2000,6,10,7,7,7,0,0,3
+JA Warrican ,West Indies,2015,2024,17,30,7,7,7,0,0,2
+WW Whysall ,England,1925,1930,4,7,7,7,7,0,0,2
+WM Woodfull ,Australia,1926,1934,35,65,7,7,7,0,0,2
+RD Woolley ,Australia,1983,1984,2,3,7,7,0,7,0,3
+Zubayr Hamza ,South Africa,2019,2024,8,13,7,7,7,0,0,2
+Abid Ali ,Pakistan,2019,2021,16,28,6,6,6,0,0,3
+EE Achong ,West Indies,1930,1935,6,9,6,6,6,0,0,1
+CJ Adams ,England,1999,2000,5,7,6,6,6,0,0,3
+AB Agarkar ,India,1998,2006,26,48,6,6,6,0,0,1
+A Athanaze ,West Indies,2023,2024,10,17,6,6,6,0,0,2
+HK Badani ,India,2001,2001,4,7,6,6,6,0,0,2
+AA Baig ,India,1959,1967,10,17,6,6,6,0,0,1
+OAC Banks ,West Indies,2003,2005,10,20,6,6,6,0,0,3
+Basit Ali ,Pakistan,1993,1995,19,35,6,6,6,0,0,1
+DG Bedingham ,South Africa,2023,2024,8,16,6,6,6,0,0,2
+AJ Bell ,South Africa,1929,1935,16,27,6,6,6,0,0,1
+TL Best ,West Indies,2003,2013,25,46,6,6,6,0,0,1
+C Blythe ,England,1901,1910,19,37,6,6,6,0,0,1
+SM Boland ,Australia,2021,2023,10,19,6,6,6,0,0,2
+RS Bopara ,England,2007,2012,13,20,6,6,6,0,0,2
+JR Bracey ,England,2021,2021,2,4,6,6,0,6,0,2
+GE Bradburn ,New Zealand,1990,2001,7,11,6,6,6,0,0,2
+W Brockwell ,England,1893,1899,7,13,6,6,6,0,0,1
+DJ Capel ,England,1987,1990,15,24,6,6,6,0,0,2
+W Carkeek ,Australia,1912,1912,6,9,6,6,0,6,0,2
+T Chanderpaul ,West Indies,2022,2024,10,19,6,6,6,0,0,2
+E Chigumbura ,Zimbabwe,2004,2014,14,24,6,6,6,0,0,2
+WM Clark ,Australia,1977,1979,10,18,6,6,6,0,0,1
+CD Collymore ,West Indies,1999,2007,30,58,6,6,6,0,0,1
+SC Cook ,South Africa,2016,2017,11,20,6,6,6,0,0,2
+V Dahiya ,India,2000,2000,2,4,6,6,0,6,0,3
+T de Zorzi ,South Africa,2023,2024,8,16,6,6,6,0,0,2
+RL Dias ,Sri Lanka,1982,1987,20,30,6,6,6,0,0,2
+AIC Dodemaide ,Australia,1987,1992,10,17,6,6,6,0,0,2
+PA Emery ,Australia,1994,1994,1,2,6,5,0,5,1,5
+FL Fane ,England,1906,1910,14,27,6,6,6,0,0,1
+CV Gadkari ,India,1953,1955,6,10,6,6,6,0,0,3
+DRA Gehrs ,Australia,1904,1911,6,11,6,6,6,0,0,2
+Y Goonasekera ,Sri Lanka,1983,1983,2,3,6,6,6,0,0,4
+AH Gray ,West Indies,1986,1987,5,10,6,6,6,0,0,3
+EJ Gray ,New Zealand,1983,1988,10,17,6,6,6,0,0,2
+DAS Gunaratne ,Sri Lanka,2016,2017,6,12,6,6,6,0,0,2
+MD Gunathilaka ,Sri Lanka,2017,2018,8,15,6,6,6,0,0,1
+WA Hadlee ,New Zealand,1937,1951,11,17,6,6,6,0,0,2
+PGZ Harris ,New Zealand,1955,1965,9,15,6,6,6,0,0,3
+Hasan Ali ,Pakistan,2017,2024,24,47,6,6,6,0,0,1
+KAR Hodge ,West Indies,2024,2024,8,14,6,6,6,0,0,2
+TP Horan ,Australia,1877,1885,15,28,6,6,6,0,0,1
+HV Hordern ,Australia,1911,1912,7,13,6,6,6,0,0,2
+Ikram Alikhil ,Afghanistan,2019,2024,2,4,6,5,0,5,1,3
+SMS Kaluperuma ,Sri Lanka,1984,1988,4,6,6,6,6,0,0,2
+CK Kapugedera ,Sri Lanka,2006,2009,8,15,6,6,6,0,0,2
+MF Kent ,Australia,1981,1981,3,6,6,6,6,0,0,3
+R Kilner ,England,1924,1926,9,13,6,6,6,0,0,2
+James Langridge ,England,1933,1946,8,15,6,6,6,0,0,2
+DW Lawrence ,England,2021,2024,14,27,6,6,6,0,0,1
+AZ Lees ,England,2022,2022,10,19,6,6,6,0,0,2
+CN McCarthy ,South Africa,1948,1951,15,26,6,6,6,0,0,1
+PS McDonnell ,Australia,1880,1888,19,34,6,6,6,0,0,2
+PJ Martin ,England,1995,1997,8,13,6,6,6,0,0,1
+TBA May ,Australia,1987,1995,24,46,6,6,6,0,0,1
+Mehrab Hossain ,BAN,2000,2003,9,11,6,6,4,2,0,2
+CR Miller ,Australia,1998,2001,18,34,6,6,6,0,0,1
+FM Misson ,Australia,1960,1961,5,10,6,6,6,0,0,2
+Mohammad Ilyas ,Pakistan,1964,1969,10,19,6,6,6,0,0,2
+Mohammad Mithun ,BAN,2018,2021,10,15,6,6,6,0,0,1
+A Mukund ,India,2011,2017,7,14,6,6,6,0,0,2
+AD Mullally ,England,1996,2001,19,34,6,6,6,0,0,1
+DJ Murray ,New Zealand,1994,1995,8,14,6,6,6,0,0,2
+Mushfiqur Rahman ,BAN,2001,2004,10,15,6,6,6,0,0,2
+Nadeem Abbasi ,Pakistan,1989,1989,3,5,6,6,0,6,0,2
+KK Nair ,India,2016,2017,6,12,6,6,6,0,0,2
+BP Nash ,West Indies,2008,2011,21,37,6,6,6,0,0,1
+LJ Nash ,Australia,1932,1937,2,4,6,6,6,0,0,2
+A Nortje ,South Africa,2019,2023,19,32,6,6,6,0,0,2
+SB O'Connor ,New Zealand,1997,2001,19,35,6,6,6,0,0,2
+ML Page ,New Zealand,1930,1937,14,22,6,6,6,0,0,2
+BH Pairaudeau ,West Indies,1953,1957,13,25,6,6,6,0,0,1
+JT Partridge ,South Africa,1963,1965,11,20,6,6,6,0,0,1
+MM Patel ,India,2006,2011,13,25,6,6,6,0,0,2
+KR Patterson ,Australia,2019,2019,2,4,6,6,6,0,0,2
+JL Pattinson ,Australia,2011,2020,21,40,6,6,6,0,0,1
+DB Pithey ,South Africa,1963,1967,8,16,6,6,6,0,0,2
+BKV Prasad ,India,1996,2001,33,59,6,6,6,0,0,1
+KTGD Prasad ,Sri Lanka,2008,2015,25,47,6,6,6,0,0,2
+SLV Raju ,India,1990,2001,28,52,6,6,6,0,0,1
+WV Raman ,India,1988,1997,11,21,6,6,6,0,0,2
+CPH Ramanayake ,Sri Lanka,1988,1993,18,30,6,6,6,0,0,1
+R Ravindra ,New Zealand,2021,2024,12,23,6,6,6,0,0,2
+FL Reifer ,West Indies,1997,2009,6,12,6,6,6,0,0,2
+PE Richardson ,England,1956,1963,34,65,6,6,6,0,0,1
+JDB Robertson ,England,1947,1952,11,19,6,6,6,0,0,1
+PADLR Sandakan ,Sri Lanka,2016,2018,11,21,6,6,6,0,0,1
+S Shivnarine ,West Indies,1978,1979,8,13,6,6,6,0,0,2
+JM Sims ,England,1935,1937,4,8,6,6,6,0,0,3
+RP Singh ,India,2006,2011,14,25,6,6,6,0,0,1
+MJ Stewart ,England,1962,1964,8,16,6,6,6,0,0,2
+PR Stirling ,Ireland,2018,2024,7,13,6,6,6,0,0,2
+AE Stoddart ,England,1888,1898,16,29,6,6,6,0,0,1
+Tapash Baisya ,BAN,2002,2005,21,29,6,6,6,0,0,1
+Lord Tennyson ,England,1913,1921,9,16,6,6,6,0,0,2
+TL Tsolekile ,South Africa,2004,2004,3,5,6,6,0,6,0,3
+MG Vandort ,Sri Lanka,2001,2008,20,39,6,6,6,0,0,1
+S van Zyl ,South Africa,2014,2016,12,20,6,6,6,0,0,1
+MA Vermeulen ,Zimbabwe,2002,2014,9,14,6,6,6,0,0,1
+CF Walters ,England,1933,1934,11,21,6,6,6,0,0,2
+JC White ,England,1921,1931,15,29,6,6,6,0,0,1
+GC Wilson ,Ireland,2018,2019,2,4,6,6,0,6,0,3
+B Wood ,England,1972,1978,12,23,6,6,6,0,0,2
+GEC Wood ,England,1924,1924,3,6,6,5,0,5,1,2
+RA Young ,England,1907,1908,2,4,6,6,0,6,0,2
+Alok Kapali ,BAN,2002,2006,17,25,5,5,5,0,0,2
+Aminul Islam ,BAN,2000,2002,13,16,5,5,5,0,0,3
+Asif Masood ,Pakistan,1969,1977,16,29,5,5,5,0,0,1
+Atiq-uz-Zaman ,Pakistan,2000,2000,1,2,5,5,0,5,0,3
+XC Balaskas ,South Africa,1930,1939,9,14,5,5,5,0,0,1
+BA Barnett ,Australia,1938,1938,4,6,5,3,0,3,2,3
+MJ Bennett ,Australia,1984,1985,3,5,5,5,5,0,0,1
+MC Bird ,England,1910,1914,10,20,5,5,5,0,0,3
+RW Blair ,New Zealand,1953,1964,19,28,5,5,5,0,0,1
+RC Blunt ,New Zealand,1930,1932,9,14,5,5,5,0,0,2
+KD Boyce ,West Indies,1971,1976,21,41,5,5,5,0,0,1
+PVD Chameera ,Sri Lanka,2015,2021,12,22,5,5,5,0,0,1
+NGB Cook ,England,1983,1989,15,25,5,5,5,0,0,2
+CS Cowdrey ,England,1984,1988,6,12,5,5,5,0,0,2
+CE Cuffy ,West Indies,1994,2002,15,26,5,5,5,0,0,1
+SH Curnow ,South Africa,1930,1932,7,11,5,5,5,0,0,3
+SM Curran ,England,2018,2021,24,46,5,5,5,0,0,2
+OC da Costa ,West Indies,1930,1935,5,7,5,5,5,0,0,3
+EL Dalton ,South Africa,1929,1939,15,26,5,5,5,0,0,2
+WM Darling ,Australia,1978,1979,14,25,5,5,5,0,0,2
+AM de Silva ,Sri Lanka,1993,1993,3,4,5,4,0,4,1,2
+DS de Silva ,Sri Lanka,1982,1984,12,19,5,5,5,0,0,2
+KSC de Silva ,Sri Lanka,1997,1999,8,14,5,5,5,0,0,2
+RV Divecha ,India,1951,1952,5,7,5,5,5,0,0,2
+TM Dowlin ,West Indies,2009,2010,6,11,5,5,5,0,0,2
+NF Druce ,England,1897,1898,5,8,5,5,4,1,0,2
+CE Eksteen ,South Africa,1993,2000,7,14,5,5,5,0,0,1
+RMS Eranga ,Sri Lanka,2011,2016,19,36,5,5,5,0,0,1
+E Evans ,Australia,1881,1886,6,10,5,5,5,0,0,2
+AE Fagg ,England,1936,1939,5,10,5,5,5,0,0,2
+Faheem Ashraf ,Pakistan,2018,2023,17,32,5,5,5,0,0,1
+N Pradeep ,Sri Lanka,2011,2017,28,53,5,5,5,0,0,1
+FGJ Ford ,England,1894,1895,5,9,5,5,5,0,0,2
+C Fortuin ,South Africa,2024,2024,2,4,5,3,0,3,2,3
+CM Francois ,South Africa,1922,1923,5,10,5,5,5,0,0,3
+EW Freeman ,Australia,1968,1970,11,21,5,5,5,0,0,1
+DK Gaekwad ,India,1952,1961,11,17,5,5,5,0,0,1
+D Gamsy ,South Africa,1970,1970,2,4,5,5,0,5,0,3
+AE Greenidge ,West Indies,1978,1979,6,10,5,5,5,0,0,2
+AFG Griffith ,West Indies,1997,2000,14,24,5,5,5,0,0,1
+SC Griffith ,England,1948,1949,3,6,5,5,0,5,0,3
+W Gunn ,England,1887,1899,11,21,5,5,5,0,0,2
+JN Hamilton ,West Indies,2019,2019,1,2,5,5,0,5,0,3
+BR Hartland ,New Zealand,1992,1994,9,15,5,5,5,0,0,3
+Hasan Mahmud ,BAN,2024,2024,8,14,5,5,5,0,0,2
+Hasan Raza ,Pakistan,1996,2005,7,13,5,5,5,0,0,2
+CMH Hathorn ,South Africa,1902,1911,12,23,5,5,5,0,0,1
+EE Hemmings ,England,1982,1991,16,28,5,5,5,0,0,1
+ND Hirwani ,India,1988,1996,17,31,5,5,5,0,0,1
+RG Holland ,Australia,1984,1986,11,18,5,5,5,0,0,2
+DT Hondo ,Zimbabwe,2001,2005,9,13,5,5,5,0,0,2
+EAC Hunte ,West Indies,1930,1930,3,6,5,5,0,5,0,3
+Ijaz Butt ,Pakistan,1959,1962,8,13,5,5,3,2,0,2
+RK Illingworth ,England,1991,1995,9,14,5,5,5,0,0,2
+Ishan Kishan ,India,2023,2023,2,4,5,5,0,5,0,3
+A Jadeja ,India,1992,2000,15,25,5,5,5,0,0,2
+KA Jamieson ,New Zealand,2020,2024,19,38,5,5,5,0,0,1
+TJ Jenner ,Australia,1970,1975,9,18,5,5,5,0,0,2
+CB Jennings ,Australia,1912,1912,6,9,5,5,5,0,0,2
+VWC Jupp ,England,1921,1928,8,15,5,5,5,0,0,1
+AS Kennedy ,England,1922,1923,5,9,5,5,5,0,0,2
+D Kenyon ,England,1951,1955,8,15,5,5,5,0,0,2
+CL King ,West Indies,1976,1980,9,17,5,5,5,0,0,2
+FM King ,West Indies,1953,1956,14,26,5,5,5,0,0,2
+R Lamba ,India,1986,1987,4,7,5,5,5,0,0,3
+GR Larsen ,New Zealand,1994,1996,8,15,5,5,5,0,0,2
+JDF Larter ,England,1962,1965,10,20,5,5,5,0,0,2
+RT Latham ,New Zealand,1992,1993,4,8,5,5,5,0,0,2
+JD Lindsay ,South Africa,1947,1947,3,6,5,4,0,4,1,2
+FA Lowson ,England,1951,1955,7,12,5,5,5,0,0,2
+GG Macaulay ,England,1923,1933,8,14,5,5,5,0,0,1
+PE McEwan ,New Zealand,1980,1984,4,8,5,5,5,0,0,2
+NAM McLean ,West Indies,1998,2001,19,33,5,5,5,0,0,1
+EDAS McMorris ,West Indies,1958,1966,13,25,5,5,5,0,0,1
+Mahmood Hussain ,Pakistan,1952,1962,27,45,5,5,5,0,0,1
+Mahmudul Hasan Joy ,BAN,2021,2024,16,29,5,5,5,0,0,2
+JAH Marshall ,New Zealand,2005,2008,7,13,5,5,5,0,0,1
+JW Martin ,Australia,1960,1967,8,16,5,5,5,0,0,3
+EA Martindale ,West Indies,1933,1939,10,17,5,5,5,0,0,1
+HH Massie ,Australia,1881,1885,9,17,5,5,5,0,0,1
+GJ Maxwell ,Australia,2013,2017,7,12,5,5,5,0,0,2
+RTM Mendis ,Sri Lanka,2021,2024,15,28,5,5,5,0,0,1
+CA Milton ,England,1958,1959,6,12,5,5,5,0,0,2
+Mohammad Amir ,Pakistan,2009,2019,36,69,5,5,5,0,0,1
+Mohammad Sharif ,BAN,2001,2007,10,12,5,5,5,0,0,2
+CH Morris ,South Africa,2016,2017,4,8,5,5,5,0,0,2
+G Motie ,West Indies,2022,2024,9,17,5,5,5,0,0,1
+Naseem Shah ,Pakistan,2019,2024,19,31,5,5,5,0,0,1
+A Nehra ,India,1999,2004,17,30,5,5,5,0,0,1
+AD Ogilvie ,Australia,1977,1978,5,10,5,5,5,0,0,1
+NV Ojha ,India,2015,2015,1,2,5,4,0,4,1,3
+GAE Paine ,England,1935,1935,4,7,5,5,5,0,0,2
+BP Patterson ,West Indies,1986,1992,28,54,5,5,5,0,0,1
+TRO Payne ,West Indies,1986,1986,1,2,5,5,0,5,0,3
+IAR Peebles ,England,1927,1931,13,21,5,5,5,0,0,1
+SJ Pegler ,South Africa,1910,1924,16,24,5,5,5,0,0,2
+N Phillip ,West Indies,1978,1979,9,15,5,5,5,0,0,2
+PI Philpott ,Australia,1965,1966,8,15,5,5,5,0,0,2
+DL Piedt ,South Africa,2014,2024,12,22,5,5,5,0,0,2
+BA Pocock ,New Zealand,1993,1997,15,24,5,5,5,0,0,1
+PH Punjabi ,India,1955,1955,5,9,5,5,5,0,0,1
+RJ Quiney ,Australia,2012,2012,2,4,5,5,5,0,0,2
+GO Rabone ,New Zealand,1949,1955,12,19,5,5,5,0,0,2
+AJ Redmond ,New Zealand,2008,2013,8,12,5,5,5,0,0,2
+BA Reid ,Australia,1985,1992,27,46,5,5,5,0,0,1
+RA Reifer ,West Indies,2017,2023,8,15,5,5,5,0,0,2
+T Richardson ,England,1893,1898,14,25,5,5,5,0,0,1
+KE Rigg ,Australia,1931,1937,8,16,5,5,5,0,0,1
+DT Ring ,Australia,1948,1953,13,26,5,5,5,0,0,1
+CA Roach ,West Indies,1928,1935,16,23,5,5,5,0,0,1
+Robiul Islam ,BAN,2010,2014,9,17,5,5,5,0,0,1
+SD Robson ,England,2014,2014,7,14,5,5,5,0,0,1
+L Ronchi ,New Zealand,2015,2016,4,8,5,5,0,5,0,2
+Sajid Khan ,Pakistan,2021,2024,10,19,5,5,5,0,0,1
+IDK Salisbury ,England,1992,2000,15,27,5,5,5,0,0,2
+DP Samaraweera ,Sri Lanka,1993,1995,7,9,5,5,5,0,0,2
+JV Saunders ,Australia,1902,1908,14,27,5,5,5,0,0,2
+Shafqat Rana ,Pakistan,1964,1969,5,9,5,5,5,0,0,2
+Shahid Nazir ,Pakistan,1996,2007,15,29,5,5,5,0,0,2
+RJ Sidebottom ,England,2001,2010,22,37,5,5,5,0,0,1
+Sikandar Raza ,Zimbabwe,2013,2021,17,30,5,5,5,0,0,1
+LMP Simmons ,West Indies,2009,2011,8,15,5,5,5,0,0,1
+RT Simpson ,England,1948,1955,27,51,5,5,5,0,0,2
+RR Singh ,India,1998,1998,1,2,5,5,5,0,0,3
+CL Smith ,England,1983,1986,8,16,5,5,5,0,0,2
+CW Smith ,West Indies,1960,1962,5,10,5,4,3,1,1,3
+ET Smith ,England,2003,2003,3,6,5,5,5,0,0,2
+Sohag Gazi ,BAN,2012,2014,10,18,5,5,5,0,0,1
+S Sreesanth ,India,2006,2011,27,50,5,5,5,0,0,2
+AG Steel ,England,1880,1888,13,24,5,5,5,0,0,1
+CT Studd ,England,1882,1883,5,10,5,5,5,0,0,2
+R Subba Row ,England,1958,1961,13,23,5,5,5,0,0,1
+PL Symcox ,South Africa,1993,1998,20,35,5,5,5,0,0,2
+SN Thakur ,India,2018,2023,11,21,5,5,5,0,0,2
+GJ Thompson ,England,1909,1910,6,12,5,5,5,0,0,2
+DT Tiripano ,Zimbabwe,2014,2023,16,27,5,5,5,0,0,1
+RW Tolchard ,England,1977,1977,4,8,5,5,5,0,0,1
+TE Tsiga ,Zimbabwe,2023,2023,2,3,5,5,0,5,0,2
+RG Twose ,New Zealand,1995,1999,16,28,5,5,5,0,0,1
+KG Viljoen ,South Africa,1930,1949,27,46,5,5,5,0,0,1
+Wahab Riaz ,Pakistan,2010,2018,27,52,5,5,5,0,0,1
+PM Walker ,England,1960,1960,3,6,5,5,5,0,0,2
+WM Wallace ,New Zealand,1937,1953,13,20,5,5,5,0,0,1
+Wazir Mohammad ,Pakistan,1952,1959,20,37,5,5,5,0,0,1
+UWMBCA Welegedara ,Sri Lanka,2007,2014,21,36,5,5,5,0,0,1
+DM Wellham ,Australia,1981,1987,6,10,5,5,5,0,0,2
+AB Williams ,West Indies,1978,1979,7,12,5,5,5,0,0,2
+SMJ Woods (AUS/ENG),NA,1888,1896,6,10,5,5,5,0,0,3
+Yasir Ali ,BAN,2021,2022,6,11,5,5,5,0,0,2
+JA Young ,England,1947,1949,8,14,5,5,5,0,0,1
+Zahid Fazal ,Pakistan,1990,1995,9,16,5,5,5,0,0,1
+Zulfiqar Ahmed ,Pakistan,1952,1956,9,16,5,5,5,0,0,1
+Aamer Jamal ,Pakistan,2023,2024,6,11,4,4,4,0,0,3
+KJ Abbott ,South Africa,2013,2017,11,21,4,4,4,0,0,1
+Abdul Malik (1) ,Afghanistan,2021,2023,2,4,4,4,4,0,0,2
+Abdur Razzak ,BAN,2006,2018,13,21,4,4,4,0,0,1
+EL a'Beckett ,Australia,1928,1932,4,8,4,4,4,0,0,2
+MR Adair ,Ireland,2019,2024,6,11,4,4,4,0,0,1
+NAT Adcock ,South Africa,1953,1962,26,48,4,4,4,0,0,1
+PJW Allott ,England,1981,1985,13,24,4,4,4,0,0,1
+S Amarnath ,India,1976,1978,10,17,4,4,4,0,0,2
+SD Anurasiri ,Sri Lanka,1986,1998,18,27,4,4,4,0,0,1
+R Appleyard ,England,1954,1956,9,18,4,4,4,0,0,2
+KJ Arnott ,Zimbabwe,1992,1993,4,6,4,4,4,0,0,2
+HMCM Bandara ,Sri Lanka,1998,2006,8,15,4,4,4,0,0,1
+SB Bangar ,India,2001,2002,12,22,4,4,4,0,0,1
+PT Barton ,New Zealand,1961,1963,7,11,4,4,4,0,0,2
+G Bean ,England,1892,1892,3,6,4,4,4,0,0,2
+STR Binny ,India,2014,2015,6,9,4,4,4,0,0,1
+LS Birkett ,West Indies,1930,1931,4,5,4,4,4,0,0,2
+EA Brandes ,Zimbabwe,1992,1999,10,18,4,4,4,0,0,1
+IG Butler ,New Zealand,2002,2004,8,14,4,4,4,0,0,1
+MR Bynoe ,West Indies,1959,1967,4,8,4,4,4,0,0,1
+GS Camacho ,West Indies,1968,1971,11,18,4,4,4,0,0,1
+S Chattergoon ,West Indies,2008,2008,4,8,4,4,4,0,0,1
+SR Clark ,Australia,2006,2009,24,48,4,4,4,0,0,1
+IA Colquhoun ,New Zealand,1955,1955,2,3,4,4,0,4,0,2
+WW Daniel ,West Indies,1976,1984,10,20,4,4,4,0,0,1
+CA Davis ,West Indies,1968,1973,15,27,4,4,4,0,0,1
+HT Davis ,New Zealand,1994,1997,5,9,4,4,4,0,0,1
+EAR de Silva ,Sri Lanka,1985,1991,10,16,4,4,4,0,0,1
+AJ Doolan ,Australia,2014,2014,4,8,4,4,4,0,0,2
+CJ Drum ,New Zealand,2001,2002,5,9,4,4,4,0,0,1
+MA Ealham ,England,1996,1998,8,13,4,4,4,0,0,1
+MK Elgie ,South Africa,1961,1962,3,6,4,4,4,0,0,2
+NH Fairbrother ,England,1987,1993,10,15,4,4,4,0,0,2
+AM Fernando ,Sri Lanka,2021,2024,19,35,4,4,4,0,0,1
+TCB Fernando ,Sri Lanka,2001,2002,9,17,4,4,4,0,0,2
+JJ Ferris (AUS/ENG),NA,1887,1892,9,16,4,4,4,0,0,1
+A Fielder ,England,1904,1908,6,12,4,4,4,0,0,2
+AP Freeman ,England,1924,1929,12,23,4,4,4,0,0,1
+AB Fudadin ,West Indies,2012,2012,3,5,4,4,4,0,0,2
+LH Gay ,England,1894,1894,1,2,4,3,0,3,1,3
+JM Ghorpade ,India,1953,1959,8,12,4,4,4,0,0,1
+PA Gibb ,England,1938,1946,8,14,4,3,0,3,1,2
+R Gilchrist ,West Indies,1957,1959,13,23,4,4,4,0,0,1
+HC Griffith ,West Indies,1928,1933,13,18,4,4,4,0,0,1
+NE Haig ,England,1921,1930,5,10,4,4,4,0,0,2
+AE Hall ,South Africa,1923,1931,7,14,4,4,4,0,0,1
+SR Harmer ,South Africa,2015,2023,10,16,4,4,4,0,0,2
+M Hayward ,South Africa,1999,2004,16,31,4,4,4,0,0,1
+GR Hazlitt ,Australia,1907,1912,9,15,4,4,4,0,0,1
+JT Hearne ,England,1892,1899,12,22,4,4,4,0,0,2
+K Higgs ,England,1965,1968,15,27,4,4,4,0,0,1
+JW Hitch ,England,1911,1921,7,12,4,4,4,0,0,1
+AJ Hollioake ,England,1997,1998,4,6,4,4,4,0,0,1
+ERT Holmes ,England,1935,1935,5,9,4,4,4,0,0,2
+ND Howard ,England,1951,1952,4,7,4,4,4,0,0,2
+Ihsanullah ,Afghanistan,2019,2019,3,6,4,4,4,0,0,2
+Imran Nazir ,Pakistan,1999,2002,8,14,4,4,4,0,0,1
+RJ Inverarity ,Australia,1968,1972,6,12,4,4,4,0,0,2
+M Jahangir Khan ,India,1932,1936,4,7,4,4,4,0,0,3
+JNT Seales ,West Indies,2021,2024,16,29,4,4,4,0,0,1
+RO Jenkins ,England,1948,1952,9,18,4,4,4,0,0,1
+IJ Jones ,England,1964,1968,15,27,4,4,4,0,0,1
+PEW Jones ,West Indies,1948,1951,9,18,4,4,4,0,0,1
+SP Jones ,England,2002,2005,18,35,4,4,4,0,0,1
+BP Julian ,Australia,1993,1995,7,14,4,4,4,0,0,1
+RR Jumadeen ,West Indies,1972,1979,12,22,4,4,4,0,0,2
+Junaid Khan ,Pakistan,2011,2015,22,43,4,4,4,0,0,2
+JL Kerr ,New Zealand,1931,1937,7,10,4,4,4,0,0,2
+Khan Mohammad ,Pakistan,1952,1958,13,22,4,4,4,0,0,2
+JJ Krejza ,Australia,2008,2008,2,4,4,4,4,0,0,3
+AG Kripal Singh ,India,1955,1964,14,25,4,4,4,0,0,1
+Kuldeep Yadav ,India,2017,2024,13,25,4,4,4,0,0,1
+PD Lashley ,West Indies,1960,1966,4,8,4,4,4,0,0,2
+WH Lockwood ,England,1893,1902,12,20,4,4,4,0,0,2
+JE McConnon ,England,1954,1954,2,4,4,4,4,0,0,4
+TR McKibbin ,Australia,1895,1898,5,10,4,4,4,0,0,2
+DL Maddy ,England,1999,2000,3,5,4,4,4,0,0,1
+Manjural Islam ,BAN,2001,2004,17,22,4,4,4,0,0,1
+FT Mann ,England,1922,1923,5,9,4,4,4,0,0,1
+CR Matthews ,South Africa,1992,1995,18,33,4,4,4,0,0,2
+B Mavuta ,Zimbabwe,2018,2023,4,7,4,4,4,0,0,2
+KSA McKenzie ,West Indies,2023,2024,6,11,4,4,4,0,0,1
+CP Mead ,England,1911,1928,17,31,4,4,4,0,0,1
+MG Melle ,South Africa,1950,1953,7,12,4,4,4,0,0,2
+KD Mills ,New Zealand,2004,2009,19,33,4,4,4,0,0,1
+Mohammad Akram ,Pakistan,1995,2001,9,15,4,4,4,0,0,1
+Mohammad Nawaz (3) ,Pakistan,2016,2022,6,12,4,4,4,0,0,2
+Mohammad Nazir ,Pakistan,1969,1983,14,23,4,4,4,0,0,1
+Mohammad Salim ,BAN,2003,2003,2,2,4,3,0,3,1,2
+Mohsin Kamal ,Pakistan,1984,1994,9,15,4,4,4,0,0,1
+LJ Moon ,England,1906,1906,4,7,4,4,3,1,0,2
+F Morley ,England,1880,1883,4,8,4,4,4,0,0,2
+CB Mpofu ,Zimbabwe,2005,2017,15,24,4,4,4,0,0,1
+TK Musakanda ,Zimbabwe,2017,2021,5,8,4,4,4,0,0,2
+S Muthusamy ,South Africa,2019,2024,4,7,4,4,4,0,0,2
+Naimur Rahman ,BAN,2000,2002,8,11,4,4,4,0,0,2
+Nasir Jamal ,Afghanistan,2019,2024,5,10,4,4,4,0,0,2
+CK Nayudu ,India,1932,1936,7,13,4,4,4,0,0,1
+ML Nkala ,Zimbabwe,2000,2005,10,17,4,4,4,0,0,2
+Sir TC O'Brien ,England,1884,1896,5,9,4,4,4,0,0,1
+SP O'Donnell ,Australia,1985,1985,6,10,4,4,4,0,0,2
+S O'Linn ,South Africa,1960,1961,7,13,4,4,4,0,0,2
+HGO Owen-Smith ,South Africa,1929,1929,5,9,4,4,4,0,0,2
+RK Oxenham ,Australia,1928,1931,7,14,4,4,4,0,0,1
+DR Parry ,West Indies,1978,1980,12,21,4,4,4,0,0,1
+CT Patankar ,India,1955,1956,1,2,4,3,0,3,1,4
+AR Patel ,India,2021,2024,14,28,4,4,4,0,0,1
+RM Patidar ,India,2024,2024,3,6,4,4,4,0,0,1
+CE Pellew ,Australia,1920,1921,10,20,4,4,4,0,0,1
+V Permaul ,West Indies,2012,2022,9,17,4,4,4,0,0,1
+PJ Petherick ,New Zealand,1976,1977,6,12,4,4,4,0,0,2
+WR Playle ,New Zealand,1958,1963,8,10,4,4,4,0,0,1
+RW Price ,Zimbabwe,1999,2013,22,37,4,4,4,0,0,2
+MJ Procter ,South Africa,1967,1970,7,14,4,4,4,0,0,2
+WG Quaife ,England,1899,1902,7,14,4,4,4,0,0,2
+CT Radley ,England,1978,1978,8,15,4,4,4,0,0,1
+V Rajindernath ,India,1952,1952,1,2,4,0,0,0,4,2
+AU Rashid ,England,2015,2019,19,36,4,4,4,0,0,1
+DM Richards ,West Indies,2009,2010,3,6,4,4,4,0,0,1
+Rizwan-uz-Zaman ,Pakistan,1981,1989,11,19,4,4,4,0,0,1
+ADG Roberts ,New Zealand,1976,1976,7,14,4,4,4,0,0,1
+AW Roberts ,New Zealand,1930,1937,5,9,4,4,4,0,0,1
+RD Robinson ,Australia,1977,1977,3,5,4,4,4,0,0,1
+BC Rose ,England,1977,1981,9,13,4,4,4,0,0,2
+FA Rose ,West Indies,1997,2000,19,33,4,4,4,0,0,2
+GA Rowe ,South Africa,1896,1902,5,8,4,4,4,0,0,2
+WE Russell ,England,1961,1967,10,18,4,4,4,0,0,2
+Saim Ayub ,Pakistan,2024,2024,6,11,4,4,4,0,0,1
+A Sandham ,England,1921,1930,14,24,4,4,4,0,0,1
+A Sanford ,West Indies,2002,2004,11,19,4,4,4,0,0,2
+DN Sardesai ,India,1961,1972,30,55,4,4,4,0,0,1
+WH Scotton ,England,1881,1887,15,28,4,4,4,0,0,2
+Shakeel Ahmed jnr ,Pakistan,1993,1995,3,6,4,4,4,0,0,2
+MD Shanaka ,Sri Lanka,2016,2021,6,9,4,4,4,0,0,2
+A Shaw ,England,1877,1882,7,13,4,4,4,0,0,2
+JN Shepherd ,West Indies,1969,1971,5,10,4,4,4,0,0,2
+MW Sievers ,Australia,1936,1937,3,5,4,4,4,0,0,2
+K Sinclair ,West Indies,2024,2024,2,4,4,4,4,0,0,2
+PR Sleep ,Australia,1979,1990,14,23,4,4,4,0,0,1
+RH Spooner ,England,1905,1912,10,18,4,4,4,0,0,1
+PM Such ,England,1993,1999,11,20,4,4,4,0,0,2
+Surendranath ,India,1958,1961,11,17,4,4,4,0,0,2
+Talat Ali ,Pakistan,1972,1979,10,16,4,4,4,0,0,1
+DJ Terbrugge ,South Africa,1998,2004,7,14,4,4,4,0,0,1
+ERH Toshack ,Australia,1946,1948,12,24,4,4,4,0,0,1
+CT Tremlett ,England,2007,2013,12,24,4,4,4,0,0,1
+AE Trott (AUS/ENG),NA,1895,1899,5,10,4,4,4,0,0,3
+FH Tyson ,England,1954,1959,17,32,4,4,4,0,0,1
+JTC Vaughan ,New Zealand,1992,1997,6,9,4,4,4,0,0,2
+GH Vihari ,India,2018,2022,16,32,4,4,4,0,0,1
+HG Vivian ,New Zealand,1931,1937,7,11,4,4,4,0,0,1
+HF Wade ,South Africa,1935,1936,10,15,4,4,4,0,0,1
+W Watson ,New Zealand,1986,1993,15,26,4,4,4,0,0,1
+WJ Whitty ,Australia,1909,1912,14,25,4,4,4,0,0,1
+JM Wiener ,Australia,1979,1980,6,10,4,4,4,0,0,2
+BA Williams ,Australia,2003,2004,4,8,4,4,4,0,0,2
+LB Williams ,South Africa,2022,2022,2,4,4,4,4,0,0,2
+DNT Zoysa ,Sri Lanka,1997,2004,30,51,4,4,4,0,0,1
+JW Zulch ,South Africa,1910,1921,16,30,4,4,4,0,0,1
+Zulfiqar Babar ,Pakistan,2013,2016,15,28,4,4,4,0,0,1
+Abrar Ahmed ,Pakistan,2022,2024,8,15,3,3,3,0,0,1
+Abul Hasan ,BAN,2012,2013,3,6,3,3,3,0,0,2
+Aftab Gul ,Pakistan,1969,1971,6,11,3,3,3,0,0,1
+Agha Saadat Ali ,Pakistan,1955,1955,1,2,3,3,3,0,0,2
+Rehan Ahmed ,England,2022,2024,5,10,3,3,3,0,0,1
+Ahmed Shehzad ,Pakistan,2013,2017,13,26,3,3,3,0,0,1
+Akram Khan ,BAN,2000,2003,8,11,3,3,3,0,0,1
+CFW Allcott ,New Zealand,1930,1932,6,9,3,3,3,0,0,1
+L Amar Singh ,India,1932,1936,7,13,3,3,3,0,0,1
+AMJG Amerasinghe ,Sri Lanka,1984,1984,2,3,3,3,3,0,0,2
+BJ Arnel ,New Zealand,2010,2012,6,12,3,3,3,0,0,1
+TD Astle ,New Zealand,2012,2020,5,10,3,3,3,0,0,1
+RA Austin ,West Indies,2009,2009,2,4,3,3,3,0,0,2
+KBJ Azad ,India,1981,1983,7,14,3,3,3,0,0,1
+CL Badcock ,Australia,1936,1938,7,11,3,3,3,0,0,1
+AH Bakewell ,England,1931,1935,6,12,3,3,3,0,0,2
+SA Banerjee ,India,1948,1949,1,2,3,3,3,0,0,2
+GJ Batty ,England,2003,2016,9,16,3,3,3,0,0,2
+DM Bess ,England,2018,2021,14,26,3,3,3,0,0,1
+GP Bilby ,New Zealand,1966,1966,2,3,3,3,3,0,0,1
+J Birkenshaw ,England,1973,1974,5,9,3,3,3,0,0,2
+M Bisset ,South Africa,1899,1910,3,6,3,2,0,2,1,1
+J Botha ,South Africa,2006,2010,5,10,3,3,3,0,0,1
+IDR Bradshaw ,West Indies,2006,2006,5,7,3,3,3,0,0,2
+N Brand ,South Africa,2024,2024,2,4,3,3,3,0,0,1
+VR Brown ,New Zealand,1985,1985,2,4,3,3,3,0,0,2
+RO Butcher ,England,1981,1981,3,4,3,3,3,0,0,2
+Hon.FSG Calthorpe ,England,1930,1930,4,8,3,3,3,0,0,1
+PR Carlstein ,South Africa,1958,1964,8,15,3,3,3,0,0,1
+AW Carr ,England,1922,1929,11,16,3,3,3,0,0,1
+JAJ Christy ,South Africa,1929,1932,10,17,3,3,3,0,0,1
+CK Coventry ,Zimbabwe,2005,2005,2,3,3,3,3,0,0,2
+J Cowie ,New Zealand,1937,1949,9,14,3,3,3,0,0,2
+K Cranston ,England,1947,1948,8,16,3,3,3,0,0,2
+RJ Crisp ,South Africa,1935,1936,9,14,3,3,3,0,0,1
+CD Cumming ,New Zealand,2005,2008,11,20,3,3,3,0,0,1
+TS Curtis ,England,1988,1989,5,9,3,3,3,0,0,1
+RKJ Dawson ,England,2001,2003,7,11,3,3,3,0,0,2
+JH de Courcy ,Australia,1953,1953,3,5,3,3,3,0,0,2
+R de Swardt ,South Africa,2024,2024,2,4,3,3,3,0,0,2
+GR Dickinson ,New Zealand,1930,1932,3,6,3,3,3,0,0,2
+GHG Doggart ,England,1950,1950,2,4,3,3,3,0,0,1
+B Dooland ,Australia,1947,1948,3,6,3,3,3,0,0,1
+UG Dowe ,West Indies,1971,1973,4,8,3,3,3,0,0,1
+A D'Souza ,Pakistan,1959,1962,6,10,3,3,3,0,0,2
+CAR Duckworth ,South Africa,1957,1957,2,4,3,3,3,0,0,1
+R Dumbrill ,South Africa,1965,1967,5,10,3,3,3,0,0,1
+Enamul Haque jnr ,BAN,2003,2013,15,27,3,3,3,0,0,1
+Fakhar Zaman ,Pakistan,2018,2019,3,6,3,3,3,0,0,1
+MLC Foster ,West Indies,1969,1978,14,26,3,3,3,0,0,1
+ERH Fuller ,South Africa,1953,1958,7,12,3,3,3,0,0,1
+DJ Gandhi ,India,1999,1999,4,8,3,3,3,0,0,1
+JB Gannon ,Australia,1977,1978,3,5,3,3,3,0,0,2
+AER Gilligan ,England,1922,1925,11,21,3,3,3,0,0,1
+TWJ Goddard ,England,1930,1939,8,13,3,3,3,0,0,1
+MJ Gopalan ,India,1934,1934,1,2,3,3,3,0,0,2
+H Graham ,Australia,1893,1896,6,11,3,3,3,0,0,1
+JP Greaves ,West Indies,2024,2024,3,5,3,3,3,0,0,2
+GA Greenidge ,West Indies,1972,1973,5,9,3,3,3,0,0,1
+Gul Mohammad (IND/PAK),NA,1946,1956,9,13,3,3,3,0,0,1
+JR Gunn ,England,1901,1905,6,12,3,3,3,0,0,1
+PAM Hands ,South Africa,1913,1924,7,10,3,3,3,0,0,2
+MS Hardikar ,India,1958,1958,2,4,3,3,3,0,0,2
+NM Hauritz ,Australia,2004,2010,17,33,3,3,3,0,0,1
+Lord Hawke ,England,1896,1899,5,10,3,3,3,0,0,2
+JA Hayes ,New Zealand,1951,1958,15,20,3,3,3,0,0,2
+F Hearne (ENG/SA),NA,1889,1896,6,9,3,3,3,0,0,1
+GAL Hearne ,South Africa,1922,1924,3,5,3,3,3,0,0,3
+C Heseltine ,England,1896,1896,2,4,3,3,3,0,0,1
+JD Higgs ,Australia,1978,1981,22,39,3,3,3,0,0,1
+DD Hindlekar ,India,1936,1946,4,7,3,3,0,3,0,1
+TV Hohns ,Australia,1989,1989,7,13,3,3,3,0,0,1
+P Holmes ,England,1921,1932,7,14,3,3,3,0,0,2
+KA Hope ,West Indies,2017,2017,5,9,3,3,3,0,0,1
+PA Horne ,New Zealand,1987,1990,4,7,3,3,3,0,0,1
+AG Huckle ,Zimbabwe,1997,1998,8,14,3,3,3,0,0,1
+MJ Humphreys ,Ireland,2023,2024,2,3,3,3,3,0,0,2
+AG Hurst ,Australia,1974,1979,12,22,3,3,3,0,0,1
+P Hutchinson ,South Africa,1889,1889,2,3,3,3,3,0,0,2
+Ijaz Ahmed jnr ,Pakistan,1995,1995,2,4,3,3,3,0,0,2
+JK Irani ,India,1947,1947,2,2,3,2,0,2,1,2
+H Ironmonger ,Australia,1928,1933,14,28,3,3,3,0,0,2
+KM Jarvis ,Zimbabwe,2011,2020,13,23,3,3,3,0,0,1
+TW Jarvis ,New Zealand,1965,1973,13,24,3,3,3,0,0,2
+NGRP Jayasuriya ,Sri Lanka,2022,2024,16,30,3,3,3,0,0,1
+CEL Jones ,West Indies,1930,1935,4,8,3,3,3,0,0,2
+SC Joseph ,West Indies,2004,2007,5,9,3,3,3,0,0,1
+KT Kasuza ,Zimbabwe,2020,2021,7,11,3,3,3,0,0,1
+PHT Kaushal ,Sri Lanka,2014,2015,7,14,3,3,3,0,0,2
+JM Kemp ,South Africa,2001,2005,4,8,3,3,3,0,0,1
+Khalid Ibadulla ,Pakistan,1964,1967,4,8,3,3,3,0,0,2
+SN Khan ,India,2024,2024,6,12,3,3,3,0,0,2
+RJ Kirtley ,England,2003,2003,4,7,3,3,3,0,0,1
+JJ Kotze ,South Africa,1902,1907,3,5,3,3,3,0,0,1
+GF Labrooy ,Sri Lanka,1986,1991,9,15,3,3,3,0,0,1
+TJ Laughlin ,Australia,1978,1978,3,6,3,3,3,0,0,2
+JJC Lawson ,West Indies,2002,2005,13,26,3,3,3,0,0,1
+E Leadbeater ,England,1951,1952,2,4,3,3,3,0,0,2
+WHV Levett ,England,1934,1934,1,2,3,3,0,3,0,3
+HSB Love ,Australia,1933,1933,1,2,3,3,0,3,0,3
+JJ Lyons ,Australia,1887,1897,14,25,3,3,3,0,0,1
+EA McDonald ,Australia,1921,1921,11,22,3,3,3,0,0,1
+A McGrath ,England,2003,2003,4,7,3,3,3,0,0,1
+RW McLeod ,Australia,1892,1893,6,10,3,3,3,0,0,1
+C Madande ,Zimbabwe,2024,2024,1,2,3,3,0,3,0,2
+ES Maka ,India,1952,1953,2,3,3,2,0,2,1,3
+PJ Malan ,South Africa,2020,2020,3,5,3,3,3,0,0,1
+FG Mann ,England,1948,1949,7,13,3,3,3,0,0,2
+NBF Mann ,South Africa,1947,1951,19,34,3,3,3,0,0,1
+GA Manou ,Australia,2009,2009,1,1,3,3,0,3,0,3
+Manjural Islam Rana ,BAN,2004,2004,6,7,3,3,3,0,0,2
+WP Masakadza ,Zimbabwe,2018,2023,3,5,3,3,3,0,0,1
+JR Mason ,England,1897,1898,5,8,3,3,3,0,0,1
+EH Mattis ,West Indies,1981,1981,4,8,3,3,3,0,0,2
+MP Maynard ,England,1988,1994,4,8,3,3,3,0,0,1
+LC Mayne ,Australia,1965,1970,6,12,3,3,3,0,0,1
+DJ Meintjes ,South Africa,1923,1923,2,4,3,3,3,0,0,2
+RS Modi ,India,1946,1952,10,16,3,3,3,0,0,1
+Mohammad Asif ,Pakistan,2005,2010,23,45,3,3,3,0,0,1
+Mohammad Salman ,Pakistan,2011,2011,2,4,3,2,0,2,1,1
+DAR Moloney ,New Zealand,1937,1937,3,6,3,3,3,0,0,2
+H Morris ,England,1991,1991,3,6,3,3,3,0,0,1
+JE Morris ,England,1990,1990,3,5,3,3,3,0,0,2
+JB Mortimore ,England,1959,1964,9,17,3,3,3,0,0,1
+S Moseley ,West Indies,2021,2021,2,4,3,3,3,0,0,2
+ARA Murray ,South Africa,1952,1954,10,18,3,3,3,0,0,1
+D Myers ,Zimbabwe,2021,2024,2,4,3,3,3,0,0,2
+Naved-ul-Hasan ,Pakistan,2004,2007,9,17,3,3,3,0,0,2
+CS Nayudu ,India,1934,1952,11,17,3,3,3,0,0,1
+C Newberry ,South Africa,1913,1914,4,7,3,3,3,0,0,3
+ES Newson ,South Africa,1930,1939,3,6,3,3,3,0,0,2
+F Nicholson ,South Africa,1935,1936,4,6,3,3,0,3,0,2
+HC Nitschke ,Australia,1931,1931,2,4,3,3,3,0,0,1
+VM Nyauchi ,Zimbabwe,2020,2024,9,16,3,3,3,0,0,1
+W O'Rourke ,New Zealand,2024,2024,7,13,3,3,3,0,0,1
+LPJ O'Brien ,Australia,1932,1936,5,9,3,3,3,0,0,2
+JDA O'Connor ,Australia,1908,1909,4,8,3,3,3,0,0,1
+D Olivier ,South Africa,2017,2024,16,31,3,3,3,0,0,1
+MB Owens ,New Zealand,1992,1994,8,12,3,3,3,0,0,2
+T Panyangara ,Zimbabwe,2004,2014,9,16,3,3,3,0,0,2
+WGA Parkhouse ,England,1950,1959,7,13,3,3,3,0,0,1
+CH Parkin ,England,1920,1924,10,17,3,3,3,0,0,2
+WD Parnell ,South Africa,2010,2017,6,11,3,3,3,0,0,1
+CC Passailaigue ,West Indies,1930,1930,1,2,3,3,3,0,0,2
+SR Patel ,England,2012,2015,6,12,3,3,3,0,0,1
+AJ Pithey ,South Africa,1957,1965,17,32,3,3,3,0,0,1
+LE Plunkett ,England,2005,2014,13,25,3,3,3,0,0,1
+R Pollard ,England,1946,1948,4,7,3,3,3,0,0,1
+RM Poore ,South Africa,1896,1896,3,4,3,3,3,0,0,2
+SW Poynter ,Ireland,2019,2019,1,2,3,2,0,2,1,2
+C Pringle ,New Zealand,1990,1995,14,24,3,3,3,0,0,1
+R Rampaul ,West Indies,2009,2012,18,34,3,3,3,0,0,1
+RMMP Rathnayake ,Sri Lanka,2024,2024,4,8,3,3,3,0,0,2
+BA Richards ,South Africa,1970,1970,4,8,3,3,3,0,0,1
+F Ridgway ,England,1951,1952,5,8,3,3,3,0,0,2
+WV Rodriguez ,West Indies,1962,1968,5,10,3,3,3,0,0,2
+Sabbir Rahman ,BAN,2016,2018,11,21,3,3,3,0,0,2
+Salahuddin ,Pakistan,1965,1969,5,9,3,3,3,0,0,1
+Saleem Altaf ,Pakistan,1967,1978,21,41,3,3,3,0,0,1
+MAR Samarasekera ,Sri Lanka,1988,1991,4,6,3,3,3,0,0,2
+Shabbir Ahmed ,Pakistan,2003,2005,10,19,3,3,3,0,0,1
+Shadab Khan ,Pakistan,2017,2020,6,11,3,3,3,0,0,1
+WA Shalders ,South Africa,1899,1907,12,23,3,3,3,0,0,1
+Shoaib Bashir ,England,2024,2024,12,23,3,3,3,0,0,1
+TAM Siriwardana ,Sri Lanka,2015,2016,5,10,3,3,3,0,0,1
+WN Slack ,England,1986,1986,3,6,3,3,3,0,0,1
+JA Small ,West Indies,1928,1930,3,4,3,3,3,0,0,2
+VI Smith ,South Africa,1947,1957,9,16,3,3,3,0,0,1
+JT Sparling ,New Zealand,1958,1964,11,16,3,3,3,0,0,1
+LA Stricker ,South Africa,1910,1912,13,24,3,3,3,0,0,1
+Khaled Ahmed ,BAN,2018,2024,15,28,3,3,3,0,0,1
+Tahir Naqqash ,Pakistan,1982,1985,15,27,3,3,3,0,0,1
+LJ Tancred ,South Africa,1902,1913,14,26,3,3,3,0,0,1
+G Thomas ,Australia,1965,1966,8,15,3,3,3,0,0,1
+NFD Thomson ,Australia,1877,1877,2,4,3,3,3,0,0,2
+NI Thomson ,England,1964,1965,5,10,3,3,3,0,0,1
+T Thushara ,Sri Lanka,2003,2010,10,18,3,3,3,0,0,2
+JW Trumble ,Australia,1885,1886,7,11,3,3,3,0,0,2
+AJ Tudor ,England,1998,2002,10,17,3,3,3,0,0,2
+JD Unadkat ,India,2010,2023,4,7,3,3,3,0,0,1
+EA van der Merwe ,South Africa,1929,1936,2,3,3,3,0,3,0,2
+R Vijay Bharadwaj ,India,1999,2000,3,5,3,3,3,0,0,2
+GE Vivian ,New Zealand,1965,1972,5,10,3,3,3,0,0,1
+KA Walter ,South Africa,1961,1961,2,4,3,3,3,0,0,1
+A Ward ,England,1969,1976,5,9,3,3,3,0,0,2
+PF Warner ,England,1899,1912,15,28,3,3,3,0,0,2
+DM Washington ,West Indies,2005,2005,1,2,3,3,3,0,0,2
+GL Weir ,New Zealand,1930,1937,11,16,3,3,3,0,0,1
+P Willey ,England,1976,1986,26,44,3,3,3,0,0,1
+H Wood ,England,1888,1892,4,8,3,2,0,2,1,2
+OE Wynne ,South Africa,1948,1950,6,10,3,3,3,0,0,2
+J Yadav ,India,2016,2022,6,12,3,3,3,0,0,1
+V Yadav ,India,1993,1993,1,2,3,1,0,1,2,2
+Aamer Nazir ,Pakistan,1993,1995,6,12,2,2,2,0,0,2
+Aaqib Javed ,Pakistan,1989,1998,22,38,2,2,2,0,0,1
+Afaq Hussain ,Pakistan,1961,1964,2,4,2,2,2,0,0,1
+G Alexander ,Australia,1880,1884,2,4,2,2,2,0,0,1
+RC Allen ,Australia,1887,1887,1,2,2,2,2,0,0,2
+GI Allott ,New Zealand,1996,1999,10,16,2,2,2,0,0,1
+SW Ambris ,West Indies,2017,2018,6,9,2,2,2,0,0,1
+Amir Hamza ,Afghanistan,2019,2023,4,8,2,2,2,0,0,1
+Anamul Haque ,BAN,2013,2022,5,9,2,2,2,0,0,1
+ML Apte ,India,1952,1953,7,12,2,2,2,0,0,1
+JC Archer ,England,2019,2021,13,25,2,2,2,0,0,1
+Ariful Haque ,BAN,2018,2018,2,4,2,2,2,0,0,1
+Arshad Ayub ,India,1987,1989,13,24,2,2,2,0,0,1
+B Arun ,India,1986,1987,2,3,2,2,2,0,0,1
+Asghar Afghan ,Afghanistan,2018,2021,6,11,2,2,2,0,0,1
+Ata-ur-Rehman ,Pakistan,1992,1996,13,23,2,2,2,0,0,1
+ES Atkinson ,West Indies,1958,1959,8,15,2,2,2,0,0,1
+RA Austin ,West Indies,1978,1978,2,4,2,2,2,0,0,1
+S Badrinath ,India,2010,2010,2,3,2,2,2,0,0,1
+L Baichan ,West Indies,1975,1976,3,6,2,2,2,0,0,2
+EAE Baptiste ,West Indies,1983,1990,10,20,2,2,2,0,0,1
+F Barratt ,England,1929,1930,5,8,2,2,2,0,0,1
+EL Bartlett ,West Indies,1928,1931,5,7,2,2,2,0,0,1
+Bazid Khan ,Pakistan,2005,2005,1,2,2,2,2,0,0,2
+DD Beard ,New Zealand,1952,1956,4,7,2,2,2,0,0,2
+R Beaumont ,South Africa,1912,1914,5,7,2,2,2,0,0,1
+DW Begbie ,South Africa,1948,1950,5,8,2,2,2,0,0,1
+KCG Benjamin ,West Indies,1992,1998,26,50,2,2,2,0,0,1
+R Berry ,England,1950,1950,2,4,2,2,2,0,0,2
+MP Bicknell ,England,1993,2003,4,7,2,2,2,0,0,1
+Bilal Asif ,Pakistan,2018,2018,5,10,2,2,2,0,0,2
+JM Bird ,Australia,2012,2017,9,17,2,2,2,0,0,1
+DD Blackie ,Australia,1928,1929,3,6,2,2,2,0,0,2
+RJ Blakey ,England,1993,1993,2,2,2,2,0,2,0,1
+DE Bollinger ,Australia,2009,2010,12,23,2,2,2,0,0,1
+JB Bolus ,England,1963,1964,7,14,2,2,2,0,0,1
+SG Borthwick ,England,2014,2014,1,2,2,2,2,0,0,2
+WE Bowes ,England,1932,1946,15,29,2,2,2,0,0,1
+EH Bowley ,England,1929,1930,5,8,2,2,2,0,0,1
+NW Bracken ,Australia,2003,2005,5,10,2,2,2,0,0,1
+WP Bradburn ,New Zealand,1964,1964,2,4,2,2,2,0,0,1
+WH Brann ,South Africa,1922,1923,3,6,2,2,2,0,0,1
+EH Bromley ,Australia,1933,1934,2,3,2,2,2,0,0,1
+CP Buckenham ,England,1910,1910,4,8,2,2,2,0,0,1
+FJ Burton ,Australia,1887,1888,2,4,2,1,1,0,1,1
+TB Burtt ,New Zealand,1947,1953,10,14,2,2,2,0,0,1
+HR Butt ,England,1896,1896,3,6,2,1,0,1,1,1
+CG Butts ,West Indies,1985,1988,7,12,2,2,2,0,0,1
+FJ Cameron ,New Zealand,1961,1965,19,35,2,2,2,0,0,1
+J Cameron-Dow ,Ireland,2019,2019,1,2,2,2,2,0,0,2
+PH Carlson ,Australia,1979,1979,2,4,2,2,2,0,0,1
+CP Carter ,South Africa,1912,1924,10,16,2,2,2,0,0,1
+TW Cartwright ,England,1964,1965,5,9,2,2,2,0,0,2
+B Casson ,Australia,2008,2008,1,2,2,2,2,0,0,2
+R Chandrika ,West Indies,2015,2016,5,7,2,2,2,0,0,2
+TM Chappell ,Australia,1981,1981,3,6,2,2,2,0,0,1
+ST Clarke ,West Indies,1978,1982,11,19,2,2,2,0,0,1
+SHM Colah ,India,1932,1933,2,4,2,2,2,0,0,2
+JB Commins ,South Africa,1994,1995,3,6,2,2,2,0,0,1
+M Commins ,Ireland,2023,2023,2,3,2,2,2,0,0,1
+BB Cooper ,Australia,1877,1877,1,2,2,2,2,0,0,2
+TA Copeland ,Australia,2011,2011,3,6,2,2,2,0,0,1
+RMH Cottam ,England,1969,1973,4,8,2,2,2,0,0,1
+ID Craig ,Australia,1953,1958,11,20,2,2,2,0,0,1
+ML Cummins ,West Indies,2016,2019,14,23,2,2,2,0,0,1
+WR Cuttell ,England,1899,1899,2,4,2,2,2,0,0,2
+LA Dawson ,England,2016,2017,3,5,2,2,2,0,0,2
+H Dean ,England,1912,1912,3,5,2,2,2,0,0,1
+CS Dempster ,New Zealand,1930,1933,10,15,2,2,2,0,0,1
+XJ Doherty ,Australia,2010,2013,4,6,2,2,2,0,0,2
+H Donnan ,Australia,1892,1896,5,9,2,2,2,0,0,1
+RR Dower ,South Africa,1899,1899,1,2,2,2,2,0,0,1
+VC Drakes ,West Indies,2002,2004,12,23,2,2,2,0,0,1
+JP Duminy ,South Africa,1927,1929,3,6,2,2,2,0,0,1
+JA Dunning ,New Zealand,1933,1937,4,7,2,2,2,0,0,1
+JH du Preez ,South Africa,1967,1967,2,4,2,2,2,0,0,1
+CJ Eady ,Australia,1896,1902,2,4,2,2,2,0,0,1
+Ehteshamuddin ,Pakistan,1979,1982,5,8,2,2,2,0,0,1
+GD Elliott ,New Zealand,2008,2009,5,9,2,2,2,0,0,2
+RM Ellison ,England,1984,1986,11,22,2,2,2,0,0,1
+L Embuldeniya ,Sri Lanka,2019,2022,17,31,2,2,2,0,0,1
+SH Emery ,Australia,1912,1912,4,5,2,2,2,0,0,1
+WS Farrer ,South Africa,1962,1964,6,12,2,2,2,0,0,1
+Fazl-e-Akbar ,Pakistan,1998,2004,5,8,2,2,2,0,0,1
+JP Fellows-Smith ,South Africa,1960,1960,4,7,2,2,2,0,0,1
+CG Fichardt ,South Africa,1892,1896,2,3,2,2,2,0,0,1
+W Flowers ,England,1884,1893,8,15,2,2,2,0,0,1
+TJ Friend ,Zimbabwe,2001,2004,13,19,2,2,2,0,0,1
+LV Garrick ,West Indies,2001,2001,1,2,2,2,2,0,0,1
+C Gladwin ,England,1947,1949,8,15,2,2,2,0,0,1
+RA Gleeson ,South Africa,1896,1896,1,2,2,2,2,0,0,1
+CD Gopinath ,India,1951,1960,8,14,2,2,2,0,0,1
+GF Grace ,England,1880,1880,1,2,2,2,2,0,0,2
+R Graham ,South Africa,1899,1899,2,4,2,2,2,0,0,2
+A Greenwood ,England,1877,1877,2,4,2,2,2,0,0,1
+GM Guard ,India,1958,1960,2,4,2,2,2,0,0,2
+S Guha ,India,1967,1969,4,8,2,2,2,0,0,1
+J Gumbie ,Zimbabwe,2024,2024,1,2,2,2,2,0,0,1
+DA Gunawardene ,Sri Lanka,1999,2005,6,9,2,2,2,0,0,1
+Gursharan Singh ,India,1990,1990,1,2,2,2,2,0,0,1
+JW Guy ,New Zealand,1955,1961,12,15,2,2,2,0,0,1
+JR Hammond ,Australia,1973,1973,5,10,2,2,2,0,0,2
+Lord Harris ,England,1879,1884,4,7,2,2,2,0,0,1
+JC Hartley ,England,1906,1906,2,3,2,2,2,0,0,1
+TW Hartley ,England,2024,2024,5,9,2,2,2,0,0,1
+PW Hasaranga ,Sri Lanka,2020,2021,4,7,2,2,2,0,0,1
+Hashmatullah Shahidi ,Afghanistan,2018,2024,8,15,2,2,2,0,0,1
+MJ Haslam ,New Zealand,1992,1995,4,6,2,2,2,0,0,2
+EG Hayes ,England,1906,1912,5,10,2,2,2,0,0,1
+RGA Headley ,West Indies,1973,1973,2,4,2,2,2,0,0,1
+CW Henderson ,South Africa,2001,2002,7,14,2,2,2,0,0,1
+O Henry ,South Africa,1992,1993,3,5,2,2,2,0,0,2
+JC Hill ,Australia,1953,1955,3,5,2,2,2,0,0,1
+DE Hoare ,Australia,1961,1961,1,2,2,2,2,0,0,1
+TG Hogan ,Australia,1983,1984,7,11,2,2,2,0,0,1
+WE Hollies ,England,1935,1950,13,23,2,2,2,0,0,1
+BC Hollioake ,England,1997,1998,2,4,2,2,2,0,0,1
+L Hone ,England,1879,1879,1,2,2,2,0,2,0,2
+MJ Horton ,England,1959,1959,2,4,2,2,2,0,0,1
+R Howorth ,England,1947,1948,5,10,2,2,2,0,0,1
+A Hurwood ,Australia,1930,1931,2,4,2,2,2,0,0,2
+Iftikhar Ahmed ,Pakistan,2016,2022,4,5,2,2,2,0,0,1
+RC Irani ,England,1996,1999,3,5,2,2,2,0,0,2
+Irfan Fazil ,Pakistan,2000,2000,1,2,2,2,2,0,0,1
+BL Irvine ,South Africa,1970,1970,4,8,2,2,2,0,0,1
+JB Iverson ,Australia,1950,1951,5,10,2,2,2,0,0,1
+RJD Jamshedji ,India,1933,1933,1,2,2,2,2,0,0,2
+MP Jarvis ,Zimbabwe,1992,1994,5,8,2,2,2,0,0,1
+PW Jarvis ,England,1988,1993,9,16,2,2,2,0,0,1
+MDUS Jayasundera ,Sri Lanka,2015,2015,2,4,2,2,2,0,0,1
+P Jayawickrama ,Sri Lanka,2021,2022,5,10,2,2,2,0,0,1
+VB John ,Sri Lanka,1983,1984,6,9,2,2,2,0,0,1
+LJ Johnson ,Australia,1948,1948,1,2,2,2,2,0,0,2
+Jubair Hossain ,BAN,2014,2015,6,9,2,2,2,0,0,1
+H Jupp ,England,1877,1877,2,4,2,2,2,0,0,2
+BR Jurangpathy ,Sri Lanka,1985,1986,2,3,2,2,2,0,0,2
+S Kalavitigoda ,Sri Lanka,2005,2005,1,1,2,2,2,0,0,2
+LWS Kaluperuma ,Sri Lanka,1982,1982,2,4,2,2,2,0,0,2
+M Kartik ,India,2000,2004,8,15,2,2,2,0,0,1
+TK Kendall ,Australia,1877,1877,2,4,2,2,2,0,0,1
+RJ Kennedy ,New Zealand,1996,1996,4,8,2,2,2,0,0,1
+Khaled Mahmud ,BAN,2001,2003,12,17,2,2,2,0,0,1
+ET Killick ,England,1929,1929,2,4,2,2,2,0,0,1
+LA King ,West Indies,1962,1968,2,4,2,2,2,0,0,1
+RD King ,West Indies,1999,2005,19,34,2,2,2,0,0,1
+RK Kleinveldt ,South Africa,2012,2013,4,7,2,2,2,0,0,1
+MP Kuhnemann ,Australia,2023,2023,3,5,2,2,2,0,0,1
+P Kumar ,India,2011,2011,6,11,2,2,2,0,0,2
+VV Kumar ,India,1961,1961,2,4,2,2,2,0,0,1
+GA Lamb ,Zimbabwe,2011,2011,1,2,2,2,2,0,0,1
+CK Langeveldt ,South Africa,2005,2006,6,11,2,2,2,0,0,1
+GB Lawrence ,South Africa,1961,1962,5,10,2,2,2,0,0,2
+WS Lees ,England,1906,1906,5,9,2,2,2,0,0,1
+IB Leggat ,New Zealand,1954,1954,1,2,2,2,2,0,0,2
+PJ Loader ,England,1954,1959,13,26,2,2,2,0,0,1
+Hon.A Lyttelton ,England,1880,1884,4,7,2,2,0,2,0,1
+AR McBrine ,Ireland,2019,2024,8,14,2,2,2,0,0,1
+AB McDonald ,Australia,2009,2009,4,7,2,2,2,0,0,1
+NC McGarrell ,West Indies,2001,2001,4,8,2,2,2,0,0,1
+PG McShane ,Australia,1885,1888,3,5,2,2,2,0,0,1
+NJ Maddinson ,Australia,2016,2016,3,6,2,2,2,0,0,1
+IS Madray ,West Indies,1958,1958,2,4,2,2,2,0,0,1
+JN Maguire ,Australia,1983,1984,3,5,2,2,2,0,0,2
+AO Malhotra ,India,1982,1985,7,11,2,2,2,0,0,1
+AL Mann ,Australia,1977,1978,4,7,2,2,2,0,0,1
+Mohammad Ali ,Pakistan,2022,2024,4,8,2,2,2,0,0,1
+DA Marillier ,Zimbabwe,2000,2002,5,9,2,2,2,0,0,1
+Marshall Ayub ,BAN,2013,2014,3,4,2,2,2,0,0,1
+F Martin ,England,1890,1892,2,4,2,2,2,0,0,1
+FR Martin ,West Indies,1928,1931,9,12,2,2,2,0,0,1
+SW Masakadza ,Zimbabwe,2012,2014,5,9,2,2,2,0,0,1
+PS Masvaure ,Zimbabwe,2016,2024,9,15,2,2,2,0,0,1
+AM Matheson ,New Zealand,1930,1931,2,3,2,2,2,0,0,2
+ER Mayne ,Australia,1912,1921,4,7,2,2,2,0,0,2
+M Mbangwa ,Zimbabwe,1996,2000,15,25,2,2,2,0,0,1
+JA McCollum ,Ireland,2019,2023,6,10,2,2,2,0,0,1
+Mehrab Hossain jnr ,BAN,2007,2009,7,11,2,2,2,0,0,1
+BAW Mendis ,Sri Lanka,2008,2014,19,31,2,2,2,0,0,1
+WE Merritt ,New Zealand,1930,1931,6,10,2,2,2,0,0,2
+AG Milkha Singh ,India,1960,1961,4,7,2,2,2,0,0,1
+WH Milton ,South Africa,1889,1892,3,4,2,2,2,0,0,1
+Mir Hamza ,Pakistan,2018,2024,6,12,2,2,2,0,0,2
+F Mitchell (ENG/SA),NA,1899,1912,5,8,2,2,2,0,0,1
+Mohammad Nabi ,Afghanistan,2018,2019,3,5,2,2,2,0,0,2
+AM Moir ,New Zealand,1951,1959,17,21,2,2,2,0,0,1
+Mosaddek Hossain ,BAN,2017,2022,4,7,2,2,2,0,0,1
+SA Muller ,Australia,1999,1999,2,4,2,2,2,0,0,1
+CT Mumba ,Zimbabwe,2016,2020,3,6,2,2,2,0,0,1
+T Murphy ,Australia,2023,2023,6,10,2,2,2,0,0,1
+N M'shangwe ,Zimbabwe,2014,2014,2,4,2,2,2,0,0,1
+Naeem Islam ,BAN,2008,2012,8,15,2,2,2,0,0,1
+Nafees Iqbal ,BAN,2004,2006,11,15,2,2,2,0,0,1
+MV Nagamootoo ,West Indies,2000,2002,5,8,2,2,2,0,0,2
+R Nanan ,West Indies,1980,1980,1,2,2,2,2,0,0,2
+SP Narine ,West Indies,2012,2013,6,11,2,2,2,0,0,1
+A Ndlovu ,Zimbabwe,2020,2020,2,3,2,2,2,0,0,1
+RJ Nicol ,New Zealand,2012,2012,2,4,2,2,2,0,0,1
+M Nissar ,India,1932,1936,6,11,2,2,2,0,0,1
+Noman Ali ,Pakistan,2021,2024,17,33,2,2,2,0,0,1
+JM Noreiga ,West Indies,1971,1971,4,7,2,2,2,0,0,2
+RK Nunes ,West Indies,1928,1930,4,5,2,2,1,1,0,1
+J Nyumbu ,Zimbabwe,2014,2016,3,6,2,2,2,0,0,1
+NJ O'Brien ,Ireland,2018,2018,1,2,2,2,0,2,0,2
+J O'Connor ,England,1929,1930,4,8,2,2,2,0,0,2
+DR O'Sullivan ,New Zealand,1973,1976,11,19,2,2,2,0,0,1
+D Padikkal ,India,2024,2024,2,3,2,2,2,0,0,2
+LCH Palairet ,England,1902,1902,2,4,2,2,2,0,0,1
+Pankaj Singh ,India,2014,2014,2,3,2,2,2,0,0,1
+NM Parker ,New Zealand,1976,1976,3,6,2,2,2,0,0,1
+LS Pascoe ,Australia,1977,1982,14,27,2,2,2,0,0,1
+JM Patel ,India,1955,1960,7,11,2,2,2,0,0,1
+MM Patel ,England,1996,1996,2,4,2,2,2,0,0,2
+Yuvraj of Patiala ,India,1934,1934,1,2,2,2,2,0,0,1
+KMA Paul ,West Indies,2018,2019,3,5,2,2,2,0,0,1
+E Peate ,England,1881,1886,9,15,2,2,2,0,0,1
+PDRL Perera ,Sri Lanka,1999,2002,8,14,2,2,2,0,0,1
+AL Phehlukwayo ,South Africa,2017,2018,4,8,2,2,2,0,0,1
+WTS Porterfield ,Ireland,2018,2019,3,6,2,2,2,0,0,2
+JE Pothecary ,South Africa,1960,1960,3,6,2,2,2,0,0,1
+AD Pougher ,England,1892,1892,1,2,2,2,2,0,0,1
+AW Powell ,South Africa,1899,1899,1,2,2,2,2,0,0,2
+D Pretorius ,South Africa,2019,2020,3,6,2,2,2,0,0,1
+WFF Price ,England,1938,1938,1,2,2,2,0,2,0,2
+HLE Promnitz ,South Africa,1927,1928,2,4,2,2,2,0,0,1
+G Pullar ,England,1959,1963,28,50,2,2,2,0,0,1
+PM Pushpakumara ,Sri Lanka,2017,2018,4,6,2,2,2,0,0,2
+AJ Pycroft ,Zimbabwe,1992,1992,3,5,2,2,2,0,0,1
+CG Rackemann ,Australia,1982,1991,12,20,2,2,2,0,0,1
+Rahmanullah Gurbaz ,Afghanistan,2024,2024,1,2,2,2,0,2,0,1
+RR Ramdass ,West Indies,2005,2005,1,2,2,2,2,0,0,2
+S Ranatunga ,Sri Lanka,1994,1997,9,13,2,2,2,0,0,1
+Rashid Khan ,Pakistan,1982,1985,4,7,2,2,2,0,0,1
+DA Renneberg ,Australia,1966,1968,8,15,2,2,2,0,0,1
+RD Rickelton ,South Africa,2022,2024,7,14,2,2,2,0,0,1
+JB Robertson ,South Africa,1935,1936,3,5,2,2,2,0,0,1
+A Rose-Innes ,South Africa,1889,1889,2,3,2,2,2,0,0,2
+TW Routledge ,South Africa,1892,1896,4,5,2,2,2,0,0,1
+VPFA Royle ,England,1879,1879,1,2,2,2,2,0,0,2
+Saleem Jaffar ,Pakistan,1986,1992,14,26,2,2,2,0,0,1
+RO Scarlett ,West Indies,1960,1960,3,6,2,2,2,0,0,1
+BN Schultz ,South Africa,1992,1997,9,15,2,2,2,0,0,1
+CP Senanayake ,Sri Lanka,1991,1991,3,6,2,2,2,0,0,1
+MA Seymour ,South Africa,1963,1970,7,12,2,2,2,0,0,1
+Shafiul Islam ,BAN,2010,2017,11,21,2,2,2,0,0,1
+OA Shah ,England,2006,2009,6,9,2,2,2,0,0,1
+Shaheen Shah Afridi ,Pakistan,2018,2024,31,54,2,2,2,0,0,1
+Shahid Israr ,Pakistan,1976,1976,1,2,2,2,0,2,0,2
+A Shahzad ,England,2010,2010,1,2,2,2,2,0,0,1
+G Sharma ,India,1985,1990,5,9,2,2,2,0,0,1
+DA Sharpe ,Pakistan,1959,1959,3,6,2,2,2,0,0,2
+JW Sharpe ,England,1890,1892,3,6,2,2,2,0,0,1
+PP Shaw ,India,2018,2020,5,10,2,2,2,0,0,2
+BK Shepherd ,Australia,1963,1965,9,18,2,2,2,0,0,1
+GH Shepstone ,South Africa,1896,1899,2,3,2,2,2,0,0,2
+GC Shillingford ,West Indies,1969,1972,7,12,2,2,2,0,0,2
+MJF Shrimpton ,New Zealand,1963,1974,10,17,2,2,2,0,0,1
+ARS Silva ,Sri Lanka,2017,2019,12,23,2,2,2,0,0,1
+CEW Silverwood ,England,1996,2002,6,9,2,2,2,0,0,1
+DJ Sincock ,Australia,1964,1966,3,5,2,2,2,0,0,2
+CK Singh ,West Indies,1960,1960,2,4,2,2,2,0,0,1
+VA Singh ,West Indies,2017,2017,3,6,2,2,2,0,0,1
+L Sipamla ,South Africa,2020,2022,3,6,2,2,2,0,0,1
+CJE Smith ,South Africa,1902,1902,3,6,2,2,2,0,0,2
+DR Smith ,England,1961,1962,5,8,2,2,2,0,0,1
+FW Smith ,South Africa,1889,1896,3,4,2,2,0,2,0,2
+SD Snooke ,South Africa,1907,1907,1,2,2,2,2,0,0,2
+Sohail Khan ,Pakistan,2009,2016,9,17,2,2,2,0,0,1
+Sohail Tanvir ,Pakistan,2007,2007,2,4,2,2,2,0,0,1
+SW Sohoni ,India,1946,1951,4,6,2,2,2,0,0,1
+J Southerton ,England,1877,1877,2,4,2,2,2,0,0,1
+GR Stead ,New Zealand,1999,1999,5,9,2,2,2,0,0,1
+GB Stevens ,Australia,1959,1960,4,8,2,2,2,0,0,1
+RB Stewart ,South Africa,1889,1889,1,2,2,2,2,0,0,2
+OP Stone ,England,2019,2024,5,10,2,2,2,0,0,1
+CEL Stuart ,West Indies,2000,2001,6,12,2,2,2,0,0,1
+MJ Swepson ,Australia,2022,2022,4,7,2,2,2,0,0,1
+AB Tancred ,South Africa,1889,1889,2,3,2,2,2,0,0,1
+Taskin Ahmed ,BAN,2017,2024,16,29,2,2,2,0,0,1
+FW Tate ,England,1902,1902,1,2,2,2,2,0,0,1
+DD Taylor ,New Zealand,1947,1956,3,5,2,2,2,0,0,1
+HT Tector ,Ireland,2023,2024,6,10,2,2,2,0,0,1
+VP Terry ,England,1984,1984,2,3,2,2,2,0,0,1
+LF Townsend ,England,1930,1934,4,8,2,2,2,0,0,1
+JC Tredwell ,England,2010,2015,2,4,2,2,2,0,0,1
+J Trim ,West Indies,1948,1952,4,8,2,2,2,0,0,1
+GB Troup ,New Zealand,1976,1986,15,28,2,2,2,0,0,1
+LR Tuckett ,South Africa,1914,1914,1,2,2,2,2,0,0,2
+GE Tyldesley ,England,1921,1929,14,25,2,2,2,0,0,1
+ML Udawatte ,Sri Lanka,2018,2018,2,4,2,2,2,0,0,1
+P Utseya ,Zimbabwe,2004,2013,4,6,2,2,2,0,0,2
+BH Valentine ,England,1933,1939,7,13,2,2,2,0,0,1
+R van Tonder ,South Africa,2024,2024,2,4,2,2,2,0,0,2
+BV Vitori ,Zimbabwe,2011,2013,4,7,2,2,2,0,0,1
+E Wainwright ,England,1893,1898,5,8,2,2,2,0,0,1
+FH Walters ,Australia,1885,1885,1,1,2,2,2,0,0,2
+B Warnapura ,Sri Lanka,1982,1982,4,7,2,2,2,0,0,1
+Washington Sundar ,India,2021,2024,7,13,2,2,2,0,0,1
+WJ Watson ,Australia,1955,1955,4,7,2,2,2,0,0,1
+PN Webb ,New Zealand,1980,1980,2,4,2,2,2,0,0,1
+AJ Webbe ,England,1879,1879,1,2,2,2,2,0,0,2
+DN Wellalage ,Sri Lanka,2022,2022,1,2,2,2,2,0,0,2
+AW Wellard ,England,1937,1938,2,4,2,2,2,0,0,2
+MD Wettimuny ,Sri Lanka,1983,1983,2,3,2,2,2,0,0,2
+MR Whitney ,Australia,1981,1992,12,24,2,2,2,0,0,1
+EAV Williams ,West Indies,1939,1948,4,8,2,2,2,0,0,1
+K Zondo ,South Africa,2022,2023,5,8,2,2,2,0,0,1
+Zulqarnain Haider ,Pakistan,2010,2010,1,2,2,2,0,2,0,2
+VR Aaron ,India,2011,2015,9,15,1,1,1,0,0,1
+Abdul Kadir ,Pakistan,1964,1965,4,8,1,0,0,0,1,1
+Abu Jayed ,BAN,2018,2021,13,19,1,1,1,0,0,1
+HD Ackerman ,South Africa,1998,1998,4,8,1,1,1,0,0,1
+AR Adams ,New Zealand,2002,2002,1,2,1,1,1,0,0,1
+FS Ahangama ,Sri Lanka,1985,1985,3,6,1,1,1,0,0,1
+Aizaz Cheema ,Pakistan,2011,2012,7,14,1,1,1,0,0,1
+Akash Deep ,India,2024,2024,5,10,1,1,1,0,0,1
+Ali Naqvi ,Pakistan,1997,1998,5,8,1,1,1,0,0,1
+IBA Allen ,West Indies,1991,1991,2,3,1,1,1,0,0,1
+KN Amalean ,Sri Lanka,1986,1988,2,2,1,1,1,0,0,1
+JH Anderson ,South Africa,1902,1902,1,2,1,1,1,0,0,1
+RW Anderson ,New Zealand,1976,1978,9,16,1,1,1,0,0,1
+WM Anderson ,New Zealand,1946,1946,1,1,1,1,1,0,0,1
+KV Andrew ,England,1954,1963,2,3,1,1,0,1,0,1
+B Andrews ,New Zealand,1973,1974,2,3,1,1,1,0,0,1
+J Angel ,Australia,1993,1995,4,7,1,1,1,0,0,1
+ZS Ansari ,England,2016,2016,3,6,1,1,1,0,0,1
+KIC Asalanka ,Sri Lanka,2021,2022,3,5,1,1,1,0,0,1
+AAP Atkinson ,England,2024,2024,8,16,1,1,1,0,0,1
+Azeem Hafeez ,Pakistan,1983,1985,18,28,1,1,1,0,0,1
+FT Badcock ,New Zealand,1930,1933,7,10,1,1,1,0,0,1
+SV Bahutule ,India,2001,2001,2,3,1,1,1,0,0,1
+LS Baker ,West Indies,2008,2009,4,7,1,1,1,0,0,1
+L Balaji ,India,2003,2005,8,15,1,1,1,0,0,1
+JC Balderstone ,England,1976,1976,2,4,1,1,1,0,0,1
+JT Ball ,England,2016,2017,4,6,1,1,1,0,0,1
+RT Barber ,New Zealand,1956,1956,1,2,1,1,1,0,0,1
+W Barber ,England,1935,1935,2,4,1,1,1,0,0,1
+KJ Barnett ,England,1988,1989,4,8,1,1,1,0,0,1
+JE Barrett ,Australia,1890,1890,2,4,1,1,1,0,0,1
+HV Baumgartner ,South Africa,1913,1913,1,1,1,1,1,0,0,1
+MA Beer ,Australia,2011,2012,2,3,1,1,1,0,0,1
+W Bell ,New Zealand,1954,1954,2,4,1,1,1,0,0,1
+BJ Bennett ,Zimbabwe,2024,2024,1,2,1,1,1,0,0,1
+P Bhandari ,India,1955,1956,3,6,1,1,1,0,0,1
+BA Bolton ,New Zealand,1959,1959,2,2,1,1,1,0,0,1
+JT Botten ,South Africa,1965,1965,3,6,1,1,1,0,0,1
+MP Bowden ,England,1889,1889,2,4,1,1,0,1,0,1
+BP Bracewell ,New Zealand,1978,1985,6,11,1,1,1,0,0,1
+DH Brain ,Zimbabwe,1992,1995,9,16,1,1,1,0,0,1
+GR Breese ,West Indies,2002,2002,1,2,1,1,1,0,0,1
+DV Brennan ,England,1951,1951,2,4,1,0,0,0,1,1
+GB Brent ,Zimbabwe,1999,2001,4,6,1,1,1,0,0,1
+AW Briscoe ,South Africa,1935,1939,2,3,1,1,1,0,0,1
+HR Bromley-Davenport ,England,1896,1899,4,8,1,1,1,0,0,1
+D Brookes ,England,1948,1948,1,2,1,1,1,0,0,1
+A Brown ,England,1961,1961,2,4,1,1,1,0,0,1
+SJE Brown ,England,1996,1996,1,2,1,1,1,0,0,1
+CR Browne ,West Indies,1928,1930,4,6,1,1,1,0,0,1
+CGD Burger ,South Africa,1958,1958,2,4,1,1,1,0,0,1
+N Burger ,South Africa,2023,2024,3,6,1,1,1,0,0,1
+RP Burl ,Zimbabwe,2017,2021,3,5,1,1,1,0,0,1
+MG Burmester ,Zimbabwe,1992,1992,3,5,1,1,1,0,0,1
+IP Butchart ,Zimbabwe,1995,1995,1,2,1,1,1,0,0,1
+HJ Butler ,England,1947,1948,2,4,1,1,1,0,0,1
+IW Callen ,Australia,1978,1978,1,2,1,1,1,0,0,1
+GD Campbell ,Australia,1989,1990,4,8,1,1,1,0,0,1
+C Campher ,Ireland,2023,2024,6,10,1,1,1,0,0,1
+GM Carew ,West Indies,1935,1949,4,8,1,1,1,0,0,1
+BA Carse ,England,2024,2024,2,4,1,1,1,0,0,1
+KU Carty ,West Indies,2024,2024,3,5,1,1,1,0,0,1
+HW Chapman ,South Africa,1914,1921,2,4,1,1,1,0,0,1
+PP Chawla ,India,2006,2012,3,6,1,1,1,0,0,1
+GA Chevalier ,South Africa,1970,1970,1,2,1,1,1,0,0,1
+JH Childs ,England,1988,1988,2,3,1,1,1,0,0,1
+TS Chisoro ,Zimbabwe,2017,2021,3,3,1,1,1,0,0,1
+R Clarke ,England,2003,2003,2,4,1,1,1,0,0,1
+JC Clay ,England,1935,1935,1,2,1,1,1,0,0,1
+SK Coen ,South Africa,1927,1928,2,4,1,1,1,0,0,1
+LJ Coldwell ,England,1962,1964,7,14,1,1,1,0,0,1
+DJ Colley ,Australia,1972,1972,3,6,1,1,1,0,0,1
+JMM Commaille ,South Africa,1910,1928,12,19,1,1,1,0,0,1
+DP Conyngham ,South Africa,1923,1923,1,2,1,1,1,0,0,1
+AHC Cooper ,South Africa,1913,1913,1,1,1,1,1,0,0,1
+WH Cooper ,Australia,1881,1884,2,4,1,1,1,0,0,1
+GA Cope ,England,1977,1978,3,5,1,1,1,0,0,1
+WH Copson ,England,1939,1947,3,6,1,1,1,0,0,1
+JT Cottam ,Australia,1887,1887,1,2,1,1,1,0,0,1
+JL Cox ,South Africa,1913,1914,3,4,1,1,1,0,0,1
+J Cranston ,England,1890,1890,1,2,1,1,1,0,0,1
+WPA Crawford ,Australia,1956,1956,4,8,1,1,1,0,0,1
+IB Cromb ,New Zealand,1931,1932,5,7,1,1,1,0,0,1
+AC Cummins ,West Indies,1993,1994,5,9,1,1,1,0,0,1
+RS Cunis ,New Zealand,1964,1972,20,38,1,1,1,0,0,1
+KM Dabengwa ,Zimbabwe,2005,2005,3,4,1,1,1,0,0,1
+A Dananjaya ,Sri Lanka,2018,2019,6,12,1,1,1,0,0,1
+HT Dani ,India,1952,1952,1,2,1,1,1,0,0,1
+BA Davis ,West Indies,1965,1965,4,7,1,1,1,0,0,1
+FI de Caires ,West Indies,1930,1930,3,6,1,1,1,0,0,1
+M de Lange ,South Africa,2011,2012,2,4,1,1,1,0,0,1
+EW Dempster ,New Zealand,1953,1954,5,9,1,1,1,0,0,1
+SI de Saram ,Sri Lanka,1999,2000,4,8,1,1,1,0,0,1
+SKL de Silva ,Sri Lanka,1997,1997,3,4,1,1,0,1,0,1
+WRS de Silva ,Sri Lanka,2002,2007,3,6,1,1,1,0,0,1
+F de Wet ,South Africa,2009,2010,2,4,1,1,1,0,0,1
+R Dhanraj ,West Indies,1994,1996,4,8,1,1,1,0,0,1
+CD Dixon ,South Africa,1914,1914,1,2,1,1,1,0,0,1
+HE Dollery ,England,1947,1950,4,8,1,1,1,0,0,1
+A Dolphin ,England,1921,1921,1,2,1,1,0,1,0,1
+A Ducat ,England,1921,1921,1,2,1,1,1,0,0,1
+T Duffin ,Zimbabwe,2005,2005,2,3,1,1,1,0,0,1
+OR Dunell ,South Africa,1889,1889,2,3,1,1,1,0,0,1
+JF du Toit ,South Africa,1892,1892,1,1,1,1,1,0,0,1
+G Dymock ,Australia,1974,1980,21,35,1,1,1,0,0,1
+Ebadot Hossain ,BAN,2019,2023,20,32,1,1,1,0,0,1
+JD Edwards ,Australia,1888,1888,3,4,1,1,1,0,0,1
+Elias Sunny ,BAN,2011,2013,4,7,1,1,1,0,0,1
+S Elworthy ,South Africa,1998,2002,4,8,1,1,1,0,0,1
+Enamul Haque ,BAN,2001,2003,10,13,1,1,1,0,0,1
+CN Evans ,Zimbabwe,1996,2003,3,4,1,1,1,0,0,1
+GM Ewing ,Zimbabwe,2003,2005,3,5,1,1,1,0,0,1
+Fahim Muntasir ,BAN,2002,2002,3,4,1,1,1,0,0,1
+K Farnes ,England,1934,1939,15,27,1,1,1,0,0,1
+KHRK Fernando ,Sri Lanka,2002,2002,2,3,1,1,1,0,0,1
+MD Fisher ,England,2022,2022,1,2,1,1,1,0,0,1
+LB Fishlock ,England,1936,1947,4,7,1,1,1,0,0,1
+BC Francis ,Australia,1972,1972,3,6,1,1,1,0,0,1
+HH Francis ,South Africa,1899,1899,2,4,1,1,1,0,0,1
+JER Gallian ,England,1995,1995,3,4,1,1,1,0,0,1
+A Gandotra ,India,1969,1969,2,4,1,1,1,0,0,1
+BBM Gaskin ,West Indies,1948,1948,2,4,1,1,1,0,0,1
+RA Gaunt ,Australia,1958,1964,3,5,1,1,1,0,0,1
+GL Gibbs ,West Indies,1955,1955,1,2,1,1,1,0,0,1
+WF Giffen ,Australia,1887,1892,3,5,1,1,1,0,0,1
+MR Gillespie ,New Zealand,2007,2012,5,8,1,1,1,0,0,1
+H Gimblett ,England,1936,1939,3,6,1,1,1,0,0,1
+N Gordon ,South Africa,1938,1939,5,8,1,1,1,0,0,1
+AR Gover ,England,1936,1946,4,7,1,1,1,0,0,1
+EM Grace ,England,1880,1880,1,2,1,1,1,0,0,1
+T Greenhough ,England,1959,1960,4,8,1,1,1,0,0,1
+EJ Gregory ,Australia,1877,1877,1,2,1,1,1,0,0,1
+RG Gregory ,Australia,1937,1937,2,4,1,1,1,0,0,1
+MG Grell ,West Indies,1930,1930,1,2,1,1,1,0,0,1
+CG Halse ,South Africa,1964,1964,3,6,1,1,1,0,0,1
+RA Hamence ,Australia,1947,1948,3,6,1,1,1,0,0,1
+F Hand ,Ireland,2023,2023,1,2,1,1,1,0,0,1
+J Hardstaff snr ,England,1907,1908,5,10,1,1,1,0,0,1
+TA Harris ,South Africa,1947,1949,3,6,1,1,1,0,0,1
+J Harry ,Australia,1895,1895,1,2,1,1,1,0,0,1
+MJ Hartigan ,Australia,1908,1908,2,4,1,1,1,0,0,1
+Haseeb Ahsan ,Pakistan,1958,1962,12,20,1,1,1,0,0,1
+Hasibul Hossain ,BAN,2000,2001,5,6,1,1,1,0,0,1
+JW Hastings ,Australia,2012,2012,1,2,1,1,1,0,0,1
+A Hearne ,England,1892,1892,1,2,1,1,1,0,0,1
+M Henderson ,New Zealand,1930,1930,1,2,1,1,1,0,0,1
+MC Henriques ,Australia,2013,2016,4,7,1,1,1,0,0,1
+PA Hibbert ,Australia,1977,1977,1,2,1,1,1,0,0,1
+A Hill ,England,1877,1877,2,4,1,1,1,0,0,1
+AJL Hill ,England,1896,1896,3,6,1,1,1,0,0,1
+MJ Hilton ,England,1950,1952,4,6,1,1,1,0,0,1
+ELG Hoad ,West Indies,1928,1933,4,5,1,1,1,0,0,1
+GB Hogg ,Australia,1996,2008,7,14,1,1,1,0,0,1
+JM Holland ,Australia,2016,2018,4,8,1,1,1,0,0,1
+KW Hough ,New Zealand,1959,1959,2,2,1,1,1,0,0,1
+WA Hunt ,Australia,1932,1932,1,2,1,1,1,0,0,1
+LG Hylton ,West Indies,1935,1939,6,12,1,1,1,0,0,1
+AP Igglesden ,England,1989,1994,3,5,1,1,1,0,0,1
+DEJ Ironside ,South Africa,1953,1954,3,5,1,1,1,0,0,1
+Israr Ali ,Pakistan,1952,1959,4,7,1,1,1,0,0,1
+SD Jack ,South Africa,1994,1995,2,4,1,1,1,0,0,1
+HL Jackson ,England,1949,1961,2,4,1,1,1,0,0,1
+Javed Ahmadi ,Afghanistan,2018,2021,3,5,1,1,1,0,0,1
+CL Johnson ,South Africa,1896,1896,1,1,1,1,1,0,0,1
+TF Johnson ,West Indies,1939,1939,1,2,1,1,1,0,0,1
+EC Joyce ,Ireland,2018,2018,1,2,1,1,1,0,0,1
+Kabir Khan ,Pakistan,1994,1995,4,7,1,1,1,0,0,1
+I Kaia ,Zimbabwe,2023,2023,2,3,1,1,1,0,0,1
+R Kaia ,Zimbabwe,2021,2021,3,4,1,1,1,0,0,1
+S Randiv ,Sri Lanka,2010,2012,12,21,1,1,1,0,0,1
+AR Kapoor ,India,1994,1996,4,7,1,1,1,0,0,1
+SS Karim ,India,2000,2000,1,2,1,1,0,1,0,1
+C Karunaratne ,Sri Lanka,2019,2019,1,2,1,1,1,0,0,1
+TJD Kelly ,Australia,1877,1879,2,4,1,1,1,0,0,1
+RB Kenny ,India,1958,1960,5,8,1,1,1,0,0,1
+ESM Kentish ,West Indies,1948,1954,2,4,1,1,1,0,0,1
+RB Kerr ,Australia,1985,1985,2,4,1,1,1,0,0,1
+I Khan ,South Africa,2009,2009,1,2,1,1,1,0,0,1
+Khurram Shahzad ,Pakistan,2023,2024,3,6,1,1,1,0,0,1
+G Kishenchand ,India,1947,1952,5,5,1,1,1,0,0,1
+AE Knight ,England,1904,1904,3,6,1,1,1,0,0,1
+DJ Knight ,England,1921,1921,2,4,1,1,1,0,0,1
+CM Kuggeleijn ,New Zealand,1988,1988,2,4,1,1,1,0,0,1
+SC Kuggeleijn ,New Zealand,2023,2024,3,6,1,1,1,0,0,1
+HG Kuhn ,South Africa,2017,2017,4,8,1,1,1,0,0,1
+AP Kuiper ,South Africa,1992,1992,1,2,1,1,1,0,0,1
+NM Kulkarni ,India,1997,2001,3,3,1,1,1,0,0,1
+RR Kulkarni ,India,1986,1987,3,6,1,1,1,0,0,1
+DSBP Kuruppu ,Sri Lanka,1987,1991,4,6,1,1,0,1,0,1
+MKGCP Lakshitha ,Sri Lanka,2002,2002,2,4,1,1,1,0,0,1
+Lall Singh ,India,1932,1932,1,2,1,1,1,0,0,1
+SG Law ,Australia,1995,1995,1,2,1,1,1,0,0,1
+PK Lee ,Australia,1931,1933,2,4,1,1,1,0,0,1
+GB Legge ,England,1927,1930,5,8,1,1,1,0,0,1
+CFH Leslie ,England,1882,1883,4,8,1,1,1,0,0,1
+HDG Leveson Gower ,England,1910,1910,3,6,1,1,1,0,0,1
+SH Lewis ,West Indies,2018,2018,2,2,1,1,1,0,0,1
+Liaqat Ali ,Pakistan,1975,1978,5,7,1,1,1,0,0,1
+GFJ Liebenberg ,South Africa,1998,1998,5,10,1,1,1,0,0,1
+James Lillywhite jnr ,England,1877,1877,2,4,1,1,1,0,0,1
+NV Lindsay ,South Africa,1921,1921,1,2,1,1,1,0,0,1
+WVS Ling ,South Africa,1921,1923,6,12,1,1,1,0,0,1
+AF Lissette ,New Zealand,1956,1956,2,2,1,1,1,0,0,1
+KS Lokuarachchi ,Sri Lanka,2003,2004,4,7,1,1,1,0,0,1
+M Louis ,West Indies,2024,2024,6,10,1,1,1,0,0,1
+AP Lucas ,England,1879,1884,5,9,1,1,1,0,0,1
+MJ McCague ,England,1993,1994,3,5,1,1,1,0,0,1
+CP McGahey ,England,1902,1902,2,4,1,1,1,0,0,1
+J McIlwraith ,Australia,1886,1886,1,1,1,1,1,0,0,1
+CJ McKay ,Australia,2009,2009,1,2,1,1,1,0,0,1
+AH McKinnon ,South Africa,1960,1967,8,16,1,1,1,0,0,1
+W Madhevere ,Zimbabwe,2021,2021,2,4,1,1,1,0,0,1
+TN Madondo ,Zimbabwe,1998,2000,3,6,1,1,1,0,0,1
+D Madushanka ,Sri Lanka,2023,2023,1,1,1,1,1,0,0,1
+Mahidul Islam Ankon ,BAN,2024,2024,1,1,1,1,0,1,0,1
+S Mahmood ,England,2022,2022,2,4,1,1,1,0,0,1
+NB Mahwire ,Zimbabwe,2002,2005,10,15,1,1,1,0,0,1
+T Makoni ,Zimbabwe,2023,2023,2,3,1,1,1,0,0,1
+A Maregwede ,Zimbabwe,2004,2004,2,2,1,1,1,0,0,1
+CS Marriott ,England,1933,1933,1,2,1,1,1,0,0,1
+HJH Marshall ,New Zealand,2000,2006,13,23,1,1,1,0,0,1
+RE Marshall ,West Indies,1951,1952,4,8,1,1,1,0,0,1
+T Maruma ,Zimbabwe,2013,2021,4,7,1,1,1,0,0,1
+RAL Massie ,Australia,1972,1973,6,12,1,1,1,0,0,1
+ADG Matthews ,England,1937,1937,1,2,1,1,1,0,0,1
+CD Matthews ,Australia,1986,1988,3,6,1,1,1,0,0,1
+BJ McCarthy ,Ireland,2024,2024,2,4,1,1,1,0,0,1
+NA McSweeney ,Australia,2024,2024,1,2,1,1,1,0,0,1
+W Mead ,England,1899,1899,1,2,1,1,1,0,0,1
+KR Meherhomji ,India,1936,1936,1,1,1,1,0,1,0,1
+VL Mehra ,India,1955,1964,8,16,1,1,1,0,0,1
+CA Merry ,West Indies,1933,1933,2,2,1,1,1,0,0,1
+KD Meuleman ,Australia,1946,1946,1,2,1,1,1,0,0,1
+PL Mhambrey ,India,1996,1996,2,4,1,1,1,0,0,1
+J Middleton ,South Africa,1896,1902,6,11,1,1,1,0,0,1
+LSM Miller ,New Zealand,1953,1958,13,20,1,1,1,0,0,1
+FW Milligan ,England,1899,1899,2,4,1,1,1,0,0,1
+CH Mills ,South Africa,1892,1892,1,1,1,1,1,0,0,1
+JE Mills ,New Zealand,1930,1933,7,10,1,1,1,0,0,1
+TB Mitchell ,England,1933,1935,5,9,1,1,1,0,0,1
+Mohammad Ayub ,Pakistan,2012,2012,1,2,1,1,1,0,0,1
+Mohammad Farooq ,Pakistan,1960,1965,7,11,1,1,1,0,0,1
+Mohammad Hussain ,Pakistan,1996,1998,2,3,1,1,1,0,0,1
+Mohammad Naim ,BAN,2022,2022,1,1,1,1,1,0,0,1
+Mohammad Ramzan ,Pakistan,1997,1997,1,1,1,1,1,0,0,1
+Mohammad Talha ,Pakistan,2009,2014,4,6,1,1,1,0,0,1
+Mohammad Wasim (1) ,Pakistan,2022,2022,2,4,1,1,1,0,0,1
+D Mohammed ,West Indies,2004,2006,5,10,1,1,1,0,0,1
+AW Mold ,England,1893,1893,3,5,1,1,1,0,0,1
+EM Moore ,South Africa,2024,2024,1,2,1,1,1,0,0,1
+TL Moreki ,South Africa,2024,2024,2,4,1,1,1,0,0,1
+BD Morrison ,New Zealand,1963,1963,1,1,1,1,1,0,0,1
+EA Moseley ,West Indies,1990,1990,2,4,1,1,1,0,0,1
+H Moses ,Australia,1887,1895,6,12,1,1,1,0,0,1
+AE Moss ,England,1954,1960,9,17,1,1,1,0,0,1
+WH Moule ,Australia,1880,1880,1,2,1,1,1,0,0,1
+Mufasir-ul-Haq ,Pakistan,1965,1965,1,2,1,1,1,0,0,1
+Munir Malik ,Pakistan,1959,1962,3,4,1,1,1,0,0,1
+Mustafizur Rahman ,BAN,2015,2022,15,25,1,1,1,0,0,1
+CT Mutombodzi ,Zimbabwe,2020,2020,1,2,1,1,1,0,0,1
+S Nadeem ,India,2019,2021,2,4,1,1,1,0,0,1
+Nahid Rana ,BAN,2024,2024,5,9,1,1,1,0,0,1
+Nasir Jamshed ,Pakistan,2013,2013,2,4,1,1,1,0,0,1
+Naveed Zadran ,Afghanistan,2024,2024,2,4,1,1,1,0,0,1
+JG Navle ,India,1932,1933,2,4,1,1,0,1,0,1
+SV Nayak ,India,1982,1982,2,3,1,1,1,0,0,1
+Nazimuddin ,BAN,2011,2012,3,5,1,1,1,0,0,1
+N Ncube ,Zimbabwe,2011,2011,1,2,1,1,1,0,0,1
+JD Nel ,South Africa,1949,1957,6,10,1,1,1,0,0,1
+PJ Newport ,England,1988,1991,3,6,1,1,1,0,0,1
+M Ngam ,South Africa,2000,2001,3,5,1,1,1,0,0,1
+R Ngarava ,Zimbabwe,2021,2024,5,8,1,1,1,0,0,1
+Niaz Ahmed ,Pakistan,1967,1969,2,4,1,1,1,0,0,1
+G Noblet ,Australia,1950,1953,3,6,1,1,1,0,0,1
+Noor Ali Zadran ,Afghanistan,2024,2024,2,4,1,1,1,0,0,1
+AL Ochse ,South Africa,1928,1929,3,6,1,1,1,0,0,1
+JL Ontong ,South Africa,2002,2004,2,4,1,1,1,0,0,1
+GWF Overton ,New Zealand,1953,1954,3,5,1,1,1,0,0,1
+AW Palm ,South Africa,1927,1928,1,2,1,1,1,0,0,1
+BA Parchment ,West Indies,2008,2008,2,3,1,1,1,0,0,1
+GAHM Parkar ,India,1982,1982,1,2,1,1,1,0,0,1
+DC Parkin ,South Africa,1892,1892,1,1,1,1,1,0,0,1
+NT Pascal ,West Indies,2010,2010,2,2,1,1,1,0,0,1
+RGM Patel ,India,1988,1988,1,2,1,1,1,0,0,1
+D Paterson ,South Africa,2020,2024,5,9,1,1,1,0,0,1
+SR Patil ,India,1955,1955,1,2,1,1,1,0,0,1
+SG Peall ,Zimbabwe,1993,1994,4,7,1,1,1,0,0,1
+COC Pearse ,South Africa,1910,1911,3,5,1,1,1,0,0,1
+ASA Perera ,Sri Lanka,1998,2001,3,6,1,1,1,0,0,1
+NLTC Perera ,Sri Lanka,2011,2012,6,9,1,1,1,0,0,1
+RTD Perks ,England,1939,1939,2,3,1,1,1,0,0,1
+NO Perry ,West Indies,1999,1999,4,7,1,1,1,0,0,1
+OJ Phillips ,West Indies,2009,2009,2,4,1,1,1,0,0,1
+CJ Poole ,England,1951,1952,3,5,1,1,1,0,0,1
+MB Poore ,New Zealand,1953,1956,14,20,1,1,1,0,0,1
+RL Powell ,West Indies,1999,2004,2,4,1,1,1,0,0,1
+N Puna ,New Zealand,1966,1966,3,5,1,1,1,0,0,1
+NA Quinn ,South Africa,1929,1932,12,19,1,1,1,0,0,1
+LS Rajput ,India,1985,1985,2,4,1,1,1,0,0,1
+L Ramji ,India,1933,1933,1,2,1,1,1,0,0,1
+KM Rangnekar ,India,1947,1948,3,4,1,1,1,0,0,1
+VB Ranjane ,India,1958,1964,7,14,1,1,1,0,0,1
+Ranjan Das ,BAN,2000,2000,1,2,1,1,1,0,0,1
+JR Ratnayeke ,Sri Lanka,1982,1989,22,32,1,1,1,0,0,1
+JC Reedman ,Australia,1894,1894,1,2,1,1,1,0,0,1
+DA Reeve ,England,1992,1992,3,6,1,1,1,0,0,1
+MR Rege ,India,1949,1949,1,1,1,1,1,0,0,1
+SF Rehman ,Pakistan,1958,1958,1,2,1,1,1,0,0,1
+JA Rennie ,Zimbabwe,1993,1997,4,8,1,1,1,0,0,1
+AJ Richardson ,Australia,1924,1926,9,14,1,1,1,0,0,1
+DW Richardson ,England,1957,1957,1,2,1,1,1,0,0,1
+GR Robertson ,Australia,1998,1998,4,7,1,1,1,0,0,1
+RH Robinson ,Australia,1936,1936,1,2,1,1,1,0,0,1
+BG Rogers ,Zimbabwe,2005,2005,4,6,1,1,1,0,0,1
+CF Root ,England,1926,1926,3,3,1,1,1,0,0,1
+GF Rorke ,Australia,1959,1959,4,8,1,1,1,0,0,1
+CG Rowe ,New Zealand,1946,1946,1,1,1,1,1,0,0,1
+JJ Roy ,England,2019,2019,5,10,1,1,1,0,0,1
+P Roy ,India,1982,1982,2,2,1,1,1,0,0,1
+AD Russell ,West Indies,2010,2010,1,2,1,1,1,0,0,1
+MJ Saggers ,England,2003,2004,3,6,1,1,1,0,0,1
+NA Saini ,India,2021,2021,2,4,1,1,1,0,0,1
+SV Samuelson ,South Africa,1910,1910,1,2,1,1,1,0,0,1
+BS Sandhu ,India,1983,1983,8,11,1,1,1,0,0,1
+Sanuar Hossain ,BAN,2001,2003,9,11,1,1,1,0,0,1
+Sarandeep Singh ,India,2000,2002,3,5,1,1,1,0,0,1
+CJ Sayers ,Australia,2018,2018,1,2,1,1,1,0,0,1
+BV Sears ,New Zealand,2024,2024,1,2,1,1,1,0,0,1
+AW Seccull ,South Africa,1896,1896,1,1,1,1,1,0,0,1
+J Selby ,England,1877,1882,6,11,1,1,0,1,0,1
+RHD Sellers ,Australia,1964,1964,1,1,1,1,1,0,0,1
+MWW Selvey ,England,1976,1977,3,6,1,1,1,0,0,1
+SMSM Senanayake ,Sri Lanka,2013,2014,1,2,1,1,1,0,0,1
+D Shackleton ,England,1950,1963,7,13,1,1,1,0,0,1
+Shahriar Hossain ,BAN,2000,2004,3,5,1,0,0,0,1,1
+Shakeel Ahmed snr ,Pakistan,1998,1998,1,2,1,1,1,0,0,1
+AK Sharma ,India,1988,1988,1,2,1,1,1,0,0,1
+PH Sharma ,India,1974,1977,5,7,1,1,1,0,0,1
+SK Sharma ,India,1988,1990,2,4,1,1,1,0,0,1
+J Sharp ,England,1909,1909,3,6,1,1,1,0,0,1
+IT Shillingford ,West Indies,1977,1978,4,8,1,1,1,0,0,1
+RH Shodhan ,India,1952,1953,3,6,1,1,1,0,0,1
+M Shumba ,Zimbabwe,2021,2023,4,5,1,1,1,0,0,1
+K Shuttleworth ,England,1970,1971,5,9,1,1,1,0,0,1
+IR Siddiqui ,India,2001,2001,1,2,1,1,1,0,0,1
+KJ Silva ,Sri Lanka,1995,1998,7,12,1,1,1,0,0,1
+GHT Simpson-Hayward ,England,1910,1910,5,10,1,1,1,0,0,1
+IM Sinclair ,New Zealand,1956,1956,2,3,1,1,1,0,0,1
+R Singh ,India,1999,1999,1,2,1,1,1,0,0,1
+VRV Singh ,India,2006,2007,5,10,1,1,1,0,0,1
+CIJ Smith ,England,1935,1937,5,9,1,1,1,0,0,1
+D Smith ,England,1935,1935,2,4,1,1,1,0,0,1
+FB Smith ,New Zealand,1947,1952,4,7,1,1,1,0,0,1
+H Smith ,England,1928,1928,1,2,1,1,0,1,0,1
+SB Smith ,Australia,1984,1984,3,6,1,1,1,0,0,1
+TPB Smith ,England,1946,1947,4,5,1,1,1,0,0,1
+RP Snell ,South Africa,1992,1994,5,9,1,1,1,0,0,1
+WRT Solomon ,South Africa,1899,1899,1,2,1,1,1,0,0,1
+WH St Hill ,West Indies,1928,1930,3,4,1,1,1,0,0,1
+DA Stirling ,New Zealand,1984,1986,6,11,1,1,1,0,0,1
+MD Stoneman ,England,2017,2018,11,19,1,1,1,0,0,1
+GB Street ,England,1923,1923,1,1,1,0,0,0,1,1
+PC Strydom ,South Africa,2000,2000,2,4,1,1,1,0,0,1
+MJ Susskind ,South Africa,1924,1924,5,5,1,1,1,0,0,1
+SW Tait ,Australia,2005,2008,3,6,1,1,1,0,0,1
+Talha Jubair ,BAN,2002,2004,7,9,1,1,1,0,0,1
+Tanvir Ahmed ,Pakistan,2010,2013,5,10,1,1,1,0,0,1
+GL Tapscott ,South Africa,1913,1913,1,1,1,1,1,0,0,1
+Tareq Aziz ,BAN,2004,2004,3,4,1,1,1,0,0,1
+K Taylor ,England,1959,1964,3,6,1,1,1,0,0,1
+LB Taylor ,England,1985,1985,2,4,1,1,1,0,0,1
+M Theekshana ,Sri Lanka,2022,2022,2,4,1,1,1,0,0,1
+DC Thomas ,West Indies,2022,2022,1,2,1,1,1,0,0,1
+G Thornton ,South Africa,1902,1902,1,2,1,1,1,0,0,1
+BM Tickner ,New Zealand,2023,2023,3,6,1,1,1,0,0,1
+JC Tongue ,England,2023,2023,2,4,1,1,1,0,0,1
+DCH Townsend ,England,1935,1935,3,5,1,1,1,0,0,1
+JPF Travers ,Australia,1902,1902,1,2,1,1,1,0,0,1
+PB Truscott ,New Zealand,1965,1965,1,2,1,1,1,0,0,1
+LL Tsotsobe ,South Africa,2010,2011,5,9,1,1,1,0,0,1
+NC Tufnell ,England,1910,1910,1,2,1,0,0,0,1,1
+MJL Turnbull ,England,1930,1936,9,17,1,1,1,0,0,1
+Tushar Imran ,BAN,2002,2007,5,6,1,1,1,0,0,1
+RK Tyldesley ,England,1924,1930,7,11,1,1,1,0,0,1
+SD Udal ,England,2005,2006,4,7,1,1,1,0,0,1
+Umar Amin ,Pakistan,2010,2010,4,8,1,1,1,0,0,1
+PGV van der Bijl ,South Africa,1938,1939,5,8,1,1,1,0,0,1
+JDF Vandersay ,Sri Lanka,2022,2022,1,2,1,1,1,0,0,1
+M Venkataramana ,India,1989,1989,1,2,1,1,1,0,0,1
+DP Viljoen ,Zimbabwe,1998,2000,2,3,1,1,1,0,0,1
+CH Vintcent ,South Africa,1889,1892,3,4,1,1,1,0,0,1
+Vizianagram ,India,1936,1936,3,5,1,1,1,0,0,1
+A Waddington ,England,1920,1921,2,4,1,1,1,0,0,1
+MG Waite ,Australia,1938,1938,2,3,1,1,1,0,0,1
+AC Waller ,Zimbabwe,1996,1996,2,4,1,1,1,0,0,1
+A Ward ,England,1893,1895,7,13,1,1,1,0,0,1
+FA Ward ,Australia,1936,1938,4,6,1,1,1,0,0,1
+IJ Ward ,England,2001,2001,5,9,1,1,1,0,0,1
+A Warren ,England,1905,1905,1,2,1,1,1,0,0,1
+AS Wassan ,India,1990,1990,4,7,1,1,1,0,0,1
+SL Watkin ,England,1991,1993,3,6,1,1,1,0,0,1
+JR Watkins ,Australia,1973,1973,1,2,1,1,1,0,0,1
+M Watkinson ,England,1995,1996,4,7,1,1,1,0,0,1
+CD Watson ,West Indies,1960,1962,7,14,1,1,1,0,0,1
+GD Watson ,Australia,1966,1972,5,9,1,1,1,0,0,1
+S Wazir Ali ,India,1932,1936,7,13,1,1,1,0,0,1
+C Wesley ,South Africa,1960,1960,3,5,1,1,1,0,0,1
+T Westley ,England,2017,2017,5,10,1,1,1,0,0,1
+JJ Whitaker ,England,1986,1986,1,2,1,1,1,0,0,1
+AW White ,West Indies,1965,1965,2,3,1,1,1,0,0,1
+CL White ,Australia,2008,2008,4,8,1,1,1,0,0,1
+RGCE Wijesuriya ,Sri Lanka,1982,1985,4,6,1,1,1,0,0,1
+D Wilson ,England,1964,1971,6,12,1,1,1,0,0,1
+PL Winslow ,South Africa,1950,1955,5,8,1,1,1,0,0,1
+AJ Woodcock ,Australia,1974,1974,1,2,1,1,1,0,0,1
+T Yohannan ,India,2001,2002,3,6,1,1,1,0,0,1
+CA Young ,Ireland,2024,2024,2,4,1,1,1,0,0,1
+HI Young ,England,1899,1899,2,4,1,1,1,0,0,1
+Zahoor Elahi ,Pakistan,1996,1996,2,4,1,1,1,0,0,1
+Zakir Khan ,Pakistan,1986,1989,2,4,1,1,1,0,0,1
+Zia-ur-Rehman ,Afghanistan,2024,2024,2,4,1,1,1,0,0,1
+M Zondeki ,South Africa,2003,2008,6,11,1,1,1,0,0,1
+Abdul Wasi ,Afghanistan,2021,2021,1,2,0,0,0,0,0,0
+Abdur Rauf ,Pakistan,2009,2009,3,6,0,0,0,0,0,0
+CA Absolom ,England,1879,1879,1,2,0,0,0,0,0,0
+Aftab Baloch ,Pakistan,1969,1975,2,4,0,0,0,0,0,0
+U Afzaal ,England,2001,2001,3,4,0,0,0,0,0,0
+AC Agar ,Australia,2013,2023,5,10,0,0,0,0,0,0
+Agha Zahid ,Pakistan,1975,1975,1,2,0,0,0,0,0,0
+JP Agnew ,England,1984,1985,3,6,0,0,0,0,0,0
+Alamgir Kabir ,BAN,2002,2004,3,4,0,0,0,0,0,0
+HH Alexander ,Australia,1933,1933,1,2,0,0,0,0,0,0
+Imtiaz Ali ,West Indies,1976,1976,1,2,0,0,0,0,0,0
+Kabir Ali ,England,2003,2003,1,2,0,0,0,0,0,0
+Ali Hussain Rizvi ,Pakistan,1997,1997,1,1,0,0,0,0,0,0
+FE Allan ,Australia,1879,1879,1,2,0,0,0,0,0,0
+PJ Allan ,Australia,1965,1965,1,2,0,0,0,0,0,0
+MJC Allom ,England,1930,1931,5,8,0,0,0,0,0,0
+Al-Amin Hossain ,BAN,2013,2019,7,11,0,0,0,0,0,0
+MKDI Amerasinghe ,Sri Lanka,2008,2008,1,2,0,0,0,0,0,0
+Amir Elahi (IND/PAK),NA,1947,1952,6,9,0,0,0,0,0,0
+SA Ankola ,India,1989,1989,1,2,0,0,0,0,0,0
+Anwar Hossain Monir ,BAN,2003,2005,3,3,0,0,0,0,0,0
+Anwar Hossain ,BAN,2002,2002,1,1,0,0,0,0,0,0
+Anwar Hussain ,Pakistan,1952,1952,4,6,0,0,0,0,0,0
+Anwar Khan ,Pakistan,1979,1979,1,2,0,0,0,0,0,0
+AL Apte ,India,1959,1959,1,1,0,0,0,0,0,0
+AG Archer ,England,1899,1899,1,2,0,0,0,0,0,0
+KA Archer ,Australia,1950,1951,5,10,0,0,0,0,0,0
+Arif Butt ,Pakistan,1964,1965,3,6,0,0,0,0,0,0
+T Armitage ,England,1877,1877,2,4,0,0,0,0,0,0
+J Arnold ,England,1931,1931,1,2,0,0,0,0,0,0
+Arshad Khan ,Pakistan,1997,2005,9,17,0,0,0,0,0,0
+NS Asgarali ,West Indies,1957,1957,2,2,0,0,0,0,0,0
+Ashfaq Ahmed ,Pakistan,1993,1993,1,2,0,0,0,0,0,0
+WH Ashley ,South Africa,1889,1889,1,1,0,0,0,0,0,0
+Atif Rauf ,Pakistan,1994,1994,1,2,0,0,0,0,0,0
+Azam Khan ,Pakistan,1996,1996,1,2,0,0,0,0,0,0
+Azhar Khan ,Pakistan,1980,1980,1,2,0,0,0,0,0,0
+Azmat Rana ,Pakistan,1980,1980,1,2,0,0,0,0,0,0
+Bahir Shah ,Afghanistan,2023,2023,1,2,0,0,0,0,0,0
+RJ Bailey ,England,1988,1990,4,7,0,0,0,0,0,0
+MRCN Bandaratilleke ,Sri Lanka,1998,2001,7,14,0,0,0,0,0,0
+SN Banerjee ,India,1949,1949,1,2,0,0,0,0,0,0
+ST Banerjee ,India,1992,1992,1,2,0,0,0,0,0,0
+C Bannerman ,Australia,1877,1879,3,6,0,0,0,0,0,0
+M Baqa Jilani ,India,1936,1936,1,2,0,0,0,0,0,0
+GD Barlow ,England,1976,1977,3,6,0,0,0,0,0,0
+AG Barrett ,West Indies,1971,1975,6,10,0,0,0,0,0,0
+VA Barton ,England,1892,1892,1,2,0,0,0,0,0,0
+GR Beard ,Australia,1980,1980,3,4,0,0,0,0,0,0
+JEF Beck ,New Zealand,1953,1956,8,14,0,0,0,0,0,0
+J Benaud ,Australia,1972,1973,3,6,0,0,0,0,0,0
+JE Benjamin ,England,1994,1994,1,2,0,0,0,0,0,0
+HK Bennett ,New Zealand,2010,2010,1,2,0,0,0,0,0,0
+MR Benson ,England,1986,1986,1,2,0,0,0,0,0,0
+DE Bernard ,West Indies,2003,2009,3,6,0,0,0,0,0,0
+BJ Bess ,West Indies,2010,2010,1,2,0,0,0,0,0,0
+N Betancourt ,West Indies,1930,1930,1,2,0,0,0,0,0,0
+M Bhanuka ,Sri Lanka,2021,2021,1,2,0,0,0,0,0,0
+AR Bhat ,India,1983,1983,2,3,0,0,0,0,0,0
+Bilawal Bhatti ,Pakistan,2013,2014,2,4,0,0,0,0,0,0
+GF Bissett ,South Africa,1927,1928,4,8,0,0,0,0,0,0
+MI Black ,West Indies,2000,2002,6,10,0,0,0,0,0,0
+ID Blackwell ,England,2006,2006,1,2,0,0,0,0,0,0
+EG Bock ,South Africa,1935,1935,1,2,0,0,0,0,0,0
+GE Bond ,South Africa,1938,1938,1,2,0,0,0,0,0,0
+MW Booth ,England,1913,1914,2,4,0,0,0,0,0,0
+T Bosch ,South Africa,1992,1992,1,2,0,0,0,0,0,0
+WM Bradley ,England,1899,1899,2,4,0,0,0,0,0,0
+CR Brathwaite ,West Indies,2015,2016,3,4,0,0,0,0,0,0
+W Brearley ,England,1905,1912,4,8,0,0,0,0,0,0
+MP Breetzke ,South Africa,2024,2024,1,2,0,0,0,0,0,0
+GA Briant ,Zimbabwe,1993,1993,1,1,0,0,0,0,0,0
+NT Broom ,New Zealand,2017,2017,2,4,0,0,0,0,0,0
+LS Brown ,South Africa,1931,1932,2,3,0,0,0,0,0,0
+GK Bruk-Jackson ,Zimbabwe,1993,1993,2,4,0,0,0,0,0,0
+C Burke ,New Zealand,1946,1946,1,1,0,0,0,0,0,0
+SF Burke ,South Africa,1962,1965,2,4,0,0,0,0,0,0
+EJK Burn ,Australia,1890,1890,2,4,0,0,0,0,0,0
+AR Butcher ,England,1979,1979,1,2,0,0,0,0,0,0
+LS Butler ,West Indies,1955,1955,1,1,0,0,0,0,0,0
+LA Butterfield ,New Zealand,1946,1946,1,1,0,0,0,0,0,0
+ID Buys ,South Africa,1922,1922,1,2,0,0,0,0,0,0
+ST Callaway ,Australia,1892,1895,3,6,0,0,0,0,0,0
+FJ Cameron ,West Indies,1948,1949,5,10,0,0,0,0,0,0
+JH Cameron ,West Indies,1939,1939,2,4,0,0,0,0,0,0
+DB Carr ,England,1951,1952,2,2,0,0,0,0,0,0
+DW Carr ,England,1909,1909,1,2,0,0,0,0,0,0
+HWR Cartwright ,Australia,2017,2017,2,4,0,0,0,0,0,0
+G Challenor ,West Indies,1928,1928,3,3,0,0,0,0,0,0
+HS Chang ,West Indies,1979,1979,1,2,0,0,0,0,0,0
+PC Charlton ,Australia,1890,1890,2,4,0,0,0,0,0,0
+HRJ Charlwood ,England,1877,1877,2,4,0,0,0,0,0,0
+TL Chatara ,Zimbabwe,2013,2024,10,19,0,0,0,0,0,0
+W Chatterton ,England,1892,1892,1,2,0,0,0,0,0,0
+CJ Chibhabha ,Zimbabwe,2016,2023,5,7,0,0,0,0,0,0
+MT Chinouya ,Zimbabwe,2016,2016,2,3,0,0,0,0,0,0
+TL Chivanga ,Zimbabwe,2023,2024,2,3,0,0,0,0,0,0
+N Chopra ,India,2000,2000,1,1,0,0,0,0,0,0
+NR Chowdhury ,India,1949,1951,2,3,0,0,0,0,0,0
+S Christopherson ,England,1884,1884,1,2,0,0,0,0,0,0
+GWA Chubb ,South Africa,1951,1951,5,9,0,0,0,0,0,0
+EW Clark ,England,1929,1934,8,15,0,0,0,0,0,0
+CB Clarke ,West Indies,1939,1939,3,6,0,0,0,0,0,0
+DC Cleverley ,New Zealand,1932,1946,2,2,0,0,0,0,0,0
+JAK Cochran ,South Africa,1931,1931,1,2,0,0,0,0,0,0
+G Coetzee ,South Africa,2023,2023,3,6,0,0,0,0,0,0
+A Coningham ,Australia,1894,1895,1,2,0,0,0,0,0,0
+C Cook ,England,1947,1947,1,2,0,0,0,0,0,0
+FJ Cook ,South Africa,1896,1896,1,2,0,0,0,0,0,0
+SH Cook ,Australia,1997,1997,2,4,0,0,0,0,0,0
+SJ Cook ,South Africa,1992,1993,3,5,0,0,0,0,0,0
+GE Corling ,Australia,1964,1964,5,8,0,0,0,0,0,0
+SS Cottrell ,West Indies,2013,2014,2,2,0,0,0,0,0,0
+G Coulthard ,Australia,1882,1882,1,2,0,0,0,0,0,0
+Hon.CJ Coventry ,England,1889,1889,2,4,0,0,0,0,0,0
+A Coxon ,England,1948,1948,1,2,0,0,0,0,0,0
+MS Crane ,England,2018,2018,1,1,0,0,0,0,0,0
+GF Cresswell ,New Zealand,1949,1951,3,4,0,0,0,0,0,0
+G Cripps ,South Africa,1892,1892,1,1,0,0,0,0,0,0
+GJ Crocker ,Zimbabwe,1992,1992,3,5,0,0,0,0,0,0
+DJ Cullen ,Australia,2006,2006,1,2,0,0,0,0,0,0
+TK Curran ,England,2017,2018,2,3,0,0,0,0,0,0
+AC Dale ,Australia,1998,1999,2,4,0,0,0,0,0,0
+JW D'Arcy ,New Zealand,1958,1958,5,6,0,0,0,0,0,0
+EQ Davies ,South Africa,1936,1939,5,6,0,0,0,0,0,0
+SP Davis ,Australia,1986,1986,1,1,0,0,0,0,0,0
+AC Dawson ,South Africa,2003,2003,2,4,0,0,0,0,0,0
+EW Dawson ,England,1928,1930,5,8,0,0,0,0,0,0
+Z de Bruyn ,South Africa,2004,2004,3,5,0,0,0,0,0,0
+RP de Groen ,New Zealand,1993,1994,5,7,0,0,0,0,0,0
+AR Dell ,Australia,1971,1974,2,4,0,0,0,0,0,0
+GRA de Silva ,Sri Lanka,1982,1982,4,8,0,0,0,0,0,0
+DT Dewdney ,West Indies,1955,1958,9,16,0,0,0,0,0,0
+JG Dewes ,England,1948,1950,5,8,0,0,0,0,0,0
+AE Dipper ,England,1921,1921,1,2,0,0,0,0,0,0
+GH Dockrell ,Ireland,2019,2023,2,3,0,0,0,0,0,0
+RG Draper ,South Africa,1950,1950,2,3,0,0,0,0,0,0
+JRF Duncan ,Australia,1971,1971,1,2,0,0,0,0,0,0
+FJ Durston ,England,1921,1921,1,2,0,0,0,0,0,0
+DV Dyer ,South Africa,1947,1947,3,6,0,0,0,0,0,0
+KH Eastwood ,Australia,1971,1971,1,2,0,0,0,0,0,0
+HI Ebeling ,Australia,1934,1934,1,2,0,0,0,0,0,0
+RM Edwards ,West Indies,1968,1969,5,9,0,0,0,0,0,0
+WJ Edwards ,Australia,1974,1974,3,6,0,0,0,0,0,0
+Ehsanul Haque ,BAN,2002,2002,1,1,0,0,0,0,0,0
+Ehsan Adil ,Pakistan,2013,2015,3,5,0,0,0,0,0,0
+RWG Emery ,New Zealand,1952,1952,2,3,0,0,0,0,0,0
+GM Emmett ,England,1948,1948,1,2,0,0,0,0,0,0
+AJ Evans ,England,1921,1921,1,2,0,0,0,0,0,0
+B Evans ,Zimbabwe,2023,2023,1,2,0,0,0,0,0,0
+Faisal Hossain ,BAN,2004,2004,1,2,0,0,0,0,0,0
+Farhan Adil ,Pakistan,2003,2003,1,2,0,0,0,0,0,0
+Farooq Hamid ,Pakistan,1964,1964,1,2,0,0,0,0,0,0
+Farrukh Zaman ,Pakistan,1976,1976,1,2,0,0,0,0,0,0
+JP Faulkner ,Australia,2013,2013,1,2,0,0,0,0,0,0
+CJ Ferguson ,Australia,2016,2016,1,1,0,0,0,0,0,0
+LH Ferguson ,New Zealand,2019,2019,1,2,0,0,0,0,0,0
+MP Fernandes ,West Indies,1928,1930,2,3,0,0,0,0,0,0
+ERNS Fernando ,Sri Lanka,1983,1984,5,8,0,0,0,0,0,0
+KADM Fernando ,Sri Lanka,2003,2003,2,4,0,0,0,0,0,0
+NR Ferreira ,Zimbabwe,2005,2005,1,1,0,0,0,0,0,0
+CE Finlason ,South Africa,1889,1889,1,2,0,0,0,0,0,0
+FE Fisher ,New Zealand,1953,1953,1,1,0,0,0,0,0,0
+JA Flavell ,England,1961,1964,4,7,0,0,0,0,0,0
+LO Fleetwood-Smith ,Australia,1935,1938,10,18,0,0,0,0,0,0
+CE Floquet ,South Africa,1910,1910,1,2,0,0,0,0,0,0
+H Foley ,New Zealand,1930,1930,1,2,0,0,0,0,0,0
+AJ Fothergill ,England,1889,1889,2,4,0,0,0,0,0,0
+CN Frank ,South Africa,1921,1921,3,6,0,0,0,0,0,0
+WHB Frank ,South Africa,1896,1896,1,1,0,0,0,0,0,0
+MC Frederick ,West Indies,1954,1954,1,2,0,0,0,0,0,0
+DL Freeman ,New Zealand,1933,1933,2,2,0,0,0,0,0,0
+FAW Freer ,Australia,1946,1946,1,2,0,0,0,0,0,0
+RL Fuller ,West Indies,1935,1935,1,2,0,0,0,0,0,0
+HA Furlonge ,West Indies,1955,1956,3,5,0,0,0,0,0,0
+HG Gaekwad ,India,1952,1952,1,1,0,0,0,0,0,0
+IS Gallage ,Sri Lanka,1999,1999,1,2,0,0,0,0,0,0
+N Gallichan ,New Zealand,1937,1937,1,2,0,0,0,0,0,0
+PLS Gamage ,Sri Lanka,2017,2018,5,9,0,0,0,0,0,0
+D Ganesh ,India,1997,1997,4,7,0,0,0,0,0,0
+AG Ganteaume ,West Indies,1948,1948,1,2,0,0,0,0,0,0
+SG Gedye ,New Zealand,1964,1965,4,8,0,0,0,0,0,0
+PR George ,Australia,2010,2010,1,2,0,0,0,0,0,0
+MEZ Ghazali ,Pakistan,1954,1954,2,2,0,0,0,0,0,0
+Ghulam Abbas ,Pakistan,1967,1967,1,2,0,0,0,0,0,0
+OD Gibson ,West Indies,1995,1999,2,4,0,0,0,0,0,0
+ESH Giddins ,England,1999,2000,4,7,0,0,0,0,0,0
+DR Gilbert ,Australia,1985,1986,9,13,0,0,0,0,0,0
+SR Gillespie ,New Zealand,1986,1986,1,1,0,0,0,0,0,0
+AHH Gilligan ,England,1930,1930,4,6,0,0,0,0,0,0
+G Gladstone ,West Indies,1930,1930,1,2,0,0,0,0,0,0
+GK Glover ,South Africa,1896,1896,1,1,0,0,0,0,0,0
+DW Gregory ,Australia,1877,1879,3,6,0,0,0,0,0,0
+IA Greig ,England,1982,1982,2,4,0,0,0,0,0,0
+BAF Grieve ,England,1889,1889,2,4,0,0,0,0,0,0
+GM Griffin ,South Africa,1960,1960,2,3,0,0,0,0,0,0
+TU Groube ,Australia,1880,1880,1,2,0,0,0,0,0,0
+CEJ Guest ,Australia,1963,1963,1,2,0,0,0,0,0,0
+C Gunasekara ,Sri Lanka,2024,2024,1,2,0,0,0,0,0,0
+RPW Guneratne ,Sri Lanka,1983,1983,1,1,0,0,0,0,0,0
+BP Gupte ,India,1961,1965,3,5,0,0,0,0,0,0
+A Habib ,England,1999,1999,2,4,0,0,0,0,0,0
+GG Hall ,South Africa,1965,1965,1,2,0,0,0,0,0,0
+C Hallows ,England,1921,1928,2,3,0,0,0,0,0,0
+GM Hamilton ,England,1999,1999,1,1,0,0,0,0,0,0
+RHM Hands ,South Africa,1914,1914,1,2,0,0,0,0,0,0
+MA Hanley ,South Africa,1949,1949,1,2,0,0,0,0,0,0
+HTW Hardinge ,England,1921,1921,1,2,0,0,0,0,0,0
+NS Harford ,New Zealand,1955,1958,8,11,0,0,0,0,0,0
+Haris Rauf ,Pakistan,2022,2022,1,2,0,0,0,0,0,0
+RM Harris ,New Zealand,1959,1959,2,2,0,0,0,0,0,0
+Harshit Rana ,India,2024,2024,1,1,0,0,0,0,0,0
+GPD Hartigan ,South Africa,1912,1914,5,6,0,0,0,0,0,0
+AEV Hartkopf ,Australia,1925,1925,1,2,0,0,0,0,0,0
+MR Harvey ,Australia,1947,1947,1,2,0,0,0,0,0,0
+RL Harvey ,South Africa,1936,1936,2,2,0,0,0,0,0,0
+Harvinder Singh ,India,1998,2001,3,6,0,0,0,0,0,0
+GG Hearne ,England,1892,1892,1,2,0,0,0,0,0,0
+BE Hendricks ,South Africa,2020,2020,1,2,0,0,0,0,0,0
+D Hettiarachchi ,Sri Lanka,2001,2001,1,2,0,0,0,0,0,0
+CFW Hime ,South Africa,1896,1896,1,2,0,0,0,0,0,0
+JR Hodges ,Australia,1877,1877,2,4,0,0,0,0,0,0
+CK Holder ,West Indies,2020,2020,1,1,0,0,0,0,0,0
+JL Hopwood ,England,1934,1934,2,3,0,0,0,0,0,0
+AN Hornby ,England,1879,1884,3,5,0,0,0,0,0,0
+AB Howard ,West Indies,1972,1972,1,1,0,0,0,0,0,0
+H Howell ,England,1920,1924,5,8,0,0,0,0,0,0
+J Hull ,England,2024,2024,1,2,0,0,0,0,0,0
+Humayun Farhat ,Pakistan,2001,2001,1,1,0,0,0,0,0,0
+GI Hume ,Ireland,2023,2023,3,5,0,0,0,0,0,0
+KC Ibrahim ,India,1948,1949,4,6,0,0,0,0,0,0
+J Iddon ,England,1935,1935,5,9,0,0,0,0,0,0
+Iftikhar Anjum ,Pakistan,2006,2006,1,2,0,0,0,0,0,0
+Ijaz Faqih ,Pakistan,1980,1988,5,8,0,0,0,0,0,0
+MC Ilott ,England,1993,1995,5,8,0,0,0,0,0,0
+Imran Khan ,Pakistan,2014,2019,10,19,0,0,0,0,0,0
+PJ Ingram ,New Zealand,2010,2010,2,4,0,0,0,0,0,0
+RD Jackman ,England,1981,1982,4,7,0,0,0,0,0,0
+WG Jacks ,England,2022,2022,2,4,0,0,0,0,0,0
+AS Jaggernauth ,West Indies,2008,2008,1,2,0,0,0,0,0,0
+LP Jai ,India,1933,1933,1,2,0,0,0,0,0,0
+Jaker Ali ,BAN,2024,2024,2,3,0,0,0,0,0,0
+Jalal-ud-Din ,Pakistan,1982,1985,6,9,0,0,0,0,0,0
+SP James ,England,1998,1998,2,4,0,0,0,0,0,0
+JA Jameson ,England,1971,1974,4,6,0,0,0,0,0,0
+Javed Akhtar ,Pakistan,1962,1962,1,1,0,0,0,0,0,0
+HK Jayantilal ,India,1971,1971,1,2,0,0,0,0,0,0
+RSA Jayasekera ,Sri Lanka,1982,1982,1,1,0,0,0,0,0,0
+S Jeganathan ,Sri Lanka,1983,1983,2,3,0,0,0,0,0,0
+DJ Johnson ,India,1996,1996,2,4,0,0,0,0,0,0
+HHH Johnson ,West Indies,1948,1950,3,6,0,0,0,0,0,0
+RL Johnson ,England,2003,2003,3,6,0,0,0,0,0,0
+RA Jones ,New Zealand,2003,2003,1,2,0,0,0,0,0,0
+LM Jongwe ,Zimbabwe,2021,2021,1,1,0,0,0,0,0,0
+S Joseph ,West Indies,2024,2024,7,12,0,0,0,0,0,0
+LR Joslin ,Australia,1968,1968,1,2,0,0,0,0,0,0
+T Kaitano ,Zimbabwe,2021,2021,1,2,0,0,0,0,0,0
+Kamran Ghulam ,Pakistan,2024,2024,2,4,0,0,0,0,0,0
+Kamrul Islam Rabbi ,BAN,2016,2018,7,13,0,0,0,0,0,0
+TP Kamungozi ,Zimbabwe,2014,2014,1,2,0,0,0,0,0,0
+TE Kane ,Ireland,2018,2018,1,2,0,0,0,0,0,0
+HH Kanitkar ,India,1999,2000,2,3,0,0,0,0,0,0
+HS Kanitkar ,India,1974,1974,2,3,0,0,0,0,0,0
+Karim Janat ,Afghanistan,2023,2024,2,4,0,0,0,0,0,0
+WW Keeton ,England,1934,1939,2,2,0,0,0,0,0,0
+GA Kempis ,South Africa,1889,1889,1,2,0,0,0,0,0,0
+SC Kerrigan ,England,2013,2013,1,2,0,0,0,0,0,0
+Khalid Hasan ,Pakistan,1954,1954,1,1,0,0,0,0,0,0
+Khalid Wazir ,Pakistan,1954,1954,2,2,0,0,0,0,0,0
+A Khan ,England,2009,2009,1,2,0,0,0,0,0,0
+JH King ,England,1909,1909,1,2,0,0,0,0,0,0
+SP Kinneir ,England,1911,1911,1,2,0,0,0,0,0,0
+NA Knox ,England,1907,1907,2,4,0,0,0,0,0,0
+CKB Kulasekara ,Sri Lanka,2011,2011,1,2,0,0,0,0,0,0
+UN Kulkarni ,India,1967,1968,4,8,0,0,0,0,0,0
+AK Kuruppuarachchi ,Sri Lanka,1986,1987,2,3,0,0,0,0,0,0
+A Kuruvilla ,India,1997,1997,10,15,0,0,0,0,0,0
+F Kuys ,South Africa,1899,1899,1,2,0,0,0,0,0,0
+MN Lathwell ,England,1993,1993,2,3,0,0,0,0,0,0
+DV Lawrence ,England,1988,1992,5,10,0,0,0,0,0,0
+HW Lee ,England,1931,1931,1,2,0,0,0,0,0,0
+JG Leggat ,New Zealand,1952,1956,9,10,0,0,0,0,0,0
+FL le Roux ,South Africa,1914,1914,1,2,0,0,0,0,0,0
+AR Lewis ,England,1972,1973,9,17,0,0,0,0,0,0
+J Lewis ,England,2006,2006,1,2,0,0,0,0,0,0
+PT Lewis ,South Africa,1913,1913,1,1,0,0,0,0,0,0
+RN Lewis ,West Indies,1997,2008,5,9,0,0,0,0,0,0
+GF Linde ,South Africa,2019,2021,3,5,0,0,0,0,0,0
+LS Livingstone ,England,2022,2022,1,2,0,0,0,0,0,0
+DK Liyanage ,Sri Lanka,1992,2001,9,15,0,0,0,0,0,0
+TA Lloyd ,England,1984,1984,1,1,0,0,0,0,0,0
+ACI Lock ,Zimbabwe,1995,1995,1,2,0,0,0,0,0,0
+GR Loveridge ,New Zealand,1996,1996,1,2,0,0,0,0,0,0
+EB Lundie ,South Africa,1914,1914,1,2,0,0,0,0,0,0
+MJ Macaulay ,South Africa,1965,1965,1,2,0,0,0,0,0,0
+JCW MacBryan ,England,1924,1924,1,1,0,0,0,0,0,0
+BE McGain ,Australia,2009,2009,1,1,0,0,0,0,0,0
+HM McGirr ,New Zealand,1930,1930,2,3,0,0,0,0,0,0
+PE McIntyre ,Australia,1995,1996,2,4,0,0,0,0,0,0
+AJ McKay ,New Zealand,2010,2010,1,1,0,0,0,0,0,0
+FA MacKinnon ,England,1879,1879,1,2,0,0,0,0,0,0
+JW McLaren ,Australia,1912,1912,1,2,0,0,0,0,0,0
+R McLaren ,South Africa,2010,2014,2,4,0,0,0,0,0,0
+EG McLeod ,New Zealand,1930,1930,1,2,0,0,0,0,0,0
+JEP McMaster ,England,1889,1889,1,2,0,0,0,0,0,0
+DAN McRae ,New Zealand,1946,1946,1,1,0,0,0,0,0,0
+MAWR Madurasinghe ,Sri Lanka,1988,1992,3,5,0,0,0,0,0,0
+Mahbubul Alam ,BAN,2008,2008,4,6,0,0,0,0,0,0
+SI Mahmood ,England,2006,2007,8,14,0,0,0,0,0,0
+JWH Makepeace ,England,1920,1921,4,7,0,0,0,0,0,0
+NA Mallender ,England,1992,1992,2,4,0,0,0,0,0,0
+MF Malone ,Australia,1977,1977,1,2,0,0,0,0,0,0
+LA Markham ,South Africa,1949,1949,1,2,0,0,0,0,0,0
+VJ Marks ,England,1982,1984,6,12,0,0,0,0,0,0
+AP Marr ,Australia,1885,1885,1,2,0,0,0,0,0,0
+NE Marshall ,West Indies,1955,1955,1,2,0,0,0,0,0,0
+BP Martin ,New Zealand,2013,2013,5,9,0,0,0,0,0,0
+JW Martin ,England,1947,1947,1,2,0,0,0,0,0,0
+WFE Marx ,South Africa,1921,1921,3,6,0,0,0,0,0,0
+MJ Mason ,New Zealand,2004,2004,1,2,0,0,0,0,0,0
+Masood Anwar ,Pakistan,1990,1990,1,2,0,0,0,0,0,0
+EZ Matambanadzo ,Zimbabwe,1996,1999,3,6,0,0,0,0,0,0
+T Meale ,New Zealand,1958,1958,2,3,0,0,0,0,0,0
+JM Mennie ,Australia,2016,2016,1,1,0,0,0,0,0,0
+KO Meth ,Zimbabwe,2013,2013,2,4,0,0,0,0,0,0
+EM Meuli ,New Zealand,1953,1953,1,1,0,0,0,0,0,0
+AM Miller ,England,1896,1896,1,2,0,0,0,0,0,0
+NO Miller ,West Indies,2009,2009,1,2,0,0,0,0,0,0
+RC Miller ,West Indies,1953,1953,1,2,0,0,0,0,0,0
+MJ Mindley ,West Indies,2022,2022,1,2,0,0,0,0,0,0
+RB Minnett ,Australia,1911,1912,9,16,0,0,0,0,0,0
+Miran Bakhsh ,Pakistan,1955,1955,2,4,0,0,0,0,0,0
+SF Mire ,Zimbabwe,2017,2017,2,3,0,0,0,0,0,0
+NS Mitchell-Innes ,England,1935,1935,1,2,0,0,0,0,0,0
+A Mithun ,India,2010,2011,4,8,0,0,0,0,0,0
+Mohammad Aslam ,Pakistan,1954,1954,1,1,0,0,0,0,0,0
+Mohammad Irfan ,Pakistan,2013,2013,4,6,0,0,0,0,0,0
+Mohammad Khalil ,Pakistan,2004,2005,2,4,0,0,0,0,0,0
+Mohammad Munaf ,Pakistan,1959,1962,4,8,0,0,0,0,0,0
+Mohammad Saleem ,Afghanistan,2024,2024,1,2,0,0,0,0,0,0
+Mohammad Shahid ,BAN,2015,2015,5,6,0,0,0,0,0,0
+Mohammad Shahzad ,Afghanistan,2018,2019,2,3,0,0,0,0,0,0
+Mohammad Zahid ,Pakistan,1996,2003,5,9,0,0,0,0,0,0
+DS Mohanty ,India,1997,1997,2,4,0,0,0,0,0,0
+JA Morkel ,South Africa,2009,2009,1,2,0,0,0,0,0,0
+J Moroney ,Australia,1949,1952,7,13,0,0,0,0,0,0
+S Morris ,Australia,1885,1885,1,2,0,0,0,0,0,0
+JK Moss ,Australia,1979,1979,1,2,0,0,0,0,0,0
+VM Muddiah ,India,1959,1960,2,3,0,0,0,0,0,0
+GH Mudie ,West Indies,1935,1935,1,2,0,0,0,0,0,0
+BS Mudzinganyama ,Zimbabwe,2020,2020,1,2,0,0,0,0,0,0
+Muhammad Musa ,Pakistan,2019,2019,1,1,0,0,0,0,0,0
+Mujeeb Ur Rahman ,Afghanistan,2018,2018,1,1,0,0,0,0,0,0
+Mukesh Kumar ,India,2023,2024,3,6,0,0,0,0,0,0
+Munir Ahmad ,Afghanistan,2021,2021,1,2,0,0,0,0,0,0
+C Munro ,New Zealand,2013,2013,1,1,0,0,0,0,0,0
+TA Munton ,England,1992,1992,2,4,0,0,0,0,0,0
+T Mupariwa ,Zimbabwe,2004,2004,1,1,0,0,0,0,0,0
+TJ Murtagh ,Ireland,2018,2019,3,6,0,0,0,0,0,0
+HA Musgrove ,Australia,1885,1885,1,2,0,0,0,0,0,0
+DT Mutendera ,Zimbabwe,2000,2000,1,2,0,0,0,0,0,0
+F Mutizwa ,Zimbabwe,2012,2012,1,1,0,0,0,0,0,0
+B Muzarabani ,Zimbabwe,2017,2024,7,11,0,0,0,0,0,0
+W Mwayenga ,Zimbabwe,2005,2005,1,2,0,0,0,0,0,0
+Nadeem Ghauri ,Pakistan,1990,1990,1,1,0,0,0,0,0,0
+Nadeem Khan ,Pakistan,1993,1999,2,4,0,0,0,0,0,0
+LE Nagel ,Australia,1932,1932,1,2,0,0,0,0,0,0
+SS Naik ,India,1974,1975,3,4,0,0,0,0,0,0
+Naoomal Jaoomal ,India,1932,1934,3,6,0,0,0,0,0,0
+T Natarajan ,India,2021,2021,1,2,0,0,0,0,0,0
+Naved Anjum ,Pakistan,1989,1990,2,4,0,0,0,0,0,0
+Naved Ashraf ,Pakistan,1998,2000,2,4,0,0,0,0,0,0
+Naved Latif ,Pakistan,2002,2002,1,2,0,0,0,0,0,0
+MN Nawaz ,Sri Lanka,2002,2002,1,2,0,0,0,0,0,0
+S Nazir Ali ,India,1932,1934,2,4,0,0,0,0,0,0
+Nazmul Hossain ,BAN,2004,2011,2,3,0,0,0,0,0,0
+Nazmul Islam ,BAN,2018,2018,1,2,0,0,0,0,0,0
+JM Neblett ,West Indies,1935,1935,1,2,0,0,0,0,0,0
+MG Neser ,Australia,2021,2022,2,4,0,0,0,0,0,0
+W Newham ,England,1888,1888,1,2,0,0,0,0,0,0
+J Newman ,New Zealand,1932,1933,3,3,0,0,0,0,0,0
+MJ Nicholson ,Australia,1998,1998,1,2,0,0,0,0,0,0
+JFW Nicolson ,South Africa,1928,1928,3,6,0,0,0,0,0,0
+Nijat Masood ,Afghanistan,2023,2024,3,6,0,0,0,0,0,0
+RAP Nissanka ,Sri Lanka,2003,2003,4,7,0,0,0,0,0,0
+K Nitish Kumar Reddy ,India,2024,2024,1,1,0,0,0,0,0,0
+NO Norton ,South Africa,1910,1910,1,2,0,0,0,0,0,0
+OE Nothling ,Australia,1928,1928,1,2,0,0,0,0,0,0
+S Nyalchand ,India,1952,1952,1,1,0,0,0,0,0,0
+KJ O'Brien ,Ireland,2018,2019,3,6,0,0,0,0,0,0
+AE Ochse ,South Africa,1889,1889,2,3,0,0,0,0,0,0
+SNJ O'Keefe ,Australia,2014,2017,9,16,0,0,0,0,0,0
+N Oldfield ,England,1939,1939,1,1,0,0,0,0,0,0
+AH Omarshah ,Zimbabwe,1992,1996,3,5,0,0,0,0,0,0
+G Onions ,England,2009,2012,9,16,0,0,0,0,0,0
+J Ormond ,England,2001,2001,2,3,0,0,0,0,0,0
+J Overton ,England,2022,2022,1,2,0,0,0,0,0,0
+DEV Padgett ,England,1960,1960,2,4,0,0,0,0,0,0
+AL Padmore ,West Indies,1976,1976,2,4,0,0,0,0,0,0
+DJ Pagon ,West Indies,2005,2005,2,4,0,0,0,0,0,0
+AM Pai ,India,1969,1969,1,2,0,0,0,0,0,0
+PE Palia ,India,1932,1936,2,4,0,0,0,0,0,0
+CH Palmer ,England,1954,1954,1,2,0,0,0,0,0,0
+KE Palmer ,England,1965,1965,1,2,0,0,0,0,0,0
+RL Park ,Australia,1920,1921,1,2,0,0,0,0,0,0
+RD Parkar ,India,1972,1973,2,4,0,0,0,0,0,0
+CWL Parker ,England,1921,1921,1,1,0,0,0,0,0,0
+GM Parker ,South Africa,1924,1924,2,2,0,0,0,0,0,0
+PWG Parker ,England,1981,1981,1,2,0,0,0,0,0,0
+MW Parkinson ,England,2022,2022,1,2,0,0,0,0,0,0
+JH Parks ,England,1937,1937,1,2,0,0,0,0,0,0
+DD Parsana ,India,1979,1979,2,4,0,0,0,0,0,0
+Nawab of Pataudi snr (ENG/IND),NA,1932,1946,6,11,0,0,0,0,0,0
+DJ Pattinson ,England,2008,2008,1,2,0,0,0,0,0,0
+KN Peiris ,Sri Lanka,2024,2024,1,2,0,0,0,0,0,0
+F Penn ,England,1880,1880,1,2,0,0,0,0,0,0
+KK Peters ,West Indies,2014,2014,1,1,0,0,0,0,0,0
+A Phillip ,West Indies,2022,2022,2,4,0,0,0,0,0,0
+WN Phillips ,Australia,1992,1992,1,2,0,0,0,0,0,0
+LR Pierre ,West Indies,1948,1948,1,2,0,0,0,0,0,0
+ACS Pigott ,England,1984,1984,1,1,0,0,0,0,0,0
+W Place ,England,1948,1948,3,6,0,0,0,0,0,0
+JB Plimsoll ,South Africa,1947,1947,1,2,0,0,0,0,0,0
+GH Pope ,England,1947,1947,1,2,0,0,0,0,0,0
+RJ Pope ,Australia,1885,1885,1,2,0,0,0,0,0,0
+RR Powar ,India,2007,2007,2,4,0,0,0,0,0,0
+S Prasanna ,Sri Lanka,2011,2011,1,1,0,0,0,0,0,0
+M Prasidh Krishna ,India,2023,2024,2,3,0,0,0,0,0,0
+D Pretorius ,South Africa,2002,2003,4,8,0,0,0,0,0,0
+RM Prideaux ,England,1968,1969,3,6,0,0,0,0,0,0
+MW Priest ,New Zealand,1990,1998,3,5,0,0,0,0,0,0
+CFH Prince ,South Africa,1899,1899,1,2,0,0,0,0,0,0
+MW Pringle ,South Africa,1992,1995,4,7,0,0,0,0,0,0
+WJ Pucovski ,Australia,2021,2021,1,2,0,0,0,0,0,0
+Qaiser Abbas ,Pakistan,2000,2000,1,2,0,0,0,0,0,0
+Qais Ahmad ,Afghanistan,2019,2024,2,4,0,0,0,0,0,0
+NV Radford ,England,1986,1988,3,6,0,0,0,0,0,0
+Rafiqul Islam ,BAN,2002,2002,1,1,0,0,0,0,0,0
+S Ragoonath ,West Indies,1999,1999,2,4,0,0,0,0,0,0
+K Rai Singh ,India,1948,1948,1,2,0,0,0,0,0,0
+Rajinder Pal ,India,1964,1964,1,2,0,0,0,0,0,0
+C Ramaswami ,India,1936,1936,2,3,0,0,0,0,0,0
+AN Ranasinghe ,Sri Lanka,1982,1982,2,4,0,0,0,0,0,0
+D Ranatunga ,Sri Lanka,1989,1989,2,4,0,0,0,0,0,0
+U Ranchod ,Zimbabwe,1993,1993,1,1,0,0,0,0,0,0
+CR Rangachari ,India,1948,1948,4,4,0,0,0,0,0,0
+WB Rankin (ENG/IRE),NA,2014,2019,3,6,0,0,0,0,0,0
+Rashid Khan ,Afghanistan,2018,2021,5,9,0,0,0,0,0,0
+V Razdan ,India,1989,1989,2,2,0,0,0,0,0,0
+HD Read ,England,1935,1935,1,2,0,0,0,0,0,0
+RE Redmond ,New Zealand,1973,1973,1,2,0,0,0,0,0,0
+N Reid ,South Africa,1921,1921,1,2,0,0,0,0,0,0
+HJ Rhodes ,England,1959,1959,2,4,0,0,0,0,0,0
+Riaz Afridi ,Pakistan,2004,2004,1,2,0,0,0,0,0,0
+AR Richards ,South Africa,1896,1896,1,1,0,0,0,0,0,0
+WHM Richards ,South Africa,1889,1889,1,1,0,0,0,0,0,0
+JA Richardson ,Australia,2019,2021,3,6,0,0,0,0,0,0
+TL Richmond ,England,1921,1921,1,2,0,0,0,0,0,0
+KR Rickards ,West Indies,1948,1952,2,4,0,0,0,0,0,0
+AT Roberts ,West Indies,1956,1956,1,2,0,0,0,0,0,0
+LA Roberts ,West Indies,1999,1999,1,2,0,0,0,0,0,0
+GK Robertson ,New Zealand,1986,1986,1,2,0,0,0,0,0,0
+WR Robertson ,Australia,1885,1885,1,2,0,0,0,0,0,0
+TS Roland-Jones ,England,2017,2017,4,8,0,0,0,0,0,0
+AK Roy ,India,1969,1969,4,8,0,0,0,0,0,0
+FE Rumsey ,England,1964,1965,5,10,0,0,0,0,0,0
+MW Rushmere ,South Africa,1992,1992,1,2,0,0,0,0,0,0
+JW Rutherford ,Australia,1956,1956,1,2,0,0,0,0,0,0
+Saif Hassan ,BAN,2020,2021,6,10,0,0,0,0,0,0
+Sajedul Islam ,BAN,2008,2013,3,5,0,0,0,0,0,0
+RL Sanghvi ,India,2001,2001,1,2,0,0,0,0,0,0
+CT Sarwate ,India,1946,1951,9,13,0,0,0,0,0,0
+RC Saxena ,India,1967,1967,1,2,0,0,0,0,0,0
+Sayed Shirzad ,Afghanistan,2021,2021,1,2,0,0,0,0,0,0
+CP Schofield ,England,2000,2000,2,4,0,0,0,0,0,0
+SS Schultz ,England,1879,1879,1,2,0,0,0,0,0,0
+AHP Scott ,West Indies,1953,1953,1,2,0,0,0,0,0,0
+OC Scott ,West Indies,1928,1931,8,11,0,0,0,0,0,0
+RH Scott ,New Zealand,1947,1947,1,1,0,0,0,0,0,0
+BJ Sealey ,West Indies,1933,1933,1,1,0,0,0,0,0,0
+TAP Sekhar ,India,1983,1983,2,2,0,0,0,0,0,0
+AK Sengupta ,India,1959,1959,1,2,0,0,0,0,0,0
+DG Sewell ,New Zealand,1997,1997,1,2,0,0,0,0,0,0
+Shafiq Ahmed ,Pakistan,1974,1981,6,10,0,0,0,0,0,0
+Shahidullah ,Afghanistan,2021,2021,1,2,0,0,0,0,0,0
+Shahid Mahboob ,Pakistan,1989,1989,1,1,0,0,0,0,0,0
+Shahid Mahmood ,Pakistan,1962,1962,1,1,0,0,0,0,0,0
+Shahid Saeed ,Pakistan,1989,1989,1,2,0,0,0,0,0,0
+T Shamsi ,South Africa,2016,2018,2,4,0,0,0,0,0,0
+Sharjeel Khan ,Pakistan,2017,2017,1,2,0,0,0,0,0,0
+KV Sharma ,India,2014,2014,1,2,0,0,0,0,0,0
+SG Shinde ,India,1946,1952,7,13,0,0,0,0,0,0
+RC Shukla ,India,1982,1982,1,2,0,0,0,0,0,0
+J Shuter ,England,1888,1888,1,2,0,0,0,0,0,0
+A Sidebottom ,England,1985,1985,1,1,0,0,0,0,0,0
+RA Sinfield ,England,1938,1938,1,2,0,0,0,0,0,0
+KN Slater ,Australia,1959,1959,1,2,0,0,0,0,0,0
+J Slight ,Australia,1880,1880,1,2,0,0,0,0,0,0
+TF Smailes ,England,1946,1946,1,2,0,0,0,0,0,0
+MA Small ,West Indies,1984,1984,2,4,0,0,0,0,0,0
+AM Smith ,England,1997,1997,1,1,0,0,0,0,0,0
+CA Smith ,England,1889,1889,1,2,0,0,0,0,0,0
+DBM Smith ,Australia,1912,1912,2,3,0,0,0,0,0,0
+DM Smith ,England,1986,1986,2,4,0,0,0,0,0,0
+DV Smith ,England,1957,1957,3,6,0,0,0,0,0,0
+HD Smith ,New Zealand,1933,1933,1,1,0,0,0,0,0,0
+GA Smithson ,England,1948,1948,2,4,0,0,0,0,0,0
+CA Snedden ,New Zealand,1947,1947,1,1,0,0,0,0,0,0
+Sohrawordi Shuvo ,BAN,2011,2011,1,2,0,0,0,0,0,0
+JL Solozano ,West Indies,2021,2021,1,2,0,0,0,0,0,0
+WER Somerville ,New Zealand,2018,2021,6,12,0,0,0,0,0,0
+MM Sood ,India,1960,1960,1,1,0,0,0,0,0,0
+TE Srinivasan ,India,1981,1981,1,2,0,0,0,0,0,0
+SJ Staples ,England,1928,1928,3,6,0,0,0,0,0,0
+SC Stayers ,West Indies,1962,1962,4,8,0,0,0,0,0,0
+JP Stephenson ,England,1989,1989,1,2,0,0,0,0,0,0
+GB Stevenson ,England,1980,1981,2,3,0,0,0,0,0,0
+PJR Steyn ,South Africa,1995,1995,3,6,0,0,0,0,0,0
+EL St Hill ,West Indies,1930,1930,2,4,0,0,0,0,0,0
+VH Stollmeyer ,West Indies,1939,1939,1,2,0,0,0,0,0,0
+GA Stuurman ,South Africa,2022,2022,2,3,0,0,0,0,0,0
+Subashis Roy ,BAN,2017,2017,4,7,0,0,0,0,0,0
+FH Sugg ,England,1888,1888,2,4,0,0,0,0,0,0
+GR Sunderam ,India,1955,1956,2,4,0,0,0,0,0,0
+Sunzamul Islam ,BAN,2018,2018,1,1,0,0,0,0,0,0
+VN Swamy ,India,1955,1955,1,2,0,0,0,0,0,0
+Syed Rasel ,BAN,2005,2007,6,8,0,0,0,0,0,0
+HM Taberer ,South Africa,1902,1902,1,2,0,0,0,0,0,0
+Tabish Khan ,Pakistan,2021,2021,1,2,0,0,0,0,0,0
+VM Tancred ,South Africa,1899,1899,1,2,0,0,0,0,0,0
+LE Tapscott ,South Africa,1923,1923,2,4,0,0,0,0,0,0
+KK Tarapore ,India,1948,1948,1,1,0,0,0,0,0,0
+AI Taylor ,South Africa,1956,1956,1,2,0,0,0,0,0,0
+D Taylor ,South Africa,1914,1914,2,4,0,0,0,0,0,0
+JO Taylor ,West Indies,1958,1959,3,5,0,0,0,0,0,0
+JP Taylor ,England,1993,1994,2,4,0,0,0,0,0,0
+NHCD Theunissen ,South Africa,1889,1889,1,1,0,0,0,0,0,0
+JG Thomas ,England,1986,1986,5,9,0,0,0,0,0,0
+PIC Thompson ,West Indies,1996,1997,2,3,0,0,0,0,0,0
+SR Thompson ,Ireland,2018,2019,3,6,0,0,0,0,0,0
+GR Thoms ,Australia,1952,1952,1,2,0,0,0,0,0,0
+AL Thomson ,Australia,1970,1971,4,8,0,0,0,0,0,0
+K Thomson ,New Zealand,1968,1968,2,4,0,0,0,0,0,0
+HM Thurlow ,Australia,1932,1932,1,2,0,0,0,0,0,0
+DS Tomlinson ,South Africa,1935,1935,1,1,0,0,0,0,0,0
+GC Tonge ,West Indies,2009,2009,1,2,0,0,0,0,0,0
+CL Townsend ,England,1899,1899,2,4,0,0,0,0,0,0
+MF Tremlett ,England,1948,1948,3,6,0,0,0,0,0,0
+GE Tribe ,Australia,1946,1947,3,6,0,0,0,0,0,0
+CK Tshuma ,Zimbabwe,2020,2020,1,1,0,0,0,0,0,0
+PS Twentyman-Jones ,South Africa,1902,1902,1,2,0,0,0,0,0,0
+EJ Tyler ,England,1896,1896,1,2,0,0,0,0,0,0
+KEA Upashantha ,Sri Lanka,1999,2002,2,4,0,0,0,0,0,0
+Usman Salahuddin ,Pakistan,2018,2018,1,1,0,0,0,0,0,0
+Usman Shinwari ,Pakistan,2019,2019,1,1,0,0,0,0,0,0
+VA Valentine ,West Indies,1933,1933,2,2,0,0,0,0,0,0
+RH Vance ,New Zealand,1988,1989,4,4,0,0,0,0,0,0
+TF van Woerkom ,Ireland,2024,2024,1,2,0,0,0,0,0,0
+GD Varnals ,South Africa,1964,1965,3,4,0,0,0,0,0,0
+GF Vernon ,England,1882,1883,1,2,0,0,0,0,0,0
+GC Viljoen ,South Africa,2016,2016,1,2,0,0,0,0,0,0
+R Vinay Kumar ,India,2012,2012,1,1,0,0,0,0,0,0
+J Vine ,England,1912,1912,2,4,0,0,0,0,0,0
+S von Berg ,South Africa,2024,2024,1,2,0,0,0,0,0,0
+Wafadar Momand ,Afghanistan,2018,2019,2,3,0,0,0,0,0,0
+LA Walcott ,West Indies,1930,1930,1,2,0,0,0,0,0,0
+BGK Walker ,New Zealand,2000,2002,5,8,0,0,0,0,0,0
+KP Walmsley ,New Zealand,1995,2000,3,6,0,0,0,0,0,0
+Waqar Salamkheil ,Afghanistan,2019,2019,1,2,0,0,0,0,0,0
+KPJ Warnaweera ,Sri Lanka,1986,1994,10,15,0,0,0,0,0,0
+JJ Warr ,England,1951,1951,2,3,0,0,0,0,0,0
+BT Watambwa ,Zimbabwe,2001,2002,6,11,0,0,0,0,0,0
+L Watt ,New Zealand,1955,1955,1,2,0,0,0,0,0,0
+MG Webb ,New Zealand,1971,1974,3,6,0,0,0,0,0,0
+KH Weekes ,West Indies,1939,1939,2,4,0,0,0,0,0,0
+CDUS Weerasinghe ,Sri Lanka,1985,1985,1,2,0,0,0,0,0,0
+AP Wells ,England,1995,1995,1,1,0,0,0,0,0,0
+RJ Westcott ,South Africa,1954,1958,5,8,0,0,0,0,0,0
+A Wharton ,England,1949,1949,1,2,0,0,0,0,0,0
+B White ,Ireland,2023,2023,3,4,0,0,0,0,0,0
+DJ White ,New Zealand,1990,1990,2,3,0,0,0,0,0,0
+DW White ,England,1961,1962,2,4,0,0,0,0,0,0
+PE Whitelaw ,New Zealand,1933,1933,2,2,0,0,0,0,0,0
+CV Wight ,West Indies,1928,1930,2,3,0,0,0,0,0,0
+GL Wight ,West Indies,1953,1953,1,2,0,0,0,0,0,0
+KIW Wijegunawardene ,Sri Lanka,1991,1992,2,4,0,0,0,0,0,0
+G Wijekoon ,Sri Lanka,2005,2005,2,4,0,0,0,0,0,0
+PK Wijetunge ,Sri Lanka,1993,1993,1,2,0,0,0,0,0,0
+CA Wiles ,West Indies,1933,1933,1,1,0,0,0,0,0,0
+LL Wilkinson ,England,1938,1939,3,5,0,0,0,0,0,0
+ET Willett ,West Indies,1973,1975,5,10,0,0,0,0,0,0
+NF Williams ,England,1990,1990,1,1,0,0,0,0,0,0
+CM Willoughby ,South Africa,2003,2003,2,4,0,0,0,0,0,0
+JT Willoughby ,South Africa,1896,1896,2,3,0,0,0,0,0,0
+CEM Wilson ,England,1899,1899,2,4,0,0,0,0,0,0
+ER Wilson ,England,1921,1921,1,2,0,0,0,0,0,0
+JW Wilson ,Australia,1956,1956,1,2,0,0,0,0,0,0
+P Wilson ,Australia,1998,1998,1,1,0,0,0,0,0,0
+CS Wimble ,South Africa,1892,1892,1,1,0,0,0,0,0,0
+KL Wishart ,West Indies,1935,1935,1,2,0,0,0,0,0,0
+R Wood ,England,1887,1887,1,2,0,0,0,0,0,0
+CW Wright ,England,1896,1896,3,6,0,0,0,0,0,0
+EG Wynyard ,England,1896,1906,3,6,0,0,0,0,0,0
+SA Yadav ,India,2023,2023,1,2,0,0,0,0,0,0
+Yamin Ahmadzai ,Afghanistan,2018,2023,6,11,0,0,0,0,0,0
+Yasir Ali ,Pakistan,2003,2003,1,2,0,0,0,0,0,0
+Yasir Arafat ,Pakistan,2007,2009,3,5,0,0,0,0,0,0
+B Yograj Singh ,India,1981,1981,1,2,0,0,0,0,0,0
+S Young ,Australia,1997,1997,1,2,0,0,0,0,0,0
+Younis Ahmed ,Pakistan,1969,1987,4,7,0,0,0,0,0,0
+Zafar Gohar ,Pakistan,2021,2021,1,1,0,0,0,0,0,0
+Zahid Mahmood ,Pakistan,2022,2024,4,8,0,0,0,0,0,0
+Zahir Khan ,Afghanistan,2019,2024,5,10,0,0,0,0,0,0
+Ziaur Rahman ,BAN,2013,2013,1,2,0,0,0,0,0,0
