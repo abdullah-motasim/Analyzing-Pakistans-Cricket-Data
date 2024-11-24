@@ -83,6 +83,7 @@ cleaned_player_data <- bind_rows(raw_bat_data, raw_bowl_data, raw_field_data) %>
     MaxDismissalsInnings = ifelse(all(is.na(MaxDismissalsInnings)), NA, max(MaxDismissalsInnings, na.rm = TRUE)),
     .groups = "drop" # Removes grouping after summarising
   ) |>
+  mutate(Average = ifelse(is.infinite(Average), NA, Average)) |>
   janitor::clean_names()
 
 #### Save data ####

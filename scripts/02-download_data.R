@@ -26,7 +26,22 @@ cricinfo_data8 <- fetch_cricinfo("t20", "men", "bowling", "career", country = NU
 cricinfo_data9 <- fetch_cricinfo("t20", "men", "fielding", "career", country = NULL)
 
 # Combine datasets by skill type (batting, bowling, fielding)
-combined_bat_data <- bind_rows(cricinfo_data1, cricinfo_data5, cricinfo_data7) %>%
+cricinfo_data1 <- cricinfo_data1 %>%
+  mutate(Player = str_trim(Player)) %>% # Remove leading/trailing spaces
+  mutate(Player = str_to_title(Player)) # Ensure consistent capitalization
+cricinfo_data4 <- cricinfo_data4 %>%
+  mutate(Player = str_trim(Player)) %>%
+  mutate(Player = str_to_title(Player))
+cricinfo_data7 <- cricinfo_data7 %>%
+  mutate(Player = str_trim(Player)) %>%
+  mutate(Player = str_to_title(Player))
+
+cricinfo_data1 <- cricinfo_data1 %>% distinct()
+cricinfo_data4 <- cricinfo_data4 %>% distinct()
+cricinfo_data7 <- cricinfo_data7 %>% distinct()
+
+
+combined_bat_data <- bind_rows(cricinfo_data1, cricinfo_data4, cricinfo_data7) %>%
   group_by(Player) %>%
   summarise(
     Country = first(Country), # Assuming 'Country' remains consistent for each player
@@ -49,6 +64,19 @@ combined_bat_data <- bind_rows(cricinfo_data1, cricinfo_data5, cricinfo_data7) %
     .groups = "drop" # Removes grouping after summarising
   )
 
+cricinfo_data2 <- cricinfo_data2 %>%
+  mutate(Player = str_trim(Player)) %>% # Remove leading/trailing spaces
+  mutate(Player = str_to_title(Player)) # Ensure consistent capitalization
+cricinfo_data5 <- cricinfo_data5 %>%
+  mutate(Player = str_trim(Player)) %>%
+  mutate(Player = str_to_title(Player))
+cricinfo_data8 <- cricinfo_data8 %>%
+  mutate(Player = str_trim(Player)) %>%
+  mutate(Player = str_to_title(Player))
+
+cricinfo_data2 <- cricinfo_data2 %>% distinct()
+cricinfo_data5 <- cricinfo_data5 %>% distinct()
+cricinfo_data8 <- cricinfo_data8 %>% distinct()
 
 combined_bowl_data <- bind_rows(cricinfo_data2, cricinfo_data5, cricinfo_data8) %>%
   group_by(Player) %>%
@@ -72,6 +100,19 @@ combined_bowl_data <- bind_rows(cricinfo_data2, cricinfo_data5, cricinfo_data8) 
     .groups = "drop" # Removes grouping after summarising
   )
 
+cricinfo_data3 <- cricinfo_data3 %>%
+  mutate(Player = str_trim(Player)) %>% # Remove leading/trailing spaces
+  mutate(Player = str_to_title(Player)) # Ensure consistent capitalization
+cricinfo_data6 <- cricinfo_data6 %>%
+  mutate(Player = str_trim(Player)) %>%
+  mutate(Player = str_to_title(Player))
+cricinfo_data9 <- cricinfo_data9 %>%
+  mutate(Player = str_trim(Player)) %>%
+  mutate(Player = str_to_title(Player))
+
+cricinfo_data3 <- cricinfo_data3 %>% distinct()
+cricinfo_data6 <- cricinfo_data6 %>% distinct()
+cricinfo_data9 <- cricinfo_data9 %>% distinct()
 
 combined_field_data <- bind_rows(cricinfo_data3, cricinfo_data6, cricinfo_data9) %>%
   group_by(Player) %>%
@@ -86,7 +127,7 @@ combined_field_data <- bind_rows(cricinfo_data3, cricinfo_data6, cricinfo_data9)
     CaughtFielder = sum(CaughtFielder, na.rm = TRUE),
     CaughtBehind = sum(CaughtBehind, na.rm = TRUE),
     Stumped = sum(Stumped, na.rm = TRUE),
-    MaxDismissalsInnings = max(MaxDismissalsInnings, na.rm = TRUE),
+    MaxDismissalsInnings = ifelse(all(is.na(MaxDismissalsInnings)), NA, max(MaxDismissalsInnings, na.rm = TRUE)),
     .groups = "drop" # Removes grouping after summarising
   )
 
