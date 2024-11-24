@@ -4,14 +4,14 @@
 # Date: 22 November 2024
 # Contact: abdullah.motasim@mail.utoronto.ca
 # License: MIT
-# Pre-requisites: tidyverse library
+# Pre-requisites: arrow and tidyverse libraries
 # Any other information needed? None
 
 
 #### Workspace setup ####
 library(tidyverse)
 
-simulated_data <- read_csv("data/00-simulated_data/simulated_player_data.csv")
+simulated_data <- read_parquet("data/00-simulated_data/simulated_player_data.parquet")
 
 # Test if the data was successfully loaded
 if (exists("simulated_data")) {

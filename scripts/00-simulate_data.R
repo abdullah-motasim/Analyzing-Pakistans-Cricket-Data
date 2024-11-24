@@ -4,13 +4,14 @@
 # Date: 22 November 2024
 # Contact: abdullah.motasim@mail.utoronto.ca
 # License: MIT
-# Pre-requisites: tibble and readr libraries
+# Pre-requisites: arrow, tibble, and readr libraries
 # Any other information needed? None
 
 
 #### Workspace setup ####
 library(tibble)
 library(readr)
+library(arrow)
 set.seed(853)
 
 
@@ -64,4 +65,4 @@ simulated_player_data <- simulated_player_data %>%
 
 
 # Save the simulated dataset
-write_csv(simulated_player_data, "data/00-simulated_data/simulated_player_data.csv")
+write_parquet(simulated_player_data, "data/00-simulated_data/simulated_player_data.parquet")

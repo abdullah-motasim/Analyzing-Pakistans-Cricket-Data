@@ -4,12 +4,14 @@
 # Date: 23 November 2024
 # Contact: abdullah.motasim@mail.utoronto.ca
 # License: MIT
-# Pre-requisites: tidyverse and dplyr libraries
-# Any other information needed? None
+# Pre-requisites: tidyverse, dplyr, and arrow libraries
+# Any other information needed? Raw player_data, match_data, and combined bat/bowl/field data
+# should be saved in the 01-raw_data folder
 
 #### Workspace setup ####
 library(tidyverse)
 library(dplyr)
+library(arrow)
 
 #### Clean data ####
 raw_player_data <- read_csv("data/01-raw_data/cricsheet_player_data.csv")
@@ -89,5 +91,5 @@ cleaned_player_data <- bind_rows(raw_bat_data, raw_bowl_data, raw_field_data) %>
   janitor::clean_names()
 
 #### Save data ####
-write_csv(cleaned_match_data, "data/02-analysis_data/cleaned_match_data.csv")
-write_csv(cleaned_player_data, "data/02-analysis_data/cleaned_player_data.csv")
+write_parquet(cleaned_match_data, "data/02-analysis_data/cleaned_match_data.parquet")
+write_parquet(cleaned_player_data, "data/02-analysis_data/cleaned_player_data.parquet")

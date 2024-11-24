@@ -4,16 +4,17 @@
 # Date: 23 November 2024
 # Contact: abdullah.motasim@mail.utoronto.ca
 # License: MIT
-# Pre-requisites: tidyverse and dplyr libraries
-# Any other information needed? None
+# Pre-requisites: tidyverse, dplyr, and arrow libraries
+# Any other information needed? cleaned match and player data should be saved in 02-analysis_data
 
 
 #### Workspace setup ####
 library(tidyverse)
 library(testthat)
+library(arrow)
 
-match_data <- read_csv("data/02-analysis_data/cleaned_match_data.csv")
-player_data <- read_csv("data/02-analysis_data/cleaned_player_data.csv")
+match_data <- read_parquet("data/02-analysis_data/cleaned_match_data.parquet")
+player_data <- read_parquet("data/02-analysis_data/cleaned_player_data.parquet")
 
 
 #### Test data ####
