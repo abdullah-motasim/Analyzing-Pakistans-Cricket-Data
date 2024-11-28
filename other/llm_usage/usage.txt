@@ -2146,3 +2146,1303 @@ test_that("cleaned_match_data column types are as expected", {
 Explanation:
 lubridate::is.Date(): This function checks whether the date column is of class Date (which includes the lubridate Date class). It returns TRUE if the column is a valid Date object and FALSE otherwise.
 This will ensure that your date column is correctly recognized as a Date object after converting it using lubridate.
+
+LLM: ChatGPT-4.
+Date: 27 November 2024
+cleaned_match_data.parquet
+File
+cleaned_player_data.parquet
+File
+The attatched files contain data on cricket teams around the world. I want to train a model in R to train  on the data for just Pakistan and determine their number of wins in the future depending. 
+
+ChatGPT said:
+ChatGPT
+I see you've uploaded two Parquet files related to cricket team and player data. To train a model for predicting Pakistan's future number of wins, we can follow these steps in R:
+
+Load the data: Read the Parquet files into R using the arrow or read_parquet package.
+Filter data for Pakistan: Extract matches and player data where Pakistan is involved.
+Feature engineering: Create predictors that could influence the number of wins, such as match location, player statistics, opposition strength, etc.
+Split data: Divide into training and testing sets.
+Train model: Use a regression or classification model (e.g., linear regression, random forest, or XGBoost) depending on the prediction type.
+Evaluate and predict: Assess model performance and predict future outcomes.
+Would you like me to:
+
+Explore the files first to understand their structure?
+Suggest a detailed R script for the entire workflow?
+Extract key statistics from the dataset?
+
+
+
+
+
+You said:
+explore the files and write the R code for me. Here is what I have so far: #### Preamble ####
+# Purpose: Models Pakistans cricket data overtime
+# Author: Muhammad Abdullah Motasim
+# Date: 27 November 2024
+# Contact: abdullah.motasim@mail.utoronto.ca
+# License: MIT
+# Pre-requisites: tidyverse, rstanarm and arrow libraries
+# Any other information needed?  The cleaned match and player data should be saved 
+# in 02-analysis_data folder
+
+
+#### Workspace setup ####
+library(tidyverse)
+library(rstanarm)
+library(arrow)
+
+#### Read data ####
+player_data <- read_parquet("data/02-analysis_data/cleaned_player_data.parquet")
+match_data <- read_parquet("data/02-analysis_data/cleaned_match_data.parquet")
+ChatGPT said:
+ChatGPT
+Based on your preamble and workspace setup, here's how to proceed:
+
+Steps to Explore the Data:
+Inspect Structure and Missing Values: Check the data's structure, dimensions, column names, and potential missing values.
+Filter for Pakistan Matches: Identify matches where Pakistan was one of the teams and summarize key columns like match results and dates.
+Summarize Player Data: Analyze how player-level statistics relate to match outcomes and the team's performance.
+Save Cleaned Data: Ensure the processed data is saved in the specified folder structure.
+Here's the R code that builds upon your preamble:
+
+R
+Copy code
+#### Explore and Clean Data ####
+
+# Inspect match data
+glimpse(match_data)
+summary(match_data)
+# Check missing values
+sapply(match_data, function(x) sum(is.na(x)))
+
+# Filter match data for Pakistan
+pakistan_matches <- match_data %>%
+  filter(team1 == "Pakistan" | team2 == "Pakistan") %>%
+  mutate(pakistan_win = case_when(
+    winner == "Pakistan" ~ 1,
+    TRUE ~ 0
+  ))
+
+# Summarize match-level performance
+pakistan_match_summary <- pakistan_matches %>%
+  group_by(year = lubridate::year(match_date)) %>%
+  summarize(
+    total_matches = n(),
+    wins = sum(pakistan_win),
+    win_rate = mean(pakistan_win)
+  )
+
+# Inspect player data
+glimpse(player_data)
+summary(player_data)
+sapply(player_data, function(x) sum(is.na(x)))
+
+# Filter player data for Pakistan
+pakistan_players <- player_data %>%
+  filter(team == "Pakistan")
+
+# Summarize player performance
+pakistan_player_summary <- pakistan_players %>%
+  group_by(player_name, year = lubridate::year(match_date)) %>%
+  summarize(
+    total_runs = sum(runs, na.rm = TRUE),
+    total_wickets = sum(wickets, na.rm = TRUE),
+    matches = n()
+  )
+
+# Save cleaned data
+write_parquet(pakistan_matches, "data/02-analysis_data/pakistan_match_data.parquet")
+write_parquet(pakistan_players, "data/02-analysis_data/pakistan_player_data.parquet")
+Next Steps:
+Feature Engineering: Create predictors from the cleaned data, like average player performance, home vs. away matches, and opposition strength.
+Model Development: Use rstanarm or another library for regression modeling.
+Evaluation: Split the data into training/testing sets and evaluate performance metrics.
+Would you like me to include the model-building steps or create visualizations for exploratory analysis?
+
+
+
+
+
+
+You said:
+write the code for the model
+ChatGPT said:
+ChatGPT
+Here’s the R code for building a predictive model to forecast Pakistan's cricket match outcomes using rstanarm. The model uses historical match data and player performance as predictors to estimate the number of future wins.
+
+R
+Copy code
+#### Model Development ####
+
+# Load necessary libraries
+library(tidyverse)
+library(rstanarm)
+library(caret) # For data splitting and evaluation
+
+# Ensure the cleaned data is available
+pakistan_matches <- read_parquet("data/02-analysis_data/pakistan_match_data.parquet")
+pakistan_players <- read_parquet("data/02-analysis_data/pakistan_player_data.parquet")
+
+# Merge player summary into match data (if needed)
+# Calculate team-level aggregated statistics
+team_performance <- pakistan_players %>%
+  group_by(year = lubridate::year(match_date)) %>%
+  summarize(
+    avg_runs = mean(total_runs, na.rm = TRUE),
+    avg_wickets = mean(total_wickets, na.rm = TRUE)
+  )
+
+# Merge with match data
+pakistan_model_data <- pakistan_matches %>%
+  mutate(year = lubridate::year(match_date)) %>%
+  left_join(team_performance, by = "year") %>%
+  select(pakistan_win, home_away, opponent_strength, avg_runs, avg_wickets) %>%
+  drop_na() # Drop rows with missing data
+
+# Split data into training and testing sets
+set.seed(42)
+train_index <- createDataPartition(pakistan_model_data$pakistan_win, p = 0.8, list = FALSE)
+train_data <- pakistan_model_data[train_index, ]
+test_data <- pakistan_model_data[-train_index, ]
+
+# Fit a logistic regression model with rstanarm
+win_model <- stan_glm(
+  pakistan_win ~ home_away + opponent_strength + avg_runs + avg_wickets,
+  data = train_data,
+  family = binomial(link = "logit"),
+  prior = normal(0, 2.5),
+  prior_intercept = normal(0, 5),
+  chains = 4,
+  iter = 2000,
+  seed = 42
+)
+
+# Model summary
+summary(win_model)
+
+#### Model Evaluation ####
+
+# Predict probabilities for test data
+test_data$predicted_prob <- predict(win_model, newdata = test_data, type = "response")
+
+# Generate predicted classes based on a threshold (e.g., 0.5)
+test_data$predicted_class <- ifelse(test_data$predicted_prob > 0.5, 1, 0)
+
+# Evaluate model performance
+confusion_matrix <- table(
+  Actual = test_data$pakistan_win,
+  Predicted = test_data$predicted_class
+)
+print(confusion_matrix)
+
+accuracy <- sum(diag(confusion_matrix)) / sum(confusion_matrix)
+print(paste("Accuracy:", round(accuracy, 2)))
+
+#### Save Model ####
+# Save the model for future use
+saveRDS(win_model, "data/02-analysis_data/pakistan_win_model.rds")
+Key Points:
+Predictors:
+
+home_away: Whether Pakistan played at home or away.
+opponent_strength: A variable representing the opposing team’s strength.
+avg_runs and avg_wickets: Aggregate team performance metrics.
+Model Type: Logistic regression for binary classification (pakistan_win).
+
+Evaluation: Calculates a confusion matrix and accuracy on the test dataset.
+
+Next Steps:
+Would you like to add predictors (e.g., player-specific stats, weather conditions)?
+Visualize the predicted probabilities?
+Fine-tune the model using alternative approaches like cross-validation or advanced predictors?
+
+LLM: ChatGPT-4.
+Date: 28 November 2024
+
+Log in
+
+Sign up
+You said:
+list the columns in a dataframe in r
+ChatGPT said:
+ChatGPT
+In R, to list the columns in a dataframe, you can use the colnames() function or the names() function. Here's how you can do it:
+
+Using colnames()
+R
+Copy code
+colnames(df)
+Using names()
+R
+Copy code
+names(df)
+Both will return a vector of the column names in the dataframe df.
+
+For example, if your dataframe df has columns "name", "age", and "salary", the output would look like this:
+
+R
+Copy code
+[1] "name"   "age"    "salary"
+If you want to view the structure of the dataframe, including the column names and types, you can also use:
+
+str() to inspect the structure
+R
+Copy code
+str(df)
+
+
+You said:
+player_yearly_summary <- player_data %>%
++   group_by(player, year = lubridate::year(start):lubridate::year(end)) %>%
++   summarize(
++     yearly_runs = sum(runs, na.rm = TRUE),
++     yearly_matches = sum(matches, na.rm = TRUE),
++     yearly_strike_rate = mean(strike_rate, na.rm = TRUE),
++     yearly_average = mean(average, na.rm = TRUE),
++     yearly_hundreds = sum(hundreds, na.rm = TRUE),
++     yearly_fifties = sum(fifties, na.rm = TRUE)
++   ) %>%
++   ungroup() %>%
++   arrange(player, year) %>%
++   group_by(player) %>%
++   mutate(
++     lagged_yearly_runs = lag(yearly_runs),
++     lagged_yearly_matches = lag(yearly_matches),
++     lagged_yearly_strike_rate = lag(yearly_strike_rate),
++     lagged_yearly_average = lag(yearly_average),
++     lagged_yearly_hundreds = lag(yearly_hundreds),
++     lagged_yearly_fifties = lag(yearly_fifties)
++   ) %>%
++   drop_na()  # Remove rows with missing lagged values
+Error in player_data %>% group_by(player, year = lubridate::year(start):lubridate::year(end)) %>%  : 
+  could not find function "%>%"
+ChatGPT said:
+ChatGPT
+The error you're seeing is due to the %>% (pipe operator) not being recognized in your R session. This operator is part of the dplyr package, which is a part of the tidyverse. It seems like the necessary library is either not loaded or is missing.
+
+To resolve this issue, you need to ensure that the dplyr package is installed and loaded. Here's how you can do that:
+
+Step 1: Install and load dplyr
+If you haven't already installed the dplyr package, run this command:
+
+R
+Copy code
+install.packages("dplyr")
+Then, load it into your R session:
+
+R
+Copy code
+library(dplyr)
+Step 2: Check for other required packages
+Your code also uses lubridate::year(), which is from the lubridate package. Make sure lubridate is installed and loaded as well:
+
+R
+Copy code
+install.packages("lubridate")
+library(lubridate)
+Step 3: Re-run your code
+Now that the necessary libraries are loaded, you should be able to re-run your code without the error.
+
+Here's your original code, with the necessary libraries included:
+
+R
+Copy code
+# Load necessary libraries
+library(dplyr)
+library(lubridate)
+
+# Your original code
+player_yearly_summary <- player_data %>%
+  group_by(player, year = lubridate::year(start):lubridate::year(end)) %>%
+  summarize(
+    yearly_runs = sum(runs, na.rm = TRUE),
+    yearly_matches = sum(matches, na.rm = TRUE),
+    yearly_strike_rate = mean(strike_rate, na.rm = TRUE),
+    yearly_average = mean(average, na.rm = TRUE),
+    yearly_hundreds = sum(hundreds, na.rm = TRUE),
+    yearly_fifties = sum(fifties, na.rm = TRUE)
+  ) %>%
+  ungroup() %>%
+  arrange(player, year) %>%
+  group_by(player) %>%
+  mutate(
+    lagged_yearly_runs = lag(yearly_runs),
+    lagged_yearly_matches = lag(yearly_matches),
+    lagged_yearly_strike_rate = lag(yearly_strike_rate),
+    lagged_yearly_average = lag(yearly_average),
+    lagged_yearly_hundreds = lag(yearly_hundreds),
+    lagged_yearly_fifties = lag(yearly_fifties)
+  ) %>%
+  drop_na()  # Remove rows with missing lagged values
+Let me know if you encounter any other issues!
+
+
+
+You said:
+There were 3 warnings in group_by().
+The first warning was:
+ℹ In argument: year = lubridate::year(start):lubridate::year(end).
+Caused by warning:
+! tz(): Don't know how to compute timezone for object of class numeric; returning "UTC".
+ℹ Run dplyr::last_dplyr_warnings() to see the 2 remaining warnings.
+ChatGPT said:
+ChatGPT
+The warning you're receiving is related to how the year is being computed for the start and end columns in your dataset. It suggests that there might be an issue with the date or datetime formats of start and end. Specifically, the warning about tz(): Don't know how to compute timezone for object of class numeric; returning "UTC" indicates that the start and/or end columns might not be in a recognized Date or POSIXct class, and they could be interpreted as numeric values instead.
+
+Possible Causes:
+Numeric values instead of date objects: If start and end are stored as numeric (e.g., year values as integers), the lubridate::year() function will return incorrect results.
+Timezone handling: If the dates are in a timezone-aware format (e.g., POSIXct), but are not correctly specified, lubridate might not be able to handle them properly.
+Solutions:
+You can address this by ensuring that start and end are in proper Date or POSIXct formats before applying lubridate::year().
+
+Step 1: Convert start and end to Date format
+First, check the types of start and end to make sure they are either Date or POSIXct objects.
+
+R
+Copy code
+str(player_data$start)  # Check the structure of the start column
+str(player_data$end)    # Check the structure of the end column
+If they are not in a date format, convert them to Date or POSIXct using lubridate functions, such as mdy(), ymd(), as.Date(), or as.POSIXct(), depending on the date format.
+
+For example, if start and end are in YYYY-MM-DD format (standard ISO format), you can convert them like this:
+
+R
+Copy code
+player_data$start <- as.Date(player_data$start)
+player_data$end <- as.Date(player_data$end)
+If they are in a different format, use the appropriate lubridate function, such as mdy() or dmy() for other date formats:
+
+R
+Copy code
+library(lubridate)
+
+player_data$start <- mdy(player_data$start)  # If the format is month-day-year
+player_data$end <- mdy(player_data$end)      # If the format is month-day-year
+Step 2: Adjust group_by() with lubridate::year()
+Once start and end are in the proper date format, you can re-run the group_by() function. The code you provided should now work without warnings.
+
+R
+Copy code
+player_yearly_summary <- player_data %>%
+  group_by(player, year = lubridate::year(start):lubridate::year(end)) %>%
+  summarize(
+    yearly_runs = sum(runs, na.rm = TRUE),
+    yearly_matches = sum(matches, na.rm = TRUE),
+    yearly_strike_rate = mean(strike_rate, na.rm = TRUE),
+    yearly_average = mean(average, na.rm = TRUE),
+    yearly_hundreds = sum(hundreds, na.rm = TRUE),
+    yearly_fifties = sum(fifties, na.rm = TRUE)
+  ) %>%
+  ungroup() %>%
+  arrange(player, year) %>%
+  group_by(player) %>%
+  mutate(
+    lagged_yearly_runs = lag(yearly_runs),
+    lagged_yearly_matches = lag(yearly_matches),
+    lagged_yearly_strike_rate = lag(yearly_strike_rate),
+    lagged_yearly_average = lag(yearly_average),
+    lagged_yearly_hundreds = lag(yearly_hundreds),
+    lagged_yearly_fifties = lag(yearly_fifties)
+  ) %>%
+  drop_na()  # Remove rows with missing lagged values
+Step 3: Test and Check Warnings
+After making these changes, if the issue persists, you can check for the remaining warnings by running:
+
+R
+Copy code
+dplyr::last_dplyr_warnings()
+This should help identify any further issues.
+
+Let me know if this resolves your issue!
+
+
+
+You said:
+they are in the format of just year
+ChatGPT said:
+ChatGPT
+Ah, if your start and end columns only contain the year as numeric values (e.g., 2010, 2011, etc.), then you don't need to use lubridate::year() to extract the year. You can directly use these columns as they are for grouping.
+
+Solution:
+Since the start and end columns are in year format (numeric), you can simply treat them as such and avoid using lubridate::year().
+
+Updated Code:
+r
+Copy code
+player_yearly_summary <- player_data %>%
+  group_by(player, year = start:end) %>%
+  summarize(
+    yearly_runs = sum(runs, na.rm = TRUE),
+    yearly_matches = sum(matches, na.rm = TRUE),
+    yearly_strike_rate = mean(strike_rate, na.rm = TRUE),
+    yearly_average = mean(average, na.rm = TRUE),
+    yearly_hundreds = sum(hundreds, na.rm = TRUE),
+    yearly_fifties = sum(fifties, na.rm = TRUE)
+  ) %>%
+  ungroup() %>%
+  arrange(player, year) %>%
+  group_by(player) %>%
+  mutate(
+    lagged_yearly_runs = lag(yearly_runs),
+    lagged_yearly_matches = lag(yearly_matches),
+    lagged_yearly_strike_rate = lag(yearly_strike_rate),
+    lagged_yearly_average = lag(yearly_average),
+    lagged_yearly_hundreds = lag(yearly_hundreds),
+    lagged_yearly_fifties = lag(yearly_fifties)
+  ) %>%
+  drop_na()  # Remove rows with missing lagged values
+Explanation:
+Grouping by years: Instead of using lubridate::year(), you are directly using start:end to create a sequence of years, which works because start and end are numeric years. This will create a range of years for each player.
+Additional Considerations:
+Ensure that the start and end columns are numeric (i.e., integer or double).
+If there are cases where end is earlier than start, the resulting year variable will be a reverse sequence, which could cause issues. You might want to ensure start <= end before proceeding.
+For example:
+
+r
+Copy code
+player_data <- player_data %>%
+  mutate(start = pmin(start, end),  # Ensure start is always less than or equal to end
+         end = pmax(start, end))
+This should work without any warnings now that you're directly working with the year values.
+
+Let me know if that helps or if you need any further clarification!
+
+
+
+You said:
+Error in group_by():
+ℹ In argument: year = start:end.
+Caused by error:
+! year must be size 7323 or 1, not 6.
+Run rlang::last_trace() to see where the error occurred.
+ChatGPT said:
+ChatGPT
+The error you're encountering arises because the start:end expression is creating a sequence of years for each row, which results in a mismatch between the expected length of the year column and the number of rows in your dataframe.
+
+The start:end produces a vector of all years between start and end, but this causes an issue because dplyr expects a single value for each grouping (i.e., one year per row).
+
+Solution:
+Instead of using start:end, we can generate a sequence of years for each row and "expand" the dataframe so that each year within the start-end range has a corresponding row.
+
+We can use tidyr::expand_grid() to create a dataframe with all combinations of player and each year in the range between start and end. Here's how you can do it:
+
+Updated Approach:
+Create a sequence of years for each player based on the start and end columns.
+Expand the dataframe so that there is a row for each year in the range from start to end.
+Aggregate the data by player and year.
+Here is the updated code:
+
+r
+Copy code
+library(dplyr)
+library(tidyr)
+
+player_yearly_summary <- player_data %>%
+  # Create a sequence of years for each player
+  rowwise() %>%
+  mutate(years = list(seq(from = start, to = end))) %>%
+  ungroup() %>%
+  # Expand the data so each year has its own row
+  unnest(years) %>%
+  group_by(player, year = years) %>%
+  summarize(
+    yearly_runs = sum(runs, na.rm = TRUE),
+    yearly_matches = sum(matches, na.rm = TRUE),
+    yearly_strike_rate = mean(strike_rate, na.rm = TRUE),
+    yearly_average = mean(average, na.rm = TRUE),
+    yearly_hundreds = sum(hundreds, na.rm = TRUE),
+    yearly_fifties = sum(fifties, na.rm = TRUE)
+  ) %>%
+  ungroup() %>%
+  arrange(player, year) %>%
+  group_by(player) %>%
+  mutate(
+    lagged_yearly_runs = lag(yearly_runs),
+    lagged_yearly_matches = lag(yearly_matches),
+    lagged_yearly_strike_rate = lag(yearly_strike_rate),
+    lagged_yearly_average = lag(yearly_average),
+    lagged_yearly_hundreds = lag(yearly_hundreds),
+    lagged_yearly_fifties = lag(yearly_fifties)
+  ) %>%
+  drop_na()  # Remove rows with missing lagged values
+Explanation:
+mutate(years = list(seq(from = start, to = end))): This creates a list column where each row will contain a sequence of years from start to end for that player.
+unnest(years): Expands the list of years into separate rows, effectively "exploding" the years so that each player will have multiple rows, one for each year in the start to end range.
+group_by(player, year = years): Groups by player and the expanded year values.
+summarize(): Aggregates the data as before, calculating yearly metrics.
+mutate(): Creates lagged variables for each player.
+Example:
+If a player has start = 2010 and end = 2012, the sequence will create rows for the years 2010, 2011, and 2012.
+
+Key Notes:
+The rowwise() function ensures that the seq() function is applied row by row, creating the range of years for each player's data.
+unnest() then expands the dataframe so that each year is treated as a separate row.
+This should resolve the issue and allow you to group by year without errors. Let me know how it works!
+
+
+
+You said:
+createDataPartition libraray
+ChatGPT said:
+ChatGPT
+The function createDataPartition() is part of the caret package in R. It is commonly used for splitting data into training and testing sets, typically for machine learning applications.
+
+Steps to Use createDataPartition
+Install and Load the caret Package:
+
+If you haven't installed the caret package, you can do so using the following command:
+
+r
+Copy code
+install.packages("caret")
+Then, load the package:
+
+r
+Copy code
+library(caret)
+Usage of createDataPartition:
+
+The function is used to create a partition of your dataset into training and testing sets. It ensures that the data is stratified (i.e., preserves the proportion of a factor variable if provided).
+
+The basic syntax is:
+
+r
+Copy code
+createDataPartition(y, p = 0.75, list = TRUE, times = 1)
+y: The outcome or dependent variable (factor or numeric).
+p: The proportion of the data to include in the training set (default is 0.75, meaning 75% for training and 25% for testing).
+list: If TRUE, the result will be returned as a list of indices; if FALSE, a vector of row numbers.
+times: The number of partitions to create.
+Example:
+Assume you have a dataframe called df and you want to split it into training and testing sets based on the outcome variable target.
+
+r
+Copy code
+# Load caret library
+library(caret)
+
+# Example dataset
+set.seed(123)  # For reproducibility
+df <- data.frame(
+  feature1 = rnorm(100),
+  feature2 = rnorm(100),
+  target = sample(c("Class1", "Class2"), 100, replace = TRUE)
+)
+
+# Create a partition
+trainIndex <- createDataPartition(df$target, p = 0.75, list = FALSE)
+
+# Split the dataset into training and testing sets
+trainData <- df[trainIndex, ]
+testData <- df[-trainIndex, ]
+
+# View the first few rows of the training and test sets
+head(trainData)
+head(testData)
+Explanation:
+createDataPartition(df$target, p = 0.75, list = FALSE): This splits the data such that 75% of the rows are selected for the training set. The list = FALSE argument returns a numeric vector of row indices instead of a list.
+trainData: The training set, containing 75% of the rows.
+testData: The testing set, containing the remaining 25% of the rows.
+Stratified Sampling:
+If your target variable is a factor (e.g., a classification problem with multiple classes), createDataPartition() ensures that the training and testing sets maintain the same proportion of each class, which is useful for imbalanced datasets.
+
+For example, if target has a class distribution of 80% Class1 and 20% Class2, the trainData and testData will maintain that same distribution.
+
+Customization:
+You can adjust the p parameter if you want a different proportion of the data in the training set.
+
+If you want to create multiple splits, use times:
+
+r
+Copy code
+splits <- createDataPartition(df$target, p = 0.75, times = 3)
+This would create 3 different training/testing splits.
+
+Let me know if you need further assistance!
+
+
+
+You said:
+ player_future_runs_model <- stan_glm(
++   formula = yearly_runs ~ lagged_yearly_runs + lagged_yearly_matches + lagged_yearly_strike_rate + lagged_yearly_average + year,
++   data = player_train_data,
++   family = gaussian(),
++   prior = normal(location = 0, scale = 2.5, autoscale = TRUE),
++   prior_intercept = normal(location = 0, scale = 2.5, autoscale = TRUE),
++   chains = 4,
++   iter = 2000
++ )
+Error in FUN(X[[i]], ...) : Stan does not support NA (in X) in data
+failed to preprocess the data; sampling not done
+Error in check_stanfit(stanfit) : 
+  Invalid stanfit object produced please report bug
+ChatGPT said:
+ChatGPT
+The error you're encountering, Stan does not support NA (in X) in data, is caused by missing values (NA) in your data. Stan, the backend for stan_glm() (from the rstanarm package), cannot handle missing values, and the model fails to preprocess the data because it contains NA values.
+
+To fix this issue, you need to handle the missing values in your dataset before fitting the model. There are several strategies you can use to handle missing values, depending on the context of your data.
+
+Solutions:
+1. Remove Rows with Missing Values
+You can simply remove rows that contain any missing values (NA) in the variables used for the model. Here's how you can do this:
+
+r
+Copy code
+# Remove rows with NA in relevant columns
+player_train_data_clean <- player_train_data %>%
+  drop_na(lagged_yearly_runs, lagged_yearly_matches, lagged_yearly_strike_rate, lagged_yearly_average, year)
+
+# Fit the model
+player_future_runs_model <- stan_glm(
+  formula = yearly_runs ~ lagged_yearly_runs + lagged_yearly_matches + lagged_yearly_strike_rate + lagged_yearly_average + year,
+  data = player_train_data_clean,
+  family = gaussian(),
+  prior = normal(location = 0, scale = 2.5, autoscale = TRUE),
+  prior_intercept = normal(location = 0, scale = 2.5, autoscale = TRUE),
+  chains = 4,
+  iter = 2000
+)
+2. Impute Missing Values
+If you don't want to lose any data, you could impute missing values using different strategies (mean imputation, median imputation, or more advanced methods such as multiple imputation). Here's an example of simple mean imputation:
+
+r
+Copy code
+# Impute missing values with the mean of each column (can use other imputation methods)
+player_train_data_clean <- player_train_data %>%
+  mutate(
+    lagged_yearly_runs = ifelse(is.na(lagged_yearly_runs), mean(lagged_yearly_runs, na.rm = TRUE), lagged_yearly_runs),
+    lagged_yearly_matches = ifelse(is.na(lagged_yearly_matches), mean(lagged_yearly_matches, na.rm = TRUE), lagged_yearly_matches),
+    lagged_yearly_strike_rate = ifelse(is.na(lagged_yearly_strike_rate), mean(lagged_yearly_strike_rate, na.rm = TRUE), lagged_yearly_strike_rate),
+    lagged_yearly_average = ifelse(is.na(lagged_yearly_average), mean(lagged_yearly_average, na.rm = TRUE), lagged_yearly_average),
+    year = ifelse(is.na(year), mean(year, na.rm = TRUE), year)
+  )
+
+# Fit the model with the cleaned data
+player_future_runs_model <- stan_glm(
+  formula = yearly_runs ~ lagged_yearly_runs + lagged_yearly_matches + lagged_yearly_strike_rate + lagged_yearly_average + year,
+  data = player_train_data_clean,
+  family = gaussian(),
+  prior = normal(location = 0, scale = 2.5, autoscale = TRUE),
+  prior_intercept = normal(location = 0, scale = 2.5, autoscale = TRUE),
+  chains = 4,
+  iter = 2000
+)
+3. Use na.rm = TRUE in Your Summaries (For Data Exploration)
+If you are doing data exploration before fitting the model, you can use na.rm = TRUE in functions like sum(), mean(), and sd() to ignore NA values when calculating summary statistics.
+
+For example, when summarizing your data:
+
+r
+Copy code
+summary(player_train_data$lagged_yearly_runs, na.rm = TRUE)
+4. Advanced Imputation Methods (Multiple Imputation)
+If you need a more sophisticated approach, you can consider using multiple imputation techniques, such as those implemented in the mice package, which creates multiple imputed datasets and combines the results.
+
+Here’s an example using the mice package:
+
+r
+Copy code
+# Install mice package if not already installed
+install.packages("mice")
+library(mice)
+
+# Impute missing values
+imputed_data <- mice(player_train_data, method = "pmm", m = 5)  # 'pmm' is predictive mean matching
+
+# Get the complete dataset (imputed)
+player_train_data_imputed <- complete(imputed_data, 1)
+
+# Fit the model with the imputed data
+player_future_runs_model <- stan_glm(
+  formula = yearly_runs ~ lagged_yearly_runs + lagged_yearly_matches + lagged_yearly_strike_rate + lagged_yearly_average + year,
+  data = player_train_data_imputed,
+  family = gaussian(),
+  prior = normal(location = 0, scale = 2.5, autoscale = TRUE),
+  prior_intercept = normal(location = 0, scale = 2.5, autoscale = TRUE),
+  chains = 4,
+  iter = 2000
+)
+Conclusion:
+To resolve the issue, you need to handle the missing values in your data by either removing rows with missing values (drop_na()) or imputing missing values before fitting the model. Removing rows is the simplest option, but if the missing data is significant, imputing the missing values may be a better solution.
+
+Let me know if you need further assistance or clarification!
+
+
+
+You said:
+how can I find where the na data is?
+ChatGPT said:
+ChatGPT
+To find where the NA values are located in your dataset in R, you can use several methods. Here's how you can inspect the missing values in your dataframe:
+
+1. Check for Missing Values with is.na()
+You can use the is.na() function to create a logical matrix (TRUE for missing values and FALSE for non-missing values) to easily locate missing data.
+
+Example:
+r
+Copy code
+# Check for missing values in the entire dataset
+na_check <- is.na(player_train_data)
+
+# View where the missing values are (TRUE means missing)
+print(na_check)
+2. Summarize the Missing Data
+To see how many missing values there are in each column, use the colSums() function combined with is.na():
+
+r
+Copy code
+# Count the number of missing values per column
+col_na_counts <- colSums(is.na(player_train_data))
+
+# View the count of missing values in each column
+print(col_na_counts)
+This will show the number of NA values in each column of your dataframe.
+
+3. Find Rows with Missing Values
+If you want to find the rows with missing data, you can use which() or complete.cases() to identify them.
+
+Example using which():
+r
+Copy code
+# Find the row indices where there are missing values
+na_rows <- which(rowSums(is.na(player_train_data)) > 0)
+
+# View the rows with missing data
+player_train_data[na_rows, ]
+This will return the rows of the dataframe where at least one column has a missing value.
+
+Example using complete.cases():
+r
+Copy code
+# Identify rows that are complete (no missing values)
+complete_rows <- complete.cases(player_train_data)
+
+# Find rows with missing values by filtering out the complete rows
+missing_rows <- player_train_data[!complete_rows, ]
+
+# View rows with missing values
+print(missing_rows)
+4. Visualize Missing Data with ggplot2 or VIM
+For a more visual approach, you can use packages like ggplot2 or VIM to plot missing data patterns.
+
+Using VIM Package (Optional)
+First, you need to install and load the VIM package:
+
+r
+Copy code
+# Install the VIM package if you don't have it
+install.packages("VIM")
+
+# Load the VIM package
+library(VIM)
+
+# Visualize the missing data pattern
+aggr(player_train_data, numbers = TRUE, prop = TRUE, plot = TRUE)
+This will give you a plot showing where the missing values are in your dataset.
+
+5. Check Specific Columns for Missing Values
+If you're only interested in checking specific columns for NA values, you can apply is.na() to individual columns:
+
+r
+Copy code
+# Check if there are any NAs in a specific column
+sum(is.na(player_train_data$lagged_yearly_runs))
+sum(is.na(player_train_data$year))
+This will return the count of missing values in the specified column.
+
+Summary:
+is.na(): Create a logical matrix showing where the missing values are.
+colSums(is.na()): Count missing values per column.
+which(rowSums(is.na()) > 0): Identify rows with missing values.
+complete.cases(): Filter out rows with no missing values.
+Visualization with VIM: Create a visual representation of the missing data.
+These methods will help you pinpoint where the NA values are located in your dataset. Let me know if you need further assistance with this!
+
+
+
+You said:
+i have this code to clean the data, but the issue is that it lags the data whcih I don't want becasue the data I have only contains the year the player started, ended and the overall career runs and wickets and whatever else. I don't have data for each year. I want to make it so that it just looks at their stats over all the years. player_yearly_summary <- player_data %>%
+  # Create a sequence of years for each player
+  rowwise() %>%
+  mutate(years = list(seq(from = start, to = end))) %>%
+  ungroup() %>%
+  # Expand the data so each year has its own row
+  unnest(years) %>%
+  group_by(player, year = years) %>%
+  summarize(
+    yearly_runs = sum(runs, na.rm = TRUE),
+    yearly_matches = sum(matches, na.rm = TRUE),
+    yearly_strike_rate = mean(strike_rate, na.rm = TRUE),
+    yearly_average = mean(average, na.rm = TRUE),
+    yearly_hundreds = sum(hundreds, na.rm = TRUE),
+    yearly_fifties = sum(fifties, na.rm = TRUE)
+  ) %>%
+  ungroup() %>%
+  arrange(player, year) %>%
+  group_by(player) %>%
+  mutate(
+    lagged_yearly_runs = lag(yearly_runs),
+    lagged_yearly_matches = lag(yearly_matches),
+    lagged_yearly_strike_rate = lag(yearly_strike_rate),
+    lagged_yearly_average = lag(yearly_average),
+    lagged_yearly_hundreds = lag(yearly_hundreds),
+    lagged_yearly_fifties = lag(yearly_fifties)
+  )%>% drop_na()
+ChatGPT said:
+ChatGPT
+It seems like you're working with a dataset where you only have aggregated statistics for players across their careers (total runs, matches, strike rates, etc.) for a specific start and end year, but you don't have data for each individual year.
+
+In this case, there’s no need to create yearly data (as you're currently doing with the seq() function and unnest()) because you're only interested in the overall career stats. So instead of breaking the data into yearly stats, you can directly work with the overall career data without "lagging" the stats by year.
+
+What you want:
+Use the aggregated stats for each player (e.g., total runs, total matches) over the entire period they played, rather than creating yearly summaries.
+Remove the lag calculations because the model should use the overall career data.
+Here is how you can modify your code:
+
+Solution:
+r
+Copy code
+player_yearly_summary <- player_data %>%
+  # Group by player to aggregate stats over their entire career
+  group_by(player) %>%
+  summarize(
+    career_runs = sum(runs, na.rm = TRUE),
+    career_matches = sum(matches, na.rm = TRUE),
+    career_strike_rate = mean(strike_rate, na.rm = TRUE),
+    career_average = mean(average, na.rm = TRUE),
+    career_hundreds = sum(hundreds, na.rm = TRUE),
+    career_fifties = sum(fifties, na.rm = TRUE),
+    start_year = min(start),  # earliest year
+    end_year = max(end)       # latest year
+  ) %>%
+  ungroup() %>%
+  # You can add additional transformations or calculations here, if needed
+  drop_na()  # Remove rows with missing values
+Explanation:
+group_by(player): You’re grouping the data by each player, as you want to calculate career statistics for each player.
+summarize():
+You sum runs, matches, hundreds, and fifties, which will give you the overall career stats for each player.
+You take the mean() of strike_rate and average to calculate the average values across the player's career.
+You calculate start_year as the minimum start year and end_year as the maximum end year to summarize the career duration.
+drop_na(): Removes rows where any of the calculated statistics are NA (which can happen if a player has missing data in one of the columns).
+What’s Different from the Original Code:
+No unnest(): You no longer need to expand the data by year because you only have one row per player (with overall career statistics).
+No lagging: The original code was trying to lag data across years, but since you're only using the overall career stats, lagging isn’t necessary.
+Example:
+If you have a player with the following data:
+
+player	start	end	runs	matches	strike_rate	average	hundreds	fifties
+A	2010	2015	5000	100	50	40	10	20
+A	2016	2018	3000	60	55	45	8	12
+After summarizing the data, the output will look like this:
+
+player	career_runs	career_matches	career_strike_rate	career_average	career_hundreds	career_fifties	start_year	end_year
+A	8000	160	52.5	42.5	18	32	2010	2018
+This way, you have the overall career statistics for each player, without breaking the data down by year.
+
+Next Steps:
+If you need to add further transformations or statistical analyses (like modeling) using this overall data, you can proceed with it now.
+Let me know if you need more help!
+
+here is the code I have so far: #### Preamble ####
+# Purpose: Models Pakistans cricket data overtime
+# Author: Muhammad Abdullah Motasim
+# Date: 27 November 2024
+# Contact: abdullah.motasim@mail.utoronto.ca
+# License: MIT
+# Pre-requisites: tidyverse, rstanarm, caret and arrow libraries
+# Any other information needed?  The cleaned match and player data should be saved 
+# in 02-analysis_data folder
+
+
+#### Workspace setup ####
+library(tidyverse)
+library(rstanarm)
+library(arrow)
+library(caret) # For data splitting and evaluation
+
+#### Read data ####
+player_data <- read_parquet("data/02-analysis_data/cleaned_player_data.parquet")
+match_data <- read_parquet("data/02-analysis_data/cleaned_match_data.parquet")
+
+# Filter match data for Pakistan and ensure Pakistan is always team1
+pakistan_matches <- match_data %>%
+  mutate(
+    team1 = ifelse(team1 == "Pakistan", "Pakistan", team2),  # Assign Pakistan to team1
+    team2 = ifelse(team1 == "Pakistan", team2, team1)         # Assign the other team to team2
+  ) %>%
+  filter(team1 == "Pakistan") %>%  # Filter for matches where Pakistan is team1
+  mutate(pakistan_win = case_when(
+    winner == "Pakistan" ~ 1,
+    TRUE ~ 0
+  ))
+
+# Summarize match-level performance
+pakistan_match_summary <- pakistan_matches %>%
+  group_by(year = lubridate::year(date)) %>%
+  summarize(
+    total_matches = n(),
+    wins = sum(pakistan_win),
+    win_rate = mean(pakistan_win)
+  )
+
+pakistan_players <- player_data %>%
+  filter(country == "Pakistan")
+
+# Summarize player performance
+pakistan_player_summary <- pakistan_players %>%
+  group_by(player, years_played = end-start) %>%
+  summarize(
+    total_runs = sum(runs, na.rm = TRUE),
+    total_wickets = sum(wickets, na.rm = TRUE),
+    matches = n()
+  )
+
+# Merge with match data
+pakistan_model_data <- pakistan_matches %>%
+  mutate(year = lubridate::year(date))
+
+set.seed(853)
+train_index <- createDataPartition(pakistan_model_data$pakistan_win, p = 0.8, list = FALSE)
+train_data <- pakistan_model_data[train_index, ]
+test_data <- pakistan_model_data[-train_index, ]
+
+first_model <-
+  stan_glm(
+    formula = pakistan_win ~  poly(year, 2) + team2,
+    data = train_data,
+    family = binomial(link = "logit"),
+    prior = normal(location = 0, scale = 2.5, autoscale = TRUE),
+    prior_intercept = normal(location = 0, scale = 2.5, autoscale = TRUE),
+    prior_aux = exponential(rate = 1, autoscale = TRUE),
+  )
+
+second_model <-
+  stan_glm(
+    formula = pakistan_win ~ year + team2,
+    data = train_data,
+  family = binomial(link = "logit"),
+  prior = normal(0, 2.5),
+  prior_intercept = normal(0, 5),
+  chains = 4,
+  iter = 2000,
+)
+
+summary(first_model)
+summary(second_model)
+
+#Predict probabilities for test data
+test_data$predicted_prob_first <- predict(first_model, newdata = test_data, type = "response")
+test_data$predicted_prob_second <- predict(second_model, newdata = test_data, type = "response")
+
+# Generate predicted classes based on a threshold (e.g., 0.5)
+test_data$predicted_class_first <- ifelse(test_data$predicted_prob_first > 0.5, 1, 0)
+test_data$predicted_class_second <- ifelse(test_data$predicted_prob_second > 0.5, 1, 0)
+
+# Evaluate model performance
+confusion_matrix_first <- table(
+  Actual = test_data$pakistan_win,
+  Predicted = test_data$predicted_class_first
+)
+confusion_matrix_second <- table(
+  Actual = test_data$pakistan_win,
+  Predicted = test_data$predicted_class_second
+)
+print(confusion_matrix_first)
+print(confusion_matrix_second)
+
+accuracy_first <- sum(diag(confusion_matrix_first)) / sum(confusion_matrix_first)
+accuracy_second <- sum(diag(confusion_matrix_second)) / sum(confusion_matrix_second)
+print(paste("Accuracy:", round(accuracy_first, 2)))
+print(paste("Accuracy:", round(accuracy_second, 2)))
+
+
+### Model data ####
+
+
+
+#### Save model ####
+saveRDS(
+  first_model,
+  file = "models/first_model.rds"
+)
+
+
+The first model is used to model data about the matches played, How can I now create a new model for each player and how they are performing. THe player data I have hasthe following info: [1] "player"                 "country"                "start"                 
+ [4] "end"                    "matches"                "bat_innings"           
+ [7] "bowl_innings"           "field_innings"          "not_outs"              
+[10] "runs"                   "high_score"             "high_score_not_out"    
+[13] "average"                "balls_faced"            "strike_rate"           
+[16] "hundreds"               "fifties"                "ducks"                 
+[19] "fours"                  "sixes"                  "overs"                 
+[22] "maidens"                "wickets"                "economy"               
+[25] "best_bowling_innings"   "four_wickets"           "five_wickets"          
+[28] "ten_wickets"            "dismissals"             "caught"                
+[31] "caught_fielder"         "caught_behind"          "stumped"               
+[34] "max_dismissals_innings"
+
+ChatGPT said:
+ChatGPT
+To model the performance of individual players, you can create separate models using the player-level data. Since your dataset includes features like runs, wickets, strike rate, and economy, you could analyze factors influencing individual performance. For instance, you could predict a player's total runs or wickets based on their experience, strike rate, or other features. Here's an approach:
+
+Step 1: Summarize and Prepare Data for Modeling
+You already have pakistan_player_summary, which summarizes player performance. Enhance this by including additional features such as strike rate and economy:
+
+r
+Copy code
+pakistan_player_summary <- pakistan_players %>%
+  group_by(player, years_played = end - start + 1) %>%
+  summarize(
+    total_runs = sum(runs, na.rm = TRUE),
+    total_wickets = sum(wickets, na.rm = TRUE),
+    average_runs = mean(average, na.rm = TRUE),
+    strike_rate = mean(strike_rate, na.rm = TRUE),
+    economy = mean(economy, na.rm = TRUE),
+    total_matches = sum(matches, na.rm = TRUE),
+    total_100s = sum(hundreds, na.rm = TRUE),
+    total_50s = sum(fifties, na.rm = TRUE),
+    total_ducks = sum(ducks, na.rm = TRUE)
+  ) %>%
+  ungroup()
+Step 2: Define the Modeling Objective
+Decide what you want to predict for each player. For example:
+
+Predict total runs based on strike rate, matches, and years played.
+Predict wickets based on economy and matches played.
+For this example, let's predict total runs.
+
+Step 3: Split Data for Player-Level Modeling
+Split the player-level data into training and testing sets.
+
+r
+Copy code
+set.seed(853)
+train_index <- createDataPartition(pakistan_player_summary$total_runs, p = 0.8, list = FALSE)
+train_data <- pakistan_player_summary[train_index, ]
+test_data <- pakistan_player_summary[-train_index, ]
+Step 4: Create a Player-Level Model
+Use a Bayesian regression model (like stan_glm) or a linear regression model.
+
+r
+Copy code
+player_model <- stan_glm(
+  formula = total_runs ~ years_played + strike_rate + total_matches + total_100s + total_50s,
+  data = train_data,
+  family = gaussian(),
+  prior = normal(location = 0, scale = 2.5, autoscale = TRUE),
+  prior_intercept = normal(location = 0, scale = 2.5, autoscale = TRUE),
+  chains = 4,
+  iter = 2000
+)
+Step 5: Evaluate the Model
+Check the model's performance on the test data.
+
+r
+Copy code
+test_data$predicted_runs <- predict(player_model, newdata = test_data, type = "response")
+
+# Calculate RMSE
+rmse <- sqrt(mean((test_data$total_runs - test_data$predicted_runs)^2, na.rm = TRUE))
+print(paste("RMSE:", round(rmse, 2)))
+
+# Plot actual vs predicted
+ggplot(test_data, aes(x = total_runs, y = predicted_runs)) +
+  geom_point() +
+  geom_abline(slope = 1, intercept = 0, color = "blue") +
+  labs(title = "Actual vs Predicted Runs", x = "Actual Runs", y = "Predicted Runs")
+Step 6: Save the Model
+Save the player-level model for later use.
+
+r
+Copy code
+saveRDS(player_model, file = "models/player_model.rds")
+Generalization
+You can apply a similar approach to model other aspects of performance, such as predicting wickets or average runs, by changing the dependent variable and relevant predictors in the formula.
+
+Would you like further assistance tailoring this approach to a specific aspect of your player data?
+
+
+
+
+
+
+You said:
+I want to try and capture how pakistans team has improved or gotten worse over time. Is there a way to build a model to predict the number of runs they'd score if they kept playing like 1 more year?
+ChatGPT said:
+ChatGPT
+Yes, you can build a model to predict the number of runs Pakistan's team might score in the next year based on historical trends. Here's an approach:
+
+Step 1: Aggregate Team-Level Performance Over Time
+Summarize Pakistan's match data to calculate team-level performance metrics by year, including total runs scored, matches played, and average runs per match.
+
+r
+Copy code
+pakistan_team_performance <- pakistan_matches %>%
+  group_by(year = lubridate::year(date)) %>%
+  summarize(
+    total_runs = sum(runs, na.rm = TRUE),
+    matches_played = n(),
+    average_runs_per_match = mean(runs, na.rm = TRUE),
+    total_wins = sum(pakistan_win),
+    win_rate = mean(pakistan_win)
+  )
+Step 2: Prepare Data for Modeling
+To predict future runs, you need features representing historical performance. Lagging the variables allows the model to learn trends.
+
+r
+Copy code
+pakistan_team_performance <- pakistan_team_performance %>%
+  arrange(year) %>%
+  mutate(
+    lagged_total_runs = lag(total_runs),
+    lagged_matches_played = lag(matches_played),
+    lagged_average_runs = lag(average_runs_per_match),
+    lagged_win_rate = lag(win_rate)
+  ) %>%
+  drop_na()  # Remove rows with missing values from lagging
+Step 3: Split Data for Training and Testing
+Split the dataset into training and testing sets.
+
+r
+Copy code
+set.seed(853)
+train_index <- createDataPartition(pakistan_team_performance$total_runs, p = 0.8, list = FALSE)
+train_data <- pakistan_team_performance[train_index, ]
+test_data <- pakistan_team_performance[-train_index, ]
+Step 4: Build the Predictive Model
+Use a Bayesian linear regression model (stan_glm) or another regression technique to predict the total runs for the next year.
+
+r
+Copy code
+future_runs_model <- stan_glm(
+  formula = total_runs ~ lagged_total_runs + lagged_matches_played + lagged_average_runs + lagged_win_rate + year,
+  data = train_data,
+  family = gaussian(),
+  prior = normal(location = 0, scale = 2.5, autoscale = TRUE),
+  prior_intercept = normal(location = 0, scale = 2.5, autoscale = TRUE),
+  chains = 4,
+  iter = 2000
+)
+Step 5: Evaluate the Model
+Evaluate the model's predictive accuracy using RMSE or similar metrics on the test dataset.
+
+r
+Copy code
+test_data$predicted_total_runs <- predict(future_runs_model, newdata = test_data, type = "response")
+
+# Calculate RMSE
+rmse <- sqrt(mean((test_data$total_runs - test_data$predicted_total_runs)^2, na.rm = TRUE))
+print(paste("RMSE:", round(rmse, 2)))
+
+# Plot actual vs predicted
+ggplot(test_data, aes(x = total_runs, y = predicted_total_runs)) +
+  geom_point() +
+  geom_abline(slope = 1, intercept = 0, color = "blue") +
+  labs(title = "Actual vs Predicted Runs", x = "Actual Runs", y =
+
+
+
+
+
+You said:
+I want to predict he runs for a player if they played 1 more year, not pakistans team
+ChatGPT said:
+ChatGPT
+To predict how many runs a player might score if they played one more year, you can create an individual player-level model. Here's how you can do it:
+
+Step 1: Prepare Player-Level Data
+Summarize the player's historical performance, including runs scored each year, number of matches, strike rate, etc.
+
+r
+Copy code
+player_yearly_summary <- player_data %>%
+  group_by(player, year = lubridate::year(start):lubridate::year(end)) %>%
+  summarize(
+    yearly_runs = sum(runs, na.rm = TRUE),
+    yearly_matches = sum(matches, na.rm = TRUE),
+    yearly_strike_rate = mean(strike_rate, na.rm = TRUE),
+    yearly_average = mean(average, na.rm = TRUE),
+    yearly_hundreds = sum(hundreds, na.rm = TRUE),
+    yearly_fifties = sum(fifties, na.rm = TRUE)
+  ) %>%
+  ungroup() %>%
+  arrange(player, year) %>%
+  group_by(player) %>%
+  mutate(
+    lagged_yearly_runs = lag(yearly_runs),
+    lagged_yearly_matches = lag(yearly_matches),
+    lagged_yearly_strike_rate = lag(yearly_strike_rate),
+    lagged_yearly_average = lag(yearly_average),
+    lagged_yearly_hundreds = lag(yearly_hundreds),
+    lagged_yearly_fifties = lag(yearly_fifties)
+  ) %>%
+  drop_na()  # Remove rows with missing lagged values
+Step 2: Create Features for Prediction
+The features will include lagged variables and cumulative stats for a player, which represent past performance.
+
+Step 3: Split Data by Player
+Split the dataset into training and testing sets.
+
+r
+Copy code
+set.seed(853)
+train_index <- createDataPartition(player_yearly_summary$yearly_runs, p = 0.8, list = FALSE)
+train_data <- player_yearly_summary[train_index, ]
+test_data <- player_yearly_summary[-train_index, ]
+Step 4: Build the Predictive Model
+You can use Bayesian regression (stan_glm) or another regression technique to predict yearly runs for the next year.
+
+r
+Copy code
+player_future_runs_model <- stan_glm(
+  formula = yearly_runs ~ lagged_yearly_runs + lagged_yearly_matches + lagged_yearly_strike_rate + lagged_yearly_average + year,
+  data = train_data,
+  family = gaussian(),
+  prior = normal(location = 0, scale = 2.5, autoscale = TRUE),
+  prior_intercept = normal(location = 0, scale = 2.5, autoscale = TRUE),
+  chains = 4,
+  iter = 2000
+)
+Step 5: Evaluate the Model
+Check the model's performance on the test dataset.
+
+r
+Copy code
+test_data$predicted_yearly_runs <- predict(player_future_runs_model, newdata = test_data, type = "response")
+
+# Calculate RMSE
+rmse <- sqrt(mean((test_data$yearly_runs - test_data$predicted_yearly_runs)^2, na.rm = TRUE))
+print(paste("RMSE:", round(rmse, 2)))
+
+# Plot actual vs predicted
+ggplot(test_data, aes(x = yearly_runs, y = predicted_yearly_runs)) +
+  geom_point() +
+  geom_abline(slope = 1, intercept = 0, color = "blue") +
+  labs(title = "Actual vs Predicted Yearly Runs", x = "Actual Yearly Runs", y = "Predicted Yearly Runs")
+Step 6: Predict Runs for Next Year
+For each player, predict their runs for one additional year.
+
+r
+Copy code
+next_year_prediction <- player_data %>%
+  filter(player %in% unique(player_yearly_summary$player)) %>%
+  group_by(player) %>%
+  summarize(
+    last_year = max(year),
+    lagged_yearly_runs = last(lagged_yearly_runs),
+    lagged_yearly_matches = last(lagged_yearly_matches),
+    lagged_yearly_strike_rate = last(lagged_yearly_strike_rate),
+    lagged_yearly_average = last(lagged_yearly_average)
+  ) %>%
+  mutate(year = last_year + 1)  # Increment year by 1 for prediction
+
+next_year_prediction$predicted_runs <- predict(player_future_runs_model, newdata = next_year_prediction, type = "response")
+Step 7: Save or Use Predictions
+Save the predictions for analysis or visualization.
+
+r
+Copy code
+write_csv(next_year_prediction, "predictions/player_next_year_runs.csv")
+Generalization
+This approach can be extended to predict wickets, strike rates, or other performance metrics using similar techniques. Would you like help refining the model or exploring other features?
