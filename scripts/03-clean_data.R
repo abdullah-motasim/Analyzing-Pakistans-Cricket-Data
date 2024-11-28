@@ -36,7 +36,7 @@ raw_field_data <- raw_field_data %>%
 cleaned_match_data <-
   raw_match_data |>
   janitor::clean_names() |>
-  select(team1, team2, date, winner, winner_wickets, winner_runs) |>
+  select(team1, team2, date, winner, winner_wickets, winner_runs, toss_winner, toss_decision) |>
   mutate(date = as.character(date)) |>
   mutate(date = ymd(date))  # Convert date to lubridate Date format
 

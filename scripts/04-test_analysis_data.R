@@ -21,8 +21,8 @@ player_data <- read_parquet("data/02-analysis_data/cleaned_player_data.parquet")
 
 # Tests for `cleaned_match_data
 
-test_that("cleaned_match_data 6 columns", {
-  expect_equal(ncol(match_data), 6)
+test_that("cleaned_match_data 8 columns", {
+  expect_equal(ncol(match_data), 8)
 })
 
 test_that("cleaned_match_data column types are as expected", {
@@ -32,6 +32,8 @@ test_that("cleaned_match_data column types are as expected", {
   expect_type(match_data$winner, "character")
   expect_type(match_data$winner_wickets, "double") # Numeric columns
   expect_type(match_data$winner_runs, "double")
+  expect_type(match_data$toss_winner, "character")
+  expect_type(match_data$toss_decision, "character")
 })
 
 # Test that `winner_wickets` and `winner_runs` columns in `cleaned_match_data` have at least one NA value (indicating mutually exclusive fields)
