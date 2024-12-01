@@ -22,12 +22,12 @@ raw_bowl_data <- read_csv("data/01-raw_data/combined_bowl_data.csv")
 raw_field_data <- read_csv("data/01-raw_data/combined_field_data.csv")
 
 raw_bat_data <- raw_bat_data %>%
-  mutate(bat_innings = Innings) %>%
-  select(-Innings)
+  mutate(bat_innings = Innings, bat_runs = Runs) %>%
+  select(-Innings, -Runs)
 
 raw_bowl_data <- raw_bowl_data %>%
-  mutate(bowl_innings = Innings) %>%
-  select(-Innings)
+  mutate(bowl_innings = Innings, bowl_runs = Runs) %>%
+  select(-Innings, -Runs)
 
 raw_field_data <- raw_field_data %>%
   mutate(field_innings = Innings) %>%
@@ -36,60 +36,75 @@ raw_field_data <- raw_field_data %>%
 cleaned_match_data <-
   raw_match_data |>
   janitor::clean_names() |>
-  select(team1, team2, date, winner, winner_wickets, winner_runs, toss_winner, toss_decision) |>
+  select(team1,
+         team2,
+         date,
+         winner,
+         winner_wickets,
+         winner_runs,
+         toss_winner) |>
   mutate(date = as.character(date)) |>
   mutate(date = ymd(date))  # Convert date to lubridate Date format
 
-cleaned_player_data <- bind_rows(raw_bat_data, raw_bowl_data, raw_field_data) %>%
+cleaned_player_data <- bind_rows(
+  raw_bat_data %>% mutate(dataset_type = "bat"),
+  raw_bowl_data %>% mutate(dataset_type = "bowl"),
+  raw_field_data %>% mutate(dataset_type = "field")
+) %>%
+  filter(Country == "Pakistan") %>%  # Filtering for Pakistani players
   group_by(Player) %>%
   summarise(
-    Country = first(Country), # Assuming 'Country' remains consistent for each player
-    Start = min(Start, na.rm = TRUE), # Take the earliest Start year
-    End = max(End, na.rm = TRUE), # Take the latest End year
+    # General player information
+    Start = min(Start, na.rm = TRUE),
+    # Take the earliest Start year
+    End = max(End, na.rm = TRUE),
+    # Take the latest End year
     Matches = first(Matches),
-    bat_innings = sum(bat_innings, na.rm = TRUE), # Sum bat_innings
-    bowl_innings = sum(bowl_innings, na.rm = TRUE), # Sum bowl_innings
-    field_innings = sum(field_innings, na.rm = TRUE), # Sum field_innings
+    # Assuming 'Matches' is consistent for each player
     
-    #BAT
-    NotOuts = sum(NotOuts, na.rm = TRUE),
-    Runs = sum(Runs, na.rm = TRUE),
-    HighScore = ifelse(all(is.na(HighScore)), NA, max(HighScore, na.rm = TRUE)), # Handle NA values
-    HighScoreNotOut = any(HighScoreNotOut == TRUE, na.rm = TRUE), # TRUE if any instance is TRUE
-    Average = mean(Average, na.rm = TRUE), # Average across all formats
-    BallsFaced = sum(BallsFaced, na.rm = TRUE),
-    StrikeRate = mean(StrikeRate, na.rm = TRUE), # Average strike rate
-    Hundreds = sum(Hundreds, na.rm = TRUE),
-    Fifties = sum(Fifties, na.rm = TRUE),
-    Ducks = sum(Ducks, na.rm = TRUE),
-    Fours = sum(Fours, na.rm=TRUE),
-    Sixes = sum(Sixes, na.rm=TRUE),
+    # Batting stats
+    bat_innings = sum(bat_innings[dataset_type == "bat"], na.rm = TRUE),
+    # Sum bat_innings
+    bowl_innings = sum(bowl_innings[dataset_type == "bowl"], na.rm = TRUE),
+    # Sum bowl_innings
+    field_innings = sum(field_innings[dataset_type == "field"], na.rm = TRUE),
+    # Sum field_innings
     
-    #BOWL
-    Overs = sum(Overs, na.rm = TRUE),
-    Maidens = sum(Maidens, na.rm = TRUE),
-    Runs = sum(Runs, na.rm = TRUE),
-    Wickets = sum(Wickets, na.rm = TRUE),
-    Average = mean(Average, na.rm = TRUE), # Average across all formats
-    Economy = mean(Economy, na.rm = TRUE), # Average economy
-    StrikeRate = mean(StrikeRate, na.rm = TRUE), # Average strike rate
-    BestBowlingInnings = ifelse(all(is.na(BestBowlingInnings)), NA, max(BestBowlingInnings, na.rm = TRUE)), # Best bowling performance
-    FourWickets = sum(FourWickets, na.rm = TRUE),
-    FiveWickets = sum(FiveWickets, na.rm = TRUE),
-    TenWickets = sum(TenWickets, na.rm = TRUE),
+    bat_runs = sum(bat_runs[dataset_type == "bat"], na.rm = TRUE),
+    # Batting - Runs
+    not_outs = sum(NotOuts[dataset_type == "bat"], na.rm = TRUE),
+    # Batting - NotOuts
+    bat_average = mean(Average[dataset_type == "bat"], na.rm = TRUE),
+    # Batting - Average
     
-    #FIELD
-    Dismissals = sum(Dismissals, na.rm = TRUE),
-    Caught = sum(Caught, na.rm = TRUE),
-    CaughtFielder = sum(CaughtFielder, na.rm = TRUE),
-    CaughtBehind = sum(CaughtBehind, na.rm = TRUE),
-    Stumped = sum(Stumped, na.rm = TRUE),
-    MaxDismissalsInnings = ifelse(all(is.na(MaxDismissalsInnings)), NA, max(MaxDismissalsInnings, na.rm = TRUE)),
-    .groups = "drop" # Removes grouping after summarising
-  ) |>
-  mutate(Average = ifelse(is.infinite(Average), NA, Average)) |>
+    # Bowling stats
+    bowl_runs = sum(bowl_runs[dataset_type == "bowl"], na.rm = TRUE),
+    # Bowling - Runs
+    Wickets = sum(Wickets[dataset_type == "bowl"], na.rm = TRUE),
+    # Bowling - Wickets
+    Economy = mean(Economy[dataset_type == "bowl"], na.rm = TRUE),
+    # Bowling - Economy
+    
+    # Fielding stats
+    Dismissals = sum(Dismissals[dataset_type == "field"], na.rm = TRUE),
+    # Fielding - Dismissals
+    
+    .groups = "drop"  # Removes grouping after summarizing
+  ) %>%
+  mutate(
+    bat_average = case_when(
+      bat_innings - not_outs == 0 ~ NA_real_,
+      # No outs, can't compute average
+      is.infinite(bat_average) ~ bat_runs / (bat_innings - not_outs),
+      # Calculate average if Inf
+      TRUE ~ bat_average  # Else keep the calculated average
+    )
+  ) %>%
   janitor::clean_names()
 
+
 #### Save data ####
-write_parquet(cleaned_match_data, "data/02-analysis_data/cleaned_match_data.parquet")
-write_parquet(cleaned_player_data, "data/02-analysis_data/cleaned_player_data.parquet")
+write_parquet(cleaned_match_data,
+              "data/02-analysis_data/cleaned_match_data.parquet")
+write_parquet(cleaned_player_data,
+              "data/02-analysis_data/cleaned_player_data.parquet")
