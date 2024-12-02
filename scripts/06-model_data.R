@@ -41,7 +41,6 @@ pakistan_matches <- match_data %>%
   mutate(toss_win = case_when(
     toss_winner == "Pakistan" ~ 1,
     TRUE ~ 0))%>%
-  select(-toss_decision)%>%
   mutate(year = lubridate::year(date))
 
 

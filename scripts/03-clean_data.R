@@ -44,7 +44,22 @@ cleaned_match_data <-
          winner_runs,
          toss_winner) |>
   mutate(date = as.character(date)) |>
-  mutate(date = ymd(date))  # Convert date to lubridate Date format
+  mutate(date = ymd(date)) |>
+  mutate(winner = ifelse(is.na(winner), "Draw", winner))  # Replace NA with "Draw" in winner column
+
+for (i in 1:nrow(cleaned_match_data)) {
+  if (cleaned_match_data$team1[i] == "Pakistan" || cleaned_match_data$team2[i] == "Pakistan") {
+    if(cleaned_match_data$team1[i] != "Pakistan"){
+      temp <- cleaned_match_data$team1[i]
+      cleaned_match_data$team1[i] <- "Pakistan"
+      cleaned_match_data$team2[i] <- temp
+    }
+  }
+}
+
+# Filter match data for Pakistan
+pakistan_matches <- cleaned_match_data %>%
+  filter(team1 == "Pakistan")
 
 cleaned_player_data <- bind_rows(
   raw_bat_data %>% mutate(dataset_type = "bat"),
@@ -106,5 +121,7 @@ cleaned_player_data <- bind_rows(
 #### Save data ####
 write_parquet(cleaned_match_data,
               "data/02-analysis_data/cleaned_match_data.parquet")
+write_parquet(pakistan_matches,
+              "data/02-analysis_data/cleaned_pakistan_match_data.parquet")
 write_parquet(cleaned_player_data,
               "data/02-analysis_data/cleaned_player_data.parquet")

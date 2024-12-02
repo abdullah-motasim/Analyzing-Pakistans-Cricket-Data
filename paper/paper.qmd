@@ -1,16 +1,17 @@
 ---
-title: "My title"
+title: "Analyzing the Pakistan Cricket Team's Performance (2002-2024)"
 subtitle: "My subtitle if needed"
 author: 
-  - First author
-  - Another author
-thanks: "Code and data are available at: [https://github.com/RohanAlexander/starter_folder](https://github.com/RohanAlexander/starter_folder)."
+  - Muhammad Abdullah Motasim
+thanks: "Code and data are available at: [https://github.com/abdullah-motasim/Analyzing-Pakistans-Cricket-Data](https://github.com/abdullah-motasim/Analyzing-Pakistans-Cricket-Data)."
 date: today
 date-format: long
 abstract: "First sentence. Second sentence. Third sentence. Fourth sentence."
 format: pdf
 number-sections: true
 bibliography: references.bib
+table-of-contents: true
+toc-depth: 2
 ---
 
 ```{r}
@@ -19,98 +20,167 @@ bibliography: references.bib
 #| message: false
 
 library(tidyverse)
-library(palmerpenguins)
+library(here)
+library(ggplot2)
+library(arrow)
+library(patchwork)
+
+pakistan_match_data <- read_parquet(here("data/02-analysis_data/cleaned_pakistan_match_data.parquet"))
 ```
 
 
 # Introduction
+Pakistan’s cricket team holds a storied legacy, marked by remarkable highs and challenging lows. From their 1992 World Cup triumph to fluctuations in form over the decades, analyzing trends in performance offers insights into their journey and areas for strategic improvement.
 
-Overview paragraph
+Despite an extensive focus on player statistics and match highlights, there remains a lack of systematic statistical analysis to evaluate long-term performance trends. This paper fills this gap by analyzing data from 2002 to 2024 to understand what factors contribute to Pakistan’s success in international cricket.
 
-Estimand paragraph
+We employ a linear regression model to analyze match outcomes, considering variables like year, opponent, and toss outcomes. The focus is on identifying trends and predicting the probability of victory under varying conditions. Our findings not only contribute to the literature on sports analytics but also provide actionable insights for coaches, analysts, and cricket administrators not only in Pakistan, but around the world.
 
-Results paragraph
+The structure of this paper is as follows: @sec-data discusses the data types included in the raw data, the cleaning process for the data, and the reason for selecting the data set we did. @sec-model discusses model specification and justification for a Linear Regression model. @sec-results analyzes the trends and correlations between different variables utilizing tabular and graphical means. @sec-discussion discusses the results of @sec-results going into detail on what the simulation results can tell us about Pakistan cricket performance, as well as assumptions and limitations in data.
 
-Why it matters paragraph
-
-Telegraphing paragraph: The remainder of this paper is structured as follows. @sec-data....
-
-
-
-
-
+## Estimand
+The estimand is the probability that Pakistan wins a cricket match, given the opponent, toss outcome, and year.
 
 # Data {#sec-data}
 
-## Overview
+The data for this study were obtained from the cricketdata R package [@cricketdata] and all analysis was performed using `R` [@citeR] alongside the following packages: `tibble` [@tibble], `readr` [@readr], `arrow` [@arrow], `tidyverse` [@tidyverse], `dplyr` [@dplyr], `testthat` [@testthat], `caret` [@caret], `rstanarm` [@rstanarm], `tidyr` [@tidyr], patchwork [@patchwork], and ggplot2 [@ggplot2].
 
-We use the statistical programming language R [@citeR].... Our data [@shelter].... Following @tellingstories, we consider...
+As mentioned before the raw data was collected from the cricketdata library which contains data on international and other major cricket matches sourced from ESPN Cricinfo [@espncricinfo] and Cricsheet [@cricsheet]. It contains details on the individual match year, teams, result, and toss winner. Additionally, the data set features comprehensive career statistics for individual players, including total runs, total balls faced, total wickets, and more. This data set was chosen for its ease of implementation within R, as it is available as a package, and for its ability to scrape data from multiple reputable cricket sources, such as ESPN, thereby enhancing the overall reliability of the data set.
 
-Overview text
+## Raw Data
+The cricketdata library offers a variety of functions that provide data sets on different cricket statistics. However, for our analysis, we focus on two key areas: individual match statistics, to determine which matches Pakistan played in and how they performed, and player career statistics, to assess how the quality of players has evolved over time and its impact on Pakistan's overall performance. To extract the relevant data, we primarily used two functions from the library: fetch_cricinfo, which retrieves individual career performance data, and fetch_cricsheet, which provides detailed match information.
+
+## Data Cleaning
+The raw match data initially contained 820 observations across 25 variables, each detailing a match between two countries. The data cleaning process involved selecting only matches in which Pakistan played, and retaining only the variables relevant to our analysis. These variables include:
+
+- `Team1` - The first team that participated in the match.
+- `Team2` - The second team that participated in the match.
+- `Date` - The date of the match (eg. 2008-01-02)
+- `Winner` - The team that won the match between Team1 and Team2 (NA if the match was a draw).
+- `Winner_wickets` - The number of wickets the winning team took (NA if the match was a draw).
+- `Winner_runs` - The number of runs the winning team scored (NA if the match was a draw).
+- `Toss_winner` - The team that won the coin toss.
+- `Toss_decision` - The decision made by the toss winner, indicating whether they chose to field or bowl.
+
+The raw player career data was broken into batting, bowling, and fielding categories with some players appearing in multiple data sets, thus the cleaning process involved combining the 3 data sets and ensuring proper handling of one player in each set. After this, only Pakistani cricket players were selected and variables which were important to use were retained. These variables are: 
+
+- `Player` - Name of the player.
+- `Start` - The year in which the player began their career
+- `End` - The year in which the player's career concluded.
+- `Matches` - The total number of matches the player participated in throughout their career.
+- `Bat_innings` -  The total number of batting innings the player participated in.
+- `Bowl_innings` -  The total number of bowling innings the player participated in.
+- `Field_innings` -  The total number of fielding innings the player participated in.
+- `Bat_runs` - The total number of runs the player scored while batting.
+- `Not_puts` - The number of times the player remained not out while batting.
+- `Bat_average` - The player's batting average, calculated as the total number of runs scored divided by the number of times they were dismissed.
+- `Bowl-runs` - The total number of runs conceded by the player while bowling. This statistic reflects how many runs the player allowed the opposition to score during their bowling spells.
+- `Wickets` - The total number of wickets taken by the player in their career.
+- `Economy` - The average number of runs the player concedes per over bowled. It is calculated by dividing the total number of runs given by the total number of overs bowled. A lower economy rate typically indicates a bowler who is more effective at restricting the opposition's scoring.
+- `Dismissals` - The total number of dismissals the player has contributed to as a fielder or wicketkeeper.
+
+After applying these cleaning procedures, we were left with 151 observations across 7 variables for the matches Pakistan has played in, and 344 observations across 14 variables for the career information of individual Pakistani cricketers.
 
 ## Measurement
-	
-Some paragraphs about how we go from a phenomena in the world to an entry in the dataset.
 
-## Outcome variables
+The cricketdata package extracts match information from official sources, including the ESPN and Cricsheet databases, scorecards, and records maintained by cricket boards. These sources provide detailed records of each international match played by Pakistan and other cricketing teams worldwide. These matches represent the real-world phenomena we aim to analyze.
 
-Add graphs, tables and text. Use sub-sub-headings for each outcome variable or update the subheading to be singular.
+This real-world data is transformed into structured entries in our dataset through the manual recording of match information by officials during the game. Key details, such as match ID, participating teams, venue, date, event, toss winner/decision, player of the match, umpires, match winner, and more, are carefully documented. Once recorded, this information is made available for download on official websites. The datasets are then retrieved and imported into R using the cricketdata package.
 
+This measurement approach is highly reliable, as it relies on official cricketing records. However, it also highlights the limitations inherent in working with aggregated datasets. For example, factors that can influence match outcomes—such as team morale or crowd effects—remain unquantified.
 
+## Variable Analysis
+Figures @fig-match-stats-1 and @fig-match-stats-2 display the count of several important match statistics. From these, we can observe that Pakistan faces a variety of opponents, with the most frequent ones being England, Sri Lanka, and Australia. Notably, Pakistan has had a challenging record against Australia, losing a significant number of matches, while many of their matches ended in draws.
 
-Some of our data is of penguins (@fig-bills), from @palmerpenguins.
+Regarding coin toss outcomes, Sri Lanka and South Africa appear to have won a substantial number of tosses. However, it's important to note that while the graphs for match outcomes and tosses won may give the impression that Pakistan was victorious in most of these events, we must keep in mind that the data has been filtered to include only Pakistan's matches. This means Pakistan appears more frequently in the data set compared to other teams, which accounts for the higher statistics shown. These figures represent Pakistan's performance specifically, not that of other teams.
 
-```{r}
-#| label: fig-bills
-#| fig-cap: Bills of penguins
-#| echo: false
+The following two graphs show the number of matches and tosses that Pakistan won or lost. The win-loss ratio is approximately 0.5, indicating that Pakistan has lost about twice as many matches as it has won. Additionally, the coin toss win ratio is close to even, reflecting a near 50/50 chance of Pakistan winning the toss.
 
-ggplot(penguins, aes(x = island, fill = species)) +
-  geom_bar(alpha = 0.8) +
-  scale_fill_manual(values = c("darkorange","purple","cyan4"),
-                    guide = "none") +
-  theme_minimal() +
-  facet_wrap(~species, ncol = 1) +
-  coord_flip()
-```
-
-Talk more about it.
-
-And also planes (@fig-planes). (You can change the height and width, but don't worry about doing that until you have finished every other aspect of the paper - Quarto will try to make it look nice and the defaults usually work well once you have enough text.)
+Finally, the last graph illustrates the number of matches Pakistan played each year. We can see a peak in 2016, with a gradual decline in matches played over the subsequent years, culminating in a sharp drop in the most recent year—comparable to the period during the COVID-19 pandemic.
 
 ```{r}
-#| label: fig-planes
-#| fig-cap: Relationship between wing length and width
+#| label: fig-match-stats-1
+#| fig-cap: Counts for match variables of interst
 #| echo: false
-#| warning: false
-#| message: false
 
-analysis_data <- read_csv(here::here("data/02-analysis_data/analysis_data.csv"))
+data <- pakistan_match_data %>%
+  mutate(pakistan_win = case_when(
+    winner == "Pakistan" ~ 1,
+    TRUE ~ 0))%>%
+  mutate(toss_win = case_when(
+    toss_winner == "Pakistan" ~ 1,
+    TRUE ~ 0))%>%
+  mutate(year = lubridate::year(date))
 
-analysis_data |> 
-  ggplot(aes(x = width, y = length)) +
-  geom_point(alpha = 0.8) +
+# Convert relevant columns to factors if they represent categorical data
+data <- data %>%
+  mutate(
+    team1 = as.factor(team1),
+    team2 = as.factor(team2),
+    winner = as.factor(winner),
+    toss_winner = as.factor(toss_winner),
+    pakistan_win = as.factor(pakistan_win),
+    toss_win = as.factor(toss_win)
+  )
+
+# Figure 2: Distribution of matches played by Team2
+fig2 <- ggplot(data, aes(x = team2)) +
+  geom_bar(fill = "coral") +
+  labs(title = "Pakistan Opponent Team", x = "Team", y = "Count") +
   theme_minimal() +
-  labs(x = "Wing width (mm)",
-       y = "Wing length (mm)")
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+# Figure 3: Match outcomes (Winner)
+fig3 <- ggplot(data, aes(x = winner)) +
+  geom_bar(fill = "darkgreen") +
+  labs(title = "Matches Won by Each Team", x = "Team", y = "Count") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+# Figure 4: Distribution of Toss Winners
+fig4 <- ggplot(data, aes(x = toss_winner)) +
+  geom_bar(fill = "purple") +
+  labs(title = "Tosses Won by each Team", x = "Team", y = "Count") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+# Figure 5: Pakistan Win Outcomes
+fig5 <- ggplot(data, aes(x = pakistan_win)) +
+  geom_bar(fill = "gold") +
+  labs(title = "Matches Won by Pakistan", x = "Outcome", y = "Count") +
+  scale_x_discrete(labels = c("0" = "Lost", "1" = "Won")) +  # Change 1 and 0 to Won and Lost
+  theme_minimal()
+
+# Figure 6: Toss Win Outcomes
+fig6 <- ggplot(data, aes(x = toss_win)) +
+  geom_bar(fill = "dodgerblue") +
+  labs(title = "Tosses Won by Pakistan", x = "Outcome", y = "Count") +
+  scale_x_discrete(labels = c("0" = "Lost", "1" = "Won")) +  # Change 1 and 0 to Won and Lost
+  theme_minimal()
+
+# Figure 7: Match Results by Year
+fig7 <- ggplot(data, aes(x = year)) +
+  geom_bar(fill = "brown") +
+  labs(title = "Pakistan's Matches Played \nper Year", x = "Year", y = "Number of Matches") +
+  theme_minimal()
+
+combines_plot1 <- (fig2)/(fig3)
+print(combines_plot1)
+
 ```
 
-Talk way more about it. 
 
-## Predictor variables
-
-Add graphs, tables and text.
-
-Use sub-sub-headings for each outcome variable and feel free to combine a few into one if they go together naturally.
+```{r}
+#| label: fig-match-stats-2
+#| fig-cap: Counts for match variables of interst
+#| echo: false
 
 
+combines_plot2 <- (fig4 | fig5) /( fig6 | fig7)
+print(combines_plot2)
+```
 
-
-
-
-
-
-# Model
+# Model {#sec-model}
 
 The goal of our modelling strategy is twofold. Firstly,...
 
@@ -139,7 +209,7 @@ We expect a positive relationship between the size of the wings and time spent a
 We can use maths by including latex between dollar signs, for instance $\theta$.
 
 
-# Results
+# Results {#sec-results}
 
 Our results are summarized in @tbl-modelresults.
 
@@ -149,10 +219,10 @@ Our results are summarized in @tbl-modelresults.
 #| warning: false
 #| message: false
 
-library(rstanarm)
-
-first_model <-
-  readRDS(file = here::here("models/first_model.rds"))
+# library(rstanarm)
+# 
+# first_model <-
+#   readRDS(file = here::here("models/first_model.rds"))
 ```
 
 ```{r}
@@ -161,20 +231,20 @@ first_model <-
 #| label: tbl-modelresults
 #| tbl-cap: "Explanatory models of flight time based on wing width and wing length"
 #| warning: false
-
-modelsummary::modelsummary(
-  list(
-    "First model" = first_model
-  ),
-  statistic = "mad",
-  fmt = 2
-)
+# 
+# modelsummary::modelsummary(
+#   list(
+#     "First model" = first_model
+#   ),
+#   statistic = "mad",
+#   fmt = 2
+# )
 ```
 
 
 
 
-# Discussion
+# Discussion {#sec-discussion}
 
 ## First discussion point {#sec-first-point}
 
@@ -216,16 +286,16 @@ In @fig-ppcheckandposteriorvsprior-2 we compare the posterior with the prior. Th
 #| layout-ncol: 2
 #| fig-cap: "Examining how the model fits, and is affected by, the data"
 #| fig-subcap: ["Posterior prediction check", "Comparing the posterior with the prior"]
-
-pp_check(first_model) +
-  theme_classic() +
-  theme(legend.position = "bottom")
-
-posterior_vs_prior(first_model) +
-  theme_minimal() +
-  scale_color_brewer(palette = "Set1") +
-  theme(legend.position = "bottom") +
-  coord_flip()
+# 
+# pp_check(first_model) +
+#   theme_classic() +
+#   theme(legend.position = "bottom")
+# 
+# posterior_vs_prior(first_model) +
+#   theme_minimal() +
+#   scale_color_brewer(palette = "Set1") +
+#   theme(legend.position = "bottom") +
+#   coord_flip()
 ```
 
 ## Diagnostics
@@ -244,9 +314,9 @@ posterior_vs_prior(first_model) +
 #| fig-subcap: ["Trace plot", "Rhat plot"]
 #| layout-ncol: 2
 
-plot(first_model, "trace")
-
-plot(first_model, "rhat")
+# plot(first_model, "trace")
+# 
+# plot(first_model, "rhat")
 ```
 
 
