@@ -1,12 +1,12 @@
 ---
-title: "Analyzing the Pakistan Cricket Team's Performance (2002-2024)"
-subtitle: "My subtitle if needed"
+title: "Analyzing Factors Affecting Pakistan Cricket Team's Performance (1952-2024)"
+subtitle: "Opponent and Coin Tossplay Play Crucial Role in Deciding Outcome"
 author: 
   - Muhammad Abdullah Motasim
 thanks: "Code and data are available at: [https://github.com/abdullah-motasim/Analyzing-Pakistans-Cricket-Data](https://github.com/abdullah-motasim/Analyzing-Pakistans-Cricket-Data)."
 date: today
 date-format: long
-abstract: "First sentence. Second sentence. Third sentence. Fourth sentence."
+abstract: "This paper analyzes Pakistan's cricket performance from 2002 to 2024, using a linear regression model to examine factors influencing match outcomes. We find that opponent strength and toss outcomes are significant predictors of Pakistan's success, highlighting both internal team dynamics and external variables. These findings provide crucial insights for coaches, analysts, and administrators, offering strategies to improve performance under varying conditions. Ultimately, our analysis contributes to a deeper understanding of the factors that drive Pakistan’s cricket success, with implications for teams worldwide."
 format: pdf
 number-sections: true
 bibliography: references.bib
@@ -31,7 +31,7 @@ library(tinytable)
 library(knitr)
 library(kableExtra)
 
-player_data <- read_parquet("data/02-analysis_data/cleaned_player_data.parquet")
+player_data <- read_parquet(here("data/02-analysis_data/cleaned_player_data.parquet"))
 
 pakistan_match_data <- read_parquet(here("data/02-analysis_data/cleaned_pakistan_match_data.parquet"))
 model <- readRDS(here("models/win_chance.rds"))
@@ -41,24 +41,10 @@ confusion_matrix <- readRDS(here("models/confusion_matrix_win_chance.rds"))
 
 # Introduction
 
-Pakistan’s cricket team holds a storied legacy, marked by remarkable
-highs and challenging lows. From their 1992 World Cup triumph to
-fluctuations in form over the decades, analyzing trends in performance
-offers insights into their journey and areas for strategic improvement.
-
-Despite an extensive focus on player statistics and match highlights,
-there remains a lack of systematic statistical analysis to evaluate
-long-term performance trends. This paper fills this gap by analyzing
-data from 2002 to 2024 to understand what factors contribute to
-Pakistan’s success in international cricket.
+Pakistan’s cricket team holds a storied legacy, marked by remarkable highs and challenging lows. From their 1992 World Cup triumph to fluctuations in form over the decades, analyzing trends in performance offers insights into their journey and areas for strategic improvement. Despite the wealth of player statistics and match highlights available, there has been a lack of systematic statistical analysis that evaluates long-term performance trends. This paper fills that gap by analyzing data from 2002 to 2024 to uncover the key factors that contribute to Pakistan’s success in international cricket.
 
 We employ a linear regression model to analyze match outcomes,
-considering variables like year, opponent, and toss outcomes. The focus
-is on identifying trends and predicting the probability of victory under
-varying conditions. Our findings not only contribute to the literature
-on sports analytics but also provide actionable insights for coaches,
-analysts, and cricket administrators not only in Pakistan, but around
-the world.
+considering variables like year, opponent, and toss outcomes. Our findings reveal several important insights. First, the strength of the opposing team emerged as a significant factor influencing Pakistan’s chances of winning. We also found that toss outcomes had a noteworthy impact on match results. This paper highlights the importance of both internal factors (such as team performance) and external factors (such as opponent strength) in shaping match outcomes. These insights provide strategic guidance for coaches, analysts, and cricket administrators, not only in Pakistan but also around the world, on how to prepare and perform under varying conditions.
 
 The structure of this paper is as follows: @sec-data discusses the data
 types included in the raw data, the cleaning process for the data, and
@@ -279,7 +265,7 @@ ggplot(data, aes(x = toss_winner)) +
 
 # Figure 4: Pakistan Win Outcomes
 ggplot(data, aes(x = pakistan_win)) +
-  geom_bar(fill = "gold") +
+  geom_bar(fill = "darkblue") +
   labs(x = "Outcome", y = "Count") +
   scale_x_discrete(labels = c("0" = "Lost", "1" = "Won")) +  # Change 1 and 0 to Won and Lost
   theme_minimal()
@@ -507,8 +493,8 @@ regression model are as follows:
 #| label: fig-opponent-stats
 #| fig-cap: "Pakistan's wins and losses against all teams"
 #| fig-subcap: ["Sri Lanka","New Zealand", "Australia", "England", "South Africa", "West Indies", "Zimbabwe", "Bangladesh", "Ireland", "India"]
-#| layout-ncol: 2
-#| layout-nrow: 5
+#| layout-ncol: 3
+#| layout-nrow: 4
 #| echo: false
 #| eval: true
 #| warning: false
@@ -558,27 +544,27 @@ print(plot)
 ```
 @fig-opponent-stats illustrates the distribution of match outcomes (wins, losses, and draws) for Pakistan against eight different cricket teams: Sri Lanka, New Zealand, England, Australia, South Africa, West Indies, Zimbabwe, and Bangladesh. These results provide an overview of Pakistan's historical performance against each team and highlight patterns in their match outcomes.
 
-- `Sri Lanka` (Figure 3a): Pakistan's matches against Sri Lanka are fairly balanced, with a slightly higher frequency of losses compared to wins. Draws are the least frequent outcome, suggesting a competitive dynamic between the two teams.
+- `Sri Lanka`: Pakistan's matches against Sri Lanka are fairly balanced, with a slightly higher frequency of losses compared to wins. Draws are the least frequent outcome, suggesting a competitive dynamic between the two teams.
 
-- `New Zealand` (Figure 3b): Matches against New Zealand reveal a similar trend, with losses being more frequent than wins. The proportion of draws remains relatively low, indicating fewer instances of matches being evenly contested.
+- `New Zealand`: Matches against New Zealand reveal a similar trend, with losses being more frequent than wins. The proportion of draws remains relatively low, indicating fewer instances of matches being evenly contested.
 
-- `England` (Figure 3c): Pakistan has a notably higher number of losses against England, with draws constituting the smallest category. This indicates that England has historically been a challenging opponent for Pakistan.
+- `England`: Pakistan has a notably higher number of losses against England, with draws constituting the smallest category. This indicates that England has historically been a challenging opponent for Pakistan.
 
-- `Australia` (Figure 3d): A significant disparity is observed in matches against Australia, where losses outnumber wins by a considerable margin. This trend underscores the dominance of Australia in these encounters.
+- `Australia`: A significant disparity is observed in matches against Australia, where losses outnumber wins by a considerable margin. This trend underscores the dominance of Australia in these encounters.
 
-- `South Africa` (Figure 3e): Matches against South Africa also show a higher proportion of losses compared to wins. However, the gap between these two outcomes is less pronounced compared to matches against Australia.
+- `South Africa`: Matches against South Africa also show a higher proportion of losses compared to wins. However, the gap between these two outcomes is less pronounced compared to matches against Australia.
 
-- `West Indies` (Figure 3f): Pakistan exhibits a stronger performance against West Indies, with wins slightly outnumbering losses. Draws remain the least frequent outcome, emphasizing decisive results in these encounters.
+- `West Indies`: Pakistan exhibits a stronger performance against West Indies, with wins slightly outnumbering losses. Draws remain the least frequent outcome, emphasizing decisive results in these encounters.
 
-- `Zimbabwe` (Figure 3g): Against Zimbabwe, Pakistan demonstrates a clear dominance, with wins significantly outnumbering losses. Draws are nearly negligible, highlighting Pakistan's consistent success in these matches.
+- `Zimbabwe`: Against Zimbabwe, Pakistan demonstrates a clear dominance, with wins significantly outnumbering losses. Draws are nearly negligible, highlighting Pakistan's consistent success in these matches.
 
-- `Bangladesh` (Figure 3h): Similar to Zimbabwe, Pakistan has a markedly higher number of wins against Bangladesh, with losses and draws being infrequent. This dominance underscores Pakistan's strong track record against this opponent.
+- `Bangladesh`: Similar to Zimbabwe, Pakistan has a markedly higher number of wins against Bangladesh, with losses and draws being infrequent. This dominance underscores Pakistan's strong track record against this opponent.
 
 Overall, these graphs provide valuable insights into Pakistan's historical performance trends across different opponents. While some teams, such as Australia and England, have posed significant challenges, others, like Bangladesh and Zimbabwe, have been more favorable matchups for Pakistan. These findings align with the regression model coefficients presented earlier, where the opponent variable was a significant predictor of Pakistan's success in matches. For instance, the high win rates against Bangladesh and Zimbabwe correspond to their positive regression coefficients, while the challenging outcomes against teams like Australia reflect negative or smaller coefficients.
 
 ```{r}
 #| label: fig-pk-wins
-#| fig-cap: "Number of Pakistan's Wins Over the Years"
+#| fig-cap: "Number of Pakistan's wins over the years"
 #| echo: false
 #| eval: true
 #| warning: false
@@ -602,28 +588,116 @@ ggplot(wins_by_year, aes(x = year, y = total_wins)) +
     y = "Total Wins"
   ) +
   theme_minimal()
-
 ```
 @fig-pk-wins displays the number of wins Pakistan has achieved each year. From the graph, we observe that Pakistan had a modest performance from 2002 to 2010, with only 2-4 wins per year, followed by a sharp increase in 2011. After this surge, the team maintained an average of 4 wins per year, with some fluctuations. However, in 2019, there was a notable decline, with just one win recorded. Since this drop, Pakistan has struggled to reach their previous high of 4 wins per year, and the current average stands at approximately 2 wins per year.
 
+```{r}
+#| label: fig-career-end-runs-individual
+#| fig-cap: "Career batting runs for each player by year of retirement"
+#| echo: false
+#| eval: true
+#| warning: false
+
+# Filter out players whose batting innings are greater than their bowling innings
+filtered_data <- player_data %>%
+  filter(bat_innings <= bowl_innings)
+
+# Add a new column to calculate career duration (end_year - start_year)
+filtered_data <- filtered_data %>%
+  mutate(career_duration = end - start)
+
+# Aggregate data to get total runs for each year when players ended their career
+runs_by_year <- filtered_data %>%
+  group_by(end) %>%
+  summarise(total_runs = sum(bat_runs))
+
+# Plot individual data points of each player's career runs:
+ggplot(filtered_data, aes(x = end, y = bat_runs)) +
+  geom_point(color = "darkblue", size = 2) +
+  labs(
+    # title = "Career Batting Runs for Each Player by Year Career Ended",
+    x = "Year Career Ended",
+    y = "Career Batting Runs"
+  ) +
+  theme_minimal()
+
+```
+
+```{r}
+#| label: fig-career-end-runs-all
+#| fig-cap: "Total career batting runs for all players retiring in each year"
+#| echo: false
+#| eval: true
+#| warning: false
+
+# Filter out players whose batting innings are greater than their bowling innings
+filtered_data <- player_data %>%
+  filter(bat_innings <= bowl_innings)
+
+# Add a new column to calculate career duration (end_year - start_year)
+filtered_data <- filtered_data %>%
+  mutate(career_duration = end - start)
+
+# Aggregate data to get total runs for each year when players ended their career
+runs_by_year <- filtered_data %>%
+  group_by(end) %>%
+  summarise(total_runs = sum(bat_runs))
+
+# Plot the aggregated data: Total career runs per year
+ggplot(runs_by_year, aes(x = end, y = total_runs)) +
+  geom_point(color = "darkblue", size = 3) + 
+  labs(
+    # title = "Total Career Batting Runs by Year Career Ended",
+    x = "Year Career Ended",
+    y = "Sum of Total Career Batting Runs"
+  ) +
+  theme_minimal()
+
+```
+
+@fig-career-end-runs-individual presents a scatter plot showing the years in which players retired and the number of runs they scored throughout their careers, with each dot representing an individual Pakistani player. The plot reveals that most players retired with fewer than 1,000 career runs, and there is generally no strong positive trend across the data. However, there is a notable exception around 2015, where we see a slight uptick in the number of runs. This increase is short-lived, as the trend declines again shortly after, until 2024, when a large number of players retired, many of whom had accumulated over 1,000 career runs. This scatter plot provides valuable insight into individual player performances, which can be used to explore broader trends in the data.
+
+@fig-career-end-runs-all shows a similar scatter plot, but in this case, each dot represents the total combined runs of all players retiring in a given year, with the y-axis now reflecting the sum of career runs for all retiring players in that year. Upon examining this graph, we observe some outliers, particularly in 2006 and 2024. Referring back to @fig-career-end-runs-individual, the 2006 outlier can be explained by a player retiring with around 6,800 runs. The 2024 outlier is due to the unusually high number of players retiring that year, including an exceptional player who ended their career with approximately 7,500 runs. Aside from these outliers, the overall trend remains relatively stagnant, with a slight increase again around 2015, though this quickly declines thereafter.
+
 # Discussion {#sec-discussion}
 
-## First discussion point {#sec-first-point}
+## Analysis Overview
 
-If my paper were 10 pages, then should be be at least 2.5 pages. The
-discussion is a chance to show off what you know and what you learnt
-from all this.
+In this paper, I employed Bayesian Logistic Regression to estimate the probability of Pakistan winning cricket matches, considering key factors such as the year of the match, the opponent, and the toss outcome. The model was specifically designed to understand how these variables influence Pakistan's chances of winning, while accounting for uncertainty and variability in the data. To ensure the analysis focused on relevant information, the data was cleaned and processed to include only Pakistan’s matches, along with important player career statistics that could impact match outcomes. By incorporating these factors, the model provided a more comprehensive understanding of Pakistan’s performance dynamics.
 
-## Second discussion point
+The results of the analysis reveal valuable insights into Pakistan's performance trends over time. For example, the strength of the opposing team played a significant role, with match outcomes showing a clear correlation between Pakistan's success and the competitive level of the opposition. Additionally, the toss outcome also emerged as influential factors, providing a deeper understanding of how certain conditions affect Pakistan's likelihood of winning. These findings underscore the importance of both internal (team performance) and external (opponent strength, match context) factors in shaping match outcomes, offering strategic insights for future team preparation and performance analysis.
 
-Please don't use these as sub-heading labels - change them to be what
-your point actually is.
+## Effect of Opponent
 
-## Third discussion point
+One key finding from the analysis is the significant influence of the opposing team on Pakistan's match performance. As shown in @fig-model-results and @tbl-model-results, the calculated coefficient values for each opposing team align with the patterns observed in @fig-opponent-stats, where Pakistan has a higher success rate against teams with greater positive coefficient values, such as Bangladesh, and a lower success rate against teams with lower or negative coefficient values, such as South Africa. This correlation suggests that Pakistan's chances of winning are not only influenced by its own team performance but also by the strength of the opposition.
 
-## Weaknesses and next steps
+The model further emphasizes the variations in Pakistan's odds of winning depending on the opponent. For example, the coefficients for teams like Bangladesh, England, and Sri Lanka indicate more favorable matchups for Pakistan, suggesting that these teams have historically been more susceptible to Pakistan's strengths or less competitive overall. Conversely, the coefficients for teams like India and South Africa point to tougher challenges, with Pakistan's chances of winning being lower in these matchups. This pattern highlights the broader strategic landscape, where understanding the relative strength of the opponent becomes crucial for predicting outcomes. It underscores the need for teams to account not just for internal factors, such as player form or match conditions, but also for the competitive level of the opposition when preparing for matches. The results validate the intuition that the quality of the opposing team is a significant determinant of Pakistan’s performance, and that adjusting tactics accordingly can improve chances against stronger teams. Ultimately, the analysis reinforces the importance of a nuanced, strategic approach to match preparation, where the nature of the opposition is carefully considered alongside team strengths and other match variables.
 
-Weaknesses and next steps should also be included.
+## Matches Won Over the years
+
+When analyzing @fig-pk-wins in relation to @fig-career-end-runs-individual and @fig-career-end-runs-all, the trends observed align with what we would expect based on the historical performance of Pakistan’s cricket team. From around 2015, we see a noticeable increase in the number of games won by Pakistan. This can be explained by the presence of a number of veteran players who, with their vast experience, played a pivotal role in guiding the team to more victories. Around 2015, several seasoned players reached the peak of their careers or retired, bringing with them not only impressive career statistics but also crucial leadership and expertise on the field. The presence of these experienced players undoubtedly helped stabilize the team's performance and contributed to the higher win rates during this period.
+
+However, following 2015, there is a visible decline in Pakistan’s performance, with a fluctuating number of wins per year. This drop in consistent victories is likely due to the retirement of key veteran players who had been essential to Pakistan’s success. With their departure, a significant number of new, less experienced players entered the team. While these new players showed potential and skill, they lacked the depth of experience necessary to handle the pressures and complexities of international cricket. This transition phase, where fresh talent was integrated into the team, led to inconsistency in match outcomes, which we observe as fluctuations in the win data post-2015.
+
+Looking ahead to 2024, the retirement of another set of senior players further raises concerns about the future trajectory of Pakistan's performance. This continuous cycle of veteran players retiring and new players coming in without the same level of experience poses a challenge for the team. Although these new players bring in raw talent, the absence of experienced leaders and match-winners could contribute to a potential decline in overall performance. Given the historical patterns, we can reasonably anticipate a dip in the team's performance in the coming years unless the emerging players quickly adapt and gain the necessary experience to compete at the highest level. Therefore, while the retirement of key players is a natural part of the cycle, it highlights the ongoing challenge Pakistan faces in maintaining a competitive edge in international cricket.
+
+## Weaknesses and Limitations: 
+
+Despite the valuable insights gained, there are several limitations in the data and methodology that must be acknowledged. One significant challenge was the limited number of matches involving Pakistan that could be used to train the model. The data set included only 820 match observations for Pakistan, which, while informative, is relatively small when considering the complexity of cricket as a sport with numerous variables influencing match outcomes. This limited sample size could affect the robustness of the model’s estimates, and in particular, the ability to generalize predictions across different conditions or time periods.
+
+Additionally, there was a lack of detailed match statistics in the raw data, which constrained the scope of the analysis. For instance, while data on match outcomes (win/loss), toss results, and opponents were available, detailed statistics like the number of runs scored, wickets taken, or batting and bowling performances were only provided for the winning team. This lack of comprehensive match data—especially for losing teams—meant that I could not include key performance indicators like runs or wickets in the model, as many of these entries were missing or incomplete. These missing values could have influenced the accuracy of the model, and it would be prudent to consider these missing data points in future iterations of the analysis, potentially employing imputation methods or seeking alternative data sources.
+
+Lastly, while the Bayesian Logistic Regression model is powerful, it assumes that the relationships between the predictors and the outcome are linear in nature. Although this is a reasonable assumption in many cases, cricket is a dynamic sport with complex interactions, and this model may not fully capture non-linear relationships or interactions between factors such as team composition, player injuries, or the impact of different match venues.
+
+## Next Steps
+
+Despite these limitations, there are several directions for future work that could improve the analysis and expand our understanding of Pakistan’s cricket performance.
+
+- Improving the Data Set: One of the key areas for future research would be to gather a more extensive data set, particularly focusing on adding detailed match statistics, including runs, wickets, and player performances for both teams. This would allow for a more comprehensive model, potentially including these factors as predictors in a multivariate analysis. Additionally, expanding the sample size to include more matches across a broader time period could help provide more robust and generalizable results.
+
+- Incorporating Player-Specific Metrics: Another avenue for improvement would be incorporating player-specific statistics into the model. By analyzing how the performance of individual players—batting and bowling averages, player form, and injury history—affects Pakistan’s match outcomes, the model could be enhanced to offer a more granular understanding of what drives success or failure in cricket matches. Including player career data alongside match data would offer a deeper, more detailed look into the team's performance and could be used to identify potential strengths and weaknesses.
+
+- Considering Interaction Effects: Future work could explore more advanced models that account for interactions between variables. For instance, the relationship between Pakistan’s performance and the opponent could vary depending on the specific conditions of a given year, such as the emergence of new players, changes in team strategy, or alterations in the competitive landscape of international cricket. Exploring such interaction effects could provide a more nuanced view of Pakistan's performance over time.
 
 \newpage
 
@@ -631,7 +705,27 @@ Weaknesses and next steps should also be included.
 
 # Appendix {.unnumbered}
 
-# Additional data details
+# Surveys, Sampling, and Observational Data
+
+In this paper, we focus on a dataset of cricket matches involving Pakistan and their performance outcomes. However, a significant challenge in our analysis was the limited and often incomplete data available for each match, which made it difficult to fully answer the question of what affects Pakistan’s overall match outcomes. Specifically, the dataset was missing detailed match statistics, such as the number of wickets per over, which player bowled in each over, individual player statistics, and detailed match events like runs and outs for both teams. This lack of granular data posed a substantial limitation to the analysis and highlighted the importance of accurate and complete data collection in sports analytics.
+
+## Data Collection
+In an ideal scenario, the data would have been far more comprehensive, particularly with respect to the granular details of each match. To overcome the limitations of the current dataset, it would be essential to gather detailed match data through a combination of observational data and video analysis. This would involve either live or recorded footage of each match, from which key statistics could be manually or automatically extracted. Such an approach would include the following steps:
+
+- `Detailed Over-by-Over Data`: Analyzing each over of the match would provide crucial insights into the match's dynamics. This would involve recording key statistics, such as the number of runs scored, the number of wickets taken, the bowler and batter in each over, and any significant events, like boundary hits or wickets. This granular data would help in identifying the ebb and flow of the match and how different events influence Pakistan’s chances of winning.
+
+- `Player-Specific Statistics`: In addition to match-level statistics, it is essential to record individual player data. For every player involved, detailed statistics such as runs scored, wickets taken, the number of innings played, and the number of outs would be recorded. This information would allow for a more precise understanding of how the performance of individual players influences the match outcome. For instance, if certain players consistently score high or take wickets in critical moments, this could provide valuable insight into the team’s overall performance strategy.
+
+- `Team-Specific Data`: Beyond individual player performance, it would be essential to capture team-level data for both the batting and bowling sides. This would include the number of runs scored by each team, the number of outs, and key tactical decisions like the batting order, field placements, and bowling changes. Understanding these aspects could allow for a better analysis of how team strategies affect the outcome of the match.
+
+## Annual Player Performance
+Another critical aspect that could improve the analysis is the collection of annual player performance data. While the current dataset allows for some insight into match outcomes, it lacks detailed player statistics across multiple years. To address this, it would be helpful to build a dataset that combines match-level data for each player over the course of several years.
+
+- `Annual Player Statistics`: For each player, aggregating data across multiple matches would provide a clearer picture of their performance over time. Key metrics such as the total number of runs scored, the number of wickets taken, the number of matches played, and the number of innings would be compiled. This would allow for a more nuanced analysis of individual player performance, considering factors like form and consistency.
+
+- `Linking Player Performance to Match Outcomes`: By examining the link between individual player statistics and match outcomes, it would be possible to identify trends that might not be evident at the match level. For example, players with higher annual runs might be correlated with higher chances of winning for the team, or certain bowlers who take more wickets in specific conditions could become key to success. This approach would allow for more precise modeling of match outcomes based on both individual and team performance.
+
+- `Player and Opponent Comparisons`: To better understand how player performance interacts with match outcomes, it would be useful to collect data on player performances not just for Pakistan, but also for opposing teams. By comparing the performances of Pakistan’s players with those of the opposing team’s players, we could gain insights into how the relative strength of players affects the result. For example, if Pakistan’s key players perform well but the opposing team’s star players outperform them, it could explain a loss despite good individual performances.
 
 # Model details {#sec-model-details}
 
@@ -784,11 +878,11 @@ fit_diagnostics <- model_summary[c("mean_PPD"),c(1, 3:6)]
 fit_diagnostics$variable <- "mean_PPD"
 fit_diagnostics <- fit_diagnostics[, c("variable", "mean", "sd", "10%", "50%", "90%")]
   
-# fit_diagnostics |>
-#   tt()
+# table1 <- fit_diagnostics |>
+#   tt()|>
 #   style_tt(j = 2:5, align = "r") |>   # Align columns 2 to 5 to the right
-#   format_tt(digits = 1, num_fmt = "decimal")  # Format numbers with 1 decimal
-
+#   format_tt(digits = 1, num_fmt = "decimal")
+  
 # Use kableExtra for table styling
 fit_diagnostics_rounded <- round(fit_diagnostics[, 2:6], 2)
 
