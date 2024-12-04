@@ -20,21 +20,10 @@ library(tidyr)
 #### Read data ####
 player_data <- read_parquet("data/02-analysis_data/cleaned_player_data.parquet")
 match_data <- read_parquet("data/02-analysis_data/cleaned_match_data.parquet")
-
-# Ensure Pakistan is always team1
-for (i in 1:nrow(match_data)) {
-  if (match_data$team1[i] == "Pakistan" || match_data$team2[i] == "Pakistan") {
-    if(match_data$team1[i] != "Pakistan"){
-      temp <- match_data$team1[i]
-      match_data$team1[i] <- "Pakistan"
-      match_data$team2[i] <- temp
-    }
-  }
-}
+pakistan_match_data <- read_parquet("data/02-analysis_data/cleaned_pakistan_match_data.parquet")
 
 # Filter match data for Pakistan
-pakistan_matches <- match_data %>%
-  filter(team1 == "Pakistan") %>% 
+pakistan_matches <- pakistan_match_data %>%
   mutate(pakistan_win = case_when(
     winner == "Pakistan" ~ 1,
     TRUE ~ 0))%>%
@@ -42,8 +31,6 @@ pakistan_matches <- match_data %>%
     toss_winner == "Pakistan" ~ 1,
     TRUE ~ 0))%>%
   mutate(year = lubridate::year(date))
-
-
 
 # Summarize match-level performance
 pakistan_match_summary <- pakistan_matches %>%
@@ -100,6 +87,7 @@ confusion_matrix_first <- table(
   Actual = match_test_data$pakistan_win,
   Predicted = match_test_data$predicted_class_first
 )
+
 confusion_matrix_second <- table(
   Actual = year_test_data$wins,
   Predicted = year_test_data$predicted_class_second
@@ -112,57 +100,9 @@ accuracy_second <- sum(diag(confusion_matrix_second)) / sum(confusion_matrix_sec
 print(paste("Accuracy:", round(accuracy_first, 2)))
 print(paste("Accuracy:", round(accuracy_second, 2)))
 
-# Model for predicting players career? Not sure if needed
-pakistan_players <- player_data %>%
-  filter(country == "Pakistan")
-
-# Summarize player performance
-pakistan_player_summary <- pakistan_players %>%
-  group_by(player, years_played = end-start) %>%
-  summarize(
-    total_runs = sum(runs, na.rm = TRUE),
-    total_wickets = sum(wickets, na.rm = TRUE),
-    matches = n()
-  )
-player_yearly_summary <- player_data %>%
-  # Group by player to aggregate stats over their entire career
-  group_by(player) %>%
-  summarize(
-    country = country,
-    career_runs = sum(runs, na.rm = TRUE),
-    career_matches = sum(matches, na.rm = TRUE),
-    career_strike_rate = mean(strike_rate, na.rm = TRUE),
-    career_average = mean(average, na.rm = TRUE),
-    career_hundreds = sum(hundreds, na.rm = TRUE),
-    career_fifties = sum(fifties, na.rm = TRUE),
-    start_year = min(start),  # earliest year
-    end_year = max(end)       # latest year
-  ) %>%
-  ungroup()
-
-set.seed(853)
-player_train_index <- createDataPartition(player_yearly_summary$yearly_runs, p = 0.8, list = FALSE)
-player_train_data <- player_yearly_summary[train_index, ]
-player_test_data <- player_yearly_summary[-train_index, ]
-
-# Count the number of missing values per column
-col_na_counts <- colSums(is.na(player_train_data))
-
-# View the count of missing values in each column
-print(col_na_counts)
-
-player_future_runs_model <- stan_glm(
-  formula = yearly_runs ~ lagged_yearly_runs + lagged_yearly_matches + lagged_yearly_strike_rate + lagged_yearly_average + year,
-  data = player_train_data_clean,
-  family = gaussian(),
-  prior = normal(location = 0, scale = 2.5, autoscale = TRUE),
-  prior_intercept = normal(location = 0, scale = 2.5, autoscale = TRUE),
-  chains = 4,
-  iter = 2000
-)
-
 #### Save model ####
 saveRDS(first_model, file = "models/win_chance.rds")
 saveRDS(second_model, file = "models/wins_per_year.rds")
+saveRDS(confusion_matrix_first, file = "models/confusion_matrix_win_chance.rds")
 
 

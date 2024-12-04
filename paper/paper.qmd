@@ -12,6 +12,9 @@ number-sections: true
 bibliography: references.bib
 table-of-contents: true
 toc-depth: 2
+editor: 
+  markdown: 
+    wrap: 72
 ---
 
 ```{r}
@@ -23,84 +26,214 @@ library(tidyverse)
 library(here)
 library(ggplot2)
 library(arrow)
-library(patchwork)
+library(modelsummary)
+library(tinytable)
+library(knitr)
+library(kableExtra)
+
+player_data <- read_parquet("data/02-analysis_data/cleaned_player_data.parquet")
 
 pakistan_match_data <- read_parquet(here("data/02-analysis_data/cleaned_pakistan_match_data.parquet"))
+model <- readRDS(here("models/win_chance.rds"))
+confusion_matrix <- readRDS(here("models/confusion_matrix_win_chance.rds"))
+
 ```
 
-
 # Introduction
-Pakistan’s cricket team holds a storied legacy, marked by remarkable highs and challenging lows. From their 1992 World Cup triumph to fluctuations in form over the decades, analyzing trends in performance offers insights into their journey and areas for strategic improvement.
 
-Despite an extensive focus on player statistics and match highlights, there remains a lack of systematic statistical analysis to evaluate long-term performance trends. This paper fills this gap by analyzing data from 2002 to 2024 to understand what factors contribute to Pakistan’s success in international cricket.
+Pakistan’s cricket team holds a storied legacy, marked by remarkable
+highs and challenging lows. From their 1992 World Cup triumph to
+fluctuations in form over the decades, analyzing trends in performance
+offers insights into their journey and areas for strategic improvement.
 
-We employ a linear regression model to analyze match outcomes, considering variables like year, opponent, and toss outcomes. The focus is on identifying trends and predicting the probability of victory under varying conditions. Our findings not only contribute to the literature on sports analytics but also provide actionable insights for coaches, analysts, and cricket administrators not only in Pakistan, but around the world.
+Despite an extensive focus on player statistics and match highlights,
+there remains a lack of systematic statistical analysis to evaluate
+long-term performance trends. This paper fills this gap by analyzing
+data from 2002 to 2024 to understand what factors contribute to
+Pakistan’s success in international cricket.
 
-The structure of this paper is as follows: @sec-data discusses the data types included in the raw data, the cleaning process for the data, and the reason for selecting the data set we did. @sec-model discusses model specification and justification for a Linear Regression model. @sec-results analyzes the trends and correlations between different variables utilizing tabular and graphical means. @sec-discussion discusses the results of @sec-results going into detail on what the simulation results can tell us about Pakistan cricket performance, as well as assumptions and limitations in data.
+We employ a linear regression model to analyze match outcomes,
+considering variables like year, opponent, and toss outcomes. The focus
+is on identifying trends and predicting the probability of victory under
+varying conditions. Our findings not only contribute to the literature
+on sports analytics but also provide actionable insights for coaches,
+analysts, and cricket administrators not only in Pakistan, but around
+the world.
+
+The structure of this paper is as follows: @sec-data discusses the data
+types included in the raw data, the cleaning process for the data, and
+the reason for selecting the data set we did. @sec-model discusses model
+specification and justification for a Linear Regression model.
+@sec-results analyzes the trends and correlations between different
+variables utilizing tabular and graphical means. @sec-discussion
+discusses the results of @sec-results going into detail on what the
+simulation results can tell us about Pakistan cricket performance, as
+well as assumptions and limitations in data.
 
 ## Estimand
-The estimand is the probability that Pakistan wins a cricket match, given the opponent, toss outcome, and year.
+
+The estimand is the probability that Pakistan wins a cricket match,
+given the opponent, toss outcome, and year.
 
 # Data {#sec-data}
 
-The data for this study were obtained from the cricketdata R package [@cricketdata] and all analysis was performed using `R` [@citeR] alongside the following packages: `tibble` [@tibble], `readr` [@readr], `arrow` [@arrow], `tidyverse` [@tidyverse], `dplyr` [@dplyr], `testthat` [@testthat], `caret` [@caret], `rstanarm` [@rstanarm], `tidyr` [@tidyr], patchwork [@patchwork], and ggplot2 [@ggplot2].
+The data for this study were obtained from the cricketdata R package
+[@cricketdata] and all analysis was performed using `R` [@citeR]
+alongside the following packages: `tibble` [@tibble], `readr` [@readr],
+`arrow` [@arrow], `tidyverse` [@tidyverse], `dplyr` [@dplyr], `testthat`
+[@testthat], `caret` [@caret], `rstanarm` [@rstanarm], `tidyr` [@tidyr],
+modelsummary [@modelsummary], tinytable [@tinytable], knitr [@knitr], and ggplot2 [@ggplot2].
 
-As mentioned before the raw data was collected from the cricketdata library which contains data on international and other major cricket matches sourced from ESPN Cricinfo [@espncricinfo] and Cricsheet [@cricsheet]. It contains details on the individual match year, teams, result, and toss winner. Additionally, the data set features comprehensive career statistics for individual players, including total runs, total balls faced, total wickets, and more. This data set was chosen for its ease of implementation within R, as it is available as a package, and for its ability to scrape data from multiple reputable cricket sources, such as ESPN, thereby enhancing the overall reliability of the data set.
+As mentioned before the raw data was collected from the cricketdata
+library which contains data on international and other major cricket
+matches sourced from ESPN Cricinfo [@espncricinfo] and Cricsheet
+[@cricsheet]. It contains details on the individual match year, teams,
+result, and toss winner. Additionally, the data set features
+comprehensive career statistics for individual players, including total
+runs, total balls faced, total wickets, and more. This data set was
+chosen for its ease of implementation within R, as it is available as a
+package, and for its ability to scrape data from multiple reputable
+cricket sources, such as ESPN, thereby enhancing the overall reliability
+of the data set.
 
 ## Raw Data
-The cricketdata library offers a variety of functions that provide data sets on different cricket statistics. However, for our analysis, we focus on two key areas: individual match statistics, to determine which matches Pakistan played in and how they performed, and player career statistics, to assess how the quality of players has evolved over time and its impact on Pakistan's overall performance. To extract the relevant data, we primarily used two functions from the library: fetch_cricinfo, which retrieves individual career performance data, and fetch_cricsheet, which provides detailed match information.
+
+The cricketdata library offers a variety of functions that provide data
+sets on different cricket statistics. However, for our analysis, we
+focus on two key areas: individual match statistics, to determine which
+matches Pakistan played in and how they performed, and player career
+statistics, to assess how the quality of players has evolved over time
+and its impact on Pakistan's overall performance. To extract the
+relevant data, we primarily used two functions from the library:
+fetch_cricinfo, which retrieves individual career performance data, and
+fetch_cricsheet, which provides detailed match information.
 
 ## Data Cleaning
-The raw match data initially contained 820 observations across 25 variables, each detailing a match between two countries. The data cleaning process involved selecting only matches in which Pakistan played, and retaining only the variables relevant to our analysis. These variables include:
 
-- `Team1` - The first team that participated in the match.
-- `Team2` - The second team that participated in the match.
-- `Date` - The date of the match (eg. 2008-01-02)
-- `Winner` - The team that won the match between Team1 and Team2 (NA if the match was a draw).
-- `Winner_wickets` - The number of wickets the winning team took (NA if the match was a draw).
-- `Winner_runs` - The number of runs the winning team scored (NA if the match was a draw).
-- `Toss_winner` - The team that won the coin toss.
-- `Toss_decision` - The decision made by the toss winner, indicating whether they chose to field or bowl.
+The raw match data initially contained 820 observations across 25
+variables, each detailing a match between two countries. The data
+cleaning process involved selecting only matches in which Pakistan
+played, and retaining only the variables relevant to our analysis. These
+variables include:
 
-The raw player career data was broken into batting, bowling, and fielding categories with some players appearing in multiple data sets, thus the cleaning process involved combining the 3 data sets and ensuring proper handling of one player in each set. After this, only Pakistani cricket players were selected and variables which were important to use were retained. These variables are: 
+-   `Team1` - The first team that participated in the match.
+-   `Team2` - The second team that participated in the match.
+-   `Date` - The date of the match (eg. 2008-01-02)
+-   `Winner` - The team that won the match between Team1 and Team2 (NA
+    if the match was a draw).
+-   `Winner_wickets` - The number of wickets the winning team took (NA
+    if the match was a draw).
+-   `Winner_runs` - The number of runs the winning team scored (NA if
+    the match was a draw).
+-   `Toss_winner` - The team that won the coin toss.
+-   `Toss_decision` - The decision made by the toss winner, indicating
+    whether they chose to field or bowl.
 
-- `Player` - Name of the player.
-- `Start` - The year in which the player began their career
-- `End` - The year in which the player's career concluded.
-- `Matches` - The total number of matches the player participated in throughout their career.
-- `Bat_innings` -  The total number of batting innings the player participated in.
-- `Bowl_innings` -  The total number of bowling innings the player participated in.
-- `Field_innings` -  The total number of fielding innings the player participated in.
-- `Bat_runs` - The total number of runs the player scored while batting.
-- `Not_puts` - The number of times the player remained not out while batting.
-- `Bat_average` - The player's batting average, calculated as the total number of runs scored divided by the number of times they were dismissed.
-- `Bowl-runs` - The total number of runs conceded by the player while bowling. This statistic reflects how many runs the player allowed the opposition to score during their bowling spells.
-- `Wickets` - The total number of wickets taken by the player in their career.
-- `Economy` - The average number of runs the player concedes per over bowled. It is calculated by dividing the total number of runs given by the total number of overs bowled. A lower economy rate typically indicates a bowler who is more effective at restricting the opposition's scoring.
-- `Dismissals` - The total number of dismissals the player has contributed to as a fielder or wicketkeeper.
+The raw player career data was broken into batting, bowling, and
+fielding categories with some players appearing in multiple data sets,
+thus the cleaning process involved combining the 3 data sets and
+ensuring proper handling of one player in each set. After this, only
+Pakistani cricket players were selected and variables which were
+important to use were retained. These variables are:
 
-After applying these cleaning procedures, we were left with 151 observations across 7 variables for the matches Pakistan has played in, and 344 observations across 14 variables for the career information of individual Pakistani cricketers.
+-   `Player` - Name of the player.
+-   `Start` - The year in which the player began their career
+-   `End` - The year in which the player's career concluded.
+-   `Matches` - The total number of matches the player participated in
+    throughout their career.
+-   `Bat_innings` - The total number of batting innings the player
+    participated in.
+-   `Bowl_innings` - The total number of bowling innings the player
+    participated in.
+-   `Field_innings` - The total number of fielding innings the player
+    participated in.
+-   `Bat_runs` - The total number of runs the player scored while
+    batting.
+-   `Not_puts` - The number of times the player remained not out while
+    batting.
+-   `Bat_average` - The player's batting average, calculated as the
+    total number of runs scored divided by the number of times they were
+    dismissed.
+-   `Bowl-runs` - The total number of runs conceded by the player while
+    bowling. This statistic reflects how many runs the player allowed
+    the opposition to score during their bowling spells.
+-   `Wickets` - The total number of wickets taken by the player in their
+    career.
+-   `Economy` - The average number of runs the player concedes per over
+    bowled. It is calculated by dividing the total number of runs given
+    by the total number of overs bowled. A lower economy rate typically
+    indicates a bowler who is more effective at restricting the
+    opposition's scoring.
+-   `Dismissals` - The total number of dismissals the player has
+    contributed to as a fielder or wicketkeeper.
+
+After applying these cleaning procedures, we were left with 151
+observations across 7 variables for the matches Pakistan has played in,
+and 344 observations across 14 variables for the career information of
+individual Pakistani cricketers.
 
 ## Measurement
 
-The cricketdata package extracts match information from official sources, including the ESPN and Cricsheet databases, scorecards, and records maintained by cricket boards. These sources provide detailed records of each international match played by Pakistan and other cricketing teams worldwide. These matches represent the real-world phenomena we aim to analyze.
+The cricketdata package extracts match information from official
+sources, including the ESPN and Cricsheet databases, scorecards, and
+records maintained by cricket boards. These sources provide detailed
+records of each international match played by Pakistan and other
+cricketing teams worldwide. These matches represent the real-world
+phenomena we aim to analyze.
 
-This real-world data is transformed into structured entries in our dataset through the manual recording of match information by officials during the game. Key details, such as match ID, participating teams, venue, date, event, toss winner/decision, player of the match, umpires, match winner, and more, are carefully documented. Once recorded, this information is made available for download on official websites. The datasets are then retrieved and imported into R using the cricketdata package.
+This real-world data is transformed into structured entries in our
+dataset through the manual recording of match information by officials
+during the game. Key details, such as match ID, participating teams,
+venue, date, event, toss winner/decision, player of the match, umpires,
+match winner, and more, are carefully documented. Once recorded, this
+information is made available for download on official websites. The
+datasets are then retrieved and imported into R using the cricketdata
+package.
 
-This measurement approach is highly reliable, as it relies on official cricketing records. However, it also highlights the limitations inherent in working with aggregated datasets. For example, factors that can influence match outcomes—such as team morale or crowd effects—remain unquantified.
+This measurement approach is highly reliable, as it relies on official
+cricketing records. However, it also highlights the limitations inherent
+in working with aggregated datasets. For example, factors that can
+influence match outcomes—such as team morale or crowd effects—remain
+unquantified.
 
 ## Variable Analysis
-Figures @fig-match-stats-1 and @fig-match-stats-2 display the count of several important match statistics. From these, we can observe that Pakistan faces a variety of opponents, with the most frequent ones being England, Sri Lanka, and Australia. Notably, Pakistan has had a challenging record against Australia, losing a significant number of matches, while many of their matches ended in draws.
 
-Regarding coin toss outcomes, Sri Lanka and South Africa appear to have won a substantial number of tosses. However, it's important to note that while the graphs for match outcomes and tosses won may give the impression that Pakistan was victorious in most of these events, we must keep in mind that the data has been filtered to include only Pakistan's matches. This means Pakistan appears more frequently in the data set compared to other teams, which accounts for the higher statistics shown. These figures represent Pakistan's performance specifically, not that of other teams.
+Figures @fig-match-stats displays the count of several important match
+statistics. From these, we can observe that Pakistan faces a variety of
+opponents, with the most frequent ones being England, Sri Lanka, and
+Australia. Notably, Pakistan has had a challenging record against
+Australia, losing a significant number of matches, while many of their
+matches ended in draws.
 
-The following two graphs show the number of matches and tosses that Pakistan won or lost. The win-loss ratio is approximately 0.5, indicating that Pakistan has lost about twice as many matches as it has won. Additionally, the coin toss win ratio is close to even, reflecting a near 50/50 chance of Pakistan winning the toss.
+Regarding coin toss outcomes, Sri Lanka and South Africa appear to have
+won a substantial number of tosses. However, it's important to note that
+while the graphs for match outcomes and tosses won may give the
+impression that Pakistan was victorious in most of these events, we must
+keep in mind that the data has been filtered to include only Pakistan's
+matches. This means Pakistan appears more frequently in the data set
+compared to other teams, which accounts for the higher statistics shown.
+These figures represent Pakistan's performance specifically, not that of
+other teams.
 
-Finally, the last graph illustrates the number of matches Pakistan played each year. We can see a peak in 2016, with a gradual decline in matches played over the subsequent years, culminating in a sharp drop in the most recent year—comparable to the period during the COVID-19 pandemic.
+The following two graphs show the number of matches and tosses that
+Pakistan won or lost. The win-loss ratio is approximately 0.5,
+indicating that Pakistan has lost about twice as many matches as it has
+won. Additionally, the coin toss win ratio is close to even, reflecting
+a near 50/50 chance of Pakistan winning the toss.
+
+Finally, the last graph illustrates the number of matches Pakistan
+played each year. We can see a peak in 2016, with a gradual decline in
+matches played over the subsequent years, culminating in a sharp drop in
+the most recent year—comparable to the period during the COVID-19
+pandemic.
 
 ```{r}
-#| label: fig-match-stats-1
+#| label: fig-match-stats
 #| fig-cap: Counts for match variables of interst
+#| fig-subcap: ["Pakistan Opponent Team","Matches Won by Each Team",
+#| "Tosses Won by each Team", "Matches Won by Pakistan", "Tosses Won by Pakistan", "Pakistan's Matches Played per Year"]
+#| layout-ncol: 2
+#| layout-nrow: 3
 #| echo: false
 
 data <- pakistan_match_data %>%
@@ -123,136 +256,368 @@ data <- data %>%
     toss_win = as.factor(toss_win)
   )
 
-# Figure 2: Distribution of matches played by Team2
-fig2 <- ggplot(data, aes(x = team2)) +
+# Figure 1: Distribution of matches played by Team2
+ggplot(data, aes(x = team2)) +
   geom_bar(fill = "coral") +
-  labs(title = "Pakistan Opponent Team", x = "Team", y = "Count") +
+  labs(x = "Team", y = "Count") +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
-# Figure 3: Match outcomes (Winner)
-fig3 <- ggplot(data, aes(x = winner)) +
+# Figure 2: Match outcomes (Winner)
+ggplot(data, aes(x = winner)) +
   geom_bar(fill = "darkgreen") +
-  labs(title = "Matches Won by Each Team", x = "Team", y = "Count") +
+  labs(x = "Team", y = "Count") +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
-# Figure 4: Distribution of Toss Winners
-fig4 <- ggplot(data, aes(x = toss_winner)) +
+# Figure 3: Distribution of Toss Winners
+ggplot(data, aes(x = toss_winner)) +
   geom_bar(fill = "purple") +
-  labs(title = "Tosses Won by each Team", x = "Team", y = "Count") +
+  labs(x = "Team", y = "Count") +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
-# Figure 5: Pakistan Win Outcomes
-fig5 <- ggplot(data, aes(x = pakistan_win)) +
+# Figure 4: Pakistan Win Outcomes
+ggplot(data, aes(x = pakistan_win)) +
   geom_bar(fill = "gold") +
-  labs(title = "Matches Won by Pakistan", x = "Outcome", y = "Count") +
+  labs(x = "Outcome", y = "Count") +
   scale_x_discrete(labels = c("0" = "Lost", "1" = "Won")) +  # Change 1 and 0 to Won and Lost
   theme_minimal()
 
-# Figure 6: Toss Win Outcomes
-fig6 <- ggplot(data, aes(x = toss_win)) +
+# Figure 5: Toss Win Outcomes
+ggplot(data, aes(x = toss_win)) +
   geom_bar(fill = "dodgerblue") +
-  labs(title = "Tosses Won by Pakistan", x = "Outcome", y = "Count") +
+  labs(x = "Outcome", y = "Count") +
   scale_x_discrete(labels = c("0" = "Lost", "1" = "Won")) +  # Change 1 and 0 to Won and Lost
   theme_minimal()
 
-# Figure 7: Match Results by Year
-fig7 <- ggplot(data, aes(x = year)) +
+# Figure 6: Match Results by Year
+ggplot(data, aes(x = year)) +
   geom_bar(fill = "brown") +
-  labs(title = "Pakistan's Matches Played \nper Year", x = "Year", y = "Number of Matches") +
+  labs(x = "Year", y = "Number of Matches") +
   theme_minimal()
-
-combines_plot1 <- (fig2)/(fig3)
-print(combines_plot1)
-
-```
-
-
-```{r}
-#| label: fig-match-stats-2
-#| fig-cap: Counts for match variables of interst
-#| echo: false
-
-
-combines_plot2 <- (fig4 | fig5) /( fig6 | fig7)
-print(combines_plot2)
+  
 ```
 
 # Model {#sec-model}
 
-The goal of our modelling strategy is twofold. Firstly,...
+I used a Bayesian Logistic Regression model to estimate the probability
+of Pakistan winning a cricket match based on several key factors.
+Logistic regression is a statistical technique used for binary
+classification, where the goal is to predict the probability of a
+categorical outcome. In this case, the outcome is whether Pakistan wins
+or loses a match.
 
-Here we briefly describe the Bayesian analysis model used to investigate... Background details and diagnostics are included in [Appendix -@sec-model-details].
+## Model Overview
 
-## Model set-up
+The model incorporates three independent variables that may influence
+match outcomes: year, opponent, and toss winner. The dependent variable
+is match_outcome, where 1 indicates a win for Pakistan and 0 indicates a
+loss. This setup allows us to examine the influence of key variables on
+Pakistan's performance.
 
-Define $y_i$ as the number of seconds that the plane remained aloft. Then $\beta_i$ is the wing width and $\gamma_i$ is the wing length, both measured in millimeters.  
+By incorporating these variables, the model explores how factors such as
+the year of the match, the opposing team, and whether Pakistan won the
+toss (which influences the decision to bat or bowl) affect Pakistan’s
+likelihood of winning. This approach helps uncover trends in Pakistan's
+performance over time and under varying conditions, providing insights
+into factors that may inform future match strategies.
 
-\begin{align} 
-y_i|\mu_i, \sigma &\sim \mbox{Normal}(\mu_i, \sigma) \\
-\mu_i &= \alpha + \beta_i + \gamma_i\\
-\alpha &\sim \mbox{Normal}(0, 2.5) \\
-\beta &\sim \mbox{Normal}(0, 2.5) \\
-\gamma &\sim \mbox{Normal}(0, 2.5) \\
-\sigma &\sim \mbox{Exponential}(1)
-\end{align}
+## Model Equation
 
-We run the model in R [@citeR] using the `rstanarm` package of @rstanarm. We use the default priors from `rstanarm`.
+The model I will be using can be described using the following equation:
 
+```{=tex}
+\begin{equation}
+\log\left(\frac{\hat{p}}{1 - \hat{p}}\right) = \beta_0 + \beta_1 \times \text{year} + \beta_2 \times \text{opponent} + \beta_3 \times \text{toss winner} 
+\end{equation}
+```
+$$
+\begin{aligned}
+\beta_0 & \sim \mbox{Normal}(0, 2.5)\\
+\beta_1 & \sim \mbox{Normal}(0, 2.5)\\
+\beta_2 & \sim \mbox{Normal}(0, 2.5)\\
+\beta_3 & \sim \mbox{Normal}(0, 2.5)
+\end{aligned}
+$$ where,
 
-### Model justification
+-   $\hat{p}$ is the predicted probability of Pakistan winning a match.
+-   $\beta_0$ is the intercept (the log-odds of winning when all
+    predictors are at their reference level).
+-   $\beta_1$ is the coefficient for the year variable, representing how
+    match outcomes are affected by the year of the match.
+-   $\beta_2$ are the coefficients for each level of the categorical
+    variable team2 (the opponent), with the reference category excluded.
+    This allows the model to compare the odds of winning against
+    different opponents.
+-   $\beta_3$ is the coefficient for the toss_win variable (whether
+    Pakistan won the toss).
 
-We expect a positive relationship between the size of the wings and time spent aloft. In particular...
+## Model Priors
 
-We can use maths by including latex between dollar signs, for instance $\theta$.
+The priors used in the model represent our assumptions about the
+parameters before observing the data. These priors are chosen based on
+reasonable beliefs about the likely values of the coefficients and are
+specified as follows:
 
+-   `Prior for the Coefficients (year, team2, toss_win)`: Each of the
+    model coefficients is assigned a Normal prior with a mean of 0 and a
+    standard deviation of 2.5. This reflects the assumption that we
+    expect the effects of the predictors to be centered around zero,
+    with a reasonable amount of uncertainty (a wide spread due to the
+    scale of 2.5) about their true values.
+
+-   `Prior for the Intercept`: A normal prior with the same parameters
+    as the coefficients (mean = 0, scale = 2.5) is used for the
+    intercept. The intercept represents the baseline log-odds of
+    Pakistan winning a match when all other predictors are zero.
+
+-   `Prior for the Auxiliary Parameter (prior_aux)`: This parameter
+    represents the dispersion of the logistic regression model. An
+    Exponential prior with a rate of 1 is used, which is typical in
+    Bayesian models for logistic regression. The Exponential prior
+    allows for a distribution with only non-negative values, reflecting
+    uncertainty in the variance of match outcomes, with higher values
+    suggesting more variability in outcomes.
+
+The Bayesian approach incorporates prior knowledge (through these
+priors) and updates it with the data from the training set, enabling the
+model to estimate relationships while accounting for uncertainty in the
+coefficients.
+
+## Model Justification
+
+A decision tree model was also considered, which could capture
+non-linear relationships and interactions between predictors. However,
+decision trees are more prone to overfitting and can be less
+interpretable than logistic regression, especially in cases with
+categorical variables like team2.
+
+An alternative approach considered was a frequentist logistic regression
+model. This model would not incorporate prior information and would
+instead focus purely on the likelihood of the data. However, the
+Bayesian approach was chosen due to its ability to incorporate prior
+knowledge and handle uncertainty more effectively, especially in the
+context of small sample sizes and the complexity of cricket data.
+
+This model provides a useful framework for estimating Pakistan's
+likelihood of winning a match based on key factors. By using a Bayesian
+Logistic Regression approach, the model incorporates uncertainty in the
+estimates, offers a clear interpretation of the effects of each
+predictor, and is flexible enough to adapt to new data as it becomes
+available. However, it should be acknowledged that there are limitations
+regarding omitted variables and potential model assumptions that could
+be addressed in future iterations.
+
+This is an overview of the model. More details such as assumptions,
+limitations, convergence, and validation can be found in
+@sec-model-details
 
 # Results {#sec-results}
 
-Our results are summarized in @tbl-modelresults.
+Our results are summarized in @tbl-model-results, and @fig-model-results
+presents the predicted values of the coefficients. This figure also
+includes the 95% confidence intervals for the predictors, as estimated
+by our Bayesian model. A 95% confidence interval indicates that there is
+a 95% probability that the true value of the parameter lies within the
+specified range, given the observed data. In the graph, each point
+represents the predicted value, and the horizontal line extending from
+each point shows the 95% confidence interval.
+
+Variables to the right of 0 have a positive correlation with the
+outcome, meaning that increasing these values increases the probability
+of Pakistan winning. Conversely, variables to the left of 0 exhibit a
+negative correlation, meaning that increasing these variables reduces
+the probability of Pakistan winning a match.
+
+Finally, it is important to note that @fig-model-results is plotted
+without the intercept term and the team2Ireland term. As shown in
+@tbl-model-results, these two values have much larger magnitudes
+compared to the other predictors. If included in the plot, their scale
+would be so large that the smaller variations in the other coefficients
+would be obscured.
 
 ```{r}
+#| label: tbl-model-results
+#| tbl-cap: "Coefficient estimates and standard errors"
 #| echo: false
 #| eval: true
 #| warning: false
-#| message: false
 
-# library(rstanarm)
-# 
-# first_model <-
-#   readRDS(file = here::here("models/first_model.rds"))
+ modelsummary::modelsummary(
+   list("Model" = model),
+   statistic = "mad",
+   fmt = 2,
+   gof_omit = "Num.Obs.|R2|Log.Lik.|RMSE|ELPD|LOOIC|LOOIC s.e.|WAIC"
+ )
 ```
 
 ```{r}
 #| echo: false
 #| eval: true
-#| label: tbl-modelresults
-#| tbl-cap: "Explanatory models of flight time based on wing width and wing length"
+#| label: fig-model-results
+#| fig-cap: "Coefficient estimates and 95% confidence intervals"
 #| warning: false
-# 
-# modelsummary::modelsummary(
-#   list(
-#     "First model" = first_model
-#   ),
-#   statistic = "mad",
-#   fmt = 2
-# )
+
+ modelplot(model, coef_omit = "Intercept|team2Ireland") + 
+   labs(x = "Coefficient Estimate", y="Predictor Variable")
 ```
 
+Analyzing some of these coefficients further, The results from the
+regression model are as follows:
+
+-   **Intercept**: The intercept of -55.94 (with a standard error of
+    80.63) represents the log-odds of Pakistan winning a match when all
+    other variables are set to their reference categories. This value is
+    quite large in magnitude, but it is not directly interpretable in
+    isolation. The negative value suggests a very low baseline
+    probability of winning in the absence of other influencing factors.
+
+-   **Year**: The coefficient for year is 0.03 (standard error = 0.04).
+    This positive coefficient suggests that, as time progresses, the
+    probability of Pakistan winning a match increases very slightly.
+    However, the small magnitude of the coefficient indicates that this
+    effect is minimal. The relatively narrow standard error suggests
+    that the estimate is reasonably precise, but the practical
+    significance of this trend is modest.
+
+-   **Opponent**: The coefficients for the opponent variable represent
+    how the likelihood of Pakistan winning a match changes when facing
+    different teams. These coefficients should be interpreted relative
+    to the reference team, which is not explicitly listed here but is
+    assumed to be the team with the lowest or most neutral effect:
+
+    -   `team2Bangladesh` has a coefficient of 3.62 (standard error =
+        1.31), which indicates a significant positive association with
+        Pakistan’s success. Matches against Bangladesh appear to
+        increase Pakistan's chances of winning.
+
+    -   `team2Sri Lanka` shows a positive coefficient of 1.09 (standard
+        error = 0.72), suggesting that matches against Sri Lanka are
+        associated with a higher probability of Pakistan winning
+        compared to the reference team, though the effect is less
+        pronounced than for Bangladesh.
+
+    -   The coefficients for other teams, such as `team2India` (0.24, standard error = 1.44) and `team2South Africa` (0.29, standard error = 0.90), are much smaller, indicating weaker associations with match success.
+    - `team2Ireland` has the largest coefficient (19.77, standard error = 15.67), indicating a very high probability of success when playing against Ireland. However, this coefficient also has a large standard error, meaning there is significant uncertainty around this estimate.
+    
+- `Toss Win`: The coefficient for toss_win is 0.60 (standard error = 0.45), suggesting that winning the toss slightly increases Pakistan's likelihood of winning the match. This result supports the common understanding that the team winning the toss often gains an advantage in deciding whether to bat or bowl first.
+
+```{r}
+#| label: fig-opponent-stats
+#| fig-cap: "Pakistan's wins and losses against all teams"
+#| fig-subcap: ["Sri Lanka","New Zealand", "Australia", "England", "South Africa", "West Indies", "Zimbabwe", "Bangladesh", "Ireland", "India"]
+#| layout-ncol: 2
+#| layout-nrow: 5
+#| echo: false
+#| eval: true
+#| warning: false
 
 
+# Create a new column that accounts for wins, losses, and draws
+pakistan_match_data <- pakistan_match_data %>%
+  mutate(pakistan_result = case_when(
+    winner == "Pakistan" ~ "Win",
+    winner == "Draw" ~ "Draw",
+    TRUE ~ "Loss"
+  ))
+
+# Loop over each opponent team
+opponents <- unique(pakistan_match_data$team2)  # Get all unique opponents
+
+# Create and save a plot for each opponent
+for (opponent in opponents) {
+  
+  # Filter the data for the current opponent
+  filtered_matches <- pakistan_match_data %>% filter(team2 == opponent)
+  
+  # Summarize the number of wins, losses, and draws
+  win_loss_summary <- filtered_matches %>%
+    group_by(pakistan_result) %>%
+    summarise(count = n(), .groups = "drop")
+  ggplot(data, aes(x = team2)) +
+  geom_bar(fill = "coral") +
+  labs(x = "Team", y = "Count") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+  # Create the plot
+  plot <- ggplot(win_loss_summary, aes(x = pakistan_result, y = count, fill = pakistan_result)) +
+    geom_bar(stat = "identity", position = "dodge") +
+    labs(
+      x = "Result",
+      y = "Count",
+      fill = "Result"
+    ) +
+    scale_fill_manual(values = c("Win" = "darkgreen", "Loss" = "brown2", "Draw" = "darkgoldenrod2")) +  # Custom colors for Win, Loss, Draw
+    coord_cartesian(ylim = c(0, 14)) +
+    theme_minimal()+
+    theme(legend.position = "none")
+  
+print(plot)
+}
+```
+@fig-opponent-stats illustrates the distribution of match outcomes (wins, losses, and draws) for Pakistan against eight different cricket teams: Sri Lanka, New Zealand, England, Australia, South Africa, West Indies, Zimbabwe, and Bangladesh. These results provide an overview of Pakistan's historical performance against each team and highlight patterns in their match outcomes.
+
+- `Sri Lanka` (Figure 3a): Pakistan's matches against Sri Lanka are fairly balanced, with a slightly higher frequency of losses compared to wins. Draws are the least frequent outcome, suggesting a competitive dynamic between the two teams.
+
+- `New Zealand` (Figure 3b): Matches against New Zealand reveal a similar trend, with losses being more frequent than wins. The proportion of draws remains relatively low, indicating fewer instances of matches being evenly contested.
+
+- `England` (Figure 3c): Pakistan has a notably higher number of losses against England, with draws constituting the smallest category. This indicates that England has historically been a challenging opponent for Pakistan.
+
+- `Australia` (Figure 3d): A significant disparity is observed in matches against Australia, where losses outnumber wins by a considerable margin. This trend underscores the dominance of Australia in these encounters.
+
+- `South Africa` (Figure 3e): Matches against South Africa also show a higher proportion of losses compared to wins. However, the gap between these two outcomes is less pronounced compared to matches against Australia.
+
+- `West Indies` (Figure 3f): Pakistan exhibits a stronger performance against West Indies, with wins slightly outnumbering losses. Draws remain the least frequent outcome, emphasizing decisive results in these encounters.
+
+- `Zimbabwe` (Figure 3g): Against Zimbabwe, Pakistan demonstrates a clear dominance, with wins significantly outnumbering losses. Draws are nearly negligible, highlighting Pakistan's consistent success in these matches.
+
+- `Bangladesh` (Figure 3h): Similar to Zimbabwe, Pakistan has a markedly higher number of wins against Bangladesh, with losses and draws being infrequent. This dominance underscores Pakistan's strong track record against this opponent.
+
+Overall, these graphs provide valuable insights into Pakistan's historical performance trends across different opponents. While some teams, such as Australia and England, have posed significant challenges, others, like Bangladesh and Zimbabwe, have been more favorable matchups for Pakistan. These findings align with the regression model coefficients presented earlier, where the opponent variable was a significant predictor of Pakistan's success in matches. For instance, the high win rates against Bangladesh and Zimbabwe correspond to their positive regression coefficients, while the challenging outcomes against teams like Australia reflect negative or smaller coefficients.
+
+```{r}
+#| label: fig-pk-wins
+#| fig-cap: "Number of Pakistan's Wins Over the Years"
+#| echo: false
+#| eval: true
+#| warning: false
+
+pakistan_win_data <- pakistan_match_data %>%
+    mutate(pakistan_win = case_when(
+    winner == "Pakistan" ~ 1,
+    TRUE ~ 0))%>%
+  mutate(year = lubridate::year(date))
+
+# Summarize the number of wins per year
+wins_by_year <- pakistan_win_data %>%
+  group_by(year) %>%
+  summarise(total_wins = sum(pakistan_win))
+
+# Create a bar plot showing the number of wins per year
+ggplot(wins_by_year, aes(x = year, y = total_wins)) +
+  geom_bar(stat = "identity", fill = "darkblue", show.legend = FALSE) +  # Set a fixed color for all bars
+  labs(
+    x = "Year",
+    y = "Total Wins"
+  ) +
+  theme_minimal()
+
+```
+@fig-pk-wins displays the number of wins Pakistan has achieved each year. From the graph, we observe that Pakistan had a modest performance from 2002 to 2010, with only 2-4 wins per year, followed by a sharp increase in 2011. After this surge, the team maintained an average of 4 wins per year, with some fluctuations. However, in 2019, there was a notable decline, with just one win recorded. Since this drop, Pakistan has struggled to reach their previous high of 4 wins per year, and the current average stands at approximately 2 wins per year.
 
 # Discussion {#sec-discussion}
 
 ## First discussion point {#sec-first-point}
 
-If my paper were 10 pages, then should be be at least 2.5 pages. The discussion is a chance to show off what you know and what you learnt from all this. 
+If my paper were 10 pages, then should be be at least 2.5 pages. The
+discussion is a chance to show off what you know and what you learnt
+from all this.
 
 ## Second discussion point
 
-Please don't use these as sub-heading labels - change them to be what your point actually is.
+Please don't use these as sub-heading labels - change them to be what
+your point actually is.
 
 ## Third discussion point
 
@@ -264,66 +629,203 @@ Weaknesses and next steps should also be included.
 
 \appendix
 
-# Appendix {-}
-
+# Appendix {.unnumbered}
 
 # Additional data details
 
 # Model details {#sec-model-details}
 
-## Posterior predictive check
+## Model assumptions
 
-In @fig-ppcheckandposteriorvsprior-1 we implement a posterior predictive check. This shows...
+-   `Independence of Observations`: We assume that the results of each
+    match are independent. This assumption may be violated in cases
+    where teams play multiple matches within a short period, but the
+    model does not account for such temporal dependencies.
 
-In @fig-ppcheckandposteriorvsprior-2 we compare the posterior with the prior. This shows... 
+-   `Logistic Relationship`: The model assumes a linear relationship
+    between the predictors (year, opponent, toss win) and the log-odds
+    of Pakistan winning. This assumption may not capture more complex
+    non-linear relationships, which would require more sophisticated
+    models, such as generalized additive models (GAMs).
+
+-   `No Interaction Effects`: The model currently does not include
+    interaction terms (e.g., how the effect of winning the toss might
+    differ by opponent). Interaction effects could be considered if they
+    were hypothesized to be important, but they are omitted here for
+    simplicity.
+
+-   `Reference Category for team2`: The model assumes that the effect of
+    playing against a reference opponent (the one excluded from the
+    dummy variables for team2) is the baseline against which the other
+    teams are compared. The choice of reference category is important
+    and could influence the interpretation of the coefficients.
+
+## Model limitations
+
+-   `Omitted Variables`: The model does not account for other
+    potentially important variables, such as player injuries, weather
+    conditions, or venue specifics. These factors could influence the
+    match outcome but are not included in the current model.
+
+-   `Data Representation`: The model is based on matches involving
+    Pakistan, so it does not generalize to other teams or international
+    cricket broadly. Additionally, the dataset may have biases (e.g., a
+    higher number of matches against certain opponents), which could
+    affect the accuracy of the predictions.
+
+-   `Data Sparsity`: The dataset available for analysis may not be large
+    enough to fully capture all the complexities of cricket matches,
+    especially with respect to less frequent events or rare outcomes.
+    This could lead to uncertainty in the model estimates, particularly
+    for smaller categories or outcomes that appear less frequently.
+
+-   `Data Granularity`: The model uses year as a continuous variable.
+    However, time trends in cricket might be better captured with more
+    granular temporal variables (e.g., by series or tournament), as the
+    year-by-year analysis may mask shorter-term trends.
+
+## Model validation
+
+We split the data into training and test sets to evaluate the predictive
+performance of the models. The first model was trained on a subset of
+the data, and its predictions were tested on the remaining matches in
+the test set. Specifically, we used out-of-sample testing, where the
+model was trained on the training set and evaluated on the test set to
+assess its ability to generalize to new, unseen data.
+
+For the first model, we predicted the probability of a match outcome
+(e.g., whether Pakistan would win) for each match in the test set. Using
+a threshold of 0.5, we classified these probabilities into binary
+outcomes (1 for a predicted win, 0 for a predicted loss). To evaluate
+model performance, we constructed a confusion matrix comparing the
+predicted classes to the actual outcomes of the test set. From this
+confusion matrix, we calculated accuracy as the proportion of correct
+predictions (i.e., the sum of true positives and true negatives divided
+by the total number of predictions). This provided an overall measure of
+how well the model performed in predicting match outcomes. The result of
+these tests is summarized in @tbl-model-metrics in the form of a
+confusion matrix and accuracy.
+
+We repeated the same procedure for the second model, predicting the
+match outcome based on a different set of features (e.g., year and
+opponent). The accuracy for both models was computed and reported
+separately.
+
+This approach provided a robust evaluation of each model's predictive
+performance on unseen data, with the confusion matrix and accuracy
+offering insights into the model’s classification capabilities. While
+accuracy provides a good indication of overall model performance, we
+also recognize that other metrics such as precision, recall, and F1
+score might be more informative in the case of imbalanced classes.
 
 ```{r}
+#| label: tbl-model-metrics
+#| tbl-cap: Confusion matrix and Accuracy measurements for model
 #| eval: true
 #| echo: false
 #| message: false
 #| warning: false
-#| label: fig-ppcheckandposteriorvsprior
-#| layout-ncol: 2
-#| fig-cap: "Examining how the model fits, and is affected by, the data"
-#| fig-subcap: ["Posterior prediction check", "Comparing the posterior with the prior"]
-# 
-# pp_check(first_model) +
-#   theme_classic() +
-#   theme(legend.position = "bottom")
-# 
-# posterior_vs_prior(first_model) +
-#   theme_minimal() +
-#   scale_color_brewer(palette = "Set1") +
-#   theme(legend.position = "bottom") +
-#   coord_flip()
+#| tbl-pos: 'H'
+#| fig-align: center
+
+# Print confusion matrix
+print(confusion_matrix)
+
+# Calculate accuracy
+accuracy <- sum(diag(confusion_matrix)) / sum(confusion_matrix)
+
+# Print formatted accuracy with two decimal places
+cat("\nModel Accuracy: ", sprintf("%.2f", accuracy), "\n", sep = "")
 ```
 
-## Diagnostics
+## Model diagnostics
 
-@fig-stanareyouokay-1 is a trace plot. It shows... This suggests...
+**Fit Diagnostics**:
 
-@fig-stanareyouokay-2 is a Rhat plot. It shows... This suggests...
+The mean posterior predictive distribution (mean_PPD) shown in @tbl-ppd is the mean of the posterior distribution of the predicted probabilities for Pakistan winning a match. The value of 0.4 indicates that, on average, the model predicts Pakistan has a 40% chance of winning a match based on the predictors.
+
+**MCMC Diagnostics**:
+
+@tbl-mcmc shows diagnostic measurements of the sampling process to assess
+whether the model has converged and whether the samples are reliable.
+
+-   `mcse (Monte Carlo Standard Error)`: The MCSE indicates the standard
+    error of the Monte Carlo estimates for each parameter. Smaller
+    values are better, as they show that the estimates are stable and
+    not too variable. Most of the parameters here have small MCSE values
+    (close to 0), indicating stable estimates.
+
+-   `Rhat`: Rhat is a measure of convergence. An Rhat value of 1.0
+    indicates perfect convergence, meaning the chains for the MCMC
+    sampling are mixing well and that the estimates for each parameter
+    are reliable. All Rhat values here are exactly 1.0, which suggests
+    that the sampling chains converged properly.
+
+-   `n_eff (Effective Sample Size)`: This is a measure of how many
+    independent samples are available for each parameter. Larger values
+    indicate better sampling. Here, most parameters have high effective
+    sample sizes (ranging from \~1600 to \~3000), suggesting that the
+    model has gathered a sufficiently large and diverse set of samples
+    for each parameter, ensuring robust inference.
 
 ```{r}
-#| echo: false
+#| label: tbl-ppd
+#| tbl-cap: Model posterior predictive distribution
 #| eval: true
+#| echo: false
 #| message: false
 #| warning: false
-#| label: fig-stanareyouokay
-#| fig-cap: "Checking the convergence of the MCMC algorithm"
-#| fig-subcap: ["Trace plot", "Rhat plot"]
-#| layout-ncol: 2
 
-# plot(first_model, "trace")
-# 
-# plot(first_model, "rhat")
+model_summary <- summary(model)
+model_summary <- as.data.frame(model_summary)
+
+# Extract relevant fit diagnostics
+fit_diagnostics <- model_summary[c("mean_PPD"),c(1, 3:6)]
+fit_diagnostics$variable <- "mean_PPD"
+fit_diagnostics <- fit_diagnostics[, c("variable", "mean", "sd", "10%", "50%", "90%")]
+  
+# fit_diagnostics |>
+#   tt()
+#   style_tt(j = 2:5, align = "r") |>   # Align columns 2 to 5 to the right
+#   format_tt(digits = 1, num_fmt = "decimal")  # Format numbers with 1 decimal
+
+# Use kableExtra for table styling
+fit_diagnostics_rounded <- round(fit_diagnostics[, 2:6], 2)
+
+fit_diagnostics_rounded |>
+  kable(format = "latex")
+
 ```
 
+```{r}
+#| label: tbl-mcmc
+#| tbl-cap: Model MCMC statisics
+#| eval: true
+#| echo: false
+#| message: false
+#| warning: false
+
+mcmc_row_names <- c("(Intercept)", "year", "team2Bangladesh", "team2England", "team2India", "team2Ireland", "team2New Zealand", "team2South Africa", "team2Sri Lanka", "team2West Indies", "team2Zimbabwe", "toss_win")
+
+model_summary2 <- summary(model)
+model_summary2 <- as.data.frame(model_summary2)
+fit_diagnostics2 <- model_summary2[mcmc_row_names,c(2, 7:8)]
+fit_diagnostics2$variable <- mcmc_row_names
+fit_diagnostics2 <- fit_diagnostics2[, c("variable", "mcse", "Rhat", "n_eff")]
+
+# fit_diagnostics2 |>
+#   tt() |>
+#   style_tt(j = 2:4, align = "r") |>
+#   format_tt(digits = 1, num_fmt = "decimal")
+
+# Use kableExtra for table styling
+fit_diagnostics_rounded2 <- round(fit_diagnostics2[, 2:4], 2)
+
+fit_diagnostics_rounded2 |>
+  kable(format = "latex")
+```
 
 
 \newpage
 
-
 # References
-
-
