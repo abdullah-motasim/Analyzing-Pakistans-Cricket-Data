@@ -1,117 +1,135 @@
 #### Preamble ####
-# Purpose: Tests the structure and validity of the simulated data 
+# Purpose: Tests the structure and validity of the simulated data
 # Author: Muhammad Abdullah Motasim
 # Date: 22 November 2024
 # Contact: abdullah.motasim@mail.utoronto.ca
 # License: MIT
-# Pre-requisites: arrow and tidyverse libraries
+# Pre-requisites: tidyverse, testthat, and lubridate libraries
 # Any other information needed? None
 
 
 #### Workspace setup ####
 library(tidyverse)
+library(testthat)
+library(lubridate)
 
-simulated_data <- read_parquet("data/00-simulated_data/simulated_player_data.parquet")
+# Load the simulated datasets
+match_data <- read_parquet("data/00-simulated_data/simulated_match_data.parquet")
+player_data <- read_parquet("data/00-simulated_data/simulated_player_data.parquet")
 
-# Test if the data was successfully loaded
-if (exists("simulated_data")) {
-  message("Test Passed: The dataset was successfully loaded.")
-} else {
-  stop("Test Failed: The dataset could not be loaded.")
-}
+#### Tests for simulated_match_data ####
 
+# Test that there are 100 matches
+test_that("simulated_match_data contains 100 matches", {
+  expect_equal(nrow(match_data), 100)
+})
 
-#### Test data ####
+# Test that match_data has 10 columns
+test_that("simulated_match_data has 10 columns", {
+  expect_equal(ncol(match_data), 10)
+})
 
-# Check if the dataset has 150 rows
-if (nrow(simulated_data) == 150) {
-  message("Test Passed: The dataset has 150 rows.")
-} else {
-  stop("Test Failed: The dataset does not have 150 rows.")
-}
+# Test that match_data columns are of the correct type
+test_that("simulated_match_data column types are as expected", {
+  expect_type(match_data$team1, "character")
+  expect_type(match_data$team2, "character")
+  expect_true(lubridate::is.Date(match_data$date)) # Check if 'date' is a lubridate Date
+  expect_type(match_data$winner, "character")
+  expect_type(match_data$team1_runs, "integer") # Numeric columns
+  expect_type(match_data$team2_runs, "integer")
+  expect_type(match_data$team1_wickets, "integer")
+  expect_type(match_data$team2_wickets, "integer")
+  expect_type(match_data$toss_winner, "character")
+})
 
-# Check if the dataset has the expected number of columns
-expected_columns <- c("Player", "Country", "Start", "End", "Matches", "Innings", "NotOuts", 
-                      "BattingRunsScored", "HighScore", "Average", "BallsFaced", 
-                      "StrikeRate", "Hundreds", "Fifties", "Ducks", "FourWickets", 
-                      "FiveWickets", "BowlingRunsScored", "Wickets", "Caught", "Stumped")
+# Test that 'team1' and 'team2' are a valid country from the list
+test_that("simulated_match_data team1 and team2 are valid countries", {
+  valid_countries <- c(
+    "India", "Australia", "England", "Pakistan", "South Africa", "Sri Lanka",
+    "New Zealand", "West Indies", "Bangladesh", "Zimbabwe", "Afghanistan", "Ireland"
+  )
+  expect_true(all(match_data$team1 %in% valid_countries))
+  expect_true(all(match_data$team2 %in% valid_countries))
+})
 
-if (all(expected_columns %in% colnames(simulated_data))) {
-  message("Test Passed: The dataset contains all expected columns.")
-} else {
-  stop("Test Failed: The dataset does not contain the expected columns.")
-}
+# Test that simulated_match_data has no duplicate rows
+test_that("simulated_match_data has no duplicate rows", {
+  expect_equal(nrow(match_data), nrow(distinct(match_data)))
+})
 
-# Check if the 'Player' column contains unique values
-if (n_distinct(simulated_data$Player) == nrow(simulated_data)) {
-  message("Test Passed: All values in 'Player' are unique.")
-} else {
-  stop("Test Failed: The 'Player' column contains duplicate values.")
-}
+# Test that team1 and team2 are distinct
+test_that("team1 and team2 are distinct in every match", {
+  expect_true(all(match_data$team1 != match_data$team2))
+})
 
-# Check if the 'Country' column contains only valid country names
-valid_countries <- c("India", "Sri Lanka", "Australia", "Pakistan", "South Africa", 
-                     "New Zealand", "England", "West Indies", "Zimbabwe", "Bangladesh", 
-                     "Afghanistan", "Ireland")
+# Test that winner is consistent with runs scored
+test_that("winner is consistent with runs scored", {
+  correct_winner <- ifelse(match_data$team1_runs > match_data$team2_runs, "team1", "team2")
+  expect_true(all(match_data$winner == correct_winner))
+})
 
-if (all(simulated_data$Country %in% valid_countries)) {
-  message("Test Passed: The 'Country' column contains only valid country names.")
-} else {
-  stop("Test Failed: The 'Country' column contains invalid country names.")
-}
+# Test that wickets do not exceed 10 per team
+test_that("wickets do not exceed 10 per team", {
+  expect_true(all(match_data$team1_wickets <= 10))
+  expect_true(all(match_data$team2_wickets <= 10))
+})
 
-# Check if there are any missing values in the dataset
-if (all(!is.na(simulated_data))) {
-  message("Test Passed: The dataset contains no missing values.")
-} else {
-  stop("Test Failed: The dataset contains missing values.")
-}
+# Test that toss_winner is either 'team1' or 'team2'
+test_that("toss_winner is valid", {
+  expect_true(all(match_data$toss_winner %in% c("team1", "team2")))
+})
 
-# Check if numeric columns contain valid ranges
-if (all(simulated_data$BattingRunsScored >= 0 & simulated_data$HighScore >= 0)) {
-  message("Test Passed: All numeric columns have valid ranges.")
-} else {
-  stop("Test Failed: Some numeric columns have invalid values.")
-}
+#### Tests for simulated_player_data ####
 
-# Check if the 'HighScore' column is consistent with 'BattingRunsScored'
-if (all(simulated_data$HighScore <= simulated_data$BattingRunsScored, na.rm = TRUE)) {
-  message("Test Passed: The 'HighScore' column is consistent with 'BattingRunsScored'.")
-} else {
-  stop("Test Failed: The 'HighScore' column has values exceeding 'BattingRunsScored'.")
-}
+# Test that there are 150 players
+test_that("simulated_player_data contains 150 players", {
+  expect_equal(nrow(player_data), 150)
+})
 
-# Check if 'Start' and 'End' years are valid
-if (all(simulated_data$Start <= simulated_data$End)) {
-  message("Test Passed: The 'Start' and 'End' columns have valid years.")
-} else {
-  stop("Test Failed: Some 'Start' years are after 'End' years.")
-}
+# Test that 'Country' is a valid country from the list
+test_that("simulated_player_data Country is valid", {
+  valid_countries <- c(
+    "India", "Australia", "England", "Pakistan", "South Africa", "Sri Lanka",
+    "New Zealand", "West Indies", "Bangladesh", "Zimbabwe", "Afghanistan", "Ireland"
+  )
+  expect_true(all(player_data$Country %in% valid_countries))
+})
 
-# Check if the dataset contains at least one player from each country
-missing_countries <- setdiff(valid_countries, unique(simulated_data$Country))
-if (length(missing_countries) == 0) {
-  message("Test Passed: All countries are represented in the dataset.")
-} else {
-  warning("Test Failed: The following countries are missing from the dataset: ", 
-          paste(missing_countries, collapse = ", "))
-}
+# Test that Start year is less than or equal to End year
+test_that("Start year is less than or equal to End year", {
+  expect_true(all(player_data$Start <= player_data$End))
+})
 
-# Check if there are no empty strings in categorical columns
-categorical_columns <- c("Player", "Country")
-if (all(simulated_data[categorical_columns] != "")) {
-  message("Test Passed: No empty strings in categorical columns.")
-} else {
-  stop("Test Failed: There are empty strings in categorical columns.")
-}
+# Test that BattingRunsScored is greater than or equal to HighScore
+test_that("BattingRunsScored is greater than or equal to HighScore", {
+  expect_true(all(player_data$BattingRunsScored >= player_data$HighScore))
+})
 
-# Check if the dataset contains at least two unique players
-if (n_distinct(simulated_data$Player) >= 2) {
-  message("Test Passed: The dataset contains at least two unique players.")
-} else {
-  stop("Test Failed: The dataset contains less than two unique players.")
-}
+# Test that no player has more centuries than half-centuries
+test_that("Hundreds cannot exceed Fifties", {
+  expect_true(all(player_data$Hundreds <= player_data$Fifties))
+})
 
-#### Summary ####
+# Test: Ensure there are no negative values for key statistics
+test_that("No negative values for key statistics", {
+  expect_true(all(player_data$Bat_innings >= 0))
+  expect_true(all(player_data$Bowl_innings >= 0))
+  expect_true(all(player_data$BattingRunsScored >= 0))
+  expect_true(all(player_data$BallsFaced >= 0))
+  expect_true(all(player_data$StrikeRate >= 0))
+  expect_true(all(player_data$Hundreds >= 0))
+  expect_true(all(player_data$Fifties >= 0))
+  expect_true(all(player_data$BowlingRunsScored >= 0))
+  expect_true(all(player_data$Wickets >= 0))
+  expect_true(all(player_data$Caught >= 0))
+  expect_true(all(player_data$Stumped >= 0))
+})
 
-message("All tests completed.")
+test_that("simulated_player_data contains at least one player from each country", {
+  valid_countries <- c(
+    "India", "Australia", "England", "Pakistan", "South Africa", "Sri Lanka",
+    "New Zealand", "West Indies", "Bangladesh", "Zimbabwe", "Afghanistan", "Ireland"
+  )
+  missing_countries <- setdiff(valid_countries, unique(player_data$Country))
+  expect_true(length(missing_countries) == 0)
+})
