@@ -7637,4 +7637,1733 @@ This model was inspired by Pakistan’s rich cricketing history and aims to prov
 - **Email**: [Your Email Here]  
 - **GitHub Repository**: [Insert GitHub Link Here]  
 
+LLM: ChatGPT-4.
+Date: 10 December 2024
 
+update this to have team2 as a charecter: team2 = purrr::map(team1, ~ sample(setdiff(countries, .x), 1)),
+  
+ChatGPT said:
+ChatGPT
+To update the code and include team2 as a character, you can modify it to explicitly assign team2 in a similar manner as team1, ensuring that team2 is defined as a list of countries sampled from countries, excluding the countries already in team1.
+
+Here’s an updated version of your code:
+
+r
+Copy code
+team2 <- purrr::map(team1, ~ sample(setdiff(countries, .x), 1))
+In this code:
+
+team2 is generated using purrr::map, just like team1.
+It ensures that for each element in team1, a country from countries is selected that isn't in the same list as the current team1 country (setdiff(countries, .x)).
+If team1 and team2 should be related but distinct (e.g., they represent opposing teams, and they must not share countries), then this code works fine for that purpose. The setdiff function ensures that the countries in team1 will not appear in team2.
+
+Let me know if you need further customization or clarification!
+
+
+You said:
+team2 should be of type charecter
+ChatGPT said:
+ChatGPT
+If you want team2 to be of type character, ensuring that the elements of team2 are characters (i.e., strings), you can simply ensure that the result of the sampling process is coerced into a character vector.
+
+Here’s how you can explicitly create team2 as a character vector:
+
+r
+Copy code
+team2 <- purrr::map_chr(team1, ~ sample(setdiff(countries, .x), 1))
+Explanation:
+purrr::map_chr() is used instead of purrr::map(). The difference is that map_chr() forces the output to be a character vector. This guarantees that team2 will consist of character elements.
+The rest of the logic remains the same: for each item in team1, it samples a country from the countries vector, excluding the countries already in team1.
+With this modification, team2 will be a character vector, where each element is a single country name from countries, ensuring that it does not overlap with team1.
+
+
+You said:
+I want to update this code to test morethings for the data that I simulated, come up with more tests. Here is the script to simulate the data: #### Preamble ####
+# Purpose: Simulates a dataset of cricket player career statistics and games
+# Author: Muhammad Abdullah Motasim
+# Date: 22 November 2024
+# Contact: abdullah.motasim@mail.utoronto.ca
+# License: MIT
+# Pre-requisites: dplyr arrow, and tibble libraries
+# Any other information needed? None
+
+
+#### Workspace setup ####
+library(tibble)
+library(dplyr)
+library(arrow)
+set.seed(853)
+
+
+#### Simulate data ####
+players <- character(150)
+for (i in 1:150) {
+  players[i] <- paste0("Player ", i)
+}
+
+
+# Countries
+countries <- c(
+  "India",
+  "Australia",
+  "England",
+  "Pakistan",
+  "South Africa",
+  "Sri Lanka",
+  "New Zealand",
+  "West Indies",
+  "Bangladesh",
+  "Zimbabwe",
+  "Afghanistan",
+  "Ireland"
+)
+
+# Simulated cricket data
+simulated_player_data <- tibble(
+  Player = players,
+  Country = sample(
+    countries,
+    size = 150,
+    replace = TRUE,
+    prob = c(0.2, 0.15, 0.15, 0.1, 0.1, 0.1, 0.1, 0.05, 0.025, 0.025, 0.02, 0.02) # Rough country distribution
+  ),
+  Start = sample(1970:2023, size = 150, replace = TRUE),
+  # Random start years
+  End = sample(1985:2023, size = 150, replace = TRUE),
+  # Random end years
+  Matches = sample(1:500, size = 150, replace = TRUE),
+  # Number of matches played
+  Bat_innings = abs(round(rnorm(
+    150,
+    mean = 50, sd = 50
+  ))),
+  # Number of innings
+  Bowl_innings = round(rnorm(150, mean = 50, sd = 50)),
+  # Number of not-outs
+  BattingRunsScored = abs(round(rnorm(
+    150,
+    mean = 500, sd = 200
+  ))),
+  # Total runs scored
+  HighScore = sample(50:150, size = 150, replace = TRUE),
+  # Highest individual score
+  Average = abs(round(runif(150, 20, 60), 2)),
+  # Batting average
+  BallsFaced = sample(1000:30000, size = 150, replace = TRUE),
+  # Balls faced
+  StrikeRate = abs(round(runif(150, 50, 150), 2)),
+  # Strike rate
+  Hundreds = abs(round(rnorm(
+    150,
+    mean = 5, sd = 10
+  ))),
+  # Number of centuries
+  Fifties = abs(round(rnorm(
+    150,
+    mean = 20, sd = 20
+  ))),
+  # Number of half-centuries
+  BowlingRunsScored = sample(0:2000, size = 150, replace = TRUE),
+  # Number of bowling runs scored
+  Wickets = abs(round(rnorm(
+    150,
+    mean = 50, sd = 50
+  ))),
+  # Number of wickets
+  Caught = abs(round(rnorm(
+    150,
+    mean = 50, sd = 50
+  ))),
+  # Number of batters caught
+  Stumped = abs(round(rnorm(
+    150,
+    mean = 50, sd = 50
+  )))
+  # Number of players stumped
+)
+
+simulated_player_data <- simulated_player_data %>%
+  mutate(End = pmax(End, Start)) %>% # Ensure Start is earlier than End
+  mutate(BattingRunsScored = pmax(BattingRunsScored, HighScore)) %>% # Ensure runs scored is higher than highscore
+  mutate(
+    # Ensure Matches is consistent with Bat_innings and Bowl_innings
+    Bat_innings = pmin(Bat_innings, Matches),
+    Bowl_innings = pmin(Bowl_innings, Matches)
+  ) %>%
+  mutate(Hundreds = pmin(Hundreds, Fifties)) # Ensure consistency of Hundreds and Fifties
+
+
+# Simulated match data
+num_matches <- 100 # Number of matches to simulate
+
+simulated_match_data <- tibble(
+  match_id = 1:num_matches,
+  
+  # Sample team1 from countries
+  team1 = sample(countries, size = num_matches, replace = TRUE),
+  
+  # Ensure team2 is different from team1 by using setdiff
+  team2 = purrr::map_chr(team1, ~ sample(setdiff(countries, .x), 1)),
+  date = sample(seq(as.Date("2000-01-01"), as.Date("2023-12-31"), by = "days"), size = num_matches, replace = TRUE),
+  toss_winner = sample(c("team1", "team2"), size = num_matches, replace = TRUE),
+  
+  # Generate runs for both teams
+  team1_runs = sample(150:400, size = num_matches, replace = TRUE),
+  team2_runs = sample(150:400, size = num_matches, replace = TRUE),
+  
+  # Generate wickets
+  team1_wickets = sample(0:10, size = num_matches, replace = TRUE),
+  team2_wickets = sample(0:10, size = num_matches, replace = TRUE)
+) %>%
+  mutate(
+    # Determine winner based on runs
+    winner = ifelse(team1_runs > team2_runs, "team1", "team2"),
+    
+    # Adjust wickets based on the winner
+    team1_wickets = ifelse(winner == "team1" & team2_wickets == 10, team2_wickets, team1_wickets),
+    team2_wickets = ifelse(winner == "team2" & team1_wickets == 10, team1_wickets, team2_wickets)
+  )
+
+# Save the simulated dataset
+write_parquet(
+  simulated_player_data,
+  "data/00-simulated_data/simulated_player_data.parquet"
+)
+
+write_parquet(
+  simulated_match_data,
+  "data/00-simulated_data/simulated_match_data.parquet"
+)
+ChatGPT said:
+ChatGPT
+To test and analyze the data that you've simulated, you can create several tests or checks to ensure that the dataset meets the expected conditions. Below are a few ideas for additional tests and validation checks that you can perform on the simulated data:
+
+1. Check for Duplicate Player Names:
+Ensure there are no duplicate player names in the dataset.
+
+r
+Copy code
+# Test for duplicate player names
+duplicated_players <- sum(duplicated(simulated_player_data$Player))
+if (duplicated_players > 0) {
+  print(paste("Warning: There are", duplicated_players, "duplicated player names."))
+} else {
+  print("No duplicate player names found.")
+}
+2. Check Player Data Consistency:
+Ensure that the Start year is always earlier than or equal to the End year, and that Matches is consistent with the number of innings.
+
+r
+Copy code
+# Test: Ensure that Start year is earlier than or equal to End year
+inconsistent_start_end <- simulated_player_data %>%
+  filter(Start > End)
+if (nrow(inconsistent_start_end) > 0) {
+  print("Warning: There are players with inconsistent Start and End years.")
+}
+
+# Test: Ensure Matches >= Bat_innings and Matches >= Bowl_innings
+inconsistent_innings <- simulated_player_data %>%
+  filter(Matches < Bat_innings | Matches < Bowl_innings)
+if (nrow(inconsistent_innings) > 0) {
+  print("Warning: There are players with inconsistent Matches and innings.")
+}
+3. Check Batting Runs Consistency:
+Ensure that BattingRunsScored is greater than or equal to HighScore.
+
+r
+Copy code
+# Test: Ensure BattingRunsScored is greater than or equal to HighScore
+inconsistent_runs <- simulated_player_data %>%
+  filter(BattingRunsScored < HighScore)
+if (nrow(inconsistent_runs) > 0) {
+  print("Warning: There are players with BattingRunsScored less than their HighScore.")
+}
+4. Check Bowling Runs and Wickets Consistency:
+Ensure that players who have bowled have a non-zero number of wickets (if wickets are greater than 0). You can also ensure that BowlingRunsScored is logically consistent with the number of wickets.
+
+r
+Copy code
+# Test: Ensure players with wickets have bowled
+bowling_inconsistencies <- simulated_player_data %>%
+  filter(Wickets > 0 & Bowl_innings == 0)
+if (nrow(bowling_inconsistencies) > 0) {
+  print("Warning: There are players with wickets but no bowling innings.")
+}
+5. Check Country Distribution:
+Ensure the distribution of players across countries is consistent with the probabilities used for sampling.
+
+r
+Copy code
+# Test: Check the distribution of countries
+country_distribution <- simulated_player_data %>%
+  group_by(Country) %>%
+  summarise(Count = n()) %>%
+  arrange(desc(Count))
+
+print(country_distribution)
+6. Check Simulated Match Data for Consistency:
+Ensure the team1 and team2 are distinct for each match, and that the toss_winner corresponds correctly to the match winner.
+
+r
+Copy code
+# Test: Ensure team1 and team2 are different
+invalid_matches <- simulated_match_data %>%
+  filter(team1 == team2)
+if (nrow(invalid_matches) > 0) {
+  print("Warning: There are matches where team1 and team2 are the same.")
+}
+
+# Test: Ensure toss_winner matches with the match winner
+toss_w
+
+You said:
+finish this code, making sure to use the testthta library for writing the tests and test the data which is simulated by this:
+- testing code to finihs: #### Workspace setup ####
+library(tidyverse)
+library(testthat)
+library(lubridate)
+
+# Load the simulated datasets
+match_data <- read_parquet("data/00-simulated_data/simulated_match_data.parquet")
+player_data <- read_parquet("data/00-simulated_data/simulated_player_data.parquet")
+
+#### Tests for simulated_match_data ####
+test_that("simulated_match_data has 10 columns", {
+  expect_equal(ncol(match_data), 10)
+})
+
+test_that("simulated_match_data column types are as expected", {
+  expect_type(match_data$team1, "character")
+  expect_type(match_data$team2, "character")
+  expect_true(lubridate::is.Date(match_data$date))  # Check if 'date' is a lubridate Date
+  expect_type(match_data$winner, "character")
+  expect_type(match_data$team1_runs, "integer") # Numeric columns
+  expect_type(match_data$team2_runs, "integer")
+  expect_type(match_data$team1_wickets, "integer")
+  expect_type(match_data$team2_wickets, "integer")
+  expect_type(match_data$toss_winner, "character")
+})
+
+# Test that simulated_match_data has no duplicate rows
+test_that("simulated_match_data has no duplicate rows", {
+  expect_equal(nrow(match_data), nrow(distinct(match_data)))
+})
+
+Code to simulate data (dont  change, just four your reference): simulated_match_data <- tibble(
+  match_id = 1:num_matches,
+  
+  # Sample team1 from countries
+  team1 = sample(countries, size = num_matches, replace = TRUE),
+  
+  # Ensure team2 is different from team1 by using setdiff
+  team2 = purrr::map_chr(team1, ~ sample(setdiff(countries, .x), 1)),
+  date = sample(seq(as.Date("2000-01-01"), as.Date("2023-12-31"), by = "days"), size = num_matches, replace = TRUE),
+  toss_winner = sample(c("team1", "team2"), size = num_matches, replace = TRUE),
+  
+  # Generate runs for both teams
+  team1_runs = sample(150:400, size = num_matches, replace = TRUE),
+  team2_runs = sample(150:400, size = num_matches, replace = TRUE),
+  
+  # Generate wickets
+  team1_wickets = sample(0:10, size = num_matches, replace = TRUE),
+  team2_wickets = sample(0:10, size = num_matches, replace = TRUE)
+) %>%
+  mutate(
+    # Determine winner based on runs
+    winner = ifelse(team1_runs > team2_runs, "team1", "team2"),
+    
+    # Adjust wickets based on the winner
+    team1_wickets = ifelse(winner == "team1" & team2_wickets == 10, team2_wickets, team1_wickets),
+    team2_wickets = ifelse(winner == "team2" & team1_wickets == 10, team1_wickets, team2_wickets)
+  )
+ChatGPT said:
+ChatGPT
+To finish the tests using the testthat library and ensure the integrity of the simulated data, we will create a series of checks that verify the data's structure, consistency, and logic. These tests will cover both the simulated_match_data and simulated_player_data. Here's how you can structure the tests:
+
+Complete Testing Code
+r
+Copy code
+#### Workspace setup ####
+library(tidyverse)
+library(testthat)
+library(lubridate)
+
+# Load the simulated datasets
+match_data <- read_parquet("data/00-simulated_data/simulated_match_data.parquet")
+player_data <- read_parquet("data/00-simulated_data/simulated_player_data.parquet")
+
+#### Tests for simulated_match_data ####
+
+test_that("simulated_match_data has 10 columns", {
+  expect_equal(ncol(match_data), 10)
+})
+
+test_that("simulated_match_data column types are as expected", {
+  expect_type(match_data$team1, "character")
+  expect_type(match_data$team2, "character")
+  expect_true(lubridate::is.Date(match_data$date))  # Check if 'date' is a lubridate Date
+  expect_type(match_data$winner, "character")
+  expect_type(match_data$team1_runs, "integer") # Numeric columns
+  expect_type(match_data$team2_runs, "integer")
+  expect_type(match_data$team1_wickets, "integer")
+  expect_type(match_data$team2_wickets, "integer")
+  expect_type(match_data$toss_winner, "character")
+})
+
+# Test that simulated_match_data has no duplicate rows
+test_that("simulated_match_data has no duplicate rows", {
+  expect_equal(nrow(match_data), nrow(distinct(match_data)))
+})
+
+# Test: Ensure that team1 and team2 are distinct
+test_that("team1 and team2 are distinct in every match", {
+  expect_true(all(match_data$team1 != match_data$team2))
+})
+
+# Test: Ensure winner is consistent with runs scored
+test_that("winner is consistent with runs scored", {
+  match_data %>%
+    rowwise() %>%
+    mutate(correct_winner = ifelse(team1_runs > team2_runs, "team1", "team2")) %>%
+    {
+      expect_true(all(.data$winner == .data$correct_winner))
+    }
+})
+
+# Test: Ensure wickets do not exceed 10 per team
+test_that("wickets do not exceed 10 per team", {
+  expect_true(all(match_data$team1_wickets <= 10))
+  expect_true(all(match_data$team2_wickets <= 10))
+})
+
+# Test: Ensure toss_winner is either 'team1' or 'team2'
+test_that("toss_winner is valid", {
+  expect_true(all(match_data$toss_winner %in% c("team1", "team2")))
+})
+
+#### Tests for simulated_player_data ####
+
+# Test: Check if there are 150 players
+test_that("simulated_player_data contains 150 players", {
+  expect_equal(nrow(player_data), 150)
+})
+
+# Test: Ensure 'Country' is a valid country from the list
+test_that("simulated_player_data Country is valid", {
+  valid_countries <- c(
+    "India", "Australia", "England", "Pakistan", "South Africa", "Sri Lanka",
+    "New Zealand", "West Indies", "Bangladesh", "Zimbabwe", "Afghanistan", "Ireland"
+  )
+  expect_true(all(player_data$Country %in% valid_countries))
+})
+
+# Test: Check if Start year is less than or equal to End year
+test_that("Start year is less than or equal to End year", {
+  expect_true(all(player_data$Start <= player_data$End))
+})
+
+# Test: Ensure that BattingRunsScored is greater than or equal to HighScore
+test_that("BattingRunsScored is greater than or equal to HighScore", {
+  expect_true(all(player_data$BattingRunsScored >= player_data$HighScore))
+})
+
+# Test: Ensure that Matches is at least the sum of Bat_innings and Bowl_innings
+test_that("Matches is at least Bat_innings and Bowl_innings combined", {
+  expect_true(all(player_data$Matches >= player_data$Bat_innings + player_data$Bowl_innings))
+})
+
+# Test: Ensure no player has more centuries than half-centuries
+test_that("Hundreds cannot exceed Fifties", {
+  expect_true(all(player_data$Hundreds <= player_data$Fifties))
+})
+
+# Test: Ensure there are no negative values for key statistics
+test_that("No negative values for key statistics", {
+  expect_true(all(player_data$Bat_innings >= 0))
+  expect_true(all(player_data$Bowl_innings >= 0))
+  expect_true(all(player_data$BattingRunsScored >= 0))
+  expect_true(all(player_data$BallsFaced >= 0))
+  expect_true(all(player_data$StrikeRate >= 0))
+  expect_true(all(player_data$Hundreds >= 0))
+  expect_true(all(player_data$Fifties >= 0))
+  expect_true(all(player_data$BowlingRunsScored >= 0))
+  expect_true(all(player_data$Wickets >= 0))
+  expect_true(all(player_data$Caught >= 0))
+  expect_true(all(player_data$Stumped >= 0))
+})
+
+# Test: Ensure the distribution of players is reasonably close to the expected probabilities
+test_that("Country distribution matches expected probabilities", {
+  expected_probs <- c(0.2, 0.15, 0.15, 0.1, 0.1, 0.1, 0.1, 0.05, 0.025, 0.025, 0.02, 0.02)
+  country_counts <- table(player_data$Country) / length(player_data$Country)
+  for (i in seq_along(expected_probs)) {
+    expect_true(abs(country_counts[i] - expected_probs[i]) < 0.05)  # Allow for small variation
+  }
+})
+
+Explanation of Tests:
+Column checks for simulated_match_data:
+
+We verify that simulated_match_data has the correct number of columns (10).
+We check that each column has the expected data type (e.g., character, integer, Date).
+We ensure that there are no duplicate rows in the match data.
+Data consistency checks for simulated_match_data:
+
+We check that team1 and team2 are distinct in every match.
+We ensure that the winner is correctly identified based on the runs scored.
+We validate that wickets do not exceed 10 per team.
+We ensure that the toss_winner column contains only valid values (i.e., team1 or team2).
+Tests for simulated_player_data:
+
+We check that there are 150 players and ensure the Country column contains valid countries.
+We ensure that the Start year is less than or equal to the End year.
+We check that BattingRunsScored is greater than or equal to HighScore.
+We ensure that the number of Matches is at least the sum of Bat_innings and Bowl_innings.
+We validate that Hundreds do not exceed Fifties.
+We verify that there are no negative values in key statistics like runs, wickets, and innings.
+Country distribution check:
+
+We test that the distribution of players across countries is reasonably close to the expected probabilities, allowing for a small variation due to randomness.
+How to Run the Tests:
+To run the tests, you would typically use testthat::test_file() or testthat::test_dir() if you place the code in a test file. Here's an example of how to run the tests:
+
+r
+Copy code
+testthat::test_file("path/to/your/test_file.R")
+This setup will test the data integrity and ensure that your simulated data is consistent and behaves as expected.
+
+
+You said:
+add this test as a testthat test: # Check if the dataset contains at least one player from each country
+missing_countries <- setdiff(valid_countries, unique(simulated_data$Country))
+if (length(missing_countries) == 0) {
+  message("Test Passed: All countries are represented in the dataset.")
+} else {
+  warning("Test Failed: The following countries are missing from the dataset: ", 
+          paste(missing_countries, collapse = ", "))
+}
+ChatGPT said:
+ChatGPT
+To add the test you described as a testthat test, you need to structure it within the test_that() function. Here's how you can do it:
+
+r
+Copy code
+# Define valid countries
+valid_countries <- c(
+  "India", "Australia", "England", "Pakistan", "South Africa", "Sri Lanka",
+  "New Zealand", "West Indies", "Bangladesh", "Zimbabwe", "Afghanistan", "Ireland"
+)
+
+# Test: Check if the dataset contains at least one player from each country
+test_that("simulated_player_data contains at least one player from each country", {
+  missing_countries <- setdiff(valid_countries, unique(player_data$Country))
+  if (length(missing_countries) == 0) {
+    message("Test Passed: All countries are represented in the dataset.")
+  } else {
+    warning("Test Failed: The following countries are missing from the dataset: ", 
+            paste(missing_countries, collapse = ", "))
+  }
+  
+  # Assert that no countries are missing
+  expect_equal(length(missing_countries), 0, 
+               info = paste("The following countries are missing: ", paste(missing_countries, collapse = ", ")))
+})
+Explanation:
+valid_countries: This is the list of countries you expect to appear in the dataset.
+setdiff: We use setdiff to check if there are any countries from the valid_countries list that are missing in the player_data$Country column.
+Message and warning: The message() and warning() functions provide feedback about the test's outcome.
+Test assertion: We use expect_equal to assert that the length of missing_countries is zero. If there are any missing countries, the test will fail and display the missing countries in the message.
+How it works:
+When you run the tests, the check will pass if all countries are represented at least once in the dataset. If any countries are missing, the test will fail, and the names of the missing countries will be shown in the test result.
+Example Output:
+If the test passes:
+
+sql
+Copy code
+Test Passed: All countries are represented in the dataset.
+If the test fails:
+
+sql
+Copy code
+Warning: Test Failed: The following countries are missing from the dataset: Zimbabwe
+This test ensures that each country is represented in the simulated dataset, maintaining the integrity of your data simulation process.
+
+
+You said:
+update this test to be done wihtout using mutate: test_that("winner is consistent with runs scored", {
+  match_data %>%
+    rowwise() %>%
+    mutate(correct_winner = ifelse(team1_runs > team2_runs, "team1", "team2")) %>%
+    {
+      expect_true(all(.data$winner == .data$correct_winner))
+    }
+})
+ChatGPT said:
+ChatGPT
+You can update the test to avoid using mutate by directly comparing the values in a vectorized manner, without needing to create a new column. Here is how you can structure the test:
+
+r
+Copy code
+test_that("winner is consistent with runs scored", {
+  correct_winner <- ifelse(match_data$team1_runs > match_data$team2_runs, "team1", "team2")
+  expect_true(all(match_data$winner == correct_winner))
+})
+Explanation:
+correct_winner: This variable calculates the correct winner based on the runs scored (team1_runs vs team2_runs) for each match. It's done using a vectorized ifelse function.
+Comparison: We then directly compare the winner column in match_data with the correct_winner vector. If they match for all rows, the test will pass.
+This approach avoids using mutate and ensures the winner is consistent with the runs scored in a more efficient way.
+
+
+You said:
+comment this code: #### Download data ####
+
+cricinfo_data1 <- fetch_cricinfo("test", "men", "batting", "career", country = NULL)
+cricinfo_data2 <- fetch_cricinfo("test", "men", "bowling", "career", country = NULL)
+cricinfo_data3 <- fetch_cricinfo("test", "men", "fielding", "career", country = NULL)
+cricinfo_data4 <- fetch_cricinfo("odi", "men", "batting", "career", country = NULL)
+cricinfo_data5 <- fetch_cricinfo("odi", "men", "bowling", "career", country = NULL)
+cricinfo_data6 <- fetch_cricinfo("odi", "men", "fielding", "career", country = NULL)
+cricinfo_data7 <- fetch_cricinfo("t20", "men", "batting", "career", country = NULL)
+cricinfo_data8 <- fetch_cricinfo("t20", "men", "bowling", "career", country = NULL)
+cricinfo_data9 <- fetch_cricinfo("t20", "men", "fielding", "career", country = NULL)
+
+# Combine datasets by skill type (batting, bowling, fielding)
+cricinfo_data1 <- cricinfo_data1 %>%
+  mutate(Player = str_trim(Player)) %>% # Remove leading/trailing spaces
+  mutate(Player = str_to_title(Player)) # Ensure consistent capitalization
+cricinfo_data4 <- cricinfo_data4 %>%
+  mutate(Player = str_trim(Player)) %>%
+  mutate(Player = str_to_title(Player))
+cricinfo_data7 <- cricinfo_data7 %>%
+  mutate(Player = str_trim(Player)) %>%
+  mutate(Player = str_to_title(Player))
+
+cricinfo_data1 <- cricinfo_data1 %>% distinct()
+cricinfo_data4 <- cricinfo_data4 %>% distinct()
+cricinfo_data7 <- cricinfo_data7 %>% distinct()
+
+
+combined_bat_data <- bind_rows(cricinfo_data1, cricinfo_data4, cricinfo_data7) %>%
+  group_by(Player) %>%
+  summarise(
+    Country = first(Country), # Assuming 'Country' remains consistent for each player
+    Start = min(Start, na.rm = TRUE), # Take the earliest Start year
+    End = max(End, na.rm = TRUE), # Take the latest End year
+    Matches = sum(Matches, na.rm = TRUE),
+    Innings = sum(Innings, na.rm = TRUE),
+    NotOuts = sum(NotOuts, na.rm = TRUE),
+    Runs = sum(Runs, na.rm = TRUE),
+    HighScore = ifelse(all(is.na(HighScore)), NA, max(HighScore, na.rm = TRUE)), # Handle NA values
+    HighScoreNotOut = any(HighScoreNotOut == TRUE, na.rm = TRUE), # TRUE if any instance is TRUE
+    Average = mean(Average, na.rm = TRUE), # Average across all formats
+    BallsFaced = sum(BallsFaced, na.rm = TRUE),
+    StrikeRate = mean(StrikeRate, na.rm = TRUE), # Average strike rate
+    Hundreds = sum(Hundreds, na.rm = TRUE),
+    Fifties = sum(Fifties, na.rm = TRUE),
+    Ducks = sum(Ducks, na.rm = TRUE),
+    Fours = sum(Fours, na.rm=TRUE),
+    Sixes = sum(Sixes, na.rm=TRUE),
+    .groups = "drop" # Removes grouping after summarising
+  )
+
+cricinfo_data2 <- cricinfo_data2 %>%
+  mutate(Player = str_trim(Player)) %>% # Remove leading/trailing spaces
+  mutate(Player = str_to_title(Player)) # Ensure consistent capitalization
+cricinfo_data5 <- cricinfo_data5 %>%
+  mutate(Player = str_trim(Player)) %>%
+  mutate(Player = str_to_title(Player))
+cricinfo_data8 <- cricinfo_data8 %>%
+  mutate(Player = str_trim(Player)) %>%
+  mutate(Player = str_to_title(Player))
+
+cricinfo_data2 <- cricinfo_data2 %>% distinct()
+cricinfo_data5 <- cricinfo_data5 %>% distinct()
+cricinfo_data8 <- cricinfo_data8 %>% distinct()
+
+combined_bowl_data <- bind_rows(cricinfo_data2, cricinfo_data5, cricinfo_data8) %>%
+  group_by(Player) %>%
+  summarise(
+    Country = first(Country), # Assuming 'Country' remains consistent for each player
+    Start = min(Start, na.rm = TRUE), # Earliest Start year
+    End = max(End, na.rm = TRUE), # Latest End year
+    Matches = sum(Matches, na.rm = TRUE),
+    Innings = sum(Innings, na.rm = TRUE),
+    Overs = sum(Overs, na.rm = TRUE),
+    Maidens = sum(Maidens, na.rm = TRUE),
+    Runs = sum(Runs, na.rm = TRUE),
+    Wickets = sum(Wickets, na.rm = TRUE),
+    Average = mean(Average, na.rm = TRUE), # Average across all formats
+    Economy = mean(Economy, na.rm = TRUE), # Average economy
+    StrikeRate = mean(StrikeRate, na.rm = TRUE), # Average strike rate
+    BestBowlingInnings = ifelse(all(is.na(BestBowlingInnings)), NA, max(BestBowlingInnings, na.rm = TRUE)), # Best bowling performance
+    FourWickets = sum(FourWickets, na.rm = TRUE),
+    FiveWickets = sum(FiveWickets, na.rm = TRUE),
+    TenWickets = sum(TenWickets, na.rm = TRUE),
+    .groups = "drop" # Removes grouping after summarising
+  )
+
+cricinfo_data3 <- cricinfo_data3 %>%
+  mutate(Player = str_trim(Player)) %>% # Remove leading/trailing spaces
+  mutate(Player = str_to_title(Player)) # Ensure consistent capitalization
+cricinfo_data6 <- cricinfo_data6 %>%
+  mutate(Player = str_trim(Player)) %>%
+  mutate(Player = str_to_title(Player))
+cricinfo_data9 <- cricinfo_data9 %>%
+  mutate(Player = str_trim(Player)) %>%
+  mutate(Player = str_to_title(Player))
+
+cricinfo_data3 <- cricinfo_data3 %>% distinct()
+cricinfo_data6 <- cricinfo_data6 %>% distinct()
+cricinfo_data9 <- cricinfo_data9 %>% distinct()
+
+combined_field_data <- bind_rows(cricinfo_data3, cricinfo_data6, cricinfo_data9) %>%
+  group_by(Player) %>%
+  summarise(
+    Country = first(Country), # Assuming 'Country' remains consistent for each player
+    Start = min(Start, na.rm = TRUE), # Earliest Start year
+    End = max(End, na.rm = TRUE), # Latest End year
+    Matches = sum(Matches, na.rm = TRUE),
+    Innings = sum(Innings, na.rm = TRUE),
+    Dismissals = sum(Dismissals, na.rm = TRUE),
+    Caught = sum(Caught, na.rm = TRUE),
+    CaughtFielder = sum(CaughtFielder, na.rm = TRUE),
+    CaughtBehind = sum(CaughtBehind, na.rm = TRUE),
+    Stumped = sum(Stumped, na.rm = TRUE),
+    MaxDismissalsInnings = ifelse(all(is.na(MaxDismissalsInnings)), NA, max(MaxDismissalsInnings, na.rm = TRUE)),
+    .groups = "drop" # Removes grouping after summarising
+  )
+
+cricsheet_data1 <- fetch_cricsheet("player", "male", "all")
+cricsheet_data2 <- fetch_cricsheet("match", "male", "all")
+
+fetch_cricsheet(
+  type = c("bbb", "match", "player"),
+  gender = c("female", "male"),
+  competition = "tests"
+)
+
+
+player_meta_data <- update_player_meta(start_again = FALSE)
+
+#### Save data ####
+write_csv(cricinfo_data1, "data/01-raw_data/fetch_cricinfo_data/test_men_batting_career_all.csv")
+write_csv(cricinfo_data2, "data/01-raw_data/fetch_cricinfo_data/test_men_bowling_career_all.csv")
+write_csv(cricinfo_data3, "data/01-raw_data/fetch_cricinfo_data/test_men_fielding_career_all.csv")
+write_csv(cricinfo_data4, "data/01-raw_data/fetch_cricinfo_data/odi_men_batting_career_all.csv")
+write_csv(cricinfo_data5, "data/01-raw_data/fetch_cricinfo_data/odi_men_bowling_career_all.csv")
+write_csv(cricinfo_data6, "data/01-raw_data/fetch_cricinfo_data/odi_men_fielding_career_all.csv")
+write_csv(cricinfo_data7, "data/01-raw_data/fetch_cricinfo_data/t20_men_batting_career_all.csv")
+write_csv(cricinfo_data8, "data/01-raw_data/fetch_cricinfo_data/t20_men_bowling_career_all.csv")
+write_csv(cricinfo_data9, "data/01-raw_data/fetch_cricinfo_data/t20_men_fielding_career_all.csv")
+          
+write_csv(combined_bat_data, "data/01-raw_data/combined_bat_data.csv")
+write_csv(combined_bowl_data, "data/01-raw_data/combined_bowl_data.csv")
+write_csv(combined_field_data, "data/01-raw_data/combined_field_data.csv")
+
+write_csv(cricsheet_data1, "data/01-raw_data/cricsheet_player_data.csv")
+write_csv(cricsheet_data2, "data/01-raw_data/cricsheet_match_data.csv")
+write_csv(player_meta_data, "data/01-raw_data/player_meta_data.csv")
+ChatGPT said:
+ChatGPT
+Here's the code with detailed comments explaining each step:
+
+r
+Copy code
+#### Download data ####
+
+# Fetch cricket player data from Cricinfo for various skill categories (batting, bowling, fielding) 
+# for different formats (Test, ODI, T20). For each category, we fetch data for both men players in career statistics.
+cricinfo_data1 <- fetch_cricinfo("test", "men", "batting", "career", country = NULL)
+cricinfo_data2 <- fetch_cricinfo("test", "men", "bowling", "career", country = NULL)
+cricinfo_data3 <- fetch_cricinfo("test", "men", "fielding", "career", country = NULL)
+cricinfo_data4 <- fetch_cricinfo("odi", "men", "batting", "career", country = NULL)
+cricinfo_data5 <- fetch_cricinfo("odi", "men", "bowling", "career", country = NULL)
+cricinfo_data6 <- fetch_cricinfo("odi", "men", "fielding", "career", country = NULL)
+cricinfo_data7 <- fetch_cricinfo("t20", "men", "batting", "career", country = NULL)
+cricinfo_data8 <- fetch_cricinfo("t20", "men", "bowling", "career", country = NULL)
+cricinfo_data9 <- fetch_cricinfo("t20", "men", "fielding", "career", country = NULL)
+
+# Data cleaning for the batting datasets by trimming player names and ensuring consistent capitalization
+cricinfo_data1 <- cricinfo_data1 %>%
+  mutate(Player = str_trim(Player)) %>%  # Remove any leading/trailing spaces from Player names
+  mutate(Player = str_to_title(Player))  # Ensure consistent capitalization of Player names
+
+cricinfo_data4 <- cricinfo_data4 %>%
+  mutate(Player = str_trim(Player)) %>%
+  mutate(Player = str_to_title(Player))
+
+cricinfo_data7 <- cricinfo_data7 %>%
+  mutate(Player = str_trim(Player)) %>%
+  mutate(Player = str_to_title(Player))
+
+# Remove duplicates from the batting datasets
+cricinfo_data1 <- cricinfo_data1 %>% distinct()
+cricinfo_data4 <- cricinfo_data4 %>% distinct()
+cricinfo_data7 <- cricinfo_data7 %>% distinct()
+
+# Combine the datasets for batting data across all formats (Test, ODI, T20)
+combined_bat_data <- bind_rows(cricinfo_data1, cricinfo_data4, cricinfo_data7) %>%
+  group_by(Player) %>%  # Group by Player to summarize data per player
+  summarise(
+    Country = first(Country),  # Assuming 'Country' remains consistent for each player
+    Start = min(Start, na.rm = TRUE),  # Take the earliest Start year for each player
+    End = max(End, na.rm = TRUE),  # Take the latest End year for each player
+    Matches = sum(Matches, na.rm = TRUE),  # Sum total number of matches
+    Innings = sum(Innings, na.rm = TRUE),  # Sum total number of innings
+    NotOuts = sum(NotOuts, na.rm = TRUE),  # Sum total number of not outs
+    Runs = sum(Runs, na.rm = TRUE),  # Sum total runs scored
+    HighScore = ifelse(all(is.na(HighScore)), NA, max(HighScore, na.rm = TRUE)),  # Max high score across all formats
+    HighScoreNotOut = any(HighScoreNotOut == TRUE, na.rm = TRUE),  # If any HighScoreNotOut value is TRUE
+    Average = mean(Average, na.rm = TRUE),  # Mean batting average across all formats
+    BallsFaced = sum(BallsFaced, na.rm = TRUE),  # Total balls faced
+    StrikeRate = mean(StrikeRate, na.rm = TRUE),  # Average strike rate
+    Hundreds = sum(Hundreds, na.rm = TRUE),  # Total number of hundreds
+    Fifties = sum(Fifties, na.rm = TRUE),  # Total number of fifties
+    Ducks = sum(Ducks, na.rm = TRUE),  # Total number of ducks
+    Fours = sum(Fours, na.rm=TRUE),  # Total number of fours
+    Sixes = sum(Sixes, na.rm=TRUE),  # Total number of sixes
+    .groups = "drop"  # Drop grouping after summarization
+  )
+
+# Data cleaning for the bowling datasets (trim player names and ensure consistent capitalization)
+cricinfo_data2 <- cricinfo_data2 %>%
+  mutate(Player = str_trim(Player)) %>%
+  mutate(Player = str_to_title(Player))
+
+cricinfo_data5 <- cricinfo_data5 %>%
+  mutate(Player = str_trim(Player)) %>%
+  mutate(Player = str_to_title(Player))
+
+cricinfo_data8 <- cricinfo_data8 %>%
+  mutate(Player = str_trim(Player)) %>%
+  mutate(Player = str_to_title(Player))
+
+# Remove duplicates from the bowling datasets
+cricinfo_data2 <- cricinfo_data2 %>% distinct()
+cricinfo_data5 <- cricinfo_data5 %>% distinct()
+cricinfo_data8 <- cricinfo_data8 %>% distinct()
+
+# Combine the datasets for bowling data across all formats (Test, ODI, T20)
+combined_bowl_data <- bind_rows(cricinfo_data2, cricinfo_data5, cricinfo_data8) %>%
+  group_by(Player) %>%
+  summarise(
+    Country = first(Country),  # Assuming 'Country' remains consistent for each player
+    Start = min(Start, na.rm = TRUE),  # Take the earliest Start year for each player
+    End = max(End, na.rm = TRUE),  # Take the latest End year for each player
+    Matches = sum(Matches, na.rm = TRUE),  # Sum total number of matches
+    Innings = sum(Innings, na.rm = TRUE),  # Sum total number of innings
+    Overs = sum(Overs, na.rm = TRUE),  # Sum total overs bowled
+    Maidens = sum(Maidens, na.rm = TRUE),  # Sum total maidens bowled
+    Runs = sum(Runs, na.rm = TRUE),  # Sum total runs conceded
+    Wickets = sum(Wickets, na.rm = TRUE),  # Sum total wickets taken
+    Average = mean(Average, na.rm = TRUE),  # Mean bowling average
+    Economy = mean(Economy, na.rm = TRUE),  # Mean economy rate
+    StrikeRate = mean(StrikeRate, na.rm = TRUE),  # Mean bowling strike rate
+    BestBowlingInnings = ifelse(all(is.na(BestBowlingInnings)), NA, max(BestBowlingInnings, na.rm = TRUE)),  # Best bowling performance
+    FourWickets = sum(FourWickets, na.rm = TRUE),  # Total number of 4-wicket hauls
+    FiveWickets = sum(FiveWickets, na.rm = TRUE),  # Total number of 5-wicket hauls
+    TenWickets = sum(TenWickets, na.rm = TRUE),  # Total number of 10-wicket hauls
+    .groups = "drop"  # Drop grouping after summarization
+  )
+
+# Data cleaning for the fielding datasets (trim player names and ensure consistent capitalization)
+cricinfo_data3 <- cricinfo_data3 %>%
+  mutate(Player = str_trim(Player)) %>%
+  mutate(Player = str_to_title(Player))
+
+cricinfo_data6 <- cricinfo_data6 %>%
+  mutate(Player = str_trim(Player)) %>%
+  mutate(Player = str_to_title(Player))
+
+cricinfo_data9 <- cricinfo_data9 %>%
+  mutate(Player = str_trim(Player)) %>%
+  mutate(Player = str_to_title(Player))
+
+# Remove duplicates from the fielding datasets
+cricinfo_data3 <- cricinfo_data3 %>% distinct()
+cricinfo_data6 <- cricinfo_data6 %>% distinct()
+cricinfo_data9 <- cricinfo_data9 %>% distinct()
+
+# Combine the datasets for fielding data across all formats (Test, ODI, T20)
+combined_field_data <- bind_rows(cricinfo_data3, cricinfo_data6, cricinfo_data9) %>%
+  group_by(Player) %>%
+  summarise(
+    Country = first(Country),  # Assuming 'Country' remains consistent for each player
+    Start = min(Start, na.rm = TRUE),  # Take the earliest Start year for each player
+    End = max(End, na.rm = TRUE),  # Take the latest End year for each player
+    Matches = sum(Matches, na.rm = TRUE),  # Sum total number of matches
+    Innings = sum(Innings, na.rm = TRUE),  # Sum total number of innings
+    Dismissals = sum(Dismissals, na.rm = TRUE),  # Total number of dismissals
+    Caught = sum(Caught, na.rm = TRUE),  # Total number of catches
+    CaughtFielder = sum(CaughtFielder, na.rm = TRUE),  # Caught by fielders
+    CaughtBehind = sum(CaughtBehind, na.rm = TRUE),  # Caught behind dismissals
+    Stumped = sum(Stumped, na.rm = TRUE),  # Total number of stumpings
+    MaxDismissalsInnings = ifelse(all(is.na(MaxDismissalsInnings)), NA, max(MaxDismissalsInnings, na.rm = TRUE)),  # Maximum dismissals in an innings
+    .groups = "drop"  # Drop grouping after summarization
+  )
+
+# Fetch additional player and match data from Cricsheet
+cricsheet_data1 <- fetch_cricsheet("player", "male", "all")
+cricsheet_data2 <- fetch_cricsheet("match", "male", "all")
+
+# Fetch Cricsheet data for Test matches
+fetch_cricsheet(
+  type = c("bbb", "match", "player"),
+  gender = c("female", "male"),
+  competition = "tests"
+)
+
+# Update player metadata (e.g., personal details, career information)
+player_meta_data <- update_player_meta(start_again = FALSE)
+
+#### Save data ####
+
+# Save all fetched and processed data into CSV files for further use
+write_csv(cricinfo_data1, "data/01-raw_data/fetch_cricinfo_data/test_men_batting_career_all.csv")
+write_csv(cricinfo_data2, "data/01-raw_data/fetch_cricinfo_data/test_men_bowling_career_all.csv")
+write_csv(cricinfo_data3, "data/01-raw_data/fetch_cricinfo_data/test_men_fielding_career_all.csv")
+write_csv(cricinfo_data4, "data/01-raw_data/fetch_cricinfo_data/odi_men_batting_career_all.csv")
+write_csv(cricinfo_data5, "data/01-raw_data/fetch_cricinfo_data/odi_men_bowling_career_all.csv")
+write_csv(cricinfo_data6, "data/01-raw_data/fetch_cricinfo_data/odi_men_fielding_career_all.csv")
+write_csv(cricinfo_data7, "data/01-raw_data/fetch_cricinfo_data/t20_men_batting_career_all.csv")
+write_csv(cricinfo_data8, "data/01-raw_data/fetch_cricinfo_data/t20_men_bowling_career_all.csv")
+write_csv(cricinfo_data9, "data/01-raw_data/fetch_cricinfo_data/t20_men_fielding_career_all.csv")
+
+# Save the combined datasets for batting, bowling, and fielding
+write_csv(combined_bat_data, "data/01-raw_data/combined_bat_data.csv")
+write_csv(combined_bowl_data, "data/01-raw_data/combined_bowl_data.csv")
+write_csv(combined_field_data, "data/01-raw_data/combined_field_data.csv")
+
+# Save Cricsheet data for players and matches
+write_csv(cricsheet_data1, "data/01-raw_data/cricsheet_player_data.csv")
+write_csv(cricsheet_data2, "data/01-raw_data/cricsheet_match_data.csv")
+
+# Save player metadata
+write_csv(player_meta_data, "data/01-raw_data/player_meta_data.csv")
+Summary:
+Download Data: Fetches cricket data from Cricinfo for batting, bowling, and fielding statistics across different formats (Test, ODI, T20) for male players.
+Data Cleaning: Trims any leading/trailing spaces and ensures consistent capitalization of player names. Duplicates are removed.
+Combining Datasets: Combines the data from various formats and skill categories into three combined datasets (batting, bowling, fielding) while summarizing statistics such as runs, wickets, matches, and averages.
+Save Data: Saves the fetched and cleaned data into CSV files for further analysis or use.
+
+You said:
+comment this code: #### Preamble ####
+# Purpose: Cleans the raw cricket data
+# Author: Muhammad Abdullah Motasim
+# Date: 23 November 2024
+# Contact: abdullah.motasim@mail.utoronto.ca
+# License: MIT
+# Pre-requisites: tidyverse, dplyr, and arrow libraries
+# Any other information needed? Raw player_data, match_data, and combined bat/bowl/field data
+# should be saved in the 01-raw_data folder
+
+#### Workspace setup ####
+library(tidyverse)
+library(dplyr)
+library(arrow)
+
+#### Clean data ####
+raw_player_data <- read_csv("data/01-raw_data/cricsheet_player_data.csv")
+raw_match_data <- read_csv("data/01-raw_data/cricsheet_match_data.csv")
+raw_meta_data <- read_csv("data/01-raw_data/player_meta_data.csv")
+raw_bat_data <- read_csv("data/01-raw_data/combined_bat_data.csv")
+raw_bowl_data <- read_csv("data/01-raw_data/combined_bowl_data.csv")
+raw_field_data <- read_csv("data/01-raw_data/combined_field_data.csv")
+
+raw_bat_data <- raw_bat_data %>%
+  mutate(bat_innings = Innings, bat_runs = Runs) %>%
+  select(-Innings, -Runs)
+
+raw_bowl_data <- raw_bowl_data %>%
+  mutate(bowl_innings = Innings, bowl_runs = Runs) %>%
+  select(-Innings, -Runs)
+
+raw_field_data <- raw_field_data %>%
+  mutate(field_innings = Innings) %>%
+  select(-Innings)
+
+cleaned_match_data <-
+  raw_match_data |>
+  janitor::clean_names() |>
+  select(
+    team1,
+    team2,
+    date,
+    winner,
+    winner_wickets,
+    winner_runs,
+    toss_winner
+  ) |>
+  mutate(date = as.character(date)) |>
+  mutate(date = ymd(date)) |>
+  mutate(winner = ifelse(is.na(winner), "Draw", winner)) # Replace NA with "Draw" in winner column
+
+for (i in 1:nrow(cleaned_match_data)) {
+  if (cleaned_match_data$team1[i] == "Pakistan" || cleaned_match_data$team2[i] == "Pakistan") {
+    if (cleaned_match_data$team1[i] != "Pakistan") {
+      temp <- cleaned_match_data$team1[i]
+      cleaned_match_data$team1[i] <- "Pakistan"
+      cleaned_match_data$team2[i] <- temp
+    }
+  }
+}
+
+# Filter match data for Pakistan
+pakistan_matches <- cleaned_match_data %>%
+  filter(team1 == "Pakistan")
+
+cleaned_player_data <- bind_rows(
+  raw_bat_data %>% mutate(dataset_type = "bat"),
+  raw_bowl_data %>% mutate(dataset_type = "bowl"),
+  raw_field_data %>% mutate(dataset_type = "field")
+) %>%
+  filter(Country == "Pakistan") %>% # Filtering for Pakistani players
+  group_by(Player) %>%
+  summarise(
+    # General player information
+    Start = min(Start, na.rm = TRUE),
+    # Take the earliest Start year
+    End = max(End, na.rm = TRUE),
+    # Take the latest End year
+    Matches = first(Matches),
+    # Assuming 'Matches' is consistent for each player
+
+    # Batting stats
+    bat_innings = sum(bat_innings[dataset_type == "bat"], na.rm = TRUE),
+    # Sum bat_innings
+    bowl_innings = sum(bowl_innings[dataset_type == "bowl"], na.rm = TRUE),
+    # Sum bowl_innings
+    field_innings = sum(field_innings[dataset_type == "field"], na.rm = TRUE),
+    # Sum field_innings
+
+    bat_runs = sum(bat_runs[dataset_type == "bat"], na.rm = TRUE),
+    # Batting - Runs
+    not_outs = sum(NotOuts[dataset_type == "bat"], na.rm = TRUE),
+    # Batting - NotOuts
+    bat_average = mean(Average[dataset_type == "bat"], na.rm = TRUE),
+    # Batting - Average
+
+    # Bowling stats
+    bowl_runs = sum(bowl_runs[dataset_type == "bowl"], na.rm = TRUE),
+    # Bowling - Runs
+    Wickets = sum(Wickets[dataset_type == "bowl"], na.rm = TRUE),
+    # Bowling - Wickets
+    Economy = mean(Economy[dataset_type == "bowl"], na.rm = TRUE),
+    # Bowling - Economy
+
+    # Fielding stats
+    Dismissals = sum(Dismissals[dataset_type == "field"], na.rm = TRUE),
+    # Fielding - Dismissals
+
+    .groups = "drop" # Removes grouping after summarizing
+  ) %>%
+  mutate(
+    bat_average = case_when(
+      bat_innings - not_outs == 0 ~ NA_real_,
+      # No outs, can't compute average
+      is.infinite(bat_average) ~ bat_runs / (bat_innings - not_outs),
+      # Calculate average if Inf
+      TRUE ~ bat_average # Else keep the calculated average
+    )
+  ) %>%
+  janitor::clean_names()
+
+
+#### Save data ####
+write_parquet(
+  cleaned_match_data,
+  "data/02-analysis_data/cleaned_match_data.parquet"
+)
+write_parquet(
+  pakistan_matches,
+  "data/02-analysis_data/cleaned_pakistan_match_data.parquet"
+)
+write_parquet(
+  cleaned_player_data,
+  "data/02-analysis_data/cleaned_player_data.parquet"
+)
+ChatGPT said:
+ChatGPT
+Here is the commented code with detailed explanations for each section:
+
+r
+Copy code
+#### Preamble ####
+# Purpose: Cleans the raw cricket data
+# Author: Muhammad Abdullah Motasim
+# Date: 23 November 2024
+# Contact: abdullah.motasim@mail.utoronto.ca
+# License: MIT
+# Pre-requisites: tidyverse, dplyr, and arrow libraries
+# Any other information needed? Raw player_data, match_data, and combined bat/bowl/field data
+# should be saved in the 01-raw_data folder
+
+#### Workspace setup ####
+# Loading necessary libraries for data manipulation and reading data formats.
+library(tidyverse)  # Contains functions for data manipulation (e.g., dplyr, tidyr)
+library(dplyr)      # For data manipulation tasks like filtering, summarizing, etc.
+library(arrow)      # For reading and writing parquet files efficiently
+
+#### Clean data ####
+# Read raw cricket data files into R from CSV files located in the 01-raw_data folder.
+raw_player_data <- read_csv("data/01-raw_data/cricsheet_player_data.csv")
+raw_match_data <- read_csv("data/01-raw_data/cricsheet_match_data.csv")
+raw_meta_data <- read_csv("data/01-raw_data/player_meta_data.csv")
+raw_bat_data <- read_csv("data/01-raw_data/combined_bat_data.csv")
+raw_bowl_data <- read_csv("data/01-raw_data/combined_bowl_data.csv")
+raw_field_data <- read_csv("data/01-raw_data/combined_field_data.csv")
+
+# Clean and reshape the batting data by renaming columns and removing unwanted columns.
+raw_bat_data <- raw_bat_data %>%
+  mutate(bat_innings = Innings, bat_runs = Runs) %>%  # Renaming columns for clarity
+  select(-Innings, -Runs)  # Remove original columns 'Innings' and 'Runs'
+
+# Clean and reshape the bowling data similarly, renaming columns and removing unwanted ones.
+raw_bowl_data <- raw_bowl_data %>%
+  mutate(bowl_innings = Innings, bowl_runs = Runs) %>%
+  select(-Innings, -Runs)
+
+# Clean and reshape the fielding data, renaming columns and removing unwanted ones.
+raw_field_data <- raw_field_data %>%
+  mutate(field_innings = Innings) %>%  # Keep only 'Innings' for fielding
+  select(-Innings)  # Remove the original 'Innings' column
+
+# Clean match data: Convert column names to lowercase, select relevant columns, and clean date format.
+cleaned_match_data <-
+  raw_match_data |>
+  janitor::clean_names() |>
+  select(
+    team1, team2, date, winner, winner_wickets, winner_runs, toss_winner  # Selecting columns of interest
+  ) |>
+  mutate(date = as.character(date)) |>
+  mutate(date = ymd(date)) |>
+  mutate(winner = ifelse(is.na(winner), "Draw", winner)) # Replace any missing winners with "Draw"
+
+# Correct the order of teams, ensuring Pakistan is always 'team1' if involved in the match.
+for (i in 1:nrow(cleaned_match_data)) {
+  if (cleaned_match_data$team1[i] == "Pakistan" || cleaned_match_data$team2[i] == "Pakistan") {
+    if (cleaned_match_data$team1[i] != "Pakistan") {
+      # Swap the teams if Pakistan is not team1
+      temp <- cleaned_match_data$team1[i]
+      cleaned_match_data$team1[i] <- "Pakistan"
+      cleaned_match_data$team2[i] <- temp
+    }
+  }
+}
+
+# Filter the match data to only include matches where Pakistan is team1.
+pakistan_matches <- cleaned_match_data %>%
+  filter(team1 == "Pakistan")
+
+# Combine batting, bowling, and fielding datasets into one and filter for Pakistani players.
+cleaned_player_data <- bind_rows(
+  raw_bat_data %>% mutate(dataset_type = "bat"),  # Add dataset type 'bat' for batting data
+  raw_bowl_data %>% mutate(dataset_type = "bowl"),  # Add dataset type 'bowl' for bowling data
+  raw_field_data %>% mutate(dataset_type = "field")  # Add dataset type 'field' for fielding data
+) %>%
+  filter(Country == "Pakistan") %>%  # Filter data to include only Pakistani players
+  group_by(Player) %>%  # Group by player to summarize stats
+  summarise(
+    # General player information: Earliest and latest years of play and matches played
+    Start = min(Start, na.rm = TRUE),
+    End = max(End, na.rm = TRUE),
+    Matches = first(Matches),
+
+    # Batting stats: Summing innings, runs, not outs, and calculating batting average
+    bat_innings = sum(bat_innings[dataset_type == "bat"], na.rm = TRUE),
+    bowl_innings = sum(bowl_innings[dataset_type == "bowl"], na.rm = TRUE),
+    field_innings = sum(field_innings[dataset_type == "field"], na.rm = TRUE),
+    bat_runs = sum(bat_runs[dataset_type == "bat"], na.rm = TRUE),
+    not_outs = sum(NotOuts[dataset_type == "bat"], na.rm = TRUE),
+    bat_average = mean(Average[dataset_type == "bat"], na.rm = TRUE),
+
+    # Bowling stats: Summing runs, wickets, and calculating economy rate
+    bowl_runs = sum(bowl_runs[dataset_type == "bowl"], na.rm = TRUE),
+    Wickets = sum(Wickets[dataset_type == "bowl"], na.rm = TRUE),
+    Economy = mean(Economy[dataset_type == "bowl"], na.rm = TRUE),
+
+    # Fielding stats: Summing dismissals
+    Dismissals = sum(Dismissals[dataset_type == "field"], na.rm = TRUE),
+
+    .groups = "drop"  # Removes grouping after summarizing data
+  ) %>%
+  mutate(
+    # Calculate batting average, handling edge cases (e.g., no innings or infinite values)
+    bat_average = case_when(
+      bat_innings - not_outs == 0 ~ NA_real_,  # No outs, can't compute average
+      is.infinite(bat_average) ~ bat_runs / (bat_innings - not_outs),  # Calculate average if Inf
+      TRUE ~ bat_average  # Keep the calculated average otherwise
+    )
+  ) %>%
+  janitor::clean_names()  # Clean column names to be consistent
+
+#### Save data ####
+# Save the cleaned data to Parquet files for further analysis.
+write_parquet(
+  cleaned_match_data,
+  "data/02-analysis_data/cleaned_match_data.parquet"
+)
+write_parquet(
+  pakistan_matches,
+  "data/02-analysis_data/cleaned_pakistan_match_data.parquet"
+)
+write_parquet(
+  cleaned_player_data,
+  "data/02-analysis_data/cleaned_player_data.parquet"
+)
+Summary of Key Sections:
+Preamble: Includes meta-information about the script's purpose, author, license, and prerequisites (libraries).
+Workspace Setup: Loads necessary libraries (tidyverse, dplyr, arrow) to manipulate data and read/write files.
+Clean Data:
+Reads raw cricket data files into data frames.
+Processes raw batting, bowling, and fielding data by renaming and cleaning columns.
+Cleans match data (e.g., date formatting, missing values for match results).
+Adjusts match data if Pakistan is involved, ensuring Pakistan is always listed as team1.
+Combines and filters player data from different datasets (batting, bowling, fielding), focusing on Pakistani players.
+Summarizes statistics (e.g., total runs, wickets, batting average) for each player.
+Save Data: Saves the cleaned and processed data into Parquet files for further analysis.
+The code systematically prepares cricket data for analysis by cleaning and reshaping it, ensuring it focuses on Pakistani players, and stores it efficiently in Parquet format for later use.
+
+
+You said:
+comment this code: match_data <- read_parquet("data/02-analysis_data/cleaned_match_data.parquet")
+player_data <- read_parquet("data/02-analysis_data/cleaned_player_data.parquet")
+
+
+#### Test data ####
+
+# Tests for cleaned_match_data
+
+test_that("cleaned_match_data 7 columns", {
+  expect_equal(ncol(match_data), 7)
+})
+
+test_that("cleaned_match_data column types are as expected", {
+  expect_type(match_data$team1, "character")
+  expect_type(match_data$team2, "character")
+  expect_true(lubridate::is.Date(match_data$date)) # Check if 'date' is a lubridate Date
+  expect_type(match_data$winner, "character")
+  expect_type(match_data$winner_wickets, "double") # Numeric columns
+  expect_type(match_data$winner_runs, "double")
+  expect_type(match_data$toss_winner, "character")
+})
+
+# Test that winner_wickets and winner_runs columns in cleaned_match_data have at least one NA value (indicating mutually exclusive fields)
+test_that("cleaned_match_data has mutually exclusive winner_wickets and winner_runs", {
+  expect_true(all(is.na(match_data$winner_wickets) | is.na(match_data$winner_runs)))
+})
+
+# Test that cleaned_match_data has no duplicated rows
+test_that("cleaned_match_data has no duplicate rows", {
+  expect_equal(nrow(match_data), nrow(distinct(match_data)))
+})
+
+# Tests for cleaned_player_data
+test_that("cleaned_player_data has 14 columns", {
+  expect_equal(ncol(player_data), 14)
+})
+
+test_that("cleaned_player_data column types are as expected", {
+  expect_type(player_data$player, "character")
+  expect_type(player_data$start, "double") # Numeric columns
+  expect_type(player_data$end, "double")
+  expect_type(player_data$matches, "double")
+  expect_type(player_data$bat_innings, "double")
+  expect_type(player_data$bowl_innings, "double")
+  expect_type(player_data$field_innings, "double")
+  expect_type(player_data$bat_runs, "double")
+  expect_type(player_data$not_outs, "double")
+  expect_type(player_data$bat_average, "double")
+  expect_type(player_data$bowl_runs, "double")
+  expect_type(player_data$wickets, "double")
+  expect_type(player_data$economy, "double")
+  expect_type(player_data$dismissals, "double")
+})
+
+test_that("cleaned_player_data does not have duplicate players", {
+  expect_equal(length(unique(player_data$player)), nrow(player_data))
+})
+
+
+test_that("cleaned_player_data numerical columns have reasonable values", {
+  expect_true(all(player_data$matches >= 0))
+  expect_true(all(player_data$bat_innings >= 0))
+  expect_true(all(player_data$bowl_innings >= 0))
+  expect_true(all(player_data$field_innings >= 0))
+})
+
+# Test that cleaned_player_data 'bat_average' column is correctly calculated when applicable
+test_that("cleaned_player_data 'bat_average' column has reasonable values", {
+  expect_true(all(player_data$bat_average >= 0, na.rm = TRUE))
+  expect_true(all(player_data$bat_average <= player_data$bat_runs, na.rm = TRUE))
+})
+
+# Test that cleaned_player_data bowling statistics are consistent
+test_that("cleaned_player_data bowling statistics are consistent", {
+  expect_true(all(player_data$wickets >= 0))
+})
+
+test_that("cleaned_player_data start year is earlier than or equal to end year", {
+  expect_true(all(player_data$start <= player_data$end, na.rm = TRUE))
+})
+
+test_that("cleaned_player_data dismissals column is reasonable", {
+  expect_true(all(player_data$dismissals >= 0, na.rm = TRUE))
+  expect_true(all(player_data$dismissals <= player_data$matches * 10, na.rm = TRUE))
+})
+
+test_that("cleaned_player_data runs are non-negative", {
+  expect_true(all(player_data$bat_runs >= 0, na.rm = TRUE))
+})
+ChatGPT said:
+ChatGPT
+Here is the commented code with detailed explanations:
+
+r
+Copy code
+# Read cleaned match and player data from Parquet files for testing.
+match_data <- read_parquet("data/02-analysis_data/cleaned_match_data.parquet")
+player_data <- read_parquet("data/02-analysis_data/cleaned_player_data.parquet")
+
+
+#### Test data ####
+
+# Tests for `cleaned_match_data`
+
+# Test to check if 'cleaned_match_data' has exactly 7 columns.
+test_that("cleaned_match_data 7 columns", {
+  expect_equal(ncol(match_data), 7)
+})
+
+# Test to ensure that the column types in 'cleaned_match_data' are as expected.
+test_that("cleaned_match_data column types are as expected", {
+  expect_type(match_data$team1, "character")  # 'team1' should be a character (text) column
+  expect_type(match_data$team2, "character")  # 'team2' should be a character (text) column
+  expect_true(lubridate::is.Date(match_data$date)) # 'date' should be a Date type, validated using lubridate
+  expect_type(match_data$winner, "character")  # 'winner' should be a character (text) column
+  expect_type(match_data$winner_wickets, "double") # 'winner_wickets' should be a numeric (double) column
+  expect_type(match_data$winner_runs, "double")  # 'winner_runs' should be a numeric (double) column
+  expect_type(match_data$toss_winner, "character")  # 'toss_winner' should be a character (text) column
+})
+
+# Test to ensure that either 'winner_wickets' or 'winner_runs' is NA for each row, indicating that only one can have a value (mutually exclusive).
+test_that("cleaned_match_data has mutually exclusive winner_wickets and winner_runs", {
+  expect_true(all(is.na(match_data$winner_wickets) | is.na(match_data$winner_runs)))  # Ensure only one column has a value at a time
+})
+
+# Test to check if there are any duplicate rows in 'cleaned_match_data'.
+test_that("cleaned_match_data has no duplicate rows", {
+  expect_equal(nrow(match_data), nrow(distinct(match_data)))  # Check if the number of rows is equal to the number of unique rows
+})
+
+# Tests for `cleaned_player_data`
+
+# Test to check if 'cleaned_player_data' has exactly 14 columns.
+test_that("cleaned_player_data has 14 columns", {
+  expect_equal(ncol(player_data), 14)  # Ensure the number of columns is correct
+})
+
+# Test to ensure that column types in 'cleaned_player_data' are as expected (mainly numeric types for player statistics).
+test_that("cleaned_player_data column types are as expected", {
+  expect_type(player_data$player, "character")  # 'player' should be a character (text) column
+  expect_type(player_data$start, "double") # 'start' year should be numeric (double)
+  expect_type(player_data$end, "double")  # 'end' year should be numeric (double)
+  expect_type(player_data$matches, "double")  # 'matches' should be numeric (double)
+  expect_type(player_data$bat_innings, "double")  # 'bat_innings' should be numeric (double)
+  expect_type(player_data$bowl_innings, "double")  # 'bowl_innings' should be numeric (double)
+  expect_type(player_data$field_innings, "double")  # 'field_innings' should be numeric (double)
+  expect_type(player_data$bat_runs, "double")  # 'bat_runs' should be numeric (double)
+  expect_type(player_data$not_outs, "double")  # 'not_outs' should be numeric (double)
+  expect_type(player_data$bat_average, "double")  # 'bat_average' should be numeric (double)
+  expect_type(player_data$bowl_runs, "double")  # 'bowl_runs' should be numeric (double)
+  expect_type(player_data$wickets, "double")  # 'wickets' should be numeric (double)
+  expect_type(player_data$economy, "double")  # 'economy' should be numeric (double)
+  expect_type(player_data$dismissals, "double")  # 'dismissals' should be numeric (double)
+})
+
+# Test to ensure that there are no duplicate players in 'cleaned_player_data'.
+test_that("cleaned_player_data does not have duplicate players", {
+  expect_equal(length(unique(player_data$player)), nrow(player_data))  # Ensure each player is unique
+})
+
+# Test to check that numerical columns in 'cleaned_player_data' have reasonable (non-negative) values.
+test_that("cleaned_player_data numerical columns have reasonable values", {
+  expect_true(all(player_data$matches >= 0))  # Ensure 'matches' is non-negative
+  expect_true(all(player_data$bat_innings >= 0))  # Ensure 'bat_innings' is non-negative
+  expect_true(all(player_data$bowl_innings >= 0))  # Ensure 'bowl_innings' is non-negative
+  expect_true(all(player_data$field_innings >= 0))  # Ensure 'field_innings' is non-negative
+})
+
+# Test to ensure that the 'bat_average' column is correctly calculated (non-negative and logically consistent).
+test_that("cleaned_player_data 'bat_average' column has reasonable values", {
+  expect_true(all(player_data$bat_average >= 0, na.rm = TRUE))  # Batting average should be non-negative
+  expect_true(all(player_data$bat_average <= player_data$bat_runs, na.rm = TRUE))  # Batting average should not exceed total runs
+})
+
+# Test to ensure that bowling statistics (wickets) are consistent (non-negative).
+test_that("cleaned_player_data bowling statistics are consistent", {
+  expect_true(all(player_data$wickets >= 0))  # Ensure 'wickets' is non-negative
+})
+
+# Test to ensure that the start year is earlier than or equal to the end year for each player.
+test_that("cleaned_player_data start year is earlier than or equal to end year", {
+  expect_true(all(player_data$start <= player_data$end, na.rm = TRUE))  # Ensure start year is before or equal to end year
+})
+
+# Test to ensure that the 'dismissals' column has reasonable values, i.e., it is non-negative and does not exceed the number of matches.
+test_that("cleaned_player_data dismissals column is reasonable", {
+  expect_true(all(player_data$dismissals >= 0, na.rm = TRUE))  # Ensure dismissals are non-negative
+  expect_true(all(player_data$dismissals <= player_data$matches * 10, na.rm = TRUE))  # Dismissals should not exceed 10 times the number of matches
+})
+
+# Test to ensure that batting runs ('bat_runs') are non-negative.
+test_that("cleaned_player_data runs are non-negative", {
+  expect_true(all(player_data$bat_runs >= 0, na.rm = TRUE))  # Ensure 'bat_runs' is non-negative
+})
+Summary of Key Tests:
+Tests for cleaned_match_data:
+
+Ensures the data has the correct number of columns (7).
+Validates the column types (e.g., character for team names, Date for match dates).
+Verifies that only one of the winner_wickets or winner_runs columns is populated for each match.
+Checks that there are no duplicate rows in the match data.
+Tests for cleaned_player_data:
+
+Ensures the player data has the correct number of columns (14).
+Validates the column types for each relevant statistic (e.g., numeric for runs, wickets).
+Verifies that there are no duplicate players in the dataset.
+Ensures numerical columns contain non-negative values, with checks for logical consistency (e.g., batting average not exceeding runs).
+Ensures that statistics like dismissals and wickets are consistent and reasonable.
+These tests help confirm that the cleaned data maintains integrity, is free from inconsistencies or errors, and conforms to expected formats and values.
+
+
+You said:
+are there any packages here taht I dont use? #### Preamble ####
+# Purpose: Models Pakistans cricket data overtime
+# Author: Muhammad Abdullah Motasim
+# Date: 27 November 2024
+# Contact: abdullah.motasim@mail.utoronto.ca
+# License: MIT
+# Pre-requisites: tidyverse, rstanarm, caret, dplyr, tidyr, and arrow libraries
+# Any other information needed?  The cleaned match and player data should be saved 
+# in 02-analysis_data folder
+
+
+#### Workspace setup ####
+library(tidyverse)
+library(rstanarm)
+library(arrow)
+library(caret) # For data splitting and evaluation
+library(dplyr)
+library(tidyr)
+
+#### Read data ####
+player_data <- read_parquet("data/02-analysis_data/cleaned_player_data.parquet")
+match_data <- read_parquet("data/02-analysis_data/cleaned_match_data.parquet")
+pakistan_match_data <- read_parquet("data/02-analysis_data/cleaned_pakistan_match_data.parquet")
+
+# Filter match data for Pakistan
+pakistan_matches <- pakistan_match_data %>%
+  mutate(pakistan_win = case_when(
+    winner == "Pakistan" ~ 1,
+    TRUE ~ 0))%>%
+  mutate(toss_win = case_when(
+    toss_winner == "Pakistan" ~ 1,
+    TRUE ~ 0))%>%
+  mutate(year = lubridate::year(date))
+
+# Summarize match-level performance
+pakistan_match_summary <- pakistan_matches %>%
+  group_by(year = lubridate::year(date)) %>%
+  summarize(
+    total_matches = n(),
+    wins = sum(pakistan_win),
+    win_rate = mean(pakistan_win),
+    tosses_won = sum(toss_win)  # Sum the toss_win column to count tosses won by Pakistan
+  )
+
+set.seed(853)
+match_train_index <- createDataPartition(pakistan_matches$pakistan_win, p = 0.8, list = FALSE)
+match_train_data <- pakistan_matches[match_train_index, ]
+match_test_data <- pakistan_matches[-match_train_index, ]
+
+first_model <-
+  stan_glm(
+    formula = pakistan_win ~  year + team2 + toss_win,
+    data = match_train_data,
+    family = binomial(link = "logit"),
+    prior = normal(location = 0, scale = 2.5, autoscale = TRUE),
+    prior_intercept = normal(location = 0, scale = 2.5, autoscale = TRUE),
+    prior_aux = exponential(rate = 1, autoscale = TRUE),
+  )
+  
+summary(first_model)
+
+#Predict probabilities for test data
+match_test_data$predicted_prob_first <- predict(first_model, newdata = match_test_data, type = "response")
+
+# Generate predicted classes based on a threshold (e.g., 0.5)
+match_test_data$predicted_class_first <- ifelse(match_test_data$predicted_prob_first > 0.5, 1, 0)
+# Evaluate model performance
+confusion_matrix_first <- table(
+  Actual = match_test_data$pakistan_win,
+  Predicted = match_test_data$predicted_class_first
+)
+
+print(confusion_matrix_first)
+
+accuracy_first <- sum(diag(confusion_matrix_first)) / sum(confusion_matrix_first)
+print(paste("Accuracy:", round(accuracy_first, 2)))
+
+#### Save model ####
+saveRDS(first_model, file = "models/win_chance.rds")
+saveRDS(confusion_matrix_first, file = "models/confusion_matrix_win_chance.rds")
+ChatGPT said:
+ChatGPT
+In the code you've provided, you are loading a few libraries, but some of them are not actually used. Here is a breakdown:
+
+Libraries that are used:
+tidyverse - This is used for data manipulation, specifically mutate, summarize, and other functions in the code.
+rstanarm - Used for the model stan_glm to fit a logistic regression model.
+arrow - Used for reading parquet files with read_parquet.
+caret - Used for splitting the data into training and testing sets with createDataPartition.
+dplyr - This is part of tidyverse, so it’s redundant to load dplyr separately. You are using mutate and summarize from dplyr.
+tidyr - Not explicitly used in this code. However, if you plan to perform further data tidying tasks (e.g., pivoting, reshaping), you may need it.
+Libraries that aren't used:
+dplyr - As mentioned, dplyr is part of the tidyverse package, so there is no need to load it separately. Since tidyverse already includes dplyr, you can remove this redundant loading.
+tidyr - In your current code, functions from tidyr (such as gather, spread, etc.) are not being used, so you can remove this as well.
+Cleaned-up version:
+r
+Copy code
+#### Preamble ####
+# Purpose: Models Pakistans cricket data overtime
+# Author: Muhammad Abdullah Motasim
+# Date: 27 November 2024
+# Contact: abdullah.motasim@mail.utoronto.ca
+# License: MIT
+# Pre-requisites: tidyverse, rstanarm, caret, arrow libraries
+# Any other information needed?  The cleaned match and player data should be saved 
+# in 02-analysis_data folder
+
+
+#### Workspace setup ####
+library(tidyverse)  # Includes dplyr and other useful packages
+library(rstanarm)   # For fitting models
+library(arrow)      # For reading parquet files
+library(caret)      # For data splitting and evaluation
+
+#### Read data ####
+player_data <- read_parquet("data/02-analysis_data/cleaned_player_data.parquet")
+match_data <- read_parquet("data/02-analysis_data/cleaned_match_data.parquet")
+pakistan_match_data <- read_parquet("data/02-analysis_data/cleaned_pakistan_match_data.parquet")
+
+# Filter match data for Pakistan
+pakistan_matches <- pakistan_match_data %>%
+  mutate(pakistan_win = case_when(
+    winner == "Pakistan" ~ 1,
+    TRUE ~ 0)) %>%
+  mutate(toss_win = case_when(
+    toss_winner == "Pakistan" ~ 1,
+    TRUE ~ 0)) %>%
+  mutate(year = lubridate::year(date))
+
+# Summarize match-level performance
+pakistan_match_summary <- pakistan_matches %>%
+  group_by(year = lubridate::year(date)) %>%
+  summarize(
+    total_matches = n(),
+    wins = sum(pakistan_win),
+    win_rate = mean(pakistan_win),
+    tosses_won = sum(toss_win)  # Sum the toss_win column to count tosses won by Pakistan
+  )
+
+set.seed(853)
+match_train_index <- createDataPartition(pakistan_matches$pakistan_win, p = 0.8, list = FALSE)
+match_train_data <- pakistan_matches[match_train_index, ]
+match_test_data <- pakistan_matches[-match_train_index, ]
+
+first_model <- stan_glm(
+  formula = pakistan_win ~  year + team2 + toss_win,
+  data = match_train_data,
+  family = binomial(link = "logit"),
+  prior = normal(location = 0, scale = 2.5, autoscale = TRUE),
+  prior_intercept = normal(location = 0, scale = 2.5, autoscale = TRUE),
+  prior_aux = exponential(rate = 1, autoscale = TRUE)
+)
+  
+summary(first_model)
+
+# Predict probabilities for test data
+match_test_data$predicted_prob_first <- predict(first_model, newdata = match_test_data, type = "response")
+
+# Generate predicted classes based on a threshold (e.g., 0.5)
+match_test_data$predicted_class_first <- ifelse(match_test_data$predicted_prob_first > 0.5, 1, 0)
+
+# Evaluate model performance
+confusion_matrix_first <- table(
+  Actual = match_test_data$pakistan_win,
+  Predicted = match_test_data$predicted_class_first
+)
+
+print(confusion_matrix_first)
+
+accuracy_first <- sum(diag(confusion_matrix_first)) / sum(confusion_matrix_first)
+print(paste("Accuracy:", round(accuracy_first, 2)))
+
+#### Save model ####
+saveRDS(first_model, file = "models/win_chance.rds")
+saveRDS(confusion_matrix_first, file = "models/confusion_matrix_win_chance.rds")
+Changes made:
+Removed dplyr and tidyr because they are already part of tidyverse and not explicitly used in the code (aside from tidyverse).
+The remaining packages (tidyverse, rstanarm, caret, and arrow) are all necessary and used in the code.
+This should clean up your script and avoid redundant loading of libraries.
+
+
+You said:
+comment this code: # Filter match data for Pakistan
+pakistan_matches <- pakistan_match_data %>%
+  mutate(pakistan_win = case_when(
+    winner == "Pakistan" ~ 1,
+    TRUE ~ 0))%>%
+  mutate(toss_win = case_when(
+    toss_winner == "Pakistan" ~ 1,
+    TRUE ~ 0))%>%
+  mutate(year = lubridate::year(date))
+
+# Summarize match-level performance
+pakistan_match_summary <- pakistan_matches %>%
+  group_by(year = lubridate::year(date)) %>%
+  summarize(
+    total_matches = n(),
+    wins = sum(pakistan_win),
+    win_rate = mean(pakistan_win),
+    tosses_won = sum(toss_win)  # Sum the toss_win column to count tosses won by Pakistan
+  )
+
+set.seed(853)
+match_train_index <- createDataPartition(pakistan_matches$pakistan_win, p = 0.8, list = FALSE)
+match_train_data <- pakistan_matches[match_train_index, ]
+match_test_data <- pakistan_matches[-match_train_index, ]
+
+first_model <-
+  stan_glm(
+    formula = pakistan_win ~  year + team2 + toss_win,
+    data = match_train_data,
+    family = binomial(link = "logit"),
+    prior = normal(location = 0, scale = 2.5, autoscale = TRUE),
+    prior_intercept = normal(location = 0, scale = 2.5, autoscale = TRUE),
+    prior_aux = exponential(rate = 1, autoscale = TRUE),
+  )
+  
+summary(first_model)
+
+#Predict probabilities for test data
+match_test_data$predicted_prob_first <- predict(first_model, newdata = match_test_data, type = "response")
+
+# Generate predicted classes based on a threshold (e.g., 0.5)
+match_test_data$predicted_class_first <- ifelse(match_test_data$predicted_prob_first > 0.5, 1, 0)
+# Evaluate model performance
+confusion_matrix_first <- table(
+  Actual = match_test_data$pakistan_win,
+  Predicted = match_test_data$predicted_class_first
+)
+
+print(confusion_matrix_first)
+
+accuracy_first <- sum(diag(confusion_matrix_first)) / sum(confusion_matrix_first)
+print(paste("Accuracy:", round(accuracy_first, 2)))
+
+#### Save model ####
+saveRDS(first_model, file = "models/win_chance.rds")
+saveRDS(confusion_matrix_first, file = "models/confusion_matrix_win_chance.rds")
+ChatGPT said:
+ChatGPT
+Here are the comments added to your code explaining each step:
+
+r
+Copy code
+# Filter match data for Pakistan
+pakistan_matches <- pakistan_match_data %>%
+  # Create a binary column indicating if Pakistan won the match (1) or not (0)
+  mutate(pakistan_win = case_when(
+    winner == "Pakistan" ~ 1,   # If Pakistan won, assign 1
+    TRUE ~ 0)) %>%              # Otherwise, assign 0
+  # Create a binary column indicating if Pakistan won the toss (1) or not (0)
+  mutate(toss_win = case_when(
+    toss_winner == "Pakistan" ~ 1,  # If Pakistan won the toss, assign 1
+    TRUE ~ 0)) %>%                 # Otherwise, assign 0
+  # Extract the year from the match date and create a new 'year' column
+  mutate(year = lubridate::year(date))
+
+# Summarize match-level performance by year
+pakistan_match_summary <- pakistan_matches %>%
+  group_by(year = lubridate::year(date)) %>%  # Group data by the year of the match
+  summarize(
+    total_matches = n(),               # Count the total number of matches in each year
+    wins = sum(pakistan_win),          # Sum the 'pakistan_win' column to get total wins in each year
+    win_rate = mean(pakistan_win),     # Calculate the win rate as the mean of 'pakistan_win'
+    tosses_won = sum(toss_win)         # Sum the 'toss_win' column to count tosses won by Pakistan
+  )
+
+# Set random seed for reproducibility
+set.seed(853)
+# Split data into training (80%) and test (20%) sets based on Pakistan's match outcome
+match_train_index <- createDataPartition(pakistan_matches$pakistan_win, p = 0.8, list = FALSE)
+match_train_data <- pakistan_matches[match_train_index, ]  # Training data
+match_test_data <- pakistan_matches[-match_train_index, ]  # Test data
+
+# Fit a logistic regression model (stan_glm) to predict Pakistan's win based on year, opponent, and toss result
+first_model <-
+  stan_glm(
+    formula = pakistan_win ~  year + team2 + toss_win,  # Predict 'pakistan_win' using 'year', 'team2' (opponent), and 'toss_win'
+    data = match_train_data,                            # Use training data
+    family = binomial(link = "logit"),                   # Logistic regression (binomial outcome)
+    prior = normal(location = 0, scale = 2.5, autoscale = TRUE),  # Normal prior for coefficients
+    prior_intercept = normal(location = 0, scale = 2.5, autoscale = TRUE),  # Normal prior for intercept
+    prior_aux = exponential(rate = 1, autoscale = TRUE)  # Exponential prior for auxiliary parameters (variance)
+  )
+  
+# Display a summary of the fitted model
+summary(first_model)
+
+# Predict the probability of Pakistan winning the match in the test data
+match_test_data$predicted_prob_first <- predict(first_model, newdata = match_test_data, type = "response")
+
+# Generate predicted classes (1 if probability > 0.5, otherwise 0)
+match_test_data$predicted_class_first <- ifelse(match_test_data$predicted_prob_first > 0.5, 1, 0)
+
+# Create a confusion matrix to evaluate the model's performance
+confusion_matrix_first <- table(
+  Actual = match_test_data$pakistan_win,          # Actual outcomes (real Pakistan wins)
+  Predicted = match_test_data$predicted_class_first  # Predicted outcomes (model predictions)
+)
+
+# Print the confusion matrix
+print(confusion_matrix_first)
+
+# Calculate and print the accuracy of the model
+accuracy_first <- sum(diag(confusion_matrix_first)) / sum(confusion_matrix_first)  # Accuracy = correctly predicted / total predictions
+print(paste("Accuracy:", round(accuracy_first, 2)))
+
+#### Save model ####
+# Save the fitted model (logistic regression model) to a file for future use
+saveRDS(first_model, file = "models/win_chance.rds")
+
+# Save the confusion matrix to a file
+saveRDS(confusion_matrix_first, file = "models/confusion_matrix_win_chance.rds")
+Key Explanations:
+Data Manipulation:
+You create several new columns (pakistan_win, toss_win, and year) based on the existing columns in pakistan_match_data. These columns are used for analysis and modeling.
+Summarization:
+The code aggregates data by year, calculating the total number of matches, wins, win rate, and toss wins for each year.
+Data Splitting:
+The dataset is split into training (80%) and test (20%) sets using createDataPartition from the caret package. This ensures you have data for both model training and evaluation.
+Modeling:
+You fit a logistic regression model (stan_glm from the rstanarm package) to predict whether Pakistan will win a match based on the year, opponent (team2), and whether Pakistan won the toss (toss_win).
+Prediction and Evaluation:
+The model is used to predict match outcomes for the test dataset. Predictions are then converted to binary values (1 for a predicted win, 0 for a predicted loss) using a threshold of 0.5.
+A confusion matrix is created to compare predicted values to actual values and calculate the model's accuracy.
+Saving the Model:
+The model and the confusion matrix are saved for later use, allowing you to reuse the model without retraining it.
+This approach effectively processes the match data, fits a model, evaluates it, and saves the results for future use.
