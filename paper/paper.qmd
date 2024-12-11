@@ -6,7 +6,7 @@ author:
 thanks: "Code and data are available at: [https://github.com/abdullah-motasim/Analyzing-Pakistans-Cricket-Data](https://github.com/abdullah-motasim/Analyzing-Pakistans-Cricket-Data)."
 date: today
 date-format: long
-abstract: "This paper analyzes Pakistan's cricket performance from 2002 to 2024, using a linear regression model to examine factors influencing match outcomes. We find that opponent strength and toss outcomes are significant predictors of Pakistan's success, highlighting both internal team dynamics and external variables. These findings provide information for coaches, analysts, and administrators, offering strategies to improve performance under varying conditions. Ultimately, our analysis contributes to a deeper understanding of the factors that drive Pakistan’s cricket success, with implications for teams worldwide."
+abstract: "This paper analyzes Pakistan's cricket performance from 1952 to 2024, using a linear regression model to examine factors influencing match outcomes. We find that opponent strength and toss outcomes are significant predictors of Pakistan's success, highlighting both internal team dynamics and external variables. These findings provide information for coaches, analysts, and administrators, offering strategies to improve performance under varying conditions. Ultimately, our analysis contributes to a deeper understanding of the factors that drive Pakistan’s cricket success, with implications for teams worldwide."
 format: pdf
 number-sections: true
 bibliography: references.bib
@@ -358,7 +358,7 @@ context of small sample sizes and the complexity of cricket data.
 This model provides a useful framework for estimating Pakistan's
 likelihood of winning a match based on key factors. By using a Bayesian
 Logistic Regression approach, the model incorporates uncertainty in the
-estimates, offers a clear interpretation of the effects of each
+estimates, giving us a clear interpretation of the effects of each
 predictor, and is flexible enough to adapt to new data as it becomes
 available. However, it should be acknowledged that there are limitations
 regarding omitted variables and potential model assumptions that could
