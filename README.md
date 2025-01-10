@@ -1,5 +1,3 @@
-# Starter folder
-
 ## Overview
 
 This repository contains all the necessary data and scripts for analyzing factors that influence the performance of the Pakistani cricket team from 1952 to 2024. The match statistics, along with a Bayesian Logistic Regression model, were used to determine that both the opponent and the outcome of the coin toss significantly impacted Pakistan's chances of winning, as detailed in the "paper" folder. 
